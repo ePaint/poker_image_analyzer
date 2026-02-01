@@ -1,0 +1,58 @@
+# Expected player names for each test screenshot
+# Leave empty string "" for empty seats
+
+[testscreen1]
+top = "SixS"
+top_left = "MiToAn"
+top_right = "Gashparello.."
+bottom_left = "Iron Lady"
+bottom = "H0T M0USE!"
+bottom_right = ""
+
+[testscreen2]
+top = "SixS"
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "H0T M0USE!"
+bottom_right = "Topwinner777"
+
+[testscreen3]
+top = "Andrey Litv.."
+top_left = ""
+top_right = ""
+bottom_left = "GYOKER_AA"
+bottom = "H0T M0USE!"
+bottom_right = "jivr31"
+
+[testscreen4]
+top = "GYOKER_AA"
+top_left = "Georg2025"
+top_right = ""
+bottom_left = ""
+bottom = "H0T M0USE!"
+bottom_right = "Omaha_NiaN.."
+
+[testscreen5]
+top = "GYOKER_AA"
+top_left = "Georg2025"
+top_right = ""
+bottom_left = ""
+bottom = "H0T M0USE!"
+bottom_right = "Omaha_NiaN.."
+
+[testscreen6]
+top = "MiToAn"
+top_left = ""
+top_right = "GYOKER_AA"
+bottom_left = "Bruinbeer"
+bottom = "H0T M0USE!"
+bottom_right = ""
+
+[testscreen7]
+top = "Habacuque"
+top_left = "REiDaSelva_"
+top_right = "GutiGuti"
+bottom_left = "TheSheriff"
+bottom = "H0T M0USE!"
+bottom_right = "TopGrinder"

@@ -1,0 +1,3 @@
+[ocr]
+engine = "easyocr"  # Options: "easyocr", "tesseract"
+gpu = false
