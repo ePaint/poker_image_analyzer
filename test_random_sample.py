@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from image_analyzer import analyze_screenshot
+from image_analyzer.models import ScreenshotFilename
 
 
 def main():
@@ -18,15 +19,15 @@ def main():
 
     target_dir.mkdir(parents=True, exist_ok=True)
 
-    all_images = list(source_dir.glob("*.png"))
-    print(f"Found {len(all_images)} images in Screenshots_GG/")
+    all_images = [p for p in source_dir.glob("*.png") if ScreenshotFilename.is_valid(p)]
+    print(f"Found {len(all_images)} valid images in Screenshots_GG/")
 
-    existing = list(target_dir.glob("*.png"))
+    existing = [p for p in target_dir.glob("*.png") if ScreenshotFilename.is_valid(p)]
     if existing:
-        print(f"Using {len(existing)} existing images in random_sample/")
+        print(f"Using {len(existing)} existing valid images in random_sample/")
         sample_images = existing
     else:
-        sample_images = random.sample(all_images, min(20, len(all_images)))
+        sample_images = random.sample(all_images, min(100, len(all_images)))
         print(f"Copying {len(sample_images)} random images...")
         for img in sample_images:
             shutil.copy(img, target_dir / img.name)
