@@ -1,12 +1,25 @@
-from image_analyzer.models import PlayerRegion, OCRResult
-from image_analyzer.engines import OCREngine
-from image_analyzer.analyzer import analyze_screenshot, analyze_image, DEFAULT_REGIONS
+from image_analyzer.models import (
+    PlayerRegion,
+    ScreenshotFilename,
+    NATURAL8_5MAX_REGIONS,
+    NATURAL8_BASE_WIDTH,
+)
+from image_analyzer.analyzer import (
+    analyze_screenshot,
+    analyze_screenshots_batch,
+    analyze_image,
+    detect_table_type,
+    DEFAULT_REGIONS,
+)
 
 __all__ = [
     "analyze_screenshot",
+    "analyze_screenshots_batch",
     "analyze_image",
+    "detect_table_type",
     "PlayerRegion",
-    "OCRResult",
+    "ScreenshotFilename",
     "DEFAULT_REGIONS",
-    "OCREngine",
+    "NATURAL8_5MAX_REGIONS",
+    "NATURAL8_BASE_WIDTH",
 ]

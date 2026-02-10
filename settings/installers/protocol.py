@@ -1,6 +1,0 @@
-from typing import Protocol
-
-
-class EngineInstaller(Protocol):
-    async def is_available(self) -> bool: ...
-    async def install(self) -> None: ...
