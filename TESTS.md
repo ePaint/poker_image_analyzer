@@ -150,3 +150,35 @@ Located in `tests/images/`:
 | `test_position_to_seat` | Converts position names to seat numbers |
 | `test_position_to_seat_with_custom_mapping` | Uses custom mapping when provided |
 | `test_position_to_seat_ignores_unknown_positions` | Skips positions not in mapping |
+
+### TestIntegration (hand_history)
+
+| Test | Purpose |
+|------|---------|
+| `test_full_conversion_workflow` | End-to-end test: parse, map seats, convert |
+| `test_write_converted_and_skipped` | Tests file output for both success and failure cases |
+
+## tests/test_image_analyzer.py (additions)
+
+### TestHandInfoRegion
+
+| Test | Purpose |
+|------|---------|
+| `test_region_exists` | Verifies HAND_INFO_REGION is defined |
+| `test_region_position` | Verifies region coordinates (0, 0, 350, 25) |
+
+### TestExtractHandNumber
+
+| Test | Purpose |
+|------|---------|
+| `test_file_not_found` | FileNotFoundError for missing files |
+| `test_extracts_hand_number` | Extracts OM number from LLM response |
+| `test_returns_none_for_no_match` | Returns None when no #OM pattern found |
+| `test_extracts_from_longer_text` | Extracts OM number from text with other content |
+
+## Test Fixtures
+
+Located in `tests/fixtures/`:
+- `sample_hands.txt` - Two hands from PLO-5Gold5 table for integration testing
+- `sample_screenshot.png` - Screenshot matching hand #OM262735460
+- `expected_results.toml` - Expected OCR results for the fixture screenshot

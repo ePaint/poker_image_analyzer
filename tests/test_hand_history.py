@@ -4,6 +4,8 @@ from dataclasses import FrozenInstanceError
 from datetime import datetime
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from unittest.mock import patch, MagicMock
+import sys
 
 from hand_history import (
     HandHistory,
@@ -19,6 +21,9 @@ from hand_history import (
     position_to_seat,
     DEFAULT_SEAT_MAPPING,
 )
+
+TESTS_DIR = Path(__file__).parent
+FIXTURES_DIR = TESTS_DIR / "fixtures"
 
 
 SAMPLE_HAND = """Poker Hand #OM262668465: PLO-5 ($5/$10) - 2025/12/21 15:09:46
@@ -298,3 +303,91 @@ class TestSeatMapping:
         position_names = {"unknown_position": "Player"}
         result = position_to_seat(position_names)
         assert result == {}
+
+
+@pytest.fixture
+def mock_anthropic():
+    """Fixture to mock the anthropic module."""
+    mock_module = MagicMock()
+    mock_client = MagicMock()
+    mock_module.Anthropic.return_value = mock_client
+
+    with patch.dict(sys.modules, {"anthropic": mock_module}):
+        yield mock_module, mock_client
+
+
+class TestIntegration:
+    """Integration tests for the full conversion workflow."""
+
+    def test_full_conversion_workflow(self, mock_anthropic):
+        """Test parsing hands, mapping seats, and converting."""
+        fixture_hands = FIXTURES_DIR / "sample_hands.txt"
+        if not fixture_hands.exists():
+            pytest.skip("Fixture hands not available")
+
+        hands = parse_file(fixture_hands)
+        assert len(hands) == 2
+        assert hands[0].hand_number == "OM262735460"
+
+        position_names = {
+            "bottom": "Hero",
+            "bottom_left": "RealPlayer2",
+            "top_left": "RealPlayer3",
+            "top": "RealPlayer4",
+            "top_right": "RealPlayer5",
+            "bottom_right": "RealPlayer6",
+        }
+        seat_names = position_to_seat(position_names)
+
+        assert seat_names == {
+            1: "Hero",
+            2: "RealPlayer2",
+            3: "RealPlayer3",
+            4: "RealPlayer4",
+            5: "RealPlayer5",
+            6: "RealPlayer6",
+        }
+
+        hand_data = {"OM262735460": seat_names}
+        results = convert_hands(hands, hand_data)
+
+        assert len(results) == 2
+
+        matched = results[0]
+        assert matched.success
+        assert matched.hand_number == "OM262735460"
+        assert "RealPlayer2" in matched.converted_text
+        assert "ebc711d3" not in matched.converted_text
+
+        unmatched = results[1]
+        assert not unmatched.success
+        assert "No matching screenshot" in unmatched.error
+
+    def test_write_converted_and_skipped(self):
+        """Test writing conversion results to files."""
+        fixture_hands = FIXTURES_DIR / "sample_hands.txt"
+        if not fixture_hands.exists():
+            pytest.skip("Fixture hands not available")
+
+        hands = parse_file(fixture_hands)
+
+        seat_names = {2: "Player2", 3: "Player3", 4: "Player4", 5: "Player5", 6: "Player6"}
+        hand_data = {"OM262735460": seat_names}
+        results = convert_hands(hands, hand_data)
+
+        with TemporaryDirectory() as tmpdir:
+            converted_path = Path(tmpdir) / "converted.txt"
+            skipped_path = Path(tmpdir) / "skipped.txt"
+
+            write_converted_file(results, converted_path)
+            write_skipped_file(results, skipped_path)
+
+            assert converted_path.exists()
+            converted_content = converted_path.read_text()
+            assert "Player2" in converted_content
+            assert "OM262735460" in converted_content
+
+            assert skipped_path.exists()
+            skipped_content = skipped_path.read_text()
+            assert "OM262735456" in skipped_content
+            assert "No matching screenshot" in skipped_content

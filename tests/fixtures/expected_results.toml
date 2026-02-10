@@ -1,0 +1,16 @@
+# Expected OCR results for sample_screenshot.png
+# Hand #OM262735460 from PLO-5Gold5 table
+
+[sample_screenshot]
+hand_number = "OM262735460"
+
+# Player names visible in screenshot (mapped to seats)
+# These are the REAL names that would be extracted by OCR
+# The hand history has encrypted IDs that should be replaced with these
+[sample_screenshot.positions]
+bottom = "Hero"
+bottom_left = "ebc711d3_REAL"   # Seat 2: ebc711d3 in hand history
+top_left = "cf5644ae_REAL"      # Seat 3: cf5644ae in hand history
+top = "fcda1095_REAL"           # Seat 4: fcda1095 in hand history
+top_right = "ef2e01a4_REAL"     # Seat 5: ef2e01a4 in hand history
+bottom_right = "b716fae0_REAL"  # Seat 6: b716fae0 in hand history

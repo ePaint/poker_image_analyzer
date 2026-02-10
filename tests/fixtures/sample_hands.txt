@@ -1,0 +1,80 @@
+Poker Hand #OM262735460: PLO-5 ($2/$5) - 2025/12/22 05:41:15
+Table 'PLO-5Gold5' 6-max Seat #5 is the button
+Seat 1: Hero ($500 in chips)
+Seat 2: ebc711d3 ($1,106 in chips)
+Seat 3: cf5644ae ($580.02 in chips)
+Seat 4: fcda1095 ($634.61 in chips)
+Seat 5: ef2e01a4 ($618.02 in chips)
+Seat 6: b716fae0 ($107.32 in chips)
+b716fae0: posts small blind $2
+Hero: posts big blind $5
+*** HOLE CARDS ***
+Dealt to Hero [Kd Qc 6s Qd Kh]
+Dealt to ebc711d3
+Dealt to cf5644ae
+Dealt to fcda1095
+Dealt to ef2e01a4
+Dealt to b716fae0
+ebc711d3: raises $12 to $17
+cf5644ae: folds
+fcda1095: folds
+ef2e01a4: folds
+b716fae0: folds
+Hero: calls $12
+*** FLOP *** [Ks 5c 3h]
+Hero: checks
+ebc711d3: checks
+*** TURN *** [Ks 5c 3h] [7h]
+Hero: bets $27.36
+ebc711d3: calls $27.36
+*** RIVER *** [Ks 5c 3h 7h] [8d]
+Hero: bets $90.72
+ebc711d3: calls $90.72
+Hero: shows [Kd Qc 6s Qd Kh] (three of a kind, Kings)
+ebc711d3: shows [6h Th 7c Ts 8c] (two pair, Eights and Sevens)
+*** SHOWDOWN ***
+Hero collected $259.66 from pot
+*** SUMMARY ***
+Total pot $272.16 | Rake $7.5 | Jackpot $5 | Bingo $0 | Fortune $0 | Tax $0
+Board [Ks 5c 3h 7h 8d]
+Seat 1: Hero (big blind) showed [Kd Qc 6s Qd Kh] and won ($259.66) with three of a kind, Kings
+Seat 2: ebc711d3 showed [6h Th 7c Ts 8c] and lost with two pair, Eights and Sevens
+Seat 3: cf5644ae folded before Flop (didn't bet)
+Seat 4: fcda1095 folded before Flop (didn't bet)
+Seat 5: ef2e01a4 (button) folded before Flop (didn't bet)
+Seat 6: b716fae0 (small blind) folded before Flop
+
+
+Poker Hand #OM262735456: PLO-5 ($2/$5) - 2025/12/22 05:40:44
+Table 'PLO-5Gold5' 6-max Seat #4 is the button
+Seat 1: Hero ($500 in chips)
+Seat 2: ebc711d3 ($1,106 in chips)
+Seat 3: cf5644ae ($580.02 in chips)
+Seat 4: fcda1095 ($634.61 in chips)
+Seat 5: ef2e01a4 ($618.02 in chips)
+Seat 6: b716fae0 ($109.32 in chips)
+ef2e01a4: posts small blind $2
+b716fae0: posts big blind $5
+*** HOLE CARDS ***
+Dealt to Hero [8c 9h 4s Qh Tc]
+Dealt to ebc711d3
+Dealt to cf5644ae
+Dealt to fcda1095
+Dealt to ef2e01a4
+Dealt to b716fae0
+Hero: folds
+ebc711d3: folds
+cf5644ae: folds
+fcda1095: folds
+ef2e01a4: folds
+Uncalled bet ($3) returned to b716fae0
+*** SHOWDOWN ***
+b716fae0 collected $7 from pot
+*** SUMMARY ***
+Total pot $7 | Rake $0 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Seat 1: Hero folded before Flop (didn't bet)
+Seat 2: ebc711d3 folded before Flop (didn't bet)
+Seat 3: cf5644ae folded before Flop (didn't bet)
+Seat 4: fcda1095 (button) folded before Flop (didn't bet)
+Seat 5: ef2e01a4 (small blind) folded before Flop
+Seat 6: b716fae0 (big blind) collected ($7)
