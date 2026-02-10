@@ -106,6 +106,11 @@ FEWSHOT_ZERO_B64: str  # Base64-encoded crop of "H0T M0USE!" (0 vs O)
 FEWSHOT_ZERO_NAME: str = "H0T M0USE!"
 FEWSHOT_I_VS_L_B64: str  # Base64-encoded crop of "jivr31" (i vs l)
 FEWSHOT_I_VS_L_NAME: str = "jivr31"
+FEWSHOT_ZERO_ALT_B64: str  # Alternative crop of "H0T M0USE!" (different lighting)
+FEWSHOT_ZERO_ALT_NAME: str = "H0T M0USE!"
+
+# Post-processing corrections for known OCR misreadings
+KNOWN_CORRECTIONS: dict[str, str] = {"GY0KER_AA": "GYOKER_AA"}
 ```
 
 ### Functions
