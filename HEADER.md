@@ -104,6 +104,9 @@ FEWSHOT_ZERO_ALT_NAME: str = "H0T M0USE!"
 # Default player regions for GGPoker 6-max
 DEFAULT_REGIONS: tuple[PlayerRegion, ...]
 
+# Hand info region for extracting hand number
+HAND_INFO_REGION: PlayerRegion  # Top-left region (0, 0, 350, 25)
+
 # Detection pixels (at respective base widths)
 GGPOKER_DETECTION_PIXEL: tuple[int, int] = (702, 64)  # 800px base
 GGPOKER_COLOR_BGR: tuple[int, int, int] = (6, 15, 219)
@@ -212,6 +215,20 @@ def analyze_screenshots_batch(
     provider: ProviderName = "anthropic",
     model: str | None = None,
 ) -> list[dict[str, str]]
+
+def extract_hand_number(
+    image: np.ndarray,
+    api_key: str | None = None,
+    provider: ProviderName = "anthropic",
+    model: str | None = None,
+) -> str | None
+
+def extract_hand_number_from_file(
+    image_path: str | Path,
+    api_key: str | None = None,
+    provider: ProviderName = "anthropic",
+    model: str | None = None,
+) -> str | None
 ```
 
 ### Private Functions
@@ -253,7 +270,173 @@ from image_analyzer.analyzer import (
     analyze_screenshots_batch,
     analyze_image,
     detect_table_type,
+    extract_hand_number,
+    extract_hand_number_from_file,
     DEFAULT_REGIONS,
 )
+from image_analyzer.constants import HAND_INFO_REGION
 from image_analyzer.llm import LLMProvider, ProviderName, get_provider
+```
+
+## hand_history/parser.py
+
+### Constants
+
+```python
+HAND_HEADER_PATTERN: re.Pattern  # Matches "Poker Hand #OMxxx: ..."
+TABLE_PATTERN: re.Pattern  # Matches "Table 'name' 6-max ..."
+SEAT_PATTERN: re.Pattern  # Matches "Seat N: player ($xxx in chips)"
+```
+
+### Data Classes
+
+```python
+@dataclass(frozen=True)
+class HandHistory:
+    hand_number: str           # "OM262668465"
+    table_name: str            # "PLO-5Platinum1"
+    timestamp: datetime
+    seats: dict[int, str]      # {1: "Hero", 2: "b3f8e036", ...}
+    raw_text: str              # Original text for replacement
+
+    def get_player_at_seat(self, seat: int) -> str | None
+    def get_seat_for_player(self, player: str) -> int | None
+```
+
+### Functions
+
+```python
+def parse_hand(text: str) -> HandHistory | None
+
+def parse_file(path: Path) -> list[HandHistory]
+
+def find_hand_by_number(hands: list[HandHistory], hand_number: str) -> HandHistory | None
+```
+
+## hand_history/converter.py
+
+### Data Classes
+
+```python
+@dataclass
+class ConversionResult:
+    hand_number: str
+    success: bool
+    original_text: str
+    converted_text: str | None = None
+    error: str | None = None
+    replacements: dict[str, str] = field(default_factory=dict)
+```
+
+### Functions
+
+```python
+def convert_hand(
+    hand: HandHistory,
+    seat_to_name: dict[int, str],
+) -> ConversionResult
+
+def convert_hands(
+    hands: list[HandHistory],
+    hand_number_to_seats: dict[str, dict[int, str]],
+) -> list[ConversionResult]
+
+def write_converted_file(
+    results: list[ConversionResult],
+    output_path: Path,
+) -> None
+
+def write_skipped_file(
+    results: list[ConversionResult],
+    output_path: Path,
+) -> None
+```
+
+## hand_history/seat_mapping.toml
+
+```toml
+[seats]
+bottom = 1        # Hero position
+bottom_left = 2
+top_left = 3
+top = 4
+top_right = 5
+bottom_right = 6
+```
+
+## hand_history/__init__.py (Public API)
+
+### Constants
+
+```python
+DEFAULT_SEAT_MAPPING: dict[str, int] = {
+    "bottom": 1,
+    "bottom_left": 2,
+    "top_left": 3,
+    "top": 4,
+    "top_right": 5,
+    "bottom_right": 6,
+}
+```
+
+### Functions
+
+```python
+def load_seat_mapping(path: Path | None = None) -> dict[str, int]
+
+def position_to_seat(
+    position_names: dict[str, str],
+    seat_mapping: dict[str, int] | None = None,
+) -> dict[int, str]
+```
+
+### Exports
+
+```python
+from hand_history.parser import (
+    HandHistory,
+    parse_hand,
+    parse_file,
+    find_hand_by_number,
+)
+from hand_history.converter import (
+    ConversionResult,
+    convert_hand,
+    convert_hands,
+    write_converted_file,
+    write_skipped_file,
+)
+```
+
+## convert.py (CLI Entry Point)
+
+### Functions
+
+```python
+def process_screenshots(
+    screenshots_dir: Path,
+    api_key: str | None = None,
+) -> dict[str, dict[int, str]]
+
+def process_hands(
+    hands_dir: Path,
+    hand_data: dict[str, dict[int, str]],
+    output_dir: Path,
+) -> tuple[int, int]
+
+def main(
+    hands_dir: Path,
+    screenshots_dir: Path,
+    output_dir: Path,
+    api_key: str | None = None,
+) -> int
+```
+
+### CLI Arguments
+
+```
+--hands       Directory containing hand history files (default: input/hands)
+--screenshots Directory containing screenshot files (default: input/screenshots)
+--output      Output directory (default: output)
+--api-key     API key for LLM provider (uses ANTHROPIC_API_KEY env var if not set)
 ```

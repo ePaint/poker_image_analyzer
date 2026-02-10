@@ -5,12 +5,15 @@ import cv2
 import numpy as np
 from PIL import Image, ImageEnhance
 
+import re
+
 from image_analyzer.constants import (
     GGPOKER_DETECTION_PIXEL, GGPOKER_COLOR_BGR, DEFAULT_REGIONS,
     NATURAL8_DETECTION_PIXEL, NATURAL8_COLOR_BGR,
     FEWSHOT_ZERO_B64, FEWSHOT_ZERO_NAME,
     FEWSHOT_I_VS_L_B64, FEWSHOT_I_VS_L_NAME,
     FEWSHOT_ZERO_ALT_B64, FEWSHOT_ZERO_ALT_NAME,
+    HAND_INFO_REGION,
     load_corrections,
 )
 from image_analyzer.models import PlayerRegion, BASE_WIDTH, NATURAL8_BASE_WIDTH, NATURAL8_5MAX_REGIONS
@@ -305,3 +308,81 @@ def analyze_screenshots_batch(
         results.append(image_result)
 
     return results
+
+
+HAND_NUMBER_PATTERN = re.compile(r"#(OM\d+)")
+
+
+def extract_hand_number(
+    image: np.ndarray,
+    api_key: str | None = None,
+    provider: ProviderName = "anthropic",
+    model: str | None = None,
+) -> str | None:
+    """Extract hand number from top-left region of screenshot.
+
+    Args:
+        image: BGR numpy array (from cv2.imread)
+        api_key: API key (uses provider-specific env var if None)
+        provider: LLM provider name
+        model: Model name (uses provider default if None)
+
+    Returns:
+        Hand number (e.g., "OM262668465") or None if not found
+    """
+    image_width = image.shape[1]
+    region = HAND_INFO_REGION.scale(image_width)
+
+    crop = image[
+        region.y:region.y + region.height,
+        region.x:region.x + region.width
+    ]
+    crop_rgb = cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)
+    pil_image = Image.fromarray(crop_rgb)
+    enhanced = _enhance_crop(pil_image)
+
+    llm = get_provider(provider, api_key, model)
+    prompt = """Read the text in this image. It shows hand information like:
+"HH PL PLO-5 $2 / $5 - #OM262843903"
+
+Output ONLY the hand number starting with #OM, nothing else.
+Example: #OM262843903"""
+
+    results = llm.call(enhanced, 1, [], prompt)
+    if not results:
+        return None
+
+    text = results[0]
+    match = HAND_NUMBER_PATTERN.search(text)
+    if match:
+        return match.group(1)
+
+    return None
+
+
+def extract_hand_number_from_file(
+    image_path: str | Path,
+    api_key: str | None = None,
+    provider: ProviderName = "anthropic",
+    model: str | None = None,
+) -> str | None:
+    """Extract hand number from screenshot file.
+
+    Args:
+        image_path: Path to the image file
+        api_key: API key (uses provider-specific env var if None)
+        provider: LLM provider name
+        model: Model name (uses provider default if None)
+
+    Returns:
+        Hand number (e.g., "OM262668465") or None if not found
+    """
+    path = Path(image_path)
+    if not path.exists():
+        raise FileNotFoundError(f"Image not found: {path}")
+
+    image = cv2.imread(str(path))
+    if image is None:
+        raise ValueError(f"Could not load image: {path}")
+
+    return extract_hand_number(image, api_key, provider, model)

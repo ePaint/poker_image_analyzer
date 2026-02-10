@@ -75,3 +75,78 @@
 Located in `tests/images/`:
 - testscreen1.png through testscreen7.png
 - All from GGPoker 6-max PLO-5 tables
+
+## tests/test_hand_history.py
+
+### TestParseHand
+
+| Test | Purpose |
+|------|---------|
+| `test_parses_hand_number` | Extracts hand number from header line |
+| `test_parses_table_name` | Extracts table name from Table line |
+| `test_parses_timestamp` | Parses timestamp into datetime object |
+| `test_parses_seats` | Extracts seat number to player name mapping |
+| `test_stores_raw_text` | Preserves original hand text for replacement |
+| `test_returns_none_for_invalid_header` | Returns None for non-hand text |
+| `test_returns_none_for_empty_string` | Returns None for empty input |
+| `test_returns_none_for_missing_table` | Returns None when Table line missing |
+
+### TestHandHistory
+
+| Test | Purpose |
+|------|---------|
+| `test_is_immutable` | Verifies HandHistory is frozen dataclass |
+| `test_get_player_at_seat` | Helper method returns player at seat or None |
+| `test_get_seat_for_player` | Helper method returns seat for player or None |
+
+### TestParseFile
+
+| Test | Purpose |
+|------|---------|
+| `test_parses_multiple_hands` | Splits file into multiple hands correctly |
+| `test_raises_for_missing_file` | FileNotFoundError for nonexistent path |
+| `test_handles_empty_file` | Returns empty list for empty file |
+
+### TestFindHandByNumber
+
+| Test | Purpose |
+|------|---------|
+| `test_finds_existing_hand` | Locates hand by number in list |
+| `test_returns_none_for_missing` | Returns None when hand not found |
+| `test_handles_empty_list` | Returns None for empty hands list |
+
+### TestConvertHand
+
+| Test | Purpose |
+|------|---------|
+| `test_replaces_encrypted_ids` | Replaces encrypted IDs with real names |
+| `test_preserves_hero` | Does not replace "Hero" player name |
+| `test_skips_empty_names` | Does not replace with "EMPTY" |
+| `test_tracks_replacements` | Records which IDs were replaced |
+| `test_replaces_all_occurrences` | Replaces ID everywhere in hand text |
+
+### TestConvertHands
+
+| Test | Purpose |
+|------|---------|
+| `test_converts_matching_hands` | Converts hands with matching screenshot data |
+| `test_marks_unmatched_as_failed` | Marks hands without screenshot as failed |
+
+### TestWriteFiles
+
+| Test | Purpose |
+|------|---------|
+| `test_write_converted_file` | Writes successful conversions to file |
+| `test_write_converted_skips_failed` | Does not create file for all-failed results |
+| `test_write_skipped_file` | Writes failed hands with error messages |
+
+### TestSeatMapping
+
+| Test | Purpose |
+|------|---------|
+| `test_default_seat_mapping` | Verifies DEFAULT_SEAT_MAPPING values |
+| `test_load_seat_mapping_returns_default_for_missing_file` | Uses defaults when config missing |
+| `test_load_seat_mapping_from_file` | Loads custom mapping from TOML |
+| `test_position_to_seat` | Converts position names to seat numbers |
+| `test_position_to_seat_with_custom_mapping` | Uses custom mapping when provided |
+| `test_position_to_seat_ignores_unknown_positions` | Skips positions not in mapping |
