@@ -23,4 +23,3 @@ settings.toml
 
 # Temporary files, large data, and scratch work
 temp/
-image_analyzer/bin/

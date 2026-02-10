@@ -47,43 +47,37 @@ oitnow2/
 ├── HEADER.md           # Class/method signatures
 ├── TESTS.md            # Test documentation
 ├── pyproject.toml      # UV/Python project config
-├── image_analyzer/     # Main OCR package
+├── convert.py          # CLI tool for hand history de-anonymization
+├── e2e_test.py         # E2E test script for manual validation
+├── image_analyzer/     # Main OCR package (uses Claude Haiku API)
 │   ├── __init__.py     # Public API exports
-│   ├── analyzer.py     # analyze_image, analyze_screenshot
-│   ├── bin/            # External binaries (gitignored)
-│   │   └── tesseract/  # Tesseract OCR installation
+│   ├── analyzer.py     # analyze_image, analyze_screenshot, extract_hand_number
+│   ├── constants.py    # Regions, detection pixels, few-shot examples
 │   ├── models/
 │   │   ├── __init__.py
 │   │   ├── PlayerRegion.py
-│   │   └── OCRResult.py
-│   ├── engines/
-│   │   ├── __init__.py
-│   │   ├── protocol.py      # OCREngine Protocol
-│   │   └── easyocr_engine.py
-│   └── upscalers/
-│       ├── __init__.py
-│       └── clahe.py
-├── settings/           # Configuration and engine management
+│   │   └── ScreenshotFilename.py
+│   └── llm/
+│       ├── __init__.py      # get_provider factory
+│       ├── protocol.py      # LLMProvider Protocol
+│       └── anthropic.py     # Claude Haiku implementation
+├── hand_history/       # Hand history de-anonymizer
+│   ├── __init__.py     # Public API, seat mapping
+│   ├── parser.py       # HandHistory dataclass, parse functions
+│   ├── converter.py    # ConversionResult, convert functions
+│   └── seat_mapping.toml  # Configurable position -> seat mapping
+├── settings/           # Configuration
 │   ├── __init__.py     # Public API exports
-│   ├── config.py       # Settings load/save, get_engine factory
-│   ├── engine_manager.py  # Async engine availability/install API
-│   ├── models/
-│   │   ├── __init__.py
-│   │   └── EngineName.py  # EngineName enum
-│   └── installers/
-│       ├── __init__.py
-│       ├── protocol.py    # EngineInstaller Protocol
-│       ├── easyocr.py     # EasyOCR installer
-│       └── tesseract.py   # Tesseract installer
-├── temp/               # Downloaded installers (gitignored)
+│   └── config.py       # Settings load/save
+├── temp/               # Scratch files, large data (gitignored)
 └── tests/
     ├── __init__.py
     ├── test_image_analyzer.py
+    ├── test_hand_history.py
     ├── test_settings.py
-    ├── test_engine_manager.py
-    ├── test_installers.py
     ├── testscreenresults.toml  # DO NOT MODIFY
-    └── images/         # Test screenshots
+    ├── images/         # Test screenshots (testscreen1-7.png)
+    └── fixtures/       # Integration test fixtures
 ```
 
 ## Architecture Principles
@@ -108,20 +102,31 @@ cd D:\MEDIA\DOCUMENTOS\ThatExcelGuy\TEG_Python\oitnow2 && uv run pytest --cov=im
 # Run specific test
 cd D:\MEDIA\DOCUMENTOS\ThatExcelGuy\TEG_Python\oitnow2 && uv run pytest tests/test_image_analyzer.py::test_function_name
 
-# Run standalone scripts (PYTHONPATH=. required for local imports)
-cd D:\MEDIA\DOCUMENTOS\ThatExcelGuy\TEG_Python\oitnow2 && PYTHONPATH=. uv run python tests/test_combinations_report.py
+# Run hand history converter
+cd D:\MEDIA\DOCUMENTOS\ThatExcelGuy\TEG_Python\oitnow2 && uv run python convert.py --hands input/hands --screenshots input/screenshots --output output/
 ```
 
 ## Module Overview
 
 ### image_analyzer (package)
-Extracts player names from GGPoker 6-max PLO-5 table screenshots using pluggable OCR engines.
+Extracts player names from GGPoker/Natural8 table screenshots using Claude Haiku API.
 
 **Public API:**
 - `analyze_screenshot()` - Analyze image file, returns dict of position -> player name
 - `analyze_image()` - Analyze numpy array image
+- `analyze_screenshots_batch()` - Analyze multiple screenshots in one API call
+- `extract_hand_number()` - Extract hand number from screenshot
+- `detect_table_type()` - Auto-detect GGPoker vs Natural8 table
 - `PlayerRegion` - Dataclass for region definition
-- `OCRResult` - Dataclass for OCR detection results
-- `EasyOCREngine` - Default OCR engine implementation
-- `OCREngine` - Protocol for custom OCR engines
+- `ScreenshotFilename` - Parser for GGPoker screenshot filenames
 - `DEFAULT_REGIONS` - Standard 6-max table regions
+
+### hand_history (package)
+De-anonymizes GGPoker hand histories by replacing encrypted player IDs with real names from screenshots.
+
+**Public API:**
+- `parse_file()` - Parse hand history file into HandHistory objects
+- `convert_hands()` - Convert hands using screenshot OCR data
+- `position_to_seat()` - Map screenshot positions to seat numbers
+- `HandHistory` - Dataclass for parsed hand data
+- `ConversionResult` - Dataclass for conversion results
