@@ -11,6 +11,7 @@ from image_analyzer.analyzer import (
     detect_table_type,
     DEFAULT_REGIONS,
 )
+from image_analyzer.llm import LLMProvider, ProviderName, get_provider
 
 __all__ = [
     "analyze_screenshot",
@@ -22,4 +23,7 @@ __all__ = [
     "DEFAULT_REGIONS",
     "NATURAL8_5MAX_REGIONS",
     "NATURAL8_BASE_WIDTH",
+    "LLMProvider",
+    "ProviderName",
+    "get_provider",
 ]

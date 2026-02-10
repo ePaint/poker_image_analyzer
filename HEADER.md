@@ -88,19 +88,11 @@ class ScreenshotFilename:
     def datetime(self) -> datetime
 ```
 
-## image_analyzer/analyzer.py
+## image_analyzer/constants.py
 
 ### Constants
 
 ```python
-DEFAULT_REGIONS: tuple[PlayerRegion, ...]
-
-# Detection pixels (at respective base widths)
-GGPOKER_DETECTION_PIXEL: tuple[int, int] = (702, 64)  # 800px base
-GGPOKER_COLOR_BGR: tuple[int, int, int] = (6, 15, 219)
-NATURAL8_DETECTION_PIXEL: tuple[int, int] = (880, 72)  # 960px base
-NATURAL8_COLOR_BGR: tuple[int, int, int] = (145, 39, 140)
-
 # Few-shot learning references for character disambiguation
 FEWSHOT_ZERO_B64: str  # Base64-encoded crop of "H0T M0USE!" (0 vs O)
 FEWSHOT_ZERO_NAME: str = "H0T M0USE!"
@@ -109,9 +101,86 @@ FEWSHOT_I_VS_L_NAME: str = "jivr31"
 FEWSHOT_ZERO_ALT_B64: str  # Alternative crop of "H0T M0USE!" (different lighting)
 FEWSHOT_ZERO_ALT_NAME: str = "H0T M0USE!"
 
-# Post-processing corrections for known OCR misreadings
-KNOWN_CORRECTIONS: dict[str, str] = {"GY0KER_AA": "GYOKER_AA"}
+# Default player regions for GGPoker 6-max
+DEFAULT_REGIONS: tuple[PlayerRegion, ...]
+
+# Detection pixels (at respective base widths)
+GGPOKER_DETECTION_PIXEL: tuple[int, int] = (702, 64)  # 800px base
+GGPOKER_COLOR_BGR: tuple[int, int, int] = (6, 15, 219)
+NATURAL8_DETECTION_PIXEL: tuple[int, int] = (880, 72)  # 960px base
+NATURAL8_COLOR_BGR: tuple[int, int, int] = (145, 39, 140)
 ```
+
+### Functions
+
+```python
+def load_corrections() -> dict[str, str]
+```
+
+## image_analyzer/corrections.toml
+
+TOML file containing known OCR misreadings and their corrections.
+
+```toml
+[corrections]
+"GY0KER_AA" = "GYOKER_AA"
+```
+
+## image_analyzer/llm/protocol.py
+
+### Protocols
+
+```python
+class LLMProvider(Protocol):
+    def call(
+        self,
+        image: Image.Image,
+        num_crops: int,
+        few_shot_examples: list[tuple[str, str, str]],
+        prompt: str,
+    ) -> list[str]
+```
+
+## image_analyzer/llm/anthropic.py
+
+### Classes
+
+```python
+class AnthropicProvider:
+    def __init__(
+        self,
+        api_key: str | None = None,
+        model: str = "claude-haiku-4-5-20251001",
+    )
+
+    def call(
+        self,
+        image: Image.Image,
+        num_crops: int,
+        few_shot_examples: list[tuple[str, str, str]],
+        prompt: str,
+    ) -> list[str]
+```
+
+## image_analyzer/llm/__init__.py
+
+### Types
+
+```python
+ProviderName = Literal["anthropic"]
+```
+
+### Functions
+
+```python
+def get_provider(
+    name: ProviderName = "anthropic",
+    api_key: str | None = None,
+    model: str | None = None,
+) -> LLMProvider
+```
+
+## image_analyzer/analyzer.py
 
 ### Functions
 
@@ -125,25 +194,29 @@ def analyze_image(
     image: np.ndarray,
     regions: tuple[PlayerRegion, ...] = DEFAULT_REGIONS,
     api_key: str | None = None,
+    provider: ProviderName = "anthropic",
+    model: str | None = None,
 ) -> dict[str, str]
 
 def analyze_screenshot(
     image_path: str | Path,
     regions: tuple[PlayerRegion, ...] | None = None,  # None = auto-detect
     api_key: str | None = None,
+    provider: ProviderName = "anthropic",
+    model: str | None = None,
 ) -> dict[str, str]
 
 def analyze_screenshots_batch(
     image_paths: list[str | Path],
     api_key: str | None = None,
+    provider: ProviderName = "anthropic",
+    model: str | None = None,
 ) -> list[dict[str, str]]
 ```
 
 ### Private Functions
 
 ```python
-def _image_to_base64(image: Image.Image) -> str
-
 def _enhance_crop(image: Image.Image) -> Image.Image
 
 def _extract_crops(
@@ -153,11 +226,16 @@ def _extract_crops(
     start_index: int = 0,
 ) -> tuple[Image.Image, list[tuple[str, int]]]
 
-def _call_anthropic(
+def _build_prompt(num_crops: int) -> str
+
+def _get_few_shot_examples() -> list[tuple[str, str, str]]
+
+def _call_llm(
     image: Image.Image,
     num_crops: int,
     api_key: str | None = None,
-    model: str = "claude-sonnet-4-20250514",
+    provider: ProviderName = "anthropic",
+    model: str | None = None,
 ) -> list[str]
 ```
 
@@ -177,4 +255,5 @@ from image_analyzer.analyzer import (
     detect_table_type,
     DEFAULT_REGIONS,
 )
+from image_analyzer.llm import LLMProvider, ProviderName, get_provider
 ```
