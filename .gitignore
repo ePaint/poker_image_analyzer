@@ -12,3 +12,42 @@ wheels/
 # External binaries and temporary files
 image_analyzer/bin/
 temp/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+
+# Claude Code local files
+.claude/
+
+# Large data files (not for version control)
+Screenshots_GG/
+Screenshots_GG.zip
+Hands 1/
+
+# Secrets and local config
+.env
+settings.toml
+
+# Test artifacts and debug output
+tests/images/random_sample/
+tests/images/debug_crops/
+tests/images/combination_results/
+tests/images/ggpoker_800/
+tests/*_results.toml
+tests/combination_report.html
+
+# Miscellaneous
+*.docx
+*.csv
+*.zip
+nul
+testscreen_dots.png
+natural8_dots.png
+natural8_dots.txt
+test_crop_combined.png
+testscreenresults_backup.toml
+
+# Extracted APK resources
+ggpoker/
