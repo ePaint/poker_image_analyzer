@@ -1,149 +1,109 @@
 # Last State - Continue From Here
 
-## Current Task
+## Current Status
 
-Implement PySide6 GUI for the Hand History De-anonymizer tool.
+**Application is fully functional** with GUI and packaging support.
 
-## What's Done
+## What's Complete
 
-1. **Backend is complete:**
-   - `image_analyzer/` - OCR using Claude Haiku API
-   - `hand_history/` - Parsing and conversion logic
-   - `convert.py` - Working CLI tool
-   - All 72 tests pass
+### Core Backend
+- `image_analyzer/` - OCR using Claude Haiku API with few-shot learning
+- `hand_history/` - Parsing, conversion, seat mapping with TableType Literal
+- `image_analyzer/ocr_dump/` - Versioned OCR dump format (v1, v2)
+- `settings/` - Cross-platform settings storage
+- `convert.py` - CLI tool for batch processing
 
-## Plan Summary
+### GUI (PySide6)
+- `gui/app.py` - Entry point with dark theme
+- `gui/main_window.py` - Main window with drag-drop zones
+- `gui/drop_zone.py` - Drag-and-drop widget (folder or file mode)
+- `gui/file_list.py` - File preview with validation
+- `gui/workers.py` - Background workers with rate limiting
+- `gui/settings_dialog.py` - API key, seat mapping, corrections
 
-Create a `gui/` package with PySide6:
+### Packaging
+- `HandHistoryDeanonymizer.spec` - PyInstaller spec (macOS .app + Windows .exe)
+- `installer.iss` - Inno Setup script for Windows installer
+- `app.py` - Entry point for PyInstaller
 
-```
-gui/
-├── __init__.py        # Package exports
-├── app.py             # QApplication entry point, dark theme
-├── main_window.py     # Main window with drag-drop zones
-├── settings_dialog.py # Modal dialog for API key configuration
-├── file_list.py       # QListWidget subclass for file preview
-├── workers.py         # QThread workers for background processing
-└── drop_zone.py       # Drag-and-drop widget for folders
-```
+### Tests
+- 105 tests passing
+- Unit tests for all modules
+- Integration tests with real OCR dump fixtures (v1 and v2)
 
-**Key decisions:**
-- PySide6 (LGPL license, same API as PyQt6)
-- Dark theme (follows system preference, with manual override)
-- Drag-and-drop folder input + Browse buttons as fallback
-- File list preview before processing
-- Settings dialog for API key (separate from main window)
-- QThread workers for API calls (non-blocking UI)
-- Cancel button support
-- pytest-qt for widget testing
-
-## Files to Create/Modify
-
-| File | Action |
-|------|--------|
-| `gui/__init__.py` | Create - package exports |
-| `gui/app.py` | Create - entry point, dark theme setup |
-| `gui/main_window.py` | Create - main UI with drop zones |
-| `gui/settings_dialog.py` | Create - API key dialog |
-| `gui/file_list.py` | Create - file preview list widget |
-| `gui/drop_zone.py` | Create - drag-and-drop widget |
-| `gui/workers.py` | Create - ScreenshotWorker, ConversionWorker |
-| `pyproject.toml` | Modify - add PySide6>=6.6.0, pytest-qt |
-| `tests/test_gui.py` | Create - worker and widget tests |
-
-## UI Layout
+## Project Structure
 
 ```
-+----------------------------------------------------------+
-| File  Settings  Help                                     |
-+----------------------------------------------------------+
-| +------------------------+  +------------------------+   |
-| |   Drop Screenshots     |  |     Drop Hand Files    |   |
-| |        Folder          |  |        Folder          |   |
-| |    (or click Browse)   |  |    (or click Browse)   |   |
-| +------------------------+  +------------------------+   |
-|                                                          |
-| Screenshots (12 files)       Hand Files (3 files)        |
-| +------------------------+  +------------------------+   |
-| | GGPoker_2024-02-08... |  | HH20240208_OM26266... |   |
-| | GGPoker_2024-02-08... |  | HH20240209_OM26267... |   |
-| | GGPoker_2024-02-08... |  | HH20240210_OM26268... |   |
-| +------------------------+  +------------------------+   |
-|                                                          |
-| Output: [________________________] [Browse...]           |
-+----------------------------------------------------------+
-| Progress                                                 |
-| [====================            ] 60%                   |
-| Processing screenshot 6/12: GGPoker_2024-02-08...        |
-+----------------------------------------------------------+
-| Log                                                      |
-| Hand #OM262668465: 5 players matched                     |
-| Hand #OM262668466: 6 players matched                     |
-+----------------------------------------------------------+
-|                            [Convert]  [Cancel]           |
-+----------------------------------------------------------+
+oitnow2/
+├── app.py                      # PyInstaller entry point
+├── convert.py                  # CLI tool
+├── HandHistoryDeanonymizer.spec # PyInstaller config
+├── installer.iss               # Inno Setup (Windows)
+├── gui/
+│   ├── app.py                  # QApplication, dark theme
+│   ├── main_window.py          # Main UI
+│   ├── drop_zone.py            # Drag-drop widget
+│   ├── file_list.py            # File list with refresh
+│   ├── workers.py              # ScreenshotWorker, ConversionWorker
+│   └── settings_dialog.py      # Settings tabs
+├── image_analyzer/
+│   ├── analyzer.py             # analyze_screenshot, detect_table_type
+│   ├── constants.py            # Regions, few-shot examples
+│   ├── models/                 # PlayerRegion, ScreenshotFilename
+│   ├── llm/                    # AnthropicProvider
+│   └── ocr_dump/               # v1/v2 format writers and parsers
+├── hand_history/
+│   ├── parser.py               # HandHistory dataclass
+│   ├── converter.py            # ConversionResult, convert_hands
+│   └── seat_mapping.toml       # Position -> seat config
+├── settings/
+│   └── config.py               # Cross-platform settings paths
+└── tests/
+    ├── test_gui.py
+    ├── test_hand_history.py
+    ├── test_image_analyzer.py
+    ├── test_settings.py
+    └── fixtures/integration/   # v1/v2 OCR dumps, sample hands
 ```
 
-**Settings Dialog (File > Settings or Ctrl+,):**
-```
-+----------------------------------+
-| Settings                    [X]  |
-+----------------------------------+
-| Anthropic API Key:               |
-| [****************************]   |
-| [Show] [Test Connection]         |
-|                                  |
-| [ ] Dark theme (follows system)  |
-|                                  |
-|              [Save]  [Cancel]    |
-+----------------------------------+
-```
-
-## Backend API to Use
+## Key Type Aliases
 
 ```python
-# From image_analyzer
-analyze_screenshot(image_path, api_key=None) -> dict[str, str]
-extract_hand_number_from_file(image_path, api_key=None) -> str | None
-ScreenshotFilename.is_valid(filename) -> bool
-
-# From hand_history
-parse_file(path) -> list[HandHistory]
-convert_hands(hands, hand_number_to_seats) -> list[ConversionResult]
-write_converted_file(results, output_path)
-write_skipped_file(results, output_path)
-position_to_seat(position_names, seat_mapping) -> dict[int, str]
-load_seat_mapping() -> dict[str, int]
+TableType = Literal["ggpoker", "natural8"]      # hand_history/__init__.py
+OcrDumpVersion = Literal["v1", "v2"]            # image_analyzer/ocr_dump/__init__.py
+ProviderName = Literal["anthropic"]             # image_analyzer/llm/__init__.py
 ```
-
-## Test Strategy
-
-**pytest-qt tests (tests/test_gui.py):**
-- `test_screenshot_worker_emits_progress` - Worker signals progress correctly
-- `test_screenshot_worker_cancellation` - Cancel stops processing
-- `test_conversion_worker_emits_results` - Worker returns ConversionResult
-- `test_drop_zone_accepts_folders` - Drag-drop accepts directory mimetypes
-- `test_drop_zone_rejects_files` - Drag-drop rejects individual files
-- `test_file_list_updates_on_folder_change` - List populates when folder set
-- `test_settings_dialog_saves_api_key` - API key persists to .env
-- `test_settings_dialog_masks_api_key` - Password field hides text
-- `test_convert_button_disabled_without_inputs` - Validation works
-- `test_convert_button_enabled_with_valid_inputs` - Validation works
-
-## Next Steps
-
-1. Add PySide6 and pytest-qt to pyproject.toml
-2. Run `uv sync` to install dependencies
-3. Create gui/ package files
-4. Create tests/test_gui.py
-5. Run `uv run pytest` to verify all tests pass
-6. Test manually with `uv run python -m gui.app`
-7. Update HEADER.md and TESTS.md
 
 ## Commands
 
 ```bash
-uv run pytest                  # Run all tests
-uv sync                        # Install deps after adding PySide6
-uv run python -m gui.app       # Launch GUI (after implementation)
+# Development
+uv run pytest                              # Run all tests
+uv run ruff check .                        # Linting
+uv tool run ty check                       # Type checking
+uv run python app.py                       # Launch GUI
+
+# Packaging (macOS)
+uv run pyinstaller HandHistoryDeanonymizer.spec --noconfirm
+open "dist/Hand History De-anonymizer.app"
+
+# Packaging (Windows) - run on Windows machine
+pyinstaller HandHistoryDeanonymizer.spec --noconfirm
+# Then run Inno Setup with installer.iss
 ```
+
+## Settings Paths
+
+| Platform | Location |
+|----------|----------|
+| macOS | `~/Library/Application Support/HandHistoryDeanonymizer/` |
+| Windows | `%APPDATA%\HandHistoryDeanonymizer\` |
+| Linux | `~/.config/handhistorydeanonymizer/` |
+| Development | `./settings.toml` (if exists, takes priority) |
+
+## Next Steps (If Continuing)
+
+1. **GitHub Actions** - Auto-build for macOS and Windows on push/release
+2. **App icon** - Create `.icns` (macOS) and `.ico` (Windows)
+3. **Code signing** - Sign macOS app and Windows exe for distribution
+4. **Auto-updater** - Check for updates on launch
