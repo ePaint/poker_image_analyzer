@@ -5,6 +5,9 @@ extracted from screenshots.
 """
 import tomllib
 from pathlib import Path
+from typing import Literal
+
+TableType = Literal["ggpoker", "natural8"]
 
 from hand_history.parser import (
     HandHistory,
@@ -22,53 +25,63 @@ from hand_history.converter import (
 
 _SEAT_MAPPING_PATH = Path(__file__).parent / "seat_mapping.toml"
 
-DEFAULT_SEAT_MAPPING: dict[str, int] = {
-    # GGPoker 6-max positions
-    "bottom": 1,
-    "bottom_left": 2,
-    "top_left": 3,
-    "top": 4,
-    "top_right": 5,
-    "bottom_right": 6,
-    # Natural8 5-max positions
-    "left": 2,
-    "right": 6,
+DEFAULT_SEAT_MAPPINGS: dict[str, dict[str, int]] = {
+    "ggpoker": {
+        "bottom": 1,
+        "bottom_left": 2,
+        "top_left": 3,
+        "top": 4,
+        "top_right": 5,
+        "bottom_right": 6,
+    },
+    "natural8": {
+        "bottom": 1,
+        "left": 2,
+        "top_left": 3,
+        "top_right": 5,
+        "right": 6,
+    },
 }
 
 
-def load_seat_mapping(path: Path | None = None) -> dict[str, int]:
-    """Load seat mapping from TOML configuration.
+def load_seat_mapping(table_type: TableType = "ggpoker", path: Path | None = None) -> dict[str, int]:
+    """Load seat mapping for a specific table type.
 
     Args:
+        table_type: Table type ("ggpoker" or "natural8")
         path: Path to seat_mapping.toml (uses default if None)
 
     Returns:
         Dict mapping position name to seat number
     """
     config_path = path or _SEAT_MAPPING_PATH
+    default = DEFAULT_SEAT_MAPPINGS.get(table_type, DEFAULT_SEAT_MAPPINGS["ggpoker"])
+
     if not config_path.exists():
-        return DEFAULT_SEAT_MAPPING.copy()
+        return default.copy()
 
     with open(config_path, "rb") as f:
         data = tomllib.load(f)
 
-    return data.get("seats", DEFAULT_SEAT_MAPPING.copy())
+    return data.get(table_type, default.copy())
 
 
 def position_to_seat(
     position_names: dict[str, str],
+    table_type: TableType = "ggpoker",
     seat_mapping: dict[str, int] | None = None,
 ) -> dict[int, str]:
     """Convert position-based names to seat-based names.
 
     Args:
         position_names: Dict from position name to player name (from OCR)
+        table_type: Table type ("ggpoker" or "natural8")
         seat_mapping: Position to seat number mapping (loads default if None)
 
     Returns:
         Dict from seat number to player name
     """
-    mapping = seat_mapping or load_seat_mapping()
+    mapping = seat_mapping or load_seat_mapping(table_type)
     result: dict[int, str] = {}
 
     for position, player_name in position_names.items():
@@ -80,6 +93,7 @@ def position_to_seat(
 
 
 __all__ = [
+    "TableType",
     "HandHistory",
     "ConversionResult",
     "parse_hand",
@@ -91,5 +105,5 @@ __all__ = [
     "write_skipped_file",
     "load_seat_mapping",
     "position_to_seat",
-    "DEFAULT_SEAT_MAPPING",
+    "DEFAULT_SEAT_MAPPINGS",
 ]

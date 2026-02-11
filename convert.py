@@ -6,16 +6,19 @@ from pathlib import Path
 
 from image_analyzer import (
     analyze_screenshot,
+    detect_table_type,
     ScreenshotFilename,
+    DEFAULT_REGIONS,
 )
 from hand_history import (
+    TableType,
     parse_file,
     convert_hands,
     write_converted_file,
     write_skipped_file,
     position_to_seat,
-    load_seat_mapping,
 )
+import cv2
 
 
 def process_screenshots(
@@ -32,7 +35,6 @@ def process_screenshots(
         Dict mapping hand number to seat->name mapping
     """
     result: dict[str, dict[int, str]] = {}
-    seat_mapping = load_seat_mapping()
 
     png_files = list(screenshots_dir.glob("*.png"))
     valid_files = [f for f in png_files if ScreenshotFilename.is_valid(f.name)]
@@ -44,13 +46,25 @@ def process_screenshots(
 
         try:
             parsed = ScreenshotFilename.parse(screenshot_path)
+            if not parsed:
+                print("  Error: Invalid filename format")
+                continue
+
             hand_number = f"OM{parsed.table_id}"
 
+            image = cv2.imread(str(screenshot_path))
+            if image is None:
+                print("  Error: Could not load image")
+                continue
+
+            regions = detect_table_type(image)
+            table_type: TableType = "ggpoker" if regions == DEFAULT_REGIONS else "natural8"
+
             position_names = analyze_screenshot(screenshot_path, api_key=api_key)
-            seat_names = position_to_seat(position_names, seat_mapping)
+            seat_names = position_to_seat(position_names, table_type)
 
             result[hand_number] = seat_names
-            print(f"  Hand #{hand_number}: {len(seat_names)} players")
+            print(f"  Hand #{hand_number}: {len(seat_names)} players ({table_type})")
 
         except Exception as e:
             print(f"  Error: {e}")
@@ -154,7 +168,7 @@ def main(
     print("Step 2: Converting hand histories...")
     success, failed = process_hands(hands_dir, hand_data, output_dir)
 
-    print(f"\n=== Summary ===")
+    print("\n=== Summary ===")
     print(f"Converted: {success} hands")
     print(f"Skipped:   {failed} hands")
 

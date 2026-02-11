@@ -5,7 +5,6 @@ import cv2
 import numpy as np
 from PIL import Image, ImageEnhance
 
-import re
 
 from image_analyzer.constants import (
     GGPOKER_DETECTION_PIXEL, GGPOKER_COLOR_BGR, DEFAULT_REGIONS,

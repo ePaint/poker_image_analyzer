@@ -141,8 +141,12 @@ def create_mock_anthropic_response(results: dict[str, str]) -> MagicMock:
         else:
             response_lines.append(f"[{idx}] EMPTY")
 
+    mock_content_block = MagicMock()
+    mock_content_block.type = "text"
+    mock_content_block.text = "\n".join(response_lines)
+
     mock_response = MagicMock()
-    mock_response.content = [MagicMock(text="\n".join(response_lines))]
+    mock_response.content = [mock_content_block]
     return mock_response
 
 

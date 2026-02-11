@@ -15,12 +15,12 @@ from image_analyzer import (
     DEFAULT_REGIONS,
 )
 from hand_history import (
+    TableType,
     parse_file,
     convert_hands,
     write_converted_file,
     write_skipped_file,
     position_to_seat,
-    load_seat_mapping,
 )
 
 
@@ -69,19 +69,22 @@ class ScreenshotWorker(QThread):
         """Call analyze_image with exponential backoff on rate limit errors."""
         import anthropic
 
+        last_error: anthropic.RateLimitError | None = None
         for attempt in range(self.MAX_RETRIES):
             self._wait_for_rate_limit()
             try:
                 return analyze_image(image, regions, self._api_key)
-            except anthropic.RateLimitError:
+            except anthropic.RateLimitError as e:
+                last_error = e
                 if attempt == self.MAX_RETRIES - 1:
                     raise
                 backoff = self.BASE_BACKOFF * (2 ** attempt)
                 time.sleep(backoff)
+        raise last_error or RuntimeError("No retries attempted")
 
     def _process_screenshot(
-        self, screenshot_path: Path, seat_mapping: dict
-    ) -> tuple[Path, str | None, str | None, dict | None, dict | None, str | None]:
+        self, screenshot_path: Path
+    ) -> tuple[Path, str | None, TableType | None, dict | None, dict | None, str | None]:
         """Process single screenshot in thread pool.
 
         Returns: (path, hand_number, table_type, position_names, seat_names, error)
@@ -98,10 +101,10 @@ class ScreenshotWorker(QThread):
                 return (screenshot_path, hand_number, None, None, None, "Could not load image")
 
             regions = detect_table_type(image)
-            table_type = "ggpoker" if regions == DEFAULT_REGIONS else "natural8"
+            table_type: TableType = "ggpoker" if regions == DEFAULT_REGIONS else "natural8"
 
             position_names = self._call_with_backoff(image, regions)
-            seat_names = position_to_seat(position_names, seat_mapping)
+            seat_names = position_to_seat(position_names, table_type)
 
             return (screenshot_path, hand_number, table_type, position_names, seat_names, None)
         except Exception as e:
@@ -111,7 +114,6 @@ class ScreenshotWorker(QThread):
         hand_data: dict[str, dict[int, str]] = {}
         ocr_results: list[dict] = []
         ocr_errors: list[dict] = []
-        seat_mapping = load_seat_mapping()
 
         png_files = list(self._screenshots_dir.glob("*.png"))
         valid_files = [f for f in png_files if ScreenshotFilename.is_valid(f.name)]
@@ -120,7 +122,7 @@ class ScreenshotWorker(QThread):
 
         with ThreadPoolExecutor(max_workers=self._parallel_calls) as executor:
             futures = {
-                executor.submit(self._process_screenshot, f, seat_mapping): f
+                executor.submit(self._process_screenshot, f): f
                 for f in valid_files
             }
 
@@ -206,7 +208,7 @@ class ConversionWorker(QThread):
                     write_skipped_file(results, output_path)
 
                 for r in successful:
-                    self.hand_converted.emit(r.hand_number, len(r.seat_names))
+                    self.hand_converted.emit(r.hand_number, len(r.replacements))
 
                 for r in failed:
                     self.hand_skipped.emit(r.hand_number, r.error or "Unknown error")

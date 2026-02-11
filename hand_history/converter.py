@@ -99,12 +99,12 @@ def write_converted_file(
         results: List of conversion results
         output_path: Path to write converted hands
     """
-    successful = [r for r in results if r.success and r.converted_text]
+    texts = [r.converted_text for r in results if r.success and r.converted_text]
 
-    if not successful:
+    if not texts:
         return
 
-    content = "\n\n\n".join(r.converted_text for r in successful)
+    content = "\n\n\n".join(texts)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(content, encoding="utf-8")
 

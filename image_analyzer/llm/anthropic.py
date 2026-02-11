@@ -83,7 +83,11 @@ class AnthropicProvider:
             messages=messages,
         )
 
-        return self._parse_response(response.content[0].text, num_crops)
+        content_block = response.content[0]
+        if content_block.type != "text":
+            raise ValueError(f"Unexpected response type: {content_block.type}")
+        text: str = content_block.text  # type: ignore[union-attr]
+        return self._parse_response(text, num_crops)
 
     def _parse_response(self, response_text: str, num_crops: int) -> list[str]:
         """Parse the LLM response into a list of extracted names."""

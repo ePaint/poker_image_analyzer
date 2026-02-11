@@ -1,9 +1,6 @@
 """Main application window."""
-from datetime import datetime
 from pathlib import Path
 
-import tomli_w
-from PySide6.QtCore import Qt
 from PySide6.QtGui import QAction, QKeySequence
 from PySide6.QtWidgets import (
     QMainWindow,
@@ -20,6 +17,7 @@ from PySide6.QtWidgets import (
 )
 
 from image_analyzer import ScreenshotFilename
+from image_analyzer.ocr_dump import write_ocr_dump, parse_ocr_dump
 from settings import load_settings, save_settings
 from gui.drop_zone import DropZone
 from gui.file_list import FileListWidget
@@ -36,6 +34,7 @@ class MainWindow(QMainWindow):
         self.setMinimumSize(800, 600)
 
         self._screenshots_folder: Path | None = None
+        self._ocr_dump_path: Path | None = None
         self._hands_folder: Path | None = None
         self._output_folder: Path | None = None
         self._screenshot_worker: ScreenshotWorker | None = None
@@ -70,8 +69,9 @@ class MainWindow(QMainWindow):
         layout = QVBoxLayout(central)
 
         drop_layout = QHBoxLayout()
-        self._screenshots_drop = DropZone("Screenshots")
+        self._screenshots_drop = DropZone("Screenshots", allow_file_mode=True)
         self._screenshots_drop.folder_dropped.connect(self._on_screenshots_folder_changed)
+        self._screenshots_drop.file_dropped.connect(self._on_ocr_dump_selected)
         self._hands_drop = DropZone("Hand Files")
         self._hands_drop.folder_dropped.connect(self._on_hands_folder_changed)
         drop_layout.addWidget(self._screenshots_drop)
@@ -155,8 +155,17 @@ class MainWindow(QMainWindow):
 
     def _on_screenshots_folder_changed(self, path: Path) -> None:
         self._screenshots_folder = path
+        self._ocr_dump_path = None
         self._screenshots_list.set_folder(path, "*.png")
         self._save_folder_setting("last_screenshots_folder", path)
+        self._update_convert_button()
+
+    def _on_ocr_dump_selected(self, path: Path) -> None:
+        self._ocr_dump_path = path
+        self._screenshots_folder = None
+        self._screenshots_list.clear()
+        self._screenshots_list.set_title(f"OCR Dump: {path.name}")
+        self._save_folder_setting("last_ocr_dump_file", path)
         self._update_convert_button()
 
     def _on_hands_folder_changed(self, path: Path) -> None:
@@ -182,6 +191,10 @@ class MainWindow(QMainWindow):
         screenshots = settings.get("last_screenshots_folder", "")
         if screenshots and Path(screenshots).exists():
             self._screenshots_drop._set_folder(Path(screenshots))
+
+        ocr_dump = settings.get("last_ocr_dump_file", "")
+        if ocr_dump and Path(ocr_dump).exists():
+            self._screenshots_drop.set_remembered_file(Path(ocr_dump))
 
         hands = settings.get("last_hands_folder", "")
         if hands and Path(hands).exists():
@@ -212,11 +225,14 @@ class MainWindow(QMainWindow):
             self._output_input.setText(folder)
 
     def _update_convert_button(self) -> None:
+        has_screenshot_input = (
+            (self._screenshots_folder is not None and self._screenshots_list.valid_count() > 0)
+            or (self._ocr_dump_path is not None and self._ocr_dump_path.exists())
+        )
         enabled = (
-            self._screenshots_folder is not None
+            has_screenshot_input
             and self._hands_folder is not None
             and self._output_folder is not None
-            and self._screenshots_list.valid_count() > 0
             and self._hands_list.count() > 0
         )
         self._convert_btn.setEnabled(enabled)
@@ -226,6 +242,36 @@ class MainWindow(QMainWindow):
         dialog.exec()
 
     def _start_conversion(self) -> None:
+        self._log.clear()
+        self._hand_data = {}
+        self._screenshots_progress_bar.setValue(0)
+        self._conversion_progress_bar.setValue(0)
+        self._set_processing_state(True)
+
+        if self._screenshots_drop.is_file_mode() and self._ocr_dump_path:
+            self._start_conversion_from_dump()
+        else:
+            self._start_conversion_from_screenshots()
+
+    def _start_conversion_from_dump(self) -> None:
+        """Load OCR results from dump file and skip to Step 2."""
+        assert self._ocr_dump_path is not None
+        self._log.append("Loading OCR results from dump file...\n")
+        self._screenshots_progress_bar.setMaximum(1)
+        self._screenshots_progress_bar.setValue(1)
+
+        try:
+            hand_data = parse_ocr_dump(self._ocr_dump_path)
+            self._hand_data = hand_data
+            self._log.append(f"Loaded data for {len(hand_data)} hands\n")
+            self._start_conversion_step2()
+        except Exception as e:
+            self._log.append(f"Error loading dump file: {e}")
+            self._set_processing_state(False)
+
+    def _start_conversion_from_screenshots(self) -> None:
+        """Process screenshots via API (normal flow)."""
+        assert self._screenshots_folder is not None
         api_key = load_api_key()
         if not api_key:
             result = QMessageBox.question(
@@ -238,15 +284,11 @@ class MainWindow(QMainWindow):
                 self._show_settings()
                 api_key = load_api_key()
                 if not api_key:
+                    self._set_processing_state(False)
                     return
             else:
+                self._set_processing_state(False)
                 return
-
-        self._log.clear()
-        self._hand_data = {}
-        self._screenshots_progress_bar.setValue(0)
-        self._conversion_progress_bar.setValue(0)
-        self._set_processing_state(True)
 
         self._log.append("Step 1: Processing screenshots...\n")
 
@@ -294,39 +336,15 @@ class MainWindow(QMainWindow):
         self._log.append(f"  Error ({filename}): {message}")
 
     def _write_ocr_debug_file(self, results: list[dict], errors: list[dict]) -> None:
-        timestamp = datetime.now()
-        filename = f"ocr_results_{timestamp.strftime('%Y-%m-%d_%H-%M-%S')}.toml"
-        path = self._output_folder / filename
-
-        path.parent.mkdir(parents=True, exist_ok=True)
-
-        data = {
-            "metadata": {
-                "timestamp": timestamp.isoformat(),
-                "screenshots_folder": str(self._screenshots_folder),
-                "total_successful": len(results),
-                "total_errors": len(errors),
-            },
-            "results": {
-                r["hand_number"]: {
-                    "filename": r["filename"],
-                    "table_type": r["table_type"],
-                    "positions": r["position_names"],
-                }
-                for r in sorted(results, key=lambda x: x["filename"])
-            },
-        }
-
-        if errors:
-            data["errors"] = {
-                e["filename"]: e["error"]
-                for e in sorted(errors, key=lambda x: x["filename"])
-            }
-
-        with open(path, "wb") as f:
-            tomli_w.dump(data, f)
-
-        self._log.append(f"OCR results saved to: {filename}")
+        assert self._output_folder is not None
+        assert self._screenshots_folder is not None
+        path = write_ocr_dump(
+            results=results,
+            errors=errors,
+            output_path=self._output_folder,
+            screenshots_folder=self._screenshots_folder,
+        )
+        self._log.append(f"OCR results saved to: {path.name}")
 
     def _on_screenshots_done(self, data: tuple) -> None:
         hand_data, ocr_results, ocr_errors = data
@@ -340,11 +358,23 @@ class MainWindow(QMainWindow):
             self._set_processing_state(False)
             return
 
+        self._start_conversion_step2()
+
+    def _start_conversion_step2(self) -> None:
+        """Start Step 2: Convert hand histories using loaded hand_data."""
+        assert self._hands_folder is not None
+        assert self._output_folder is not None
+
+        if not self._hand_data:
+            self._log.append("No hand data available. Nothing to convert.")
+            self._set_processing_state(False)
+            return
+
         self._log.append("Step 2: Converting hand histories...\n")
 
         self._conversion_worker = ConversionWorker(
             self._hands_folder,
-            hand_data,
+            self._hand_data,
             self._output_folder,
         )
         self._conversion_worker.progress.connect(self._on_conversion_progress)
@@ -365,7 +395,7 @@ class MainWindow(QMainWindow):
         self._log.append(f"  Skipped #{hand_number}: {reason}")
 
     def _on_conversion_done(self, success: int, failed: int) -> None:
-        self._log.append(f"\n=== Summary ===")
+        self._log.append("\n=== Summary ===")
         self._log.append(f"Converted: {success} hands")
         self._log.append(f"Skipped:   {failed} hands")
         self._log.append(f"\nOutput saved to: {self._output_folder}")

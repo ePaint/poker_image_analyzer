@@ -5,6 +5,8 @@ from pathlib import Path
 
 import tomli_w
 from dotenv import set_key, dotenv_values
+
+from hand_history import TableType
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QDialog,
@@ -54,29 +56,43 @@ def save_api_key(key: str) -> None:
     set_key(str(env_path), "ANTHROPIC_API_KEY", key)
 
 
-def load_seat_mapping() -> dict[str, int]:
-    """Load seat mapping from TOML file."""
+DEFAULT_SEATS = {
+    "ggpoker": {
+        "bottom": 1,
+        "bottom_left": 2,
+        "top_left": 3,
+        "top": 4,
+        "top_right": 5,
+        "bottom_right": 6,
+    },
+    "natural8": {
+        "bottom": 1,
+        "left": 2,
+        "top_left": 3,
+        "top_right": 5,
+        "right": 6,
+    },
+}
+
+
+def load_seat_mapping() -> dict[str, dict[str, int]]:
+    """Load seat mappings for all table types."""
     path = _get_seat_mapping_path()
     if not path.exists():
-        return {
-            "bottom": 1,
-            "bottom_left": 2,
-            "top_left": 3,
-            "top": 4,
-            "top_right": 5,
-            "bottom_right": 6,
-        }
+        return {k: v.copy() for k, v in DEFAULT_SEATS.items()}
     with open(path, "rb") as f:
         data = tomllib.load(f)
-    return data.get("seats", {})
+    return {
+        "ggpoker": data.get("ggpoker", DEFAULT_SEATS["ggpoker"].copy()),
+        "natural8": data.get("natural8", DEFAULT_SEATS["natural8"].copy()),
+    }
 
 
-def save_seat_mapping(mapping: dict[str, int]) -> None:
-    """Save seat mapping to TOML file."""
+def save_seat_mapping(mappings: dict[str, dict[str, int]]) -> None:
+    """Save seat mappings to TOML file."""
     path = _get_seat_mapping_path()
-    data = {"seats": mapping}
     with open(path, "wb") as f:
-        tomli_w.dump(data, f)
+        tomli_w.dump(mappings, f)
 
 
 def load_corrections() -> dict[str, str]:
@@ -100,15 +116,8 @@ def save_corrections(corrections: dict[str, str]) -> None:
 class SettingsDialog(QDialog):
     """Settings dialog with tabs for API key, seat mapping, and corrections."""
 
-    POSITIONS = ["bottom", "bottom_left", "top_left", "top", "top_right", "bottom_right"]
-    DEFAULT_SEATS = {
-        "bottom": 1,
-        "bottom_left": 2,
-        "top_left": 3,
-        "top": 4,
-        "top_right": 5,
-        "bottom_right": 6,
-    }
+    GGPOKER_POSITIONS = ["bottom", "bottom_left", "top_left", "top", "top_right", "bottom_right"]
+    NATURAL8_POSITIONS = ["bottom", "left", "top_left", "top_right", "right"]
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -196,23 +205,40 @@ class SettingsDialog(QDialog):
         info_label.setWordWrap(True)
         layout.addWidget(info_label)
 
-        form = QFormLayout()
-        self._seat_spinboxes: dict[str, QSpinBox] = {}
+        # Initialize nested dict for spinboxes
+        self._seat_spinboxes: dict[str, dict[str, QSpinBox]] = {}
 
-        for position in self.POSITIONS:
-            spinbox = QSpinBox()
-            spinbox.setRange(1, 6)
-            spinbox.setValue(self.DEFAULT_SEATS[position])
-            self._seat_spinboxes[position] = spinbox
-            form.addRow(f"{position}:", spinbox)
-
-        layout.addLayout(form)
+        # Sub-tabs for each table type
+        self._seat_tabs = QTabWidget()
+        self._seat_tabs.addTab(
+            self._create_seat_form("ggpoker", self.GGPOKER_POSITIONS),
+            "GGPoker (6-max)"
+        )
+        self._seat_tabs.addTab(
+            self._create_seat_form("natural8", self.NATURAL8_POSITIONS),
+            "Natural8 (5-max)"
+        )
+        layout.addWidget(self._seat_tabs)
 
         reset_btn = QPushButton("Reset to Defaults")
         reset_btn.clicked.connect(self._reset_seat_mapping)
         layout.addWidget(reset_btn)
 
         layout.addStretch()
+
+        return widget
+
+    def _create_seat_form(self, table_type: TableType, positions: list[str]) -> QWidget:
+        widget = QWidget()
+        form = QFormLayout(widget)
+
+        self._seat_spinboxes[table_type] = {}
+        for position in positions:
+            spinbox = QSpinBox()
+            spinbox.setRange(1, 6)
+            spinbox.setValue(DEFAULT_SEATS[table_type][position])
+            self._seat_spinboxes[table_type][position] = spinbox
+            form.addRow(f"{position}:", spinbox)
 
         return widget
 
@@ -254,9 +280,11 @@ class SettingsDialog(QDialog):
         if api_key:
             self._api_key_input.setText(api_key)
 
-        seat_mapping = load_seat_mapping()
-        for position, spinbox in self._seat_spinboxes.items():
-            spinbox.setValue(seat_mapping.get(position, self.DEFAULT_SEATS[position]))
+        mappings = load_seat_mapping()
+        for table_type, spinboxes in self._seat_spinboxes.items():
+            for position, spinbox in spinboxes.items():
+                default = DEFAULT_SEATS[table_type].get(position, 1)
+                spinbox.setValue(mappings.get(table_type, {}).get(position, default))
 
         corrections = load_corrections()
         self._corrections_table.setRowCount(len(corrections))
@@ -291,8 +319,9 @@ class SettingsDialog(QDialog):
             QMessageBox.critical(self, "Error", f"Connection failed:\n{e}")
 
     def _reset_seat_mapping(self) -> None:
-        for position, spinbox in self._seat_spinboxes.items():
-            spinbox.setValue(self.DEFAULT_SEATS[position])
+        for table_type, spinboxes in self._seat_spinboxes.items():
+            for position, spinbox in spinboxes.items():
+                spinbox.setValue(DEFAULT_SEATS[table_type][position])
 
     def _add_correction_row(self) -> None:
         row = self._corrections_table.rowCount()
@@ -315,10 +344,12 @@ class SettingsDialog(QDialog):
         if api_key:
             save_api_key(api_key)
 
-        seat_mapping = {}
-        for position, spinbox in self._seat_spinboxes.items():
-            seat_mapping[position] = spinbox.value()
-        save_seat_mapping(seat_mapping)
+        mappings = {}
+        for table_type, spinboxes in self._seat_spinboxes.items():
+            mappings[table_type] = {}
+            for position, spinbox in spinboxes.items():
+                mappings[table_type][position] = spinbox.value()
+        save_seat_mapping(mappings)
 
         corrections = {}
         for row in range(self._corrections_table.rowCount()):

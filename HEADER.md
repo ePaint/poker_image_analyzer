@@ -104,9 +104,6 @@ FEWSHOT_ZERO_ALT_NAME: str = "H0T M0USE!"
 # Default player regions for GGPoker 6-max
 DEFAULT_REGIONS: tuple[PlayerRegion, ...]
 
-# Hand info region for extracting hand number
-HAND_INFO_REGION: PlayerRegion  # Top-left region (0, 0, 350, 25)
-
 # Detection pixels (at respective base widths)
 GGPOKER_DETECTION_PIXEL: tuple[int, int] = (702, 64)  # 800px base
 GGPOKER_COLOR_BGR: tuple[int, int, int] = (6, 15, 219)
@@ -215,45 +212,68 @@ def analyze_screenshots_batch(
     provider: ProviderName = "anthropic",
     model: str | None = None,
 ) -> list[dict[str, str]]
-
-def extract_hand_number(
-    image: np.ndarray,
-    api_key: str | None = None,
-    provider: ProviderName = "anthropic",
-    model: str | None = None,
-) -> str | None
-
-def extract_hand_number_from_file(
-    image_path: str | Path,
-    api_key: str | None = None,
-    provider: ProviderName = "anthropic",
-    model: str | None = None,
-) -> str | None
 ```
 
-### Private Functions
+## image_analyzer/ocr_dump/__init__.py
+
+### Types
 
 ```python
-def _enhance_crop(image: Image.Image) -> Image.Image
+OcrDumpVersion = Literal["v1", "v2"]
+```
 
-def _extract_crops(
-    image: np.ndarray,
-    regions: tuple[PlayerRegion, ...],
-    target_width: int = 400,
-    start_index: int = 0,
-) -> tuple[Image.Image, list[tuple[str, int]]]
+### Constants
 
-def _build_prompt(num_crops: int) -> str
+```python
+CURRENT_VERSION: OcrDumpVersion = "v2"
+```
 
-def _get_few_shot_examples() -> list[tuple[str, str, str]]
+### Functions
 
-def _call_llm(
-    image: Image.Image,
-    num_crops: int,
-    api_key: str | None = None,
-    provider: ProviderName = "anthropic",
-    model: str | None = None,
-) -> list[str]
+```python
+def write_ocr_dump(
+    results: list[dict],
+    errors: list[dict],
+    output_path: Path,
+    screenshots_folder: Path,
+    version: OcrDumpVersion = CURRENT_VERSION,
+) -> Path
+
+def parse_ocr_dump(path: Path) -> dict[str, dict[int, str]]
+```
+
+## image_analyzer/ocr_dump/v1.py
+
+Version 1 format: Keys by hand_number only (duplicates overwrite).
+
+```python
+VERSION: str = "v1"
+
+def write(
+    results: list[dict],
+    errors: list[dict],
+    output_path: Path,
+    screenshots_folder: Path,
+) -> Path
+
+def parse(path: Path) -> dict[str, dict[int, str]]
+```
+
+## image_analyzer/ocr_dump/v2.py
+
+Version 2 format: Keys by hand_datetime composite (preserves all screenshots).
+
+```python
+VERSION: str = "v2"
+
+def write(
+    results: list[dict],
+    errors: list[dict],
+    output_path: Path,
+    screenshots_folder: Path,
+) -> Path
+
+def parse(path: Path) -> dict[str, dict[int, str]]
 ```
 
 ## image_analyzer/__init__.py (Public API)
@@ -270,11 +290,8 @@ from image_analyzer.analyzer import (
     analyze_screenshots_batch,
     analyze_image,
     detect_table_type,
-    extract_hand_number,
-    extract_hand_number_from_file,
     DEFAULT_REGIONS,
 )
-from image_analyzer.constants import HAND_INFO_REGION
 from image_analyzer.llm import LLMProvider, ProviderName, get_provider
 ```
 
@@ -355,37 +372,63 @@ def write_skipped_file(
 ## hand_history/seat_mapping.toml
 
 ```toml
-[seats]
-bottom = 1        # Hero position
+[ggpoker]
+bottom = 1
 bottom_left = 2
 top_left = 3
 top = 4
 top_right = 5
 bottom_right = 6
+
+[natural8]
+bottom = 1
+left = 2
+top_left = 3
+top_right = 5
+right = 6
 ```
 
 ## hand_history/__init__.py (Public API)
 
+### Types
+
+```python
+TableType = Literal["ggpoker", "natural8"]
+```
+
 ### Constants
 
 ```python
-DEFAULT_SEAT_MAPPING: dict[str, int] = {
-    "bottom": 1,
-    "bottom_left": 2,
-    "top_left": 3,
-    "top": 4,
-    "top_right": 5,
-    "bottom_right": 6,
+DEFAULT_SEAT_MAPPINGS: dict[str, dict[str, int]] = {
+    "ggpoker": {
+        "bottom": 1,
+        "bottom_left": 2,
+        "top_left": 3,
+        "top": 4,
+        "top_right": 5,
+        "bottom_right": 6,
+    },
+    "natural8": {
+        "bottom": 1,
+        "left": 2,
+        "top_left": 3,
+        "top_right": 5,
+        "right": 6,
+    },
 }
 ```
 
 ### Functions
 
 ```python
-def load_seat_mapping(path: Path | None = None) -> dict[str, int]
+def load_seat_mapping(
+    table_type: TableType = "ggpoker",
+    path: Path | None = None,
+) -> dict[str, int]
 
 def position_to_seat(
     position_names: dict[str, str],
+    table_type: TableType = "ggpoker",
     seat_mapping: dict[str, int] | None = None,
 ) -> dict[int, str]
 ```
@@ -467,23 +510,29 @@ class MainWindow(QMainWindow):
 
     # Slots
     def _on_screenshots_folder_changed(self, path: Path) -> None
+    def _on_ocr_dump_selected(self, path: Path) -> None
     def _on_hands_folder_changed(self, path: Path) -> None
     def _on_output_changed(self, text: str) -> None
     def _browse_output(self) -> None
     def _update_convert_button(self) -> None
     def _show_settings(self) -> None
     def _start_conversion(self) -> None
+    def _start_conversion_from_dump(self) -> None
+    def _start_conversion_from_screenshots(self) -> None
+    def _start_conversion_step2(self) -> None
     def _cancel_conversion(self) -> None
+    def _set_processing_state(self, processing: bool) -> None
     def _save_folder_setting(self, key: str, path: Path) -> None
     def _load_saved_folders(self) -> None
     def _refresh_screenshots(self) -> None
     def _refresh_hands(self) -> None
+    def _write_ocr_debug_file(self, results: list[dict], errors: list[dict]) -> None
 
     # Worker callbacks
     def _on_screenshot_progress(self, current: int, total: int, filename: str) -> None
-    def _on_screenshot_result(self, hand_number: str, seat_names: dict) -> None
+    def _on_screenshot_result(self, hand_number: str, filename: str, position_count: int, seat_count: int) -> None
     def _on_screenshot_error(self, filename: str, message: str) -> None
-    def _on_screenshots_done(self, hand_data: dict) -> None
+    def _on_screenshots_done(self, data: tuple) -> None
     def _on_conversion_progress(self, current: int, total: int, filename: str) -> None
     def _on_hand_converted(self, hand_number: str, player_count: int) -> None
     def _on_hand_skipped(self, hand_number: str, reason: str) -> None
@@ -492,13 +541,22 @@ class MainWindow(QMainWindow):
 
 ## gui/settings_dialog.py
 
+### Constants
+
+```python
+DEFAULT_SEATS: dict[str, dict[str, int]] = {
+    "ggpoker": {...},
+    "natural8": {...},
+}
+```
+
 ### Functions
 
 ```python
 def load_api_key() -> str | None
 def save_api_key(key: str) -> None
-def load_seat_mapping() -> dict[str, int]
-def save_seat_mapping(mapping: dict[str, int]) -> None
+def load_seat_mapping() -> dict[str, dict[str, int]]
+def save_seat_mapping(mappings: dict[str, dict[str, int]]) -> None
 def load_corrections() -> dict[str, str]
 def save_corrections(corrections: dict[str, str]) -> None
 ```
@@ -507,8 +565,8 @@ def save_corrections(corrections: dict[str, str]) -> None
 
 ```python
 class SettingsDialog(QDialog):
-    POSITIONS: list[str]  # 6 position names
-    DEFAULT_SEATS: dict[str, int]
+    GGPOKER_POSITIONS: list[str]  # 6 position names
+    NATURAL8_POSITIONS: list[str]  # 5 position names
 
     def __init__(self, parent=None)
     def get_api_key(self) -> str
@@ -521,14 +579,17 @@ class SettingsDialog(QDialog):
 ```python
 class DropZone(QFrame):
     folder_dropped: Signal(Path)
+    file_dropped: Signal(Path)
 
-    def __init__(self, label: str, parent=None)
+    def __init__(self, label: str, allow_file_mode: bool = False, parent=None)
     def dragEnterEvent(self, event: QDragEnterEvent) -> None
     def dragLeaveEvent(self, event) -> None
     def dropEvent(self, event: QDropEvent) -> None
     def mousePressEvent(self, event: QMouseEvent) -> None
     def clear(self) -> None
     def get_folder(self) -> Path | None
+    def is_file_mode(self) -> bool
+    def set_remembered_file(self, path: Path) -> None
 ```
 
 ## gui/file_list.py
@@ -547,6 +608,7 @@ class FileListWidget(QWidget):
     )
 
     def set_folder(self, path: Path, pattern: str) -> int
+    def set_title(self, title: str) -> None
     def clear(self) -> None
     def get_files(self) -> list[Path]
     def get_valid_files(self) -> list[Path]
@@ -562,14 +624,19 @@ class FileListWidget(QWidget):
 ```python
 class ScreenshotWorker(QThread):
     progress: Signal(int, int, str)  # current, total, filename
-    result: Signal(str, dict)  # hand_number, seat_names
+    result: Signal(str, str, int, int)  # hand_number, filename, position_count, seat_count
     error: Signal(str, str)  # filename, message
-    finished_processing: Signal(dict)  # hand_data
+    finished_processing: Signal(object)  # (hand_data, ocr_results, ocr_errors)
+
+    MAX_RETRIES: int = 5
+    BASE_BACKOFF: float = 1.0
 
     def __init__(
         self,
         screenshots_dir: Path,
         api_key: str | None = None,
+        parallel_calls: int = 5,
+        rate_limit_per_minute: int = 50,
         parent=None,
     )
     def cancel(self) -> None
@@ -578,7 +645,7 @@ class ScreenshotWorker(QThread):
 
 class ConversionWorker(QThread):
     progress: Signal(int, int, str)  # current, total, filename
-    hand_converted: Signal(str, int)  # hand_number, player_count
+    hand_converted: Signal(str, int)  # hand_number, replacement_count
     hand_skipped: Signal(str, str)  # hand_number, reason
     finished_processing: Signal(int, int)  # success_count, failed_count
 

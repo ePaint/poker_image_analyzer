@@ -1,0 +1,6400 @@
+[metadata]
+version = "v1"
+timestamp = "2026-02-11T02:22:27.265957"
+screenshots_folder = "/Users/pianosoftwareinc/Documents/TEG/oitnow2/temp/Screenshots_GG"
+total_successful = 570
+total_errors = 0
+
+[seat_mappings.ggpoker]
+bottom = 1
+bottom_left = 2
+top_left = 3
+top = 4
+top_right = 5
+bottom_right = 6
+
+[seat_mappings.natural8]
+bottom = 1
+left = 2
+top_left = 3
+top_right = 5
+right = 6
+
+[results.OM154753304]
+filename = "2024-02-08_ 09-39_AM_$2_$5_#154753304.png"
+table_type = "natural8"
+
+[results.OM154753304.positions]
+top_left = "RussWestbro.."
+top_right = "AnnAmbre11"
+left = "shubidubi"
+right = "dAvid-H"
+bottom = "TeddyKGBEEE"
+
+[results.OM154735074]
+filename = "2024-02-08_ 09-51_AM_$2_$5_#154735074.png"
+table_type = "natural8"
+
+[results.OM154735074.positions]
+top_left = "Alex Kalenin"
+top_right = "Jurek Itter.."
+left = "shubidubi"
+right = "cazana1"
+bottom = "TeddyKGBEEE"
+
+[results.OM154753595]
+filename = "2024-02-08_ 09-59_AM_$2_$5_#154753595.png"
+table_type = "natural8"
+
+[results.OM154753595.positions]
+top_left = "RussWestbro.."
+top_right = "AnnAmbre11"
+left = "shubidubi"
+right = "top1020"
+bottom = "TeddyKGBEEE"
+
+[results.OM154753630]
+filename = "2024-02-08_ 10-01_AM_$2_$5_#154753630.png"
+table_type = "natural8"
+
+[results.OM154753630.positions]
+top_left = "top1020"
+top_right = "AnnAmbre11"
+left = "Sam88888888"
+right = "RussWestbro.."
+bottom = "TeddyKGBEEE"
+
+[results.OM154753659]
+filename = "2024-02-08_ 10-03_AM_$2_$5_#154753659.png"
+table_type = "natural8"
+
+[results.OM154753659.positions]
+top_left = "shubidubi"
+top_right = "AnnAmbre11"
+left = "Sam88888888"
+right = "RussWestbro.."
+bottom = "TeddyKGBEEE"
+
+[results.OM154753686]
+filename = "2024-02-08_ 10-05_AM_$2_$5_#154753686.png"
+table_type = "natural8"
+
+[results.OM154753686.positions]
+top_left = "RussWestbro.."
+top_right = "AnnAmbre11"
+left = "shubidubi"
+right = "Wang Kun"
+bottom = "TeddyKGBEEE"
+
+[results.OM154735224]
+filename = "2024-02-08_ 10-08_AM_$2_$5_#154735224.png"
+table_type = "natural8"
+
+[results.OM154735224.positions]
+top_left = "Alex Kalenin"
+top_right = "Jurek Itter.."
+left = "shubidubi"
+right = "cazana1"
+bottom = "TeddyKGBEEE"
+
+[results.OM154708144]
+filename = "2024-02-08_ 10-16_AM_$2_$5_#154708144.png"
+table_type = "natural8"
+
+[results.OM154708144.positions]
+top_left = "shubidubi"
+top_right = "meranda"
+left = "BonAvenTurE.."
+right = "AnnAmbre11"
+bottom = "TeddyKGBEEE"
+
+[results.OM156719252]
+filename = "2024-02-18_ 04-59_AM_$1_$2_#156719252.png"
+table_type = "natural8"
+
+[results.OM156719252.positions]
+top_left = "Crushinskyy"
+top_right = "Pitjackzaf93"
+left = "GreenFrogX"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM156709144]
+filename = "2024-02-18_ 05-01_AM_$2_$5_#156709144.png"
+table_type = "natural8"
+
+[results.OM156709144.positions]
+top_left = "Sherlocksch.."
+top_right = "Andrei Must.."
+left = "Wei-Jie Weng"
+right = "ds_007"
+bottom = "TeddyKGBEEE"
+
+[results.OM156734252]
+filename = "2024-02-18_ 05-01_AM_$2_$5_#156734252.png"
+table_type = "natural8"
+
+[results.OM156734252.positions]
+top_left = "Andrei Must.."
+top_right = "RC_Octwenty"
+left = "Caloonia"
+right = "Wei-Jie Weng"
+bottom = "TeddyKGBEEE"
+
+[results.OM156748431]
+filename = "2024-02-18_ 05-22_AM_$5_$10_#156748431.png"
+table_type = "natural8"
+
+[results.OM156748431.positions]
+top_left = "L Protopapas"
+top_right = "yerang1980"
+left = "jindongk"
+right = "RC_Octwenty"
+bottom = "TeddyKGBEEE"
+
+[results.OM156983088]
+filename = "2024-02-19_ 05-46_AM_$5_$10_#156983088.png"
+table_type = "natural8"
+
+[results.OM156983088.positions]
+top_left = "Dealt"
+top_right = "mimozaa"
+left = "Henry5781lee"
+right = "TheShrike"
+bottom = "TeddyKGBEEE"
+
+[results.OM156953909]
+filename = "2024-02-19_ 05-47_AM_$2_$5_#156953909.png"
+table_type = "natural8"
+
+[results.OM156953909.positions]
+top_left = "Paintbrush"
+top_right = "miizals"
+left = "Zhouzhennan"
+right = "Andrei Must.."
+bottom = "TeddyKGBEEE"
+
+[results.OM156935815]
+filename = "2024-02-19_ 05-49_AM_$2_$5_#156935815.png"
+table_type = "natural8"
+
+[results.OM156935815.positions]
+top_left = "Paintbrush"
+top_right = "River Magic"
+left = "MichuuuuU"
+right = "Andrei Must.."
+bottom = "TeddyKGBEEE"
+
+[results.OM156935896]
+filename = "2024-02-19_ 06-01_AM_$2_$5_#156935896.png"
+table_type = "natural8"
+
+[results.OM156935896.positions]
+top_left = "Paintbrush"
+top_right = "River Magic"
+left = "MichuuuuU"
+right = "Andrei Must.."
+bottom = "TeddyKGBEEE"
+
+[results.OM156983327]
+filename = "2024-02-19_ 06-17_AM_$5_$10_#156983327.png"
+table_type = "natural8"
+
+[results.OM156983327.positions]
+top_left = "L Protopapas"
+top_right = "mimozaa"
+left = "Cooper_696"
+right = "TheShrike"
+bottom = "TeddyKGBEEE"
+
+[results.OM167835439]
+filename = "2024-04-17_ 04-16_AM_$200_$400_#167835439.png"
+table_type = "natural8"
+
+[results.OM167835439.positions]
+top_left = ""
+top_right = ""
+left = "Laszlo Bujt..."
+right = ""
+bottom = "T Tabagari"
+
+[results.OM168159674]
+filename = "2024-04-17_ 04-16_AM_$50_$100_#168159674.png"
+table_type = "natural8"
+
+[results.OM168159674.positions]
+top_left = "Andras Neme.."
+top_right = "zamirovsky"
+left = "TUUTTU"
+right = "Eduardo Pir.."
+bottom = "T Tabagari"
+
+[results.OM167940795]
+filename = "2024-04-17_ 04-17_AM_$200_$400_#167940795.png"
+table_type = "natural8"
+
+[results.OM167940795.positions]
+top_left = ""
+top_right = ""
+left = "MigWarrior"
+right = ""
+bottom = "Vasilev Ser.."
+
+[results.OM168159700]
+filename = "2024-04-17_ 04-23_AM_$50_$100_#168159700.png"
+table_type = "natural8"
+
+[results.OM168159700.positions]
+top_left = "T Tabagari"
+top_right = "TUUTTU"
+left = "Eduardo Pir.."
+right = "Andras Neme.."
+bottom = "zamirovsky"
+
+[results.OM199002717]
+filename = "2024-09-22_ 12-49_AM_$1_$2_#199002717.png"
+table_type = "ggpoker"
+
+[results.OM199002717.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM199438308]
+filename = "2024-09-24_ 03-08_PM_$1_$2_#199438308.png"
+table_type = "ggpoker"
+
+[results.OM199438308.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM199482446]
+filename = "2024-09-24_ 03-33_PM_$1_$2_#199482446.png"
+table_type = "ggpoker"
+
+[results.OM199482446.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM199619482]
+filename = "2024-09-25_ 10-28_AM_$1_$2_#199619482.png"
+table_type = "ggpoker"
+
+[results.OM199619482.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM199619671]
+filename = "2024-09-25_ 10-42_AM_$1_$2_#199619671.png"
+table_type = "ggpoker"
+
+[results.OM199619671.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM199823675]
+filename = "2024-09-26_ 08-53_AM_$1_$2_#199823675.png"
+table_type = "ggpoker"
+
+[results.OM199823675.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM200658055]
+filename = "2024-09-30_ 02-57_PM_$1_$2_#200658055.png"
+table_type = "ggpoker"
+
+[results.OM200658055.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM200891856]
+filename = "2024-10-01_ 10-24_AM_$2_$5_#200891856.png"
+table_type = "ggpoker"
+
+[results.OM200891856.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM201116771]
+filename = "2024-10-02_ 01-26_PM_$2_$5_#201116771.png"
+table_type = "ggpoker"
+
+[results.OM201116771.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM201029809]
+filename = "2024-10-02_ 09-50_AM_$2_$5_#201029809.png"
+table_type = "ggpoker"
+
+[results.OM201029809.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM201611455]
+filename = "2024-10-04_ 01-30_PM_$2_$5_#201611455.png"
+table_type = "ggpoker"
+
+[results.OM201611455.positions]
+top = "BamboLeo74"
+top_left = ""
+top_right = "lolik812"
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = "boubouki"
+
+[results.OM201594669]
+filename = "2024-10-04_ 03-38_PM_$2_$5_#201594669.png"
+table_type = "ggpoker"
+
+[results.OM201594669.positions]
+top = ""
+top_left = "V Kostrub"
+top_right = ""
+bottom_left = "lolik812"
+bottom = "saruman13"
+bottom_right = "topolompo"
+
+[results.OM201612841]
+filename = "2024-10-04_ 03-49_PM_$2_$5_#201612841.png"
+table_type = "ggpoker"
+
+[results.OM201612841.positions]
+top = "Route_66"
+top_left = "flyholit13"
+top_right = "Sherlocksch.."
+bottom_left = "V Kostrub"
+bottom = "saruman13"
+bottom_right = "opaobha"
+
+[results.OM201555289]
+filename = "2024-10-04_ 06-38_PM_$2_$5_#201555289.png"
+table_type = "ggpoker"
+
+[results.OM201555289.positions]
+top = "Craaaal!"
+top_left = "boubouki"
+top_right = "medflush"
+bottom_left = "murmirr"
+bottom = "saruman13"
+bottom_right = "tickettoride"
+
+[results.OM201700028]
+filename = "2024-10-05_ 06-58_AM_$1_$2_#201700028.png"
+table_type = "ggpoker"
+
+[results.OM201700028.positions]
+top = "long999ly"
+top_left = "Supervajakki"
+top_right = "du@lity"
+bottom_left = "Natalia lva.."
+bottom = "saruman13"
+bottom_right = "Minnnnn79"
+
+[results.OM202291345]
+filename = "2024-10-09_ 04-43_PM_$2_$5_#202291345.png"
+table_type = "ggpoker"
+
+[results.OM202291345.positions]
+top = ""
+top_left = ""
+top_right = "jiu0000"
+bottom_left = "BamboLeo74"
+bottom = "saruman13"
+bottom_right = "boubouki"
+
+[results.OM202218492]
+filename = "2024-10-09_ 04-45_PM_$5_$10_#202218492.png"
+table_type = "ggpoker"
+
+[results.OM202218492.positions]
+top = ""
+top_left = ""
+top_right = "C-137"
+bottom_left = "NittyBB"
+bottom = "boubouki"
+bottom_right = "saruman13"
+
+[results.OM202264782]
+filename = "2024-10-09_ 05-03_PM_$2_$5_#202264782.png"
+table_type = "ggpoker"
+
+[results.OM202264782.positions]
+top = ""
+top_left = "JRVICENZI"
+top_right = ""
+bottom_left = "F Estegassy"
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM202264934]
+filename = "2024-10-09_ 05-24_PM_$2_$5_#202264934.png"
+table_type = "ggpoker"
+
+[results.OM202264934.positions]
+top = "Absolut Free"
+top_left = "JRVICENZI"
+top_right = "V Kostrub"
+bottom_left = "F Estegassy"
+bottom = "saruman13"
+bottom_right = "Craaaal"
+
+[results.OM202402239]
+filename = "2024-10-10_ 01-29_PM_$2_$5_#202402239.png"
+table_type = "ggpoker"
+
+[results.OM202402239.positions]
+top = "boubouki"
+top_left = "hombredevid..."
+top_right = "what hands"
+bottom_left = "Mahowny_"
+bottom = "saruman13"
+bottom_right = "Vesa M Takk..."
+
+[results.OM202336590]
+filename = "2024-10-10_ 11-57_AM_$5_$10_#202336590.png"
+table_type = "ggpoker"
+
+[results.OM202336590.positions]
+top = "Carl Schrad.."
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM202319908]
+filename = "2024-10-10_ 12-51_AM_$5_$10_#202319908.png"
+table_type = "ggpoker"
+
+[results.OM202319908.positions]
+top = "Ceo And Fou.."
+top_left = ""
+top_right = ""
+bottom_left = "L Rozomashv.."
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM202496181]
+filename = "2024-10-11_ 02-49_PM_$5_$10_#202496181.png"
+table_type = "ggpoker"
+
+[results.OM202496181.positions]
+top = "PinaKapsa500"
+top_left = "Route_66"
+top_right = "Just-for-fun"
+bottom_left = "Rui Sousa"
+bottom = "saruman13"
+bottom_right = "Steven Tool"
+
+[results.OM202496574]
+filename = "2024-10-11_ 03-20_PM_$5_$10_#202496574.png"
+table_type = "ggpoker"
+
+[results.OM202496574.positions]
+top = "PinaKapsa500"
+top_left = "Betman_"
+top_right = "C - 137"
+bottom_left = "Rui Sousa"
+bottom = "saruman13"
+bottom_right = "flyholit13"
+
+[results.OM202581221]
+filename = "2024-10-11_ 08-53_PM_$5_$10_#202581221.png"
+table_type = "ggpoker"
+
+[results.OM202581221.positions]
+top = "Gormezano"
+top_left = "stalingulag"
+top_right = "Melodica"
+bottom_left = "Murilo Milh.."
+bottom = "saruman13"
+bottom_right = "River Magic"
+
+[results.OM202525632]
+filename = "2024-10-11_ 09-11_PM_$5_$10_#202525632.png"
+table_type = "ggpoker"
+
+[results.OM202525632.positions]
+top = ""
+top_left = "Murilo Milh.."
+top_right = ""
+bottom_left = "imH14"
+bottom = "saruman13"
+bottom_right = "Bernhard Ha.."
+
+[results.OM202554797]
+filename = "2024-10-11_ 09-11_PM_$5_$10_#202554797.png"
+table_type = "ggpoker"
+
+[results.OM202554797.positions]
+top = "River Magic"
+top_left = "Bemhard Ha.."
+top_right = "imH14"
+bottom_left = "pertyi fish"
+bottom = "saruman13"
+bottom_right = "Murilo Milh.."
+
+[results.OM202484698]
+filename = "2024-10-11_ 09-21_AM_$5_$10_#202484698.png"
+table_type = "ggpoker"
+
+[results.OM202484698.positions]
+top = "V Rasskazov"
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM202581617]
+filename = "2024-10-11_ 09-27_PM_$5_$10_#202581617.png"
+table_type = "ggpoker"
+
+[results.OM202581617.positions]
+top = "Gormezano"
+top_left = "GATAKIA23"
+top_right = "Melodica"
+bottom_left = "Murilo Milh.."
+bottom = "saruman13"
+bottom_right = "imH14"
+
+[results.OM202600612]
+filename = "2024-10-11_ 09-29_PM_$5_$10_#202600612.png"
+table_type = "ggpoker"
+
+[results.OM202600612.positions]
+top = "Mossberget"
+top_left = "River Magic"
+top_right = "GATAKIA23"
+bottom_left = "MrRai17"
+bottom = "saruman13"
+bottom_right = "Melodica"
+
+[results.OM202445589]
+filename = "2024-10-11_ 10-20_AM_$2_$5_#202445589.png"
+table_type = "ggpoker"
+
+[results.OM202445589.positions]
+top = "bortii"
+top_left = "Alexey Meln.."
+top_right = "PinaKapsa500"
+bottom_left = "racs0911"
+bottom = "saruman13"
+bottom_right = "Joale2017"
+
+[results.OM202547781]
+filename = "2024-10-12_ 07-20_AM_$5_$10_#202547781.png"
+table_type = "ggpoker"
+
+[results.OM202547781.positions]
+top = "Bane11"
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM202578390]
+filename = "2024-10-12_ 07-31_AM_$5_$10_#202578390.png"
+table_type = "ggpoker"
+
+[results.OM202578390.positions]
+top = "Yuriy Anisi..."
+top_left = "Bane11"
+top_right = "imH14"
+bottom_left = "Shi Zhang"
+bottom = "saruman13"
+bottom_right = "RespectTheP..."
+
+[results.OM202578562]
+filename = "2024-10-12_ 07-50_AM_$5_$10_#202578562.png"
+table_type = "ggpoker"
+
+[results.OM202578562.positions]
+top = "Yuriy Anisi..."
+top_left = "Bane11"
+top_right = "imH14"
+bottom_left = "Betman__"
+bottom = "saruman13"
+bottom_right = "RespectTheP..."
+
+[results.OM202737003]
+filename = "2024-10-13_ 05-42_PM_$2_$5_#202737003.png"
+table_type = "ggpoker"
+
+[results.OM202737003.positions]
+top = "Steven Tool"
+top_left = "F Estegassy"
+top_right = "364G"
+bottom_left = "boubouki"
+bottom = "saruman13"
+bottom_right = "River Magic"
+
+[results.OM202838714]
+filename = "2024-10-14_ 01-14_PM_$5_$10_#202838714.png"
+table_type = "ggpoker"
+
+[results.OM202838714.positions]
+top = "Schlangach"
+top_left = "Sergio Gonz.."
+top_right = "crazygrinde.."
+bottom_left = "C-137"
+bottom = "saruman13"
+bottom_right = "Working9to5"
+
+[results.OM202838742]
+filename = "2024-10-14_ 01-17_PM_$5_$10_#202838742.png"
+table_type = "ggpoker"
+
+[results.OM202838742.positions]
+top = "Schlangach"
+top_left = "Sergio Gonz.."
+top_right = "crazygrinde.."
+bottom_left = "C-137"
+bottom = "saruman13"
+bottom_right = "Working9to5"
+
+[results.OM202839724]
+filename = "2024-10-14_ 02-30_PM_$5_$10_#202839724.png"
+table_type = "ggpoker"
+
+[results.OM202839724.positions]
+top = "Schlangach"
+top_left = "crazygrinde.."
+top_right = "Betman_"
+bottom_left = "shubidubi"
+bottom = "saruman13"
+bottom_right = "AnnAmbre11"
+
+[results.OM202749512]
+filename = "2024-10-14_ 03-27_PM_$5_$10_#202749512.png"
+table_type = "ggpoker"
+
+[results.OM202749512.positions]
+top = "Murilo Milh.."
+top_left = ""
+top_right = "C - 137"
+bottom_left = "Betman_"
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM202807757]
+filename = "2024-10-14_ 12-49_AM_$5_$10_#202807757.png"
+table_type = "ggpoker"
+
+[results.OM202807757.positions]
+top = "iLuvBeets"
+top_left = "Sergio Gonz.."
+top_right = "Joale2017"
+bottom_left = "imH14"
+bottom = "saruman13"
+bottom_right = "P9925-8943"
+
+[results.OM202807802]
+filename = "2024-10-14_ 12-56_AM_$5_$10_#202807802.png"
+table_type = "ggpoker"
+
+[results.OM202807802.positions]
+top = "C-137"
+top_left = "Sergio Gonz.."
+top_right = ""
+bottom_left = "imH14"
+bottom = "saruman13"
+bottom_right = "Schlangach"
+
+[results.OM203002832]
+filename = "2024-10-15_ 01-00_PM_$5_$10_#203002832.png"
+table_type = "ggpoker"
+
+[results.OM203002832.positions]
+top = "Betman"
+top_left = "C-137"
+top_right = "Youssif"
+bottom_left = "Jan Maule"
+bottom = "saruman13"
+bottom_right = "suerteyfort.."
+
+[results.OM203040305]
+filename = "2024-10-15_ 04-03_PM_$5_$10_#203040305.png"
+table_type = "ggpoker"
+
+[results.OM203040305.positions]
+top = "Steven Tool"
+top_left = ""
+top_right = "C - 137"
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM203059193]
+filename = "2024-10-16_ 10-03_AM_$5_$10_#203059193.png"
+table_type = "ggpoker"
+
+[results.OM203059193.positions]
+top = "C-137"
+top_left = "pertyi fish"
+top_right = "Bane11"
+bottom_left = "Fabian Bran.."
+bottom = "saruman13"
+bottom_right = "SUDOMAGODO"
+
+[results.OM203132544]
+filename = "2024-10-16_ 11-33_AM_$5_$10_#203132544.png"
+table_type = "ggpoker"
+
+[results.OM203132544.positions]
+top = "Bane11"
+top_left = "Fabian Bran.."
+top_right = "Working9to5"
+bottom_left = "pertyi fish"
+bottom = "saruman13"
+bottom_right = "monkey_Ly"
+
+[results.OM203132591]
+filename = "2024-10-16_ 11-40_AM_$5_$10_#203132591.png"
+table_type = "ggpoker"
+
+[results.OM203132591.positions]
+top = "Bane11"
+top_left = "Fabian Bran.."
+top_right = "Working9to5"
+bottom_left = "pertyi fish"
+bottom = "saruman13"
+bottom_right = "monkey_Ly"
+
+[results.OM203479016]
+filename = "2024-10-19_ 04-57_PM_$5_$10_#203479016.png"
+table_type = "ggpoker"
+
+[results.OM203479016.positions]
+top = "Chris Schmi.."
+top_left = "R Alexandre"
+top_right = "L Rozomashv.."
+bottom_left = "kramer359"
+bottom = "saruman13"
+bottom_right = "1931311"
+
+[results.OM203628753]
+filename = "2024-10-20_ 01-47_PM_$5_$10_#203628753.png"
+table_type = "ggpoker"
+
+[results.OM203628753.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = "MickYannick1"
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM203664022]
+filename = "2024-10-20_ 04-08_PM_$5_$10_#203664022.png"
+table_type = "ggpoker"
+
+[results.OM203664022.positions]
+top = "Crushinsky"
+top_left = "BTikito"
+top_right = "Working9to5"
+bottom_left = "The Captain"
+bottom = "saruman13"
+bottom_right = "Karakousi521"
+
+[results.OM203559920]
+filename = "2024-10-20_ 11-02_AM_$5_$10_#203559920.png"
+table_type = "ggpoker"
+
+[results.OM203559920.positions]
+top = "Crushinsky"
+top_left = ""
+top_right = "Renaixensa"
+bottom_left = "BestPratice"
+bottom = "saruman13"
+bottom_right = "Groknl"
+
+[results.OM203594750]
+filename = "2024-10-20_ 11-34_AM_$5_$10_#203594750.png"
+table_type = "ggpoker"
+
+[results.OM203594750.positions]
+top = ""
+top_left = ""
+top_right = "Groknl"
+bottom_left = "BestPratice"
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM203922919]
+filename = "2024-10-22_ 12-54_AM_$2_$5_#203922919.png"
+table_type = "ggpoker"
+
+[results.OM203922919.positions]
+top = "P3281-9543"
+top_left = "bingo7777"
+top_right = "Vesa M Takk..."
+bottom_left = "what hands"
+bottom = "saruman13"
+bottom_right = "Crushinsky"
+
+[results.OM203818613]
+filename = "2024-10-22_ 12-56_AM_$5_$10_#203818613.png"
+table_type = "ggpoker"
+
+[results.OM203818613.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = "Bruinbeer"
+bottom = "saruman13"
+bottom_right = "Crushinsky"
+
+[results.OM204260976]
+filename = "2024-10-24_ 03-30_PM_$5_$10_#204260976.png"
+table_type = "ggpoker"
+
+[results.OM204260976.positions]
+top = "Bruinbeer"
+top_left = "Yuriy Anisi..."
+top_right = "Betman_"
+bottom_left = "FastedState"
+bottom = "saruman13"
+bottom_right = "Toncee"
+
+[results.OM204342775]
+filename = "2024-10-25_ 10-41_AM_$5_$10_#204342775.png"
+table_type = "ggpoker"
+
+[results.OM204342775.positions]
+top = "Bruinbeer"
+top_left = ""
+top_right = "Killer Quee.."
+bottom_left = "Crushinskyy"
+bottom = "saruman13"
+bottom_right = "Yuriy Anisi.."
+
+[results.OM205098090]
+filename = "2024-10-30_ 05-32_PM_$5_$10_#205098090.png"
+table_type = "ggpoker"
+
+[results.OM205098090.positions]
+top = "Rui Sousa"
+top_left = ""
+top_right = ""
+bottom_left = "C-137"
+bottom = "saruman13"
+bottom_right = "YaZzTheFish"
+
+[results.OM205287037]
+filename = "2024-10-31_ 04-07_PM_$5_$10_#205287037.png"
+table_type = "ggpoker"
+
+[results.OM205287037.positions]
+top = ""
+top_left = "Betman_"
+top_right = "happynitster"
+bottom_left = "C-137"
+bottom = "saruman13"
+bottom_right = "Rui Sousa"
+
+[results.OM205274489]
+filename = "2024-10-31_ 05-09_PM_$5_$10_#205274489.png"
+table_type = "natural8"
+
+[results.OM205274489.positions]
+top_left = ""
+top_right = ""
+left = ""
+right = ""
+bottom = "saruman13"
+
+[results.OM205520707]
+filename = "2024-11-01_ 03-56_PM_$5_$10_#205520707.png"
+table_type = "ggpoker"
+
+[results.OM205520707.positions]
+top = "Carl Schrad.."
+top_left = "Zasadal"
+top_right = "Toncee"
+bottom_left = "crazygrinde.."
+bottom = "saruman13"
+bottom_right = "Melodica"
+
+[results.OM206513730]
+filename = "2024-11-08_ 02-23_PM_$1_$2_#206513730.png"
+table_type = "ggpoker"
+
+[results.OM206513730.positions]
+top = "Kirvesmiess"
+top_left = "Schlangach"
+top_right = "P3953-8660"
+bottom_left = "Madridmenta.."
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM206506128]
+filename = "2024-11-08_ 04-49_PM_$1_$2_#206506128.png"
+table_type = "ggpoker"
+
+[results.OM206506128.positions]
+top = "johnwick66"
+top_left = "6high!"
+top_right = "Hydra25"
+bottom_left = "mustaine88"
+bottom = "saruman13"
+bottom_right = "sauvage hero"
+
+[results.OM206754641]
+filename = "2024-11-10_ 09-39_AM_$2_$5_#206754641.png"
+table_type = "ggpoker"
+
+[results.OM206754641.positions]
+top = "jiuooo"
+top_left = ""
+top_right = "River Magic"
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = "Dmytro Syne.."
+
+[results.OM207509370]
+filename = "2024-11-16_ 01-34_PM_$5_$10_#207509370.png"
+table_type = "ggpoker"
+
+[results.OM207509370.positions]
+top = "Aksel Hansen"
+top_left = "D Lazarevic"
+top_right = "Karakousis21"
+bottom_left = "chaefchen"
+bottom = "saruman13"
+bottom_right = "Pavel Abram.."
+
+[results.OM207711036]
+filename = "2024-11-17_ 05-27_PM_$5_$10_#207711036.png"
+table_type = "ggpoker"
+
+[results.OM207711036.positions]
+top = "D Lazarevic"
+top_left = "P1381-9002"
+top_right = "Tikti"
+bottom_left = "Danil Rafik.."
+bottom = "saruman13"
+bottom_right = "J4P2013"
+
+[results.OM207755985]
+filename = "2024-11-18_ 08-46_AM_$2_$5_#207755985.png"
+table_type = "ggpoker"
+
+[results.OM207755985.positions]
+top = "Reraiseme"
+top_left = "S van Wesem..."
+top_right = "Get2TheRiver"
+bottom_left = "racs0911"
+bottom = "saruman13"
+bottom_right = "horrorr"
+
+[results.OM208169349]
+filename = "2024-11-21_ 10-02_AM_$2_$5_#208169349.png"
+table_type = "ggpoker"
+
+[results.OM208169349.positions]
+top = "AnnAmbre11"
+top_left = "homorr"
+top_right = "GIVVO"
+bottom_left = "Vesa M Takk..."
+bottom = "saruman13"
+bottom_right = "FastedState"
+
+[results.OM208369653]
+filename = "2024-11-23_ 03-46_PM_$10_$20_#208369653.png"
+table_type = "ggpoker"
+
+[results.OM208369653.positions]
+top = "manila_natu.."
+top_left = "G Cocco"
+top_right = "Working9to5"
+bottom_left = "tuktuk1111"
+bottom = "saruman13"
+bottom_right = "P1381-9002"
+
+[results.OM208394926]
+filename = "2024-11-23_ 10-13_AM_$10_$20_#208394926.png"
+table_type = "ggpoker"
+
+[results.OM208394926.positions]
+top = ""
+top_left = "crazygrinde.."
+top_right = "Working9to5"
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = "tahintouta"
+
+[results.OM208488555]
+filename = "2024-11-24_ 07-55_AM_$10_$20_#208488555.png"
+table_type = "ggpoker"
+
+[results.OM208488555.positions]
+top = "Sweet Count.."
+top_left = "Rex Ludus"
+top_right = ""
+bottom_left = "Anton Ilyn"
+bottom = "saruman13"
+bottom_right = "Denis Konev"
+
+[results.OM208466276]
+filename = "2024-11-24_ 07-56_AM_$10_$20_#208466276.png"
+table_type = "ggpoker"
+
+[results.OM208466276.positions]
+top = "Tripalo gen.."
+top_left = "lhateplo5"
+top_right = "Sweet Count.."
+bottom_left = "Anton llyn"
+bottom = "saruman13"
+bottom_right = "Rex Ludus"
+
+[results.OM208488634]
+filename = "2024-11-24_ 08-02_AM_$10_$20_#208488634.png"
+table_type = "ggpoker"
+
+[results.OM208488634.positions]
+top = ""
+top_left = "Rex Ludus"
+top_right = ""
+bottom_left = "Anton Ilyn"
+bottom = "saruman13"
+bottom_right = "Denis Konev"
+
+[results.OM208533881]
+filename = "2024-11-24_ 08-03_AM_$10_$20_#208533881.png"
+table_type = "ggpoker"
+
+[results.OM208533881.positions]
+top = ""
+top_left = ""
+top_right = "lhateplo5"
+bottom_left = "jiuoooo"
+bottom = "Denis Konev"
+bottom_right = "saruman13"
+
+[results.OM208488931]
+filename = "2024-11-24_ 08-28_AM_$10_$20_#208488931.png"
+table_type = "ggpoker"
+
+[results.OM208488931.positions]
+top = ""
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = "izlatbape"
+
+[results.OM208641168]
+filename = "2024-11-24_ 10-40_PM_$10_$20_#208641168.png"
+table_type = "ggpoker"
+
+[results.OM208641168.positions]
+top = "Playboyfrom..."
+top_left = "leckerjokol..."
+top_right = "TryHardBro"
+bottom_left = "Working9to5"
+bottom = "saruman13"
+bottom_right = "Elias Harala"
+
+[results.OM208637281]
+filename = "2024-11-25_ 12-13_AM_$10_$20_#208637281.png"
+table_type = "ggpoker"
+
+[results.OM208637281.positions]
+top = "Andre Santos"
+top_left = "CHina YU"
+top_right = "DBDTirons"
+bottom_left = "V Javakhish.."
+bottom = "saruman13"
+bottom_right = "crazygrinde.."
+
+[results.OM208608946]
+filename = "2024-11-25_ 12-45_AM_$10_$20_#208608946.png"
+table_type = "ggpoker"
+
+[results.OM208608946.positions]
+top = "Working9to5"
+top_left = "Sweet Count.."
+top_right = "DBDTirons"
+bottom_left = "crazygrinde.."
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM208805761]
+filename = "2024-11-26_ 03-52_PM_$10_$20_#208805761.png"
+table_type = "ggpoker"
+
+[results.OM208805761.positions]
+top = "IStartGetti.."
+top_left = "Never lie"
+top_right = "Tom Vogelsa.."
+bottom_left = "C-137"
+bottom = "saruman13"
+bottom_right = "M Klosterme.."
+
+[results.OM208831916]
+filename = "2024-11-26_ 04-13_PM_$10_$20_#208831916.png"
+table_type = "ggpoker"
+
+[results.OM208831916.positions]
+top = "R Nazarenko"
+top_left = "C - 137"
+top_right = "Gergo Nagy"
+bottom_left = "GimmeMyCard"
+bottom = "saruman13"
+bottom_right = "Tom Vogelsa.."
+
+[results.OM208832383]
+filename = "2024-11-26_ 05-04_PM_$10_$20_#208832383.png"
+table_type = "ggpoker"
+
+[results.OM208832383.positions]
+top = "Bartalamif"
+top_left = "BabauDoPand.."
+top_right = "P Gregorio"
+bottom_left = "GimmeMyCard"
+bottom = "saruman13"
+bottom_right = "Tom Vogelsa.."
+
+[results.OM209007290]
+filename = "2024-11-28_ 02-59_PM_$10_$20_#209007290.png"
+table_type = "ggpoker"
+
+[results.OM209007290.positions]
+top = ""
+top_left = "L Rozomashv.."
+top_right = "Andre Samtos"
+bottom_left = "C-137"
+bottom = "saruman13"
+bottom_right = "Carlos A Br.."
+
+[results.OM209192839]
+filename = "2024-11-29_ 03-57_PM_$10_$20_#209192839.png"
+table_type = "ggpoker"
+
+[results.OM209192839.positions]
+top = ""
+top_left = "Tom Vogelsa..."
+top_right = ""
+bottom_left = "Anton Ilyn"
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM209204542]
+filename = "2024-11-29_ 03-59_PM_$10_$20_#209204542.png"
+table_type = "ggpoker"
+
+[results.OM209204542.positions]
+top = "lLaperashv.."
+top_left = "Bruinbeer"
+top_right = "Marcus Diel.."
+bottom_left = "DBDTirons"
+bottom = "saruman13"
+bottom_right = "Toncee"
+
+[results.OM209173301]
+filename = "2024-11-29_ 11-35_AM_$5_$10_#209173301.png"
+table_type = "ggpoker"
+
+[results.OM209173301.positions]
+top = "Daniel Perk.."
+top_left = "tickettonde"
+top_right = "floboyer"
+bottom_left = "Working9to5"
+bottom = "saruman13"
+bottom_right = "Spacecowboy.."
+
+[results.OM209173316]
+filename = "2024-11-29_ 11-37_AM_$5_$10_#209173316.png"
+table_type = "ggpoker"
+
+[results.OM209173316.positions]
+top = "Daniel Perk.."
+top_left = "tickettonde"
+top_right = "floboyer"
+bottom_left = "Working9to5"
+bottom = "saruman13"
+bottom_right = "Spacecowboy.."
+
+[results.OM209245949]
+filename = "2024-11-30_ 11-12_AM_$10_$20_#209245949.png"
+table_type = "ggpoker"
+
+[results.OM209245949.positions]
+top = "V Javakhish.."
+top_left = "K Bouloutsos"
+top_right = ""
+bottom_left = "centik13"
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM209936515]
+filename = "2024-12-05_ 01-16_PM_$10_$20_#209936515.png"
+table_type = "ggpoker"
+
+[results.OM209936515.positions]
+top = "Markus Rist.."
+top_left = "Tikiti"
+top_right = "lcall_SoWhat"
+bottom_left = "Elias Harala"
+bottom = "saruman13"
+bottom_right = "FastedState"
+
+[results.OM210018735]
+filename = "2024-12-05_ 11-07_PM_$10_$20_#210018735.png"
+table_type = "ggpoker"
+
+[results.OM210018735.positions]
+top = "baka444"
+top_left = "Working9to5"
+top_right = "LJJKB77"
+bottom_left = "ravel Abram.."
+bottom = "saruman13"
+bottom_right = "Stanimir Ko.."
+
+[results.OM209936229]
+filename = "2024-12-05_ 12-45_AM_$10_$20_#209936229.png"
+table_type = "ggpoker"
+
+[results.OM209936229.positions]
+top = "Markus Rist.."
+top_left = "Tikiti"
+top_right = "lcall_SoWhat"
+bottom_left = "Elias Harala"
+bottom = "saruman13"
+bottom_right = "FastedState"
+
+[results.OM210317464]
+filename = "2024-12-08_ 06-10_PM_$10_$20_#210317464.png"
+table_type = "ggpoker"
+
+[results.OM210317464.positions]
+top = "Dante Ferna.."
+top_left = "Marcus Diel.."
+top_right = "J van Dijck"
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = "Bruinbeer"
+
+[results.OM210317585]
+filename = "2024-12-08_ 06-30_PM_$10_$20_#210317585.png"
+table_type = "ggpoker"
+
+[results.OM210317585.positions]
+top = ""
+top_left = "Marcus Diel.."
+top_right = "J van Dijck"
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM210327714]
+filename = "2024-12-08_ 06-51_PM_$2_$5_#210327714.png"
+table_type = "ggpoker"
+
+[results.OM210327714.positions]
+top = "JACKP0T23"
+top_left = "imH14"
+top_right = "nneMotyzza"
+bottom_left = "du@lity"
+bottom = "saruman13"
+bottom_right = "GimmeMyCard"
+
+[results.OM210506232]
+filename = "2024-12-10_ 02-13_AM_$10_$20_#210506232.png"
+table_type = "ggpoker"
+
+[results.OM210506232.positions]
+top = "Einstein777"
+top_left = "DBDTirons"
+top_right = "Lauri Varon.."
+bottom_left = "M Medlewski"
+bottom = "saruman13"
+bottom_right = "Jan Maule"
+
+[results.OM211878600]
+filename = "2024-12-20_ 02-04_PM_$5_$10_#211878600.png"
+table_type = "ggpoker"
+
+[results.OM211878600.positions]
+top = "V Rasskazov"
+top_left = "P3281-9543"
+top_right = "Tancred"
+bottom_left = "Amala-J-M-"
+bottom = "saruman13"
+bottom_right = "Trinnity"
+
+[results.OM211937099]
+filename = "2024-12-20_ 04-27_PM_$10_$20_#211937099.png"
+table_type = "ggpoker"
+
+[results.OM211937099.positions]
+top = "Marcus Diel.."
+top_left = "K Bouloutsos"
+top_right = ""
+bottom_left = "Manqolia"
+bottom = "saruman13"
+bottom_right = "tuktuk1111"
+
+[results.OM211899842]
+filename = "2024-12-20_ 05-08_PM_$10_$20_#211899842.png"
+table_type = "ggpoker"
+
+[results.OM211899842.positions]
+top = "luxuryday999"
+top_left = "K Bouloutsos"
+top_right = "Marcus Diel.."
+bottom_left = "Krasimir Ya.."
+bottom = "saruman13"
+bottom_right = "C - 137"
+
+[results.OM211947794]
+filename = "2024-12-20_ 05-24_PM_$10_$20_#211947794.png"
+table_type = "ggpoker"
+
+[results.OM211947794.positions]
+top = "luxuryday999"
+top_left = "K Bouloutsos"
+top_right = "Marcus Diel.."
+bottom_left = "Krasimir Ya.."
+bottom = "saruman13"
+bottom_right = "C - 137"
+
+[results.OM211889056]
+filename = "2024-12-20_ 05-30_PM_$10_$20_#211889056.png"
+table_type = "ggpoker"
+
+[results.OM211889056.positions]
+top = "C-137"
+top_left = "luxuryday999"
+top_right = "Marcus Diel.."
+bottom_left = "gggggo"
+bottom = "saruman13"
+bottom_right = "K Bouloutsos"
+
+[results.OM211977116]
+filename = "2024-12-21_ 10-53_AM_$10_$20_#211977116.png"
+table_type = "ggpoker"
+
+[results.OM211977116.positions]
+top = "Shearer91"
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM211977166]
+filename = "2024-12-21_ 11-02_AM_$10_$20_#211977166.png"
+table_type = "ggpoker"
+
+[results.OM211977166.positions]
+top = "Shearer91"
+top_left = ""
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM212081277]
+filename = "2024-12-21_ 11-07_AM_$10_$20_#212081277.png"
+table_type = "ggpoker"
+
+[results.OM212081277.positions]
+top = "Shearer91"
+top_left = ""
+top_right = "Marcus Diel.."
+bottom_left = "Tom Vogelsa.."
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM212090653]
+filename = "2024-12-21_ 11-30_AM_$10_$20_#212090653.png"
+table_type = "ggpoker"
+
+[results.OM212090653.positions]
+top = "Titan1668"
+top_left = "falix123"
+top_right = "Marcus Diel.."
+bottom_left = "tuktuk1111"
+bottom = "saruman13"
+bottom_right = "Anton llyn"
+
+[results.OM212158534]
+filename = "2024-12-22_ 04-42_PM_$5_$10_#212158534.png"
+table_type = "ggpoker"
+
+[results.OM212158534.positions]
+top = "Mercado"
+top_left = ""
+top_right = "2fast4u_"
+bottom_left = "NS_BigWinner"
+bottom = "saruman13"
+bottom_right = "C - 137"
+
+[results.OM212260853]
+filename = "2024-12-22_ 07-38_PM_$10_$20_#212260853.png"
+table_type = "ggpoker"
+
+[results.OM212260853.positions]
+top = "Bruinbeer"
+top_left = ""
+top_right = "Mercado"
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM212224526]
+filename = "2024-12-22_ 07-57_PM_$5_$10_#212224526.png"
+table_type = "ggpoker"
+
+[results.OM212224526.positions]
+top = ""
+top_left = "bundenuma"
+top_right = ""
+bottom_left = "tickettoride"
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM213118268]
+filename = "2024-12-29_ 03-14_PM_$10_$20_#213118268.png"
+table_type = "ggpoker"
+
+[results.OM213118268.positions]
+top = "V Karakituk.."
+top_left = "C-137"
+top_right = "T Tabagari"
+bottom_left = "Noksukow"
+bottom = "saruman13"
+bottom_right = "Jan Maule"
+
+[results.OM213163121]
+filename = "2024-12-29_ 04-03_PM_$10_$20_#213163121.png"
+table_type = "ggpoker"
+
+[results.OM213163121.positions]
+top = "takita"
+top_left = "T Tabagari"
+top_right = "mostmegez"
+bottom_left = "V Karakituk.."
+bottom = "saruman13"
+bottom_right = "Dealt"
+
+[results.OM213097942]
+filename = "2024-12-29_ 04-17_PM_$10_$20_#213097942.png"
+table_type = "ggpoker"
+
+[results.OM213097942.positions]
+top = "crazygrinde.."
+top_left = "K Bouloutsos"
+top_right = "V Karakituk.."
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = "Roger Tonde.."
+
+[results.OM213127946]
+filename = "2024-12-29_ 05-58_PM_$10_$20_#213127946.png"
+table_type = "ggpoker"
+
+[results.OM213127946.positions]
+top = ""
+top_left = ""
+top_right = "Mercado"
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = ""
+
+[results.OM213165084]
+filename = "2024-12-29_ 06-03_PM_$10_$20_#213165084.png"
+table_type = "ggpoker"
+
+[results.OM213165084.positions]
+top = "ThePLOitici.."
+top_left = "Mercado"
+top_right = ""
+bottom_left = ""
+bottom = "saruman13"
+bottom_right = "Punktesamml.."
+
+[results.OM216910020]
+filename = "2025-01-25_ 04-08_PM_$10_$20_#216910020.png"
+table_type = "ggpoker"
+
+[results.OM216910020.positions]
+top = "Kapteeni La.."
+top_left = "Simon Boliv.."
+top_right = "TheNerdGuy1"
+bottom_left = "L Rozomashv.."
+bottom = "H0T M0USE!"
+bottom_right = "BTCETH"
+
+[results.OM22203180]
+filename = "2025-03-13_ 04-13_AM_$1_$2_#22203180.png"
+table_type = "natural8"
+
+[results.OM22203180.positions]
+top_left = "gohu23"
+top_right = "Sharkcesar"
+left = "Yoichi_Isagi"
+right = "zwwdai57"
+bottom = "TeddyKGBEEE"
+
+[results.OM22203196]
+filename = "2025-03-13_ 04-17_AM_$1_$2_#22203196.png"
+table_type = "natural8"
+
+[results.OM22203196.positions]
+top_left = "gohu23"
+top_right = ""
+left = "CardCon"
+right = "zwwdai57"
+bottom = "TeddyKGBEEE"
+
+[results.OM22203209]
+filename = "2025-03-13_ 04-19_AM_$1_$2_#22203209.png"
+table_type = "natural8"
+
+[results.OM22203209.positions]
+top_left = "gohu23"
+top_right = "controlbure..."
+left = "CardCon"
+right = "DorVaknin"
+bottom = "TeddyKGBEEE"
+
+[results.OM22211882]
+filename = "2025-03-13_ 05-38_AM_$1_$2_#22211882.png"
+table_type = "natural8"
+
+[results.OM22211882.positions]
+top_left = "gohu23"
+top_right = "Dor Vaknin"
+left = "CardCon"
+right = "controlbure.."
+bottom = "TeddyKGBEEE"
+
+[results.OM22203643]
+filename = "2025-03-13_ 05-49_AM_$1_$2_#22203643.png"
+table_type = "natural8"
+
+[results.OM22203643.positions]
+top_left = "CardCon"
+top_right = "controlbure.."
+left = "Yoichi_Isagi"
+right = "gohu23"
+bottom = "TeddyKGBEEF"
+
+[results.OM22203691]
+filename = "2025-03-13_ 05-56_AM_$1_$2_#22203691.png"
+table_type = "natural8"
+
+[results.OM22203691.positions]
+top_left = "CardCon"
+top_right = "controlbure.."
+left = "Yoichi_Isagi"
+right = "Liisa Ann"
+bottom = "TeddyKGBEEF"
+
+[results.OM22240247]
+filename = "2025-03-13_ 05-58_AM_$1_$2_#22240247.png"
+table_type = "natural8"
+
+[results.OM22240247.positions]
+top_left = "CardCon"
+top_right = "ApaApa_Lu_M.."
+left = "Yoichi_Isagi"
+right = "Liisa Ann"
+bottom = "TeddyKGBEEE"
+
+[results.OM22212075]
+filename = "2025-03-13_ 06-11_AM_$1_$2_#22212075.png"
+table_type = "natural8"
+
+[results.OM22212075.positions]
+top_left = "Liisa Ann"
+top_right = "Yoichi_Isagi"
+left = "CardCon"
+right = "controlbure.."
+bottom = "TeddyKGBEEE"
+
+[results.OM22157795]
+filename = "2025-03-13_ 07-42_AM_$2_$5_#22157795.png"
+table_type = "natural8"
+
+[results.OM22157795.positions]
+top_left = ""
+top_right = "dotheConga"
+left = ""
+right = "Whynot23"
+bottom = "TeddyKGBEEF"
+
+[results.OM22212673]
+filename = "2025-03-13_ 07-43_AM_$1_$2_#22212673.png"
+table_type = "natural8"
+
+[results.OM22212673.positions]
+top_left = "He Jin"
+top_right = "Liisa Ann"
+left = "Crushinsky"
+right = "drinkbeer"
+bottom = "TeddyKGBEEF"
+
+[results.OM22351027]
+filename = "2025-03-14_ 04-00_AM_$2_$5_#22351027.png"
+table_type = "natural8"
+
+[results.OM22351027.positions]
+top_left = "River Stf"
+top_right = "Jakub Kolorz"
+left = "Luka Zunic"
+right = "ApaApa_Lu_M.."
+bottom = "TeddyKGBEEE"
+
+[results.OM22332737]
+filename = "2025-03-14_ 04-03_AM_$5_$10_#22332737.png"
+table_type = "natural8"
+
+[results.OM22332737.positions]
+top_left = "Jakub Kolorz"
+top_right = "Mitz137"
+left = "Wagyu_Couri.."
+right = "Pablo Panet.."
+bottom = "TeddyKGBEEE"
+
+[results.OM22332746]
+filename = "2025-03-14_ 04-05_AM_$5_$10_#22332746.png"
+table_type = "natural8"
+
+[results.OM22332746.positions]
+top_left = "Jakub Kolorz"
+top_right = "Mitz137"
+left = "Wagyu_Couri.."
+right = "Pablo Panet.."
+bottom = "TeddyKGBEEE"
+
+[results.OM22332863]
+filename = "2025-03-14_ 04-23_AM_$5_$10_#22332863.png"
+table_type = "natural8"
+
+[results.OM22332863.positions]
+top_left = "Jakub Kolorz"
+top_right = "Mitz137"
+left = "Wagyu_Couri.."
+right = "Pablo Panet.."
+bottom = "TeddyKGBEEE"
+
+[results.OM22298567]
+filename = "2025-03-14_ 04-39_AM_$5_$10_#22298567.png"
+table_type = "natural8"
+
+[results.OM22298567.positions]
+top_left = "lLaperashy.."
+top_right = "Wagyu_Couri.."
+left = "OdnavChauch.."
+right = "lckssIII"
+bottom = "TeddyKGBEEE"
+
+[results.OM22351396]
+filename = "2025-03-14_ 05-02_AM_$2_$5_#22351396.png"
+table_type = "natural8"
+
+[results.OM22351396.positions]
+top_left = "Gglai"
+top_right = "Jakub Kolorz"
+left = "Pablo Panet.."
+right = "Just4Respect"
+bottom = "TeddyKGBEEF"
+
+[results.OM22501378]
+filename = "2025-03-15_ 03-56_AM_$2_$5_#22501378.png"
+table_type = "natural8"
+
+[results.OM22501378.positions]
+top_left = "Gglai"
+top_right = "River Stf"
+left = "BMGR_OmahaO.."
+right = "lckssIII"
+bottom = "TeddyKGBEEE"
+
+[results.OM22512347]
+filename = "2025-03-15_ 04-03_AM_$5_$10_#22512347.png"
+table_type = "natural8"
+
+[results.OM22512347.positions]
+top_left = ""
+top_right = "BronnyStan"
+left = "Pandadth"
+right = "King_Midas"
+bottom = "M Medlewski"
+
+[results.OM22456113]
+filename = "2025-03-15_ 04-05_AM_$1_$2_#22456113.png"
+table_type = "natural8"
+
+[results.OM22456113.positions]
+top_left = "PadrinoPJP"
+top_right = "El Chiquito"
+left = "tuituile888"
+right = "CardCon"
+bottom = "TeddyKGBEEE"
+
+[results.OM22456244]
+filename = "2025-03-15_ 04-21_AM_$2_$5_#22456244.png"
+table_type = "natural8"
+
+[results.OM22456244.positions]
+top_left = "BMGR_OmahaO.."
+top_right = ""
+left = "Gglaj"
+right = "King_Midas"
+bottom = "TeddyKGBEEE"
+
+[results.OM22512794]
+filename = "2025-03-15_ 04-50_AM_$5_$10_#22512794.png"
+table_type = "natural8"
+
+[results.OM22512794.positions]
+top_left = ""
+top_right = ""
+left = "Jakub Kolorz"
+right = "M Medlewski"
+bottom = "TeddyKGBEEE"
+
+[results.OM22502080]
+filename = "2025-03-15_ 04-54_AM_$2_$5_#22502080.png"
+table_type = "natural8"
+
+[results.OM22502080.positions]
+top_left = "shi shi qiu.."
+top_right = "M lakovlev"
+left = "halbae"
+right = "BaoDingWang"
+bottom = "TeddyKGBEEF"
+
+[results.OM22502135]
+filename = "2025-03-15_ 05-06_AM_$2_$5_#22502135.png"
+table_type = "natural8"
+
+[results.OM22502135.positions]
+top_left = ""
+top_right = "shi shi qiu.."
+left = "M lakovlev"
+right = "halbae"
+bottom = "BaoDingWang"
+
+[results.OM22513099]
+filename = "2025-03-15_ 05-27_AM_$5_$10_#22513099.png"
+table_type = "natural8"
+
+[results.OM22513099.positions]
+top_left = ""
+top_right = ""
+left = "M Medlewski"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM22457164]
+filename = "2025-03-15_ 06-09_AM_$2_$5_#22457164.png"
+table_type = "natural8"
+
+[results.OM22457164.positions]
+top_left = "BMGR_OmahaO.."
+top_right = "Tancred"
+left = "Dmytro Syne.."
+right = "King_Midas"
+bottom = "TeddyKGBEEE"
+
+[results.OM22502890]
+filename = "2025-03-15_ 06-26_AM_$10_$20_#22502890.png"
+table_type = "natural8"
+
+[results.OM22502890.positions]
+top_left = "Pandadth"
+top_right = "Alfred Karl.."
+left = "Anton Ilyn"
+right = "BronnyStan"
+bottom = "TeddyKGBEEE"
+
+[results.OM22484222]
+filename = "2025-03-15_ 06-26_AM_$2_$5_#22484222.png"
+table_type = "natural8"
+
+[results.OM22484222.positions]
+top_left = "A Kurganskii"
+top_right = "doTheConga"
+left = "BMGR_OmahaO.."
+right = "gaq8888"
+bottom = "TeddyKGBEEE"
+
+[results.OM22513612]
+filename = "2025-03-15_ 06-28_AM_$5_$10_#22513612.png"
+table_type = "natural8"
+
+[results.OM22513612.positions]
+top_left = "dotheConga"
+top_right = "LordHackfre.."
+left = "BMGR_OmahaO.."
+right = "M Medlewski"
+bottom = "TeddyKGBEEE"
+
+[results.OM22502964]
+filename = "2025-03-15_ 06-33_AM_$10_$20_#22502964.png"
+table_type = "natural8"
+
+[results.OM22502964.positions]
+top_left = "Pandadth"
+top_right = "Alfred Karl.."
+left = "Anton Ilyn"
+right = "BronnyStan"
+bottom = "TeddyKGBEEE"
+
+[results.OM22641773]
+filename = "2025-03-16_ 05-12_AM_$2_$5_#22641773.png"
+table_type = "natural8"
+
+[results.OM22641773.positions]
+top_left = "shubidubi"
+top_right = "Jakub Kcolorz"
+left = "skinnywhale"
+right = "Wonthis"
+bottom = "TeddyKGBEEE"
+
+[results.OM22641811]
+filename = "2025-03-16_ 05-23_AM_$2_$5_#22641811.png"
+table_type = "natural8"
+
+[results.OM22641811.positions]
+top_left = "shubidubi"
+top_right = "Jakub Kolorz"
+left = "skinnywhale"
+right = "Wonthis"
+bottom = "TeddyKGBEEE"
+
+[results.OM22641814]
+filename = "2025-03-16_ 05-23_AM_$2_$5_#22641814.png"
+table_type = "natural8"
+
+[results.OM22641814.positions]
+top_left = "shubidubi"
+top_right = "Jakub Kolorz"
+left = "skinnywhale"
+right = "Wonthis"
+bottom = "TeddyKGBEEE"
+
+[results.OM22585880]
+filename = "2025-03-16_ 05-46_AM_$1_$2_#22585880.png"
+table_type = "natural8"
+
+[results.OM22585880.positions]
+top_left = "PlayTwice"
+top_right = "bubba_gump"
+left = "The Captain"
+right = "El Chiquito"
+bottom = "TeddyKGBEEE"
+
+[results.OM22617902]
+filename = "2025-03-16_ 06-05_AM_$2_$5_#22617902.png"
+table_type = "natural8"
+
+[results.OM22617902.positions]
+top_left = "TUUTTU"
+top_right = "PlayTwice"
+left = "Gglaj"
+right = "FEFELIPEE"
+bottom = "TeddyKGBEEE"
+
+[results.OM22618104]
+filename = "2025-03-16_ 06-29_AM_$2_$5_#22618104.png"
+table_type = "natural8"
+
+[results.OM22618104.positions]
+top_left = "The Captain"
+top_right = "S Nesterenko"
+left = "Gglaj"
+right = "FEFELIPEE"
+bottom = "TeddyKGBEEE"
+
+[results.OM22618114]
+filename = "2025-03-16_ 06-30_AM_$2_$5_#22618114.png"
+table_type = "natural8"
+
+[results.OM22618114.positions]
+top_left = "The Captain"
+top_right = "S Nesterenko"
+left = "Gglaj"
+right = "FEFELIPEE"
+bottom = "TeddyKGBEEE"
+
+[results.OM22594097]
+filename = "2025-03-16_ 06-34_AM_$2_$5_#22594097.png"
+table_type = "natural8"
+
+[results.OM22594097.positions]
+top_left = "Wonthis"
+top_right = "PlayTwice"
+left = "S Nesterenko"
+right = "Gglai"
+bottom = "TeddyKGBEEE"
+
+[results.OM22752185]
+filename = "2025-03-17_ 03-52_AM_$2_$5_#22752185.png"
+table_type = "natural8"
+
+[results.OM22752185.positions]
+top_left = "BMGR_OmahaO.."
+top_right = "1985GG"
+left = "catrupinho"
+right = "fenzmi"
+bottom = "TeddyKGBEEE"
+
+[results.OM22752233]
+filename = "2025-03-17_ 04-00_AM_$2_$5_#22752233.png"
+table_type = "natural8"
+
+[results.OM22752233.positions]
+top_left = "BMGR_OmahaO.."
+top_right = "1985GG"
+left = "catrupinho"
+right = "fenzmi"
+bottom = "TeddyKGBEEE"
+
+[results.OM22715011]
+filename = "2025-03-17_ 04-17_AM_$5_$10_#22715011.png"
+table_type = "natural8"
+
+[results.OM22715011.positions]
+top_left = ""
+top_right = "Upsw1ng"
+left = "M1akovlev"
+right = "catrupinho"
+bottom = "TeddyKGBEEE"
+
+[results.OM22715171]
+filename = "2025-03-17_ 04-34_AM_$5_$10_#22715171.png"
+table_type = "natural8"
+
+[results.OM22715171.positions]
+top_left = "Upsw1ng"
+top_right = "M lakovlev"
+left = "it1351"
+right = "catrupinho"
+bottom = "TeddyKGBEEE"
+
+[results.OM22772637]
+filename = "2025-03-17_ 04-41_AM_$2_$5_#22772637.png"
+table_type = "natural8"
+
+[results.OM22772637.positions]
+top_left = "PloDaddy"
+top_right = ""
+left = "LaPistola"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM22695582]
+filename = "2025-03-17_ 04-42_AM_$2_$5_#22695582.png"
+table_type = "natural8"
+
+[results.OM22695582.positions]
+top_left = "PloDaddy"
+top_right = "BMGR_OmahaO.."
+left = "drzhou"
+right = "Tancred"
+bottom = "TeddyKGBEEF"
+
+[results.OM22695607]
+filename = "2025-03-17_ 04-46_AM_$2_$5_#22695607.png"
+table_type = "natural8"
+
+[results.OM22695607.positions]
+top_left = "PloDaddy"
+top_right = ""
+left = "drzhou"
+right = "Tancred"
+bottom = "TeddyKGBEEF"
+
+[results.OM22715293]
+filename = "2025-03-17_ 04-52_AM_$5_$10_#22715293.png"
+table_type = "natural8"
+
+[results.OM22715293.positions]
+top_left = "Upsw1ng"
+top_right = "M lakovlev"
+left = "Ylling"
+right = "catrupinho"
+bottom = "TeddyKGBEEE"
+
+[results.OM22695714]
+filename = "2025-03-17_ 05-08_AM_$2_$5_#22695714.png"
+table_type = "natural8"
+
+[results.OM22695714.positions]
+top_left = "The Captain"
+top_right = "BMGR_OmahaO.."
+left = "drzhou"
+right = "Tancred"
+bottom = "TeddyKGBEEE"
+
+[results.OM22695742]
+filename = "2025-03-17_ 05-11_AM_$2_$5_#22695742.png"
+table_type = "natural8"
+
+[results.OM22695742.positions]
+top_left = "The Captain"
+top_right = "BMGR_OmahaO.."
+left = "drzhou"
+right = "Tancred"
+bottom = "TeddyKGBEEE"
+
+[results.OM22715432]
+filename = "2025-03-17_ 05-12_AM_$5_$10_#22715432.png"
+table_type = "natural8"
+
+[results.OM22715432.positions]
+top_left = "Upsw1ng"
+top_right = "M lakovlev"
+left = "Gglaj"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM22715436]
+filename = "2025-03-17_ 05-16_AM_$5_$10_#22715436.png"
+table_type = "natural8"
+
+[results.OM22715436.positions]
+top_left = "Upsw1ng"
+top_right = "M lakovlev"
+left = "Gglaj"
+right = "Aleksei Pet.."
+bottom = "TeddyKGBEEE"
+
+[results.OM22695901]
+filename = "2025-03-17_ 05-29_AM_$2_$5_#22695901.png"
+table_type = "natural8"
+
+[results.OM22695901.positions]
+top_left = "ApaApa_Lu_M.."
+top_right = "Aleksei Pet.."
+left = "drzhou"
+right = "Tancred"
+bottom = "TeddyKGBEEE"
+
+[results.OM22930442]
+filename = "2025-03-18_ 05-09_AM_$2_$5_#22930442.png"
+table_type = "natural8"
+
+[results.OM22930442.positions]
+top_left = "The Captain"
+top_right = "jetstream7"
+left = "Oshi oshi"
+right = "CardCon"
+bottom = "TeddyKGBEEE"
+
+[results.OM22920746]
+filename = "2025-03-18_ 05-22_AM_$2_$5_#22920746.png"
+table_type = "natural8"
+
+[results.OM22920746.positions]
+top_left = "romammadov"
+top_right = "A Kurganskii"
+left = "jetstream7"
+right = "LordHackfre.."
+bottom = "TeddyKGBEEE"
+
+[results.OM22930603]
+filename = "2025-03-18_ 05-22_AM_$2_$5_#22930603.png"
+table_type = "natural8"
+
+[results.OM22930603.positions]
+top_left = "The Captain"
+top_right = "S Nesterenko"
+left = "Oshi oshi"
+right = "CardCon"
+bottom = "TeddyKGBEEE"
+
+[results.OM22930906]
+filename = "2025-03-18_ 06-04_AM_$2_$5_#22930906.png"
+table_type = "natural8"
+
+[results.OM22930906.positions]
+top_left = "Potshipper"
+top_right = "S Nesterenko"
+left = "Oshi oshi"
+right = "CardCon"
+bottom = "TeddyKGBEEE"
+
+[results.OM22930982]
+filename = "2025-03-18_ 06-06_AM_$2_$5_#22930982.png"
+table_type = "natural8"
+
+[results.OM22930982.positions]
+top_left = "Potshipper"
+top_right = "S Nesterenko"
+left = "Rex Ludus"
+right = "CardCon"
+bottom = "TeddyKGBEEE"
+
+[results.OM23139777]
+filename = "2025-03-20_ 04-29_AM_$1_$2_#23139777.png"
+table_type = "natural8"
+
+[results.OM23139777.positions]
+top_left = "PepinhAA"
+top_right = "FlodTrun"
+left = "EasyMao"
+right = "drzhou"
+bottom = "TeddyKGBEEE"
+
+[results.OM23156851]
+filename = "2025-03-20_ 04-47_AM_$2_$5_#23156851.png"
+table_type = "natural8"
+
+[results.OM23156851.positions]
+top_left = "Mitz137"
+top_right = "REiDaSelva"
+left = "Henrique Ba.."
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM23220010]
+filename = "2025-03-20_ 05-21_AM_$2_$5_#23220010.png"
+table_type = "natural8"
+
+[results.OM23220010.positions]
+top_left = "CardCon"
+top_right = "Floatingworld"
+left = "CaesarMarcu..."
+right = "inandez875"
+bottom = "TeddyKGBEEF"
+
+[results.OM23220035]
+filename = "2025-03-20_ 05-30_AM_$2_$5_#23220035.png"
+table_type = "natural8"
+
+[results.OM23220035.positions]
+top_left = "CardCon"
+top_right = "Floatingworld"
+left = "Dmytro Syne.."
+right = "inandez875"
+bottom = "TeddyKGBEEE"
+
+[results.OM23220085]
+filename = "2025-03-20_ 05-41_AM_$2_$5_#23220085.png"
+table_type = "natural8"
+
+[results.OM23220085.positions]
+top_left = "Tancred"
+top_right = "Floatingworld"
+left = "Dmytro Syne.."
+right = "inandez875"
+bottom = "TeddyKGBEEE"
+
+[results.OM23108306]
+filename = "2025-03-20_ 05-42_AM_$2_$5_#23108306.png"
+table_type = "natural8"
+
+[results.OM23108306.positions]
+top_left = "BMGR_OmahaO.."
+top_right = "Tancred"
+left = "1985GG"
+right = "Floatinworld"
+bottom = "TeddyKGBEEE"
+
+[results.OM23108324]
+filename = "2025-03-20_ 05-46_AM_$2_$5_#23108324.png"
+table_type = "natural8"
+
+[results.OM23108324.positions]
+top_left = "BMGR_Omaha0.."
+top_right = "Tancred"
+left = "1985GG"
+right = "Floatinworld"
+bottom = "TeddyKGBEEE"
+
+[results.OM23118819]
+filename = "2025-03-20_ 05-47_AM_$2_$5_#23118819.png"
+table_type = "natural8"
+
+[results.OM23118819.positions]
+top_left = "A5stone"
+top_right = "lckssIII"
+left = "REiDaSelva"
+right = "inandez875"
+bottom = "TeddyKGBEEF"
+
+[results.OM23118838]
+filename = "2025-03-20_ 05-47_AM_$2_$5_#23118838.png"
+table_type = "natural8"
+
+[results.OM23118838.positions]
+top_left = "A5stone"
+top_right = "lckssIII"
+left = "REiDaSelva"
+right = "inandez875"
+bottom = "TeddyKGBEEF"
+
+[results.OM23118845]
+filename = "2025-03-20_ 05-48_AM_$2_$5_#23118845.png"
+table_type = "natural8"
+
+[results.OM23118845.positions]
+top_left = "A5stone"
+top_right = "lckssIII"
+left = "REiDaSelva"
+right = "inandez875"
+bottom = "TeddyKGBEEF"
+
+[results.OM23108364]
+filename = "2025-03-20_ 05-54_AM_$2_$5_#23108364.png"
+table_type = "natural8"
+
+[results.OM23108364.positions]
+top_left = "Potshipper"
+top_right = "Tancred"
+left = "1985GG"
+right = "inandez875"
+bottom = "TeddyKGBEEE"
+
+[results.OM23210655]
+filename = "2025-03-20_ 06-17_AM_$2_$5_#23210655.png"
+table_type = "natural8"
+
+[results.OM23210655.positions]
+top_left = "GTA Wizard"
+top_right = "L Bogachkin"
+left = "jnandez875"
+right = "Jakub Kolorz"
+bottom = "TeddyKGBEEE"
+
+[results.OM23184926]
+filename = "2025-03-20_ 06-29_AM_$2_$5_#23184926.png"
+table_type = "natural8"
+
+[results.OM23184926.positions]
+top_left = "REiDaSelva"
+top_right = "PlayTwice"
+left = "Potshipper"
+right = "stockmarket.."
+bottom = "TeddyKGBEEF"
+
+[results.OM23210827]
+filename = "2025-03-20_ 06-33_AM_$2_$5_#23210827.png"
+table_type = "natural8"
+
+[results.OM23210827.positions]
+top_left = "GTA Wizard"
+top_right = "Potshipper"
+left = "jnandez875"
+right = "Jakub Kolorz"
+bottom = "TeddyKGBEEE"
+
+[results.OM23185099]
+filename = "2025-03-20_ 06-51_AM_$2_$5_#23185099.png"
+table_type = "natural8"
+
+[results.OM23185099.positions]
+top_left = "REiDaSelva"
+top_right = "PlayTwice"
+left = "Potshipper"
+right = "stockmarket.."
+bottom = "TeddyKGBEEE"
+
+[results.OM23220645]
+filename = "2025-03-20_ 06-58_AM_$2_$5_#23220645.png"
+table_type = "natural8"
+
+[results.OM23220645.positions]
+top_left = "inandez875"
+top_right = "PlayTwice"
+left = "Egor Rudche.."
+right = "Sodalin"
+bottom = "TeddyKGBEEE"
+
+[results.OM23220660]
+filename = "2025-03-20_ 06-58_AM_$2_$5_#23220660.png"
+table_type = "natural8"
+
+[results.OM23220660.positions]
+top_left = ""
+top_right = "PlayTwice"
+left = "Egor Rudche.."
+right = "Jakub Kolorz"
+bottom = "TeddyKGBEEE"
+
+[results.OM23185182]
+filename = "2025-03-20_ 06-59_AM_$2_$5_#23185182.png"
+table_type = "natural8"
+
+[results.OM23185182.positions]
+top_left = "REiDaSelva"
+top_right = "PlayTwice"
+left = "Potshipper"
+right = "stockmarket.."
+bottom = "TeddyKGBEEF"
+
+[results.OM23108832]
+filename = "2025-03-20_ 07-01_AM_$2_$5_#23108832.png"
+table_type = "natural8"
+
+[results.OM23108832.positions]
+top_left = "Gglaj"
+top_right = "PlayTwice"
+left = "Potshipper"
+right = "Karpito82"
+bottom = "TeddyKGBEEF"
+
+[results.OM23312884]
+filename = "2025-03-21_ 04-51_AM_$5_$10_#23312884.png"
+table_type = "natural8"
+
+[results.OM23312884.positions]
+top_left = ""
+top_right = "BronnyStan"
+left = "jetstream7"
+right = "Pandadth"
+bottom = "TeddyKGBEEE"
+
+[results.OM23332306]
+filename = "2025-03-21_ 05-13_AM_$5_$10_#23332306.png"
+table_type = "natural8"
+
+[results.OM23332306.positions]
+top_left = "whale66"
+top_right = "Greedy Belly"
+left = "CaesarMarcu.."
+right = "BronnyStan"
+bottom = "TeddyKGBEEF"
+
+[results.OM23313025]
+filename = "2025-03-21_ 05-17_AM_$5_$10_#23313025.png"
+table_type = "natural8"
+
+[results.OM23313025.positions]
+top_left = "CardCon"
+top_right = "BronnyStan"
+left = "whale66"
+right = "Street punt.."
+bottom = "TeddyKGBEEF"
+
+[results.OM23313104]
+filename = "2025-03-21_ 05-26_AM_$5_$10_#23313104.png"
+table_type = "natural8"
+
+[results.OM23313104.positions]
+top_left = "CardCon"
+top_right = "BronnyStan"
+left = "whale66"
+right = "Street punt.."
+bottom = "TeddyKGBEEF"
+
+[results.OM23359976]
+filename = "2025-03-22_ 05-00_AM_$0.50_$1_#23359976.png"
+table_type = "natural8"
+
+[results.OM23359976.positions]
+top_left = "Bedutidol68"
+top_right = "Seppo Taala.."
+left = "1pivasik1"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM23490152]
+filename = "2025-03-22_ 05-27_AM_$0.50_$1_#23490152.png"
+table_type = "natural8"
+
+[results.OM23490152.positions]
+top_left = "Szu1971"
+top_right = "Duyen phan"
+left = "Megladongg"
+right = "Seppo Taala.."
+bottom = "TeddyKGBEEF"
+
+[results.OM23490265]
+filename = "2025-03-22_ 05-44_AM_$0.50_$1_#23490265.png"
+table_type = "natural8"
+
+[results.OM23490265.positions]
+top_left = "HarryPote"
+top_right = "Seppo Taala.."
+left = "Szu1971"
+right = "zlaya222"
+bottom = "TeddyKGBEEE"
+
+[results.OM23490288]
+filename = "2025-03-22_ 05-48_AM_$0.50_$1_#23490288.png"
+table_type = "natural8"
+
+[results.OM23490288.positions]
+top_left = "foulsoul"
+top_right = "Duyen phan"
+left = "BMGR_OmahaO.."
+right = "Seppo Taala.."
+bottom = "TeddyKGBEEE"
+
+[results.OM23454084]
+filename = "2025-03-22_ 05-57_AM_$0.50_$1_#23454084.png"
+table_type = "natural8"
+
+[results.OM23454084.positions]
+top_left = "Seppo Taala.."
+top_right = ""
+left = "HarryPote"
+right = "F34RequiTY"
+bottom = "TeddyKGBEEE"
+
+[results.OM23490335]
+filename = "2025-03-22_ 05-58_AM_$0.50_$1_#23490335.png"
+table_type = "natural8"
+
+[results.OM23490335.positions]
+top_left = "foulsoul"
+top_right = "Faustine"
+left = "BMGR_OmahaO.."
+right = "Seppo Taala.."
+bottom = "TeddyKGBEEF"
+
+[results.OM23490372]
+filename = "2025-03-22_ 06-03_AM_$0.50_$1_#23490372.png"
+table_type = "natural8"
+
+[results.OM23490372.positions]
+top_left = "foulsoul"
+top_right = "Faustine"
+left = ""
+right = "Seppo Taala.."
+bottom = "TeddyKGBEEF"
+
+[results.OM23454159]
+filename = "2025-03-22_ 06-08_AM_$0.50_$1_#23454159.png"
+table_type = "natural8"
+
+[results.OM23454159.positions]
+top_left = "Seppo Taala.."
+top_right = "Faustine"
+left = "HarryPote"
+right = "F34RequiTY"
+bottom = "TeddyKGBEEF"
+
+[results.OM23490453]
+filename = "2025-03-22_ 06-15_AM_$0.50_$1_#23490453.png"
+table_type = "natural8"
+
+[results.OM23490453.positions]
+top_left = "HarryPote"
+top_right = "Seppo Taala.."
+left = "Szu1971"
+right = "zlaya222"
+bottom = "TeddyKGBEEF"
+
+[results.OM23819916]
+filename = "2025-03-25_ 06-10_AM_$0.50_$1_#23819916.png"
+table_type = "natural8"
+
+[results.OM23819916.positions]
+top_left = "Mu1tiWay"
+top_right = "Wizard666"
+left = "moneditas"
+right = "KannonePLAYA"
+bottom = "TeddyKGBEEE"
+
+[results.OM23828232]
+filename = "2025-03-25_ 06-20_AM_$1_$2_#23828232.png"
+table_type = "natural8"
+
+[results.OM23828232.positions]
+top_left = "so hot"
+top_right = "Wizard666"
+left = "FlodTrun"
+right = "OTSD"
+bottom = "TeddyKGBEEE"
+
+[results.OM23890003]
+filename = "2025-03-25_ 06-41_AM_$0.50_$1_#23890003.png"
+table_type = "natural8"
+
+[results.OM23890003.positions]
+top_left = "TynamiteDits"
+top_right = "Wizard666"
+left = "foulsoul"
+right = "Fenasi KERIM"
+bottom = "TeddyKGBEEE"
+
+[results.OM23828488]
+filename = "2025-03-25_ 06-43_AM_$1_$2_#23828488.png"
+table_type = "natural8"
+
+[results.OM23828488.positions]
+top_left = "so hot"
+top_right = "Wizard666"
+left = "FlodTrun"
+right = "OTSD"
+bottom = "TeddyKGBEEE"
+
+[results.OM23890046]
+filename = "2025-03-25_ 06-46_AM_$0.50_$1_#23890046.png"
+table_type = "natural8"
+
+[results.OM23890046.positions]
+top_left = "TynamiteDits"
+top_right = "Wizard666"
+left = "PlayTwice"
+right = "Fenasi KERIM"
+bottom = "TeddyKGBEEE"
+
+[results.OM23796272]
+filename = "2025-03-25_ 06-58_AM_$0.50_$1_#23796272.png"
+table_type = "natural8"
+
+[results.OM23796272.positions]
+top_left = "Baylife"
+top_right = "gggod123"
+left = "PlayTwice"
+right = "gucci68"
+bottom = "TeddyKGBEEF"
+
+[results.OM27293989]
+filename = "2025-04-19_ 02-46_AM_$1_$2_#27293989.png"
+table_type = "natural8"
+
+[results.OM27293989.positions]
+top_left = "Olexii Golu.."
+top_right = "sesalec"
+left = "Tixiii"
+right = "Iron-Jarhead"
+bottom = "TeddyKGBEEE"
+
+[results.OM27238713]
+filename = "2025-04-19_ 02-55_AM_$1_$2_#27238713.png"
+table_type = "natural8"
+
+[results.OM27238713.positions]
+top_left = "OYHE MAMUT"
+top_right = "SalaR_@S"
+left = "nikita2005"
+right = "0lexii Golu.."
+bottom = "TeddyKGBEEE"
+
+[results.OM27238721]
+filename = "2025-04-19_ 02-56_AM_$1_$2_#27238721.png"
+table_type = "natural8"
+
+[results.OM27238721.positions]
+top_left = "0YHEAMUT"
+top_right = "SalaR_@S"
+left = "nikita2005"
+right = "0lexii Golu.."
+bottom = "TeddyKGBEEE"
+
+[results.OM27238731]
+filename = "2025-04-19_ 02-57_AM_$1_$2_#27238731.png"
+table_type = "natural8"
+
+[results.OM27238731.positions]
+top_left = "deurnebef"
+top_right = "SalaR_@S"
+left = "nikita2005"
+right = "0lexii Golu.."
+bottom = "TeddyKGBEEE"
+
+[results.OM27256149]
+filename = "2025-04-19_ 02-59_AM_$1_$2_#27256149.png"
+table_type = "natural8"
+
+[results.OM27256149.positions]
+top_left = "7allin7"
+top_right = "fl0ppy"
+left = "0lexii Golu.."
+right = "Tixiii"
+bottom = "TeddyKGBEEE"
+
+[results.OM27256177]
+filename = "2025-04-19_ 03-05_AM_$1_$2_#27256177.png"
+table_type = "natural8"
+
+[results.OM27256177.positions]
+top_left = "7allin7"
+top_right = "fl0ppy"
+left = "0lexii Golu.."
+right = "Tixiii"
+bottom = "TeddyKGBEEE"
+
+[results.OM27238827]
+filename = "2025-04-19_ 03-13_AM_$1_$2_#27238827.png"
+table_type = "natural8"
+
+[results.OM27238827.positions]
+top_left = "vaoniming@3.."
+top_right = "SalaR_@S"
+left = "deurnebef"
+right = "0lexii Golu.."
+bottom = "TeddyKGBEEE"
+
+[results.OM27279606]
+filename = "2025-04-19_ 03-23_AM_$1_$2_#27279606.png"
+table_type = "natural8"
+
+[results.OM27279606.positions]
+top_left = "_zwwdai57"
+top_right = "WbkJGG"
+left = "sesalec"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM27279694]
+filename = "2025-04-19_ 03-29_AM_$1_$2_#27279694.png"
+table_type = "natural8"
+
+[results.OM27279694.positions]
+top_left = ""
+top_right = "_zwwdai57"
+left = "WbkJGG"
+right = "sesalec"
+bottom = "7allin7"
+
+[results.OM27238953]
+filename = "2025-04-19_ 03-37_AM_$1_$2_#27238953.png"
+table_type = "natural8"
+
+[results.OM27238953.positions]
+top_left = "vaoniming@3.."
+top_right = ""
+left = ""
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM27256492]
+filename = "2025-04-19_ 03-40_AM_$1_$2_#27256492.png"
+table_type = "natural8"
+
+[results.OM27256492.positions]
+top_left = "zwwdai57"
+top_right = "kababzi"
+left = "sesalec"
+right = "Thunai"
+bottom = "TeddyKGBEEE"
+
+[results.OM27294242]
+filename = "2025-04-19_ 03-43_AM_$1_$2_#27294242.png"
+table_type = "natural8"
+
+[results.OM27294242.positions]
+top_left = "sesalec"
+top_right = "Yummy"
+left = "M Medeiros"
+right = "zwwdai57"
+bottom = "TeddyKGBEEE"
+
+[results.OM27284443]
+filename = "2025-04-19_ 03-53_AM_$1_$2_#27284443.png"
+table_type = "natural8"
+
+[results.OM27284443.positions]
+top_left = "GutiGuti"
+top_right = "zwwdai57"
+left = ""
+right = "7allin7"
+bottom = "TeddyKGBEEE"
+
+[results.OM27294329]
+filename = "2025-04-19_ 03-53_AM_$1_$2_#27294329.png"
+table_type = "natural8"
+
+[results.OM27294329.positions]
+top_left = "sesalec"
+top_right = "Yummy"
+left = "M Medeiros"
+right = "zwwdai57"
+bottom = "TeddyKGBEEE"
+
+[results.OM27284433]
+filename = "2025-04-19_ 03-54_AM_$1_$2_#27284433.png"
+table_type = "natural8"
+
+[results.OM27284433.positions]
+top_left = "GutiGuti"
+top_right = "zwwdai57"
+left = ""
+right = "7allin7"
+bottom = "TeddyKGBEEE"
+
+[results.OM27284484]
+filename = "2025-04-19_ 04-04_AM_$1_$2_#27284484.png"
+table_type = "natural8"
+
+[results.OM27284484.positions]
+top_left = ""
+top_right = "zwwdai57"
+left = "STTTT4444"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM27256604]
+filename = "2025-04-19_ 04-10_AM_$1_$2_#27256604.png"
+table_type = "natural8"
+
+[results.OM27256604.positions]
+top_left = "zwwdal57"
+top_right = ""
+left = "STTTT4444"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM27239319]
+filename = "2025-04-19_ 04-36_AM_$1_$2_#27239319.png"
+table_type = "natural8"
+
+[results.OM27239319.positions]
+top_left = "PikaGonavic.."
+top_right = ""
+left = "STTTT4444"
+right = "FlodTrun"
+bottom = "TeddyKGBEEE"
+
+[results.OM27239403]
+filename = "2025-04-19_ 04-46_AM_$1_$2_#27239403.png"
+table_type = "natural8"
+
+[results.OM27239403.positions]
+top_left = "PikaGonavic.."
+top_right = "OYHE MAMUT"
+left = "STTTT4444"
+right = "FlodTrun"
+bottom = "TeddyKGBEEE"
+
+[results.OM27239445]
+filename = "2025-04-19_ 04-51_AM_$1_$2_#27239445.png"
+table_type = "natural8"
+
+[results.OM27239445.positions]
+top_left = "PikaGonavic.."
+top_right = "OYHE MAMUT"
+left = "STTTT4444"
+right = "FlodTrun"
+bottom = "TeddyKGBEEE"
+
+[results.OM27256720]
+filename = "2025-04-19_ 04-51_AM_$1_$2_#27256720.png"
+table_type = "natural8"
+
+[results.OM27256720.positions]
+top_left = "ebosher"
+top_right = "zwwdai57"
+left = "FlodTrun"
+right = "lilo13"
+bottom = "TeddyKGBEEE"
+
+[results.OM27294571]
+filename = "2025-04-19_ 04-54_AM_$1_$2_#27294571.png"
+table_type = "natural8"
+
+[results.OM27294571.positions]
+top_left = "ebosher"
+top_right = "Yummy"
+left = "FlodTrun"
+right = "zwwdai57"
+bottom = "TeddyKGBEEE"
+
+[results.OM27294575]
+filename = "2025-04-19_ 04-54_AM_$1_$2_#27294575.png"
+table_type = "natural8"
+
+[results.OM27294575.positions]
+top_left = "ebosher"
+top_right = "Yummy"
+left = "FlodTrun"
+right = "zwwdai57"
+bottom = "TeddyKGBEEE"
+
+[results.OM27256746]
+filename = "2025-04-19_ 05-00_AM_$1_$2_#27256746.png"
+table_type = "natural8"
+
+[results.OM27256746.positions]
+top_left = "ebosher"
+top_right = "zwwdai57"
+left = "FlodTrun"
+right = "lilo13"
+bottom = "TeddyKGBEEE"
+
+[results.OM27239570]
+filename = "2025-04-19_ 05-03_AM_$1_$2_#27239570.png"
+table_type = "natural8"
+
+[results.OM27239570.positions]
+top_left = "PikaGonavic.."
+top_right = "STTTT4444"
+left = "DevilSnake"
+right = "FlodTrun"
+bottom = "TeddyKGBEEE"
+
+[results.OM27239604]
+filename = "2025-04-19_ 05-07_AM_$1_$2_#27239604.png"
+table_type = "natural8"
+
+[results.OM27239604.positions]
+top_left = "PikaGonavic.."
+top_right = "STTTT4444"
+left = "DevilSnake"
+right = "FlodTrun"
+bottom = "TeddyKGBEEE"
+
+[results.OM27256792]
+filename = "2025-04-19_ 05-10_AM_$1_$2_#27256792.png"
+table_type = "natural8"
+
+[results.OM27256792.positions]
+top_left = "ebosher"
+top_right = "zwwdai57"
+left = "FlodTrun"
+right = "lilo13"
+bottom = "TeddyKGBEEE"
+
+[results.OM27256794]
+filename = "2025-04-19_ 05-10_AM_$1_$2_#27256794.png"
+table_type = "natural8"
+
+[results.OM27256794.positions]
+top_left = "Yummy"
+top_right = "sesalec"
+left = "Julio Steff.."
+right = "PikaGonavic.."
+bottom = "TeddyKGBEEE"
+
+[results.OM27239674]
+filename = "2025-04-19_ 05-12_AM_$1_$2_#27239674.png"
+table_type = "natural8"
+
+[results.OM27239674.positions]
+top_left = "PikaGonavic.."
+top_right = "STTTT4444"
+left = "DevilSnake"
+right = "FlodTrun"
+bottom = "TeddyKGBEEE"
+
+[results.OM27239692]
+filename = "2025-04-19_ 05-14_AM_$1_$2_#27239692.png"
+table_type = "natural8"
+
+[results.OM27239692.positions]
+top_left = "PikaGonavic.."
+top_right = "STTTT4444"
+left = "DevilSnake"
+right = "FlodTrun"
+bottom = "TeddyKGBEEE"
+
+[results.OM27239788]
+filename = "2025-04-19_ 05-22_AM_$1_$2_#27239788.png"
+table_type = "natural8"
+
+[results.OM27239788.positions]
+top_left = "PikaGonavic.."
+top_right = "STTTT4444"
+left = "DevilSnake"
+right = "FlodTrun"
+bottom = "TeddyKGBEEE"
+
+[results.OM27256883]
+filename = "2025-04-19_ 05-24_AM_$1_$2_#27256883.png"
+table_type = "natural8"
+
+[results.OM27256883.positions]
+top_left = "GutiGuti"
+top_right = "7allin7"
+left = "FlodTrun"
+right = "lilo13"
+bottom = "TeddyKGBEEF"
+
+[results.OM27256928]
+filename = "2025-04-19_ 05-35_AM_$1_$2_#27256928.png"
+table_type = "natural8"
+
+[results.OM27256928.positions]
+top_left = "Yummy"
+top_right = "sesalec"
+left = "3rd Bro"
+right = "PikaGonavic.."
+bottom = "TeddyKGBEEE"
+
+[results.OM27256960]
+filename = "2025-04-19_ 05-40_AM_$1_$2_#27256960.png"
+table_type = "natural8"
+
+[results.OM27256960.positions]
+top_left = "GutiGuti"
+top_right = "7allin7"
+left = "FlodTrun"
+right = "lilo13"
+bottom = "TeddyKGBEEE"
+
+[results.OM27330055]
+filename = "2025-04-19_ 05-45_AM_$1_$2_#27330055.png"
+table_type = "natural8"
+
+[results.OM27330055.positions]
+top_left = "Liisa Ann"
+top_right = "Plantscha P.."
+left = "sesalec"
+right = "DevilSnake"
+bottom = "TeddyKGBEEE"
+
+[results.OM27416504]
+filename = "2025-04-20_ 02-19_AM_$1_$2_#27416504.png"
+table_type = "natural8"
+
+[results.OM27416504.positions]
+top_left = "wang1985"
+top_right = "DOLLABILL420"
+left = "Iron-Jarhead"
+right = "yaoniqiming@3.."
+bottom = "TeddyKGBEEF"
+
+[results.OM27339518]
+filename = "2025-04-20_ 02-20_AM_$1_$2_#27339518.png"
+table_type = "natural8"
+
+[results.OM27339518.positions]
+top_left = "deurnebef"
+top_right = "Yummy"
+left = "Alex Petrov"
+right = "wang1985"
+bottom = "TeddyKGBEEF"
+
+[results.OM27405829]
+filename = "2025-04-20_ 02-23_AM_$1_$2_#27405829.png"
+table_type = "natural8"
+
+[results.OM27405829.positions]
+top_left = ""
+top_right = "Filhote"
+left = ""
+right = "shesman"
+bottom = "TeddyKGBEEE"
+
+[results.OM27396694]
+filename = "2025-04-20_ 02-41_AM_$1_$2_#27396694.png"
+table_type = "natural8"
+
+[results.OM27396694.positions]
+top_left = ""
+top_right = "wang1985"
+left = ""
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM27339688]
+filename = "2025-04-20_ 02-49_AM_$1_$2_#27339688.png"
+table_type = "natural8"
+
+[results.OM27339688.positions]
+top_left = "Contre1"
+top_right = "odonkey"
+left = "Alex Petrov"
+right = "wang1985"
+bottom = "TeddyKGBEEE"
+
+[results.OM27396780]
+filename = "2025-04-20_ 02-57_AM_$1_$2_#27396780.png"
+table_type = "natural8"
+
+[results.OM27396780.positions]
+top_left = "deurnebef"
+top_right = "Faiz_shexani"
+left = "Bedutidol68"
+right = "P1406-8354"
+bottom = "TeddyKGBEEE"
+
+[results.OM27423734]
+filename = "2025-04-20_ 03-09_AM_$2_$5_#27423734.png"
+table_type = "natural8"
+
+[results.OM27423734.positions]
+top_left = "OYHE MAMUT"
+top_right = "yaoniming@3.."
+left = "deurnebef"
+right = "Monk3yTILT!"
+bottom = "TeddyKGBEEF"
+
+[results.OM27416904]
+filename = "2025-04-20_ 03-13_AM_$1_$2_#27416904.png"
+table_type = "natural8"
+
+[results.OM27416904.positions]
+top_left = "wang1985"
+top_right = "DOLLABILL420"
+left = "Labarbadels.."
+right = "yaoniming@3.."
+bottom = "TeddyKGBEEF"
+
+[results.OM27339966]
+filename = "2025-04-20_ 03-36_AM_$1_$2_#27339966.png"
+table_type = "natural8"
+
+[results.OM27339966.positions]
+top_left = "Yummy"
+top_right = "cristianAQ"
+left = "odonkey"
+right = "7allin7"
+bottom = "TeddyKGBEEE"
+
+[results.OM27339972]
+filename = "2025-04-20_ 03-37_AM_$1_$2_#27339972.png"
+table_type = "natural8"
+
+[results.OM27339972.positions]
+top_left = "Yummy"
+top_right = "cristianAQ"
+left = "odonkey"
+right = "7allin7"
+bottom = "TeddyKGBEEE"
+
+[results.OM27339982]
+filename = "2025-04-20_ 03-39_AM_$1_$2_#27339982.png"
+table_type = "natural8"
+
+[results.OM27339982.positions]
+top_left = "7allin7"
+top_right = "odonkey"
+left = "Alex Petrov"
+right = "wang1985"
+bottom = "TeddyKGBEEF"
+
+[results.OM27430000]
+filename = "2025-04-20_ 03-44_AM_$1_$2_#27430000.png"
+table_type = "natural8"
+
+[results.OM27430000.positions]
+top_left = ""
+top_right = "7allin7"
+left = "odonkey"
+right = "Alex Petrov"
+bottom = "TeddyKGBEEF"
+
+[results.OM27430019]
+filename = "2025-04-20_ 03-49_AM_$1_$2_#27430019.png"
+table_type = "natural8"
+
+[results.OM27430019.positions]
+top_left = "Yummy"
+top_right = "cristianAQ"
+left = "odonkey"
+right = "7allin7"
+bottom = "TeddyKGBEEE"
+
+[results.OM27386302]
+filename = "2025-04-20_ 03-51_AM_$1_$2_#27386302.png"
+table_type = "natural8"
+
+[results.OM27386302.positions]
+top_left = "zwwdal57"
+top_right = "Contre1"
+left = "Hubert Revv.."
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM27417276]
+filename = "2025-04-20_ 03-55_AM_$1_$2_#27417276.png"
+table_type = "natural8"
+
+[results.OM27417276.positions]
+top_left = "Labarbadels.."
+top_right = "zwwdai57"
+left = "7allin7"
+right = "yaoniming@3.."
+bottom = "TeddyKGBEEF"
+
+[results.OM27386332]
+filename = "2025-04-20_ 04-00_AM_$1_$2_#27386332.png"
+table_type = "natural8"
+
+[results.OM27386332.positions]
+top_left = "zwwdal57"
+top_right = "Contre1"
+left = "7allin7"
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM27430068]
+filename = "2025-04-20_ 04-02_AM_$1_$2_#27430068.png"
+table_type = "natural8"
+
+[results.OM27430068.positions]
+top_left = "Yummy"
+top_right = "cristianAQ"
+left = "odonkey"
+right = "7allin7"
+bottom = "TeddyKGBEEE"
+
+[results.OM27430072]
+filename = "2025-04-20_ 04-03_AM_$1_$2_#27430072.png"
+table_type = "natural8"
+
+[results.OM27430072.positions]
+top_left = "Yummy"
+top_right = "cristianAQ"
+left = "odonkey"
+right = "7allin7"
+bottom = "TeddyKGBEEE"
+
+[results.OM27386416]
+filename = "2025-04-20_ 04-17_AM_$1_$2_#27386416.png"
+table_type = "natural8"
+
+[results.OM27386416.positions]
+top_left = "zwwdai57"
+top_right = ""
+left = ""
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM27417529]
+filename = "2025-04-20_ 04-28_AM_$1_$2_#27417529.png"
+table_type = "natural8"
+
+[results.OM27417529.positions]
+top_left = "Labarbadels.."
+top_right = "zwwdai57"
+left = "7allin7"
+right = "odonkey"
+bottom = "TeddyKGBEEE"
+
+[results.OM27386465]
+filename = "2025-04-20_ 04-30_AM_$1_$2_#27386465.png"
+table_type = "natural8"
+
+[results.OM27386465.positions]
+top_left = "zwwdal57"
+top_right = "7allin7"
+left = "DevilSnake"
+right = "A5stone"
+bottom = "TeddyKGBEEE"
+
+[results.OM27430178]
+filename = "2025-04-20_ 04-30_AM_$1_$2_#27430178.png"
+table_type = "natural8"
+
+[results.OM27430178.positions]
+top_left = "Vvikx Mylr"
+top_right = "zwwdai57"
+left = "BrooklynBH"
+right = "raphayakawa"
+bottom = "TeddyKGBEEE"
+
+[results.OM27430198]
+filename = "2025-04-20_ 04-34_AM_$1_$2_#27430198.png"
+table_type = "natural8"
+
+[results.OM27430198.positions]
+top_left = "Yummy"
+top_right = "zwwdai57"
+left = "odonkey"
+right = "7allin7"
+bottom = "TeddyKGBEEE"
+
+[results.OM27346220]
+filename = "2025-04-20_ 04-42_AM_$2_$5_#27346220.png"
+table_type = "natural8"
+
+[results.OM27346220.positions]
+top_left = "clmlba"
+top_right = "cristianAQ"
+left = "Monk3yTILT!"
+right = "Sharmuti"
+bottom = "TeddyKGBEEF"
+
+[results.OM27417595]
+filename = "2025-04-20_ 04-43_AM_$1_$2_#27417595.png"
+table_type = "natural8"
+
+[results.OM27417595.positions]
+top_left = "Labarbadels.."
+top_right = "zwwdai57"
+left = "7allin7"
+right = "raphayakawa"
+bottom = "TeddyKGBEEE"
+
+[results.OM27417608]
+filename = "2025-04-20_ 04-47_AM_$1_$2_#27417608.png"
+table_type = "natural8"
+
+[results.OM27417608.positions]
+top_left = "Labarbadels.."
+top_right = "zwwdai57"
+left = "7allin7"
+right = "raphayakawa"
+bottom = "TeddyKGBEEE"
+
+[results.OM27430272]
+filename = "2025-04-20_ 04-51_AM_$1_$2_#27430272.png"
+table_type = "natural8"
+
+[results.OM27430272.positions]
+top_left = "Vvikx Mylr"
+top_right = "zwwdai57"
+left = "BrooklynBH"
+right = "raphayakawa"
+bottom = "TeddyKGBEEE"
+
+[results.OM27397372]
+filename = "2025-04-20_ 04-54_AM_$1_$2_#27397372.png"
+table_type = "natural8"
+
+[results.OM27397372.positions]
+top_left = "zwwdal57"
+top_right = "Plantscha P.."
+left = "sesalec"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM27397387]
+filename = "2025-04-20_ 04-58_AM_$1_$2_#27397387.png"
+table_type = "natural8"
+
+[results.OM27397387.positions]
+top_left = "zwwdal57"
+top_right = "Plantscha P.."
+left = "sesalec"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM27417712]
+filename = "2025-04-20_ 05-01_AM_$1_$2_#27417712.png"
+table_type = "natural8"
+
+[results.OM27417712.positions]
+top_left = "Labarbadels.."
+top_right = "zwwdai57"
+left = "7allin7"
+right = "raphayakawa"
+bottom = "TeddyKGBEEE"
+
+[results.OM27346252]
+filename = "2025-04-20_ 05-08_AM_$2_$5_#27346252.png"
+table_type = "natural8"
+
+[results.OM27346252.positions]
+top_left = "raphayakawa"
+top_right = "cristianAQ"
+left = "Monk3yTILT!"
+right = "Sharmuti"
+bottom = "TeddyKGBEEE"
+
+[results.OM27346256]
+filename = "2025-04-20_ 05-10_AM_$2_$5_#27346256.png"
+table_type = "natural8"
+
+[results.OM27346256.positions]
+top_left = "raphayakawa"
+top_right = "cristianAQ"
+left = "Monk3yTILT!"
+right = "Sharmuti"
+bottom = "TeddyKGBEEF"
+
+[results.OM27430393]
+filename = "2025-04-20_ 05-20_AM_$1_$2_#27430393.png"
+table_type = "natural8"
+
+[results.OM27430393.positions]
+top_left = "7allin7"
+top_right = "zwwdai57"
+left = "BrooklynBH"
+right = "raphayakawa"
+bottom = "TeddyKGBEEE"
+
+[results.OM27430415]
+filename = "2025-04-20_ 05-27_AM_$1_$2_#27430415.png"
+table_type = "natural8"
+
+[results.OM27430415.positions]
+top_left = "7allin7"
+top_right = "zwwdai57"
+left = "BrooklynBH"
+right = "raphayakawa"
+bottom = "TeddyKGBEEE"
+
+[results.OM27533290]
+filename = "2025-04-21_ 02-21_AM_$1_$2_#27533290.png"
+table_type = "natural8"
+
+[results.OM27533290.positions]
+top_left = "Doug Barclay"
+top_right = "pokerlkl"
+left = "Run it Once!"
+right = "lchiii"
+bottom = "TeddyKGBEEE"
+
+[results.OM27533300]
+filename = "2025-04-21_ 02-33_AM_$1_$2_#27533300.png"
+table_type = "natural8"
+
+[results.OM27533300.positions]
+top_left = "A5stone"
+top_right = "686bro"
+left = "Yummy"
+right = "xiaobale"
+bottom = "TeddyKGBEEE"
+
+[results.OM27457384]
+filename = "2025-04-21_ 02-31_AM_$1_$2_#27457384.png"
+table_type = "natural8"
+
+[results.OM27457384.positions]
+top_left = "Bond James .."
+top_right = ""
+left = "deurnebef"
+right = "Melitab"
+bottom = "TeddyKGBEEE"
+
+[results.OM27533524]
+filename = "2025-04-21_ 02-40_AM_$1_$2_#27533524.png"
+table_type = "natural8"
+
+[results.OM27533524.positions]
+top_left = "zwwdai57"
+top_right = "pokerlkl"
+left = "rosan"
+right = "canalhinha"
+bottom = "TeddyKGBEEE"
+
+[results.OM27457485]
+filename = "2025-04-21_ 02-43_AM_$1_$2_#27457485.png"
+table_type = "natural8"
+
+[results.OM27457485.positions]
+top_left = "Bond James .."
+top_right = "Run it Once!"
+left = "deurnebef"
+right = "Melitab"
+bottom = "TeddyKGBEEF"
+
+[results.OM27533573]
+filename = "2025-04-21_ 02-43_AM_$1_$2_#27533573.png"
+table_type = "natural8"
+
+[results.OM27533573.positions]
+top_left = "zwwdal57"
+top_right = ""
+left = "deurnebef"
+right = "canalhinha"
+bottom = "TeddyKGBEEE"
+
+[results.OM27533596]
+filename = "2025-04-21_ 02-47_AM_$1_$2_#27533596.png"
+table_type = "natural8"
+
+[results.OM27533596.positions]
+top_left = "zwwdal57"
+top_right = ""
+left = "deurnebef"
+right = "canalhinha"
+bottom = "TeddyKGBEEE"
+
+[results.OM27533773]
+filename = "2025-04-21_ 03-01_AM_$1_$2_#27533773.png"
+table_type = "natural8"
+
+[results.OM27533773.positions]
+top_left = "zwwdal57"
+top_right = "SteekjeLOs"
+left = "deurnebef"
+right = "canalhinha"
+bottom = "TeddyKGBEEF"
+
+[results.OM27533780]
+filename = "2025-04-21_ 03-01_AM_$1_$2_#27533780.png"
+table_type = "natural8"
+
+[results.OM27533780.positions]
+top_left = "A5stone"
+top_right = "686bro"
+left = "Yummy"
+right = "xiaobale"
+bottom = "TeddyKGBEEE"
+
+[results.OM27457827]
+filename = "2025-04-21_ 03-24_AM_$1_$2_#27457827.png"
+table_type = "natural8"
+
+[results.OM27457827.positions]
+top_left = ""
+top_right = "zwwdai57"
+left = "deurnebef"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM27534031]
+filename = "2025-04-21_ 03-25_AM_$1_$2_#27534031.png"
+table_type = "natural8"
+
+[results.OM27534031.positions]
+top_left = "zwwdai57"
+top_right = "686bro"
+left = "Yummy"
+right = "xiaobale"
+bottom = "TeddyKGBEEE"
+
+[results.OM27553161]
+filename = "2025-04-21_ 03-34_AM_$1_$2_#27553161.png"
+table_type = "natural8"
+
+[results.OM27553161.positions]
+top_left = ""
+top_right = ""
+left = ""
+right = "zwwdai57"
+bottom = "TeddyKGBEEE"
+
+[results.OM27534208]
+filename = "2025-04-21_ 03-38_AM_$1_$2_#27534208.png"
+table_type = "natural8"
+
+[results.OM27534208.positions]
+top_left = "zwwdal57"
+top_right = "ebosher"
+left = "Yummy"
+right = "xiaobale"
+bottom = "TeddyKGBEEE"
+
+[results.OM27553275]
+filename = "2025-04-21_ 03-44_AM_$1_$2_#27553275.png"
+table_type = "natural8"
+
+[results.OM27553275.positions]
+top_left = "SankaClaus"
+top_right = "canalhinha"
+left = "Gambledore .."
+right = "zwwdai57"
+bottom = "TeddyKGBEEF"
+
+[results.OM27534327]
+filename = "2025-04-21_ 03-48_AM_$1_$2_#27534327.png"
+table_type = "natural8"
+
+[results.OM27534327.positions]
+top_left = "zwwdal57"
+top_right = "ebosher"
+left = "Yummy"
+right = "vailoko10"
+bottom = "TeddyKGBEEF"
+
+[results.OM27534385]
+filename = "2025-04-21_ 03-55_AM_$1_$2_#27534385.png"
+table_type = "natural8"
+
+[results.OM27534385.positions]
+top_left = "zwwdai57"
+top_right = "luckboxcent.."
+left = "DevilSnake"
+right = "A5stone"
+bottom = "TeddyKGBEEE"
+
+[results.OM27534510]
+filename = "2025-04-21_ 04-06_AM_$1_$2_#27534510.png"
+table_type = "natural8"
+
+[results.OM27534510.positions]
+top_left = "zwwdai57"
+top_right = ""
+left = "kababzi"
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM27534719]
+filename = "2025-04-21_ 04-29_AM_$1_$2_#27534719.png"
+table_type = "natural8"
+
+[results.OM27534719.positions]
+top_left = "zwwdal57"
+top_right = "Liisa Ann"
+left = "kababzi"
+right = "Mr_MadMaks"
+bottom = "TeddyKGBEEF"
+
+[results.OM27560054]
+filename = "2025-04-21_ 04-33_AM_$2_$5_#27560054.png"
+table_type = "natural8"
+
+[results.OM27560054.positions]
+top_left = "Bigdaddydex"
+top_right = "Victoria Bi.."
+left = "kababzi"
+right = "NOWWON"
+bottom = "TeddyKGBEEE"
+
+[results.OM27553709]
+filename = "2025-04-21_ 04-40_AM_$1_$2_#27553709.png"
+table_type = "natural8"
+
+[results.OM27553709.positions]
+top_left = "SankaClaus"
+top_right = "Liisa Ann"
+left = "Gambledore .."
+right = "zwwdai57"
+bottom = "TeddyKGBEEF"
+
+[results.OM27517136]
+filename = "2025-04-21_ 05-04_AM_$1_$2_#27517136.png"
+table_type = "natural8"
+
+[results.OM27517136.positions]
+top_left = "kingleo777"
+top_right = "Yummy"
+left = "Liisa Ann"
+right = "zwwdai57"
+bottom = "TeddyKGBEEF"
+
+[results.OM27649921]
+filename = "2025-04-22_ 03-03_AM_$1_$2_#27649921.png"
+table_type = "natural8"
+
+[results.OM27649921.positions]
+top_left = "sinoda"
+top_right = "muka82"
+left = "Vvikx Mylr"
+right = "Sagittarius3"
+bottom = "TeddyKGBEEE"
+
+[results.OM27680774]
+filename = "2025-04-22_ 03-10_AM_$1_$2_#27680774.png"
+table_type = "natural8"
+
+[results.OM27680774.positions]
+top_left = "Mitz137"
+top_right = "ORappabr"
+left = "AbizianA_20"
+right = "wang1985"
+bottom = "TeddyKGBEEE"
+
+[results.OM27638269]
+filename = "2025-04-22_ 03-11_AM_$1_$2_#27638269.png"
+table_type = "natural8"
+
+[results.OM27638269.positions]
+top_left = "Duyen phan"
+top_right = "AbizianA_20"
+left = "Henrique Ba.."
+right = "wang1985"
+bottom = "TeddyKGBEEE"
+
+[results.OM27638271]
+filename = "2025-04-22_ 03-11_AM_$1_$2_#27638271.png"
+table_type = "natural8"
+
+[results.OM27638271.positions]
+top_left = ""
+top_right = "wang1985"
+left = "RottenTomato"
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM27638281]
+filename = "2025-04-22_ 03-13_AM_$1_$2_#27638281.png"
+table_type = "natural8"
+
+[results.OM27638281.positions]
+top_left = "Duyen phan"
+top_right = "AbizianA_20"
+left = "Henrique Ba.."
+right = "wang1985"
+bottom = "TeddyKGBEEE"
+
+[results.OM27700034]
+filename = "2025-04-22_ 03-15_AM_$1_$2_#27700034.png"
+table_type = "natural8"
+
+[results.OM27700034.positions]
+top_left = ""
+top_right = "Duyen phan"
+left = "muka82"
+right = "Vvikx Mylr"
+bottom = "Sagittarius3"
+
+[results.OM27638477]
+filename = "2025-04-22_ 03-35_AM_$1_$2_#27638477.png"
+table_type = "natural8"
+
+[results.OM27638477.positions]
+top_left = "Duyen phan"
+top_right = "AbizianA_20"
+left = "RottenTomato"
+right = "wang1985"
+bottom = "TeddyKGBEEF"
+
+[results.OM27700282]
+filename = "2025-04-22_ 03-53_AM_$1_$2_#27700282.png"
+table_type = "natural8"
+
+[results.OM27700282.positions]
+top_left = "Curator1"
+top_right = "muka82"
+left = "sesalec"
+right = "Sagittarius3"
+bottom = "TeddyKGBEEE"
+
+[results.OM27700300]
+filename = "2025-04-22_ 03-56_AM_$1_$2_#27700300.png"
+table_type = "natural8"
+
+[results.OM27700300.positions]
+top_left = "Curator1"
+top_right = "muka82"
+left = "sesalec"
+right = "Sagittarius3"
+bottom = "TeddyKGBEEE"
+
+[results.OM27680933]
+filename = "2025-04-22_ 04-13_AM_$1_$2_#27680933.png"
+table_type = "natural8"
+
+[results.OM27680933.positions]
+top_left = "TheRealGoat"
+top_right = "p0kerParty"
+left = "AbizianA_20"
+right = "pokerIkl"
+bottom = "TeddyKGBEEE"
+
+[results.OM27700476]
+filename = "2025-04-22_ 04-28_AM_$1_$2_#27700476.png"
+table_type = "natural8"
+
+[results.OM27700476.positions]
+top_left = "Curator1"
+top_right = "muka82"
+left = "p0kerParty"
+right = "TheRealGoat"
+bottom = "TeddyKGBEEE"
+
+[results.OM27700494]
+filename = "2025-04-22_ 04-31_AM_$1_$2_#27700494.png"
+table_type = "natural8"
+
+[results.OM27700494.positions]
+top_left = "Curator1"
+top_right = "muka82"
+left = "p0kerParty"
+right = "TheRealGoat"
+bottom = "TeddyKGBEEE"
+
+[results.OM27639210]
+filename = "2025-04-22_ 04-47_AM_$1_$2_#27639210.png"
+table_type = "natural8"
+
+[results.OM27639210.positions]
+top_left = "ORappabr"
+top_right = "odonkey"
+left = "TheRealGoat"
+right = "Mogambo-"
+bottom = "TeddyKGBEEF"
+
+[results.OM27639219]
+filename = "2025-04-22_ 04-49_AM_$1_$2_#27639219.png"
+table_type = "natural8"
+
+[results.OM27639219.positions]
+top_left = "ORappabr"
+top_right = "odonkey"
+left = "TheRealGoat"
+right = "Mogambo-"
+bottom = "TeddyKGBEEF"
+
+[results.OM27906095]
+filename = "2025-04-24_ 03-01_AM_$1_$2_#27906095.png"
+table_type = "natural8"
+
+[results.OM27906095.positions]
+top_left = "PotCrusher"
+top_right = "Ant34dai"
+left = ""
+right = "Noobkhiladi"
+bottom = "TeddyKGBEEF"
+
+[results.OM27888108]
+filename = "2025-04-24_ 05-25_AM_$2_$5_#27888108.png"
+table_type = "natural8"
+
+[results.OM27888108.positions]
+top_left = "odonkey"
+top_right = "Liisa Ann"
+left = "OseaDigamos.."
+right = "ApaApa_Lu_M.."
+bottom = "TeddyKGBEEF"
+
+[results.OM27907154]
+filename = "2025-04-24_ 05-27_AM_$1_$2_#27907154.png"
+table_type = "natural8"
+
+[results.OM27907154.positions]
+top_left = "Alkiviadis .."
+top_right = "Bedutidol68"
+left = "Liisa Ann"
+right = "Duyen phan"
+bottom = "TeddyKGBEEF"
+
+[results.OM27907164]
+filename = "2025-04-24_ 05-29_AM_$1_$2_#27907164.png"
+table_type = "natural8"
+
+[results.OM27907164.positions]
+top_left = "Alkiviadis .."
+top_right = "Bedutidol68"
+left = "Liisa Ann"
+right = "Duyen phan"
+bottom = "TeddyKGBEEF"
+
+[results.OM27888153]
+filename = "2025-04-24_ 05-32_AM_$2_$5_#27888153.png"
+table_type = "natural8"
+
+[results.OM27888153.positions]
+top_left = "odonkey"
+top_right = "Liisa Ann"
+left = ""
+right = "ApaApa_Lu_M.."
+bottom = "TeddyKGBEEE"
+
+[results.OM28155889]
+filename = "2025-04-26_ 02-32_AM_$1_$2_#28155889.png"
+table_type = "natural8"
+
+[results.OM28155889.positions]
+top_left = "Ant34dai"
+top_right = "Vvikx Mylr"
+left = "SabahD"
+right = "ToxicAbuser"
+bottom = "TeddyKGBEEE"
+
+[results.OM28192908]
+filename = "2025-04-26_ 02-32_AM_$1_$2_#28192908.png"
+table_type = "natural8"
+
+[results.OM28192908.positions]
+top_left = "RibaFish1"
+top_right = "TCyang"
+left = ""
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM28155900]
+filename = "2025-04-26_ 02-33_AM_$1_$2_#28155900.png"
+table_type = "natural8"
+
+[results.OM28155900.positions]
+top_left = "Ant34dai"
+top_right = "Vvikx Mylr"
+left = "SabahD"
+right = "ToxicAbuser"
+bottom = "TeddyKGBEEE"
+
+[results.OM28193401]
+filename = "2025-04-26_ 03-20_AM_$1_$2_#28193401.png"
+table_type = "natural8"
+
+[results.OM28193401.positions]
+top_left = "OmahaKing13"
+top_right = "Vvikx Mylr"
+left = "Ant34dai"
+right = "ToxicAbuser"
+bottom = "TeddyKGBEEE"
+
+[results.OM28193516]
+filename = "2025-04-26_ 03-31_AM_$1_$2_#28193516.png"
+table_type = "natural8"
+
+[results.OM28193516.positions]
+top_left = "OmahaKing13"
+top_right = "VvikxMylr"
+left = "Ant34dai"
+right = "ToxicAbuser"
+bottom = "TeddyKGBEEE"
+
+[results.OM28193528]
+filename = "2025-04-26_ 03-31_AM_$1_$2_#28193528.png"
+table_type = "natural8"
+
+[results.OM28193528.positions]
+top_left = "AmarilloSli.."
+top_right = "Ant34dai"
+left = "ToxicAbuser"
+right = "Ph4n70m R1d.."
+bottom = "TeddyKGBEEE"
+
+[results.OM28193539]
+filename = "2025-04-26_ 03-32_AM_$1_$2_#28193539.png"
+table_type = "natural8"
+
+[results.OM28193539.positions]
+top_left = "AmarilloSli.."
+top_right = "Ant34dai"
+left = "ToxicAbuser"
+right = "Ph4n70m R1d.."
+bottom = "TeddyKGBEEE"
+
+[results.OM28193555]
+filename = "2025-04-26_ 03-33_AM_$1_$2_#28193555.png"
+table_type = "natural8"
+
+[results.OM28193555.positions]
+top_left = "OmahaKing13"
+top_right = "VvikxMylr"
+left = "Ant34dai"
+right = "ToxicAbuser"
+bottom = "TeddyKGBEEE"
+
+[results.OM28156438]
+filename = "2025-04-26_ 04-11_AM_$1_$2_#28156438.png"
+table_type = "natural8"
+
+[results.OM28156438.positions]
+top_left = ""
+top_right = "Sweeetspot"
+left = "ToxicAbuser"
+right = "M lakovlev"
+bottom = "TeddyKGBEEE"
+
+[results.OM28194002]
+filename = "2025-04-26_ 04-13_AM_$1_$2_#28194002.png"
+table_type = "natural8"
+
+[results.OM28194002.positions]
+top_left = ""
+top_right = ""
+left = "ToxicAbuser"
+right = "Sweeetspot"
+bottom = "TeddyKGBEEE"
+
+[results.OM28203896]
+filename = "2025-04-26_ 04-18_AM_$1_$2_#28203896.png"
+table_type = "natural8"
+
+[results.OM28203896.positions]
+top_left = "Lichtziende.."
+top_right = "Vvikx Mylr"
+left = "ToxicAbuser"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM28231418]
+filename = "2025-04-26_ 04-20_AM_$1_$2_#28231418.png"
+table_type = "natural8"
+
+[results.OM28231418.positions]
+top_left = "TiltPoker"
+top_right = "Sweeetspot"
+left = "DuECESWiLd22"
+right = "ToxicAbuser"
+bottom = "TeddyKGBEEF"
+
+[results.OM28204110]
+filename = "2025-04-26_ 04-42_AM_$1_$2_#28204110.png"
+table_type = "natural8"
+
+[results.OM28204110.positions]
+top_left = "Lichtziende.."
+top_right = "Vvikx Mylr"
+left = "TiltPoker"
+right = "NeedOrNickN.."
+bottom = "TeddyKGBEEE"
+
+[results.OM28231651]
+filename = "2025-04-26_ 05-12_AM_$1_$2_#28231651.png"
+table_type = "natural8"
+
+[results.OM28231651.positions]
+top_left = "M lakovlev"
+top_right = "Vvikx Mylr"
+left = "lenjing"
+right = "RottenTomato"
+bottom = "TeddyKGBEEE"
+
+[results.OM28429914]
+filename = "2025-04-28_ 01-45_AM_$1_$2_#28429914.png"
+table_type = "natural8"
+
+[results.OM28429914.positions]
+top_left = "Kobi belo"
+top_right = ""
+left = ""
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM28435052]
+filename = "2025-04-28_ 02-06_AM_$1_$2_#28435052.png"
+table_type = "natural8"
+
+[results.OM28435052.positions]
+top_left = "PlayTwice"
+top_right = "Luckyball02.."
+left = "JosiasRojas.."
+right = "PROWL3R"
+bottom = "TeddyKGBEEE"
+
+[results.OM28435064]
+filename = "2025-04-28_ 02-08_AM_$1_$2_#28435064.png"
+table_type = "natural8"
+
+[results.OM28435064.positions]
+top_left = "PlayTwice"
+top_right = "Luckyball02.."
+left = "JosiasRojas.."
+right = "PROWL3R"
+bottom = "TeddyKGBEEE"
+
+[results.OM28444580]
+filename = "2025-04-28_ 02-10_AM_$1_$2_#28444580.png"
+table_type = "natural8"
+
+[results.OM28444580.positions]
+top_left = "cleov"
+top_right = "PlayTwice"
+left = "DK Burnell"
+right = "Jojo26"
+bottom = "TeddyKGBEEE"
+
+[results.OM28408001]
+filename = "2025-04-28_ 02-10_AM_$1_$2_#28408001.png"
+table_type = "natural8"
+
+[results.OM28408001.positions]
+top_left = "PROWL3R"
+top_right = "bufalobyll"
+left = "PlayTwice"
+right = "saadouniaber"
+bottom = "TeddyKGBEEE"
+
+[results.OM28408010]
+filename = "2025-04-28_ 02-12_AM_$1_$2_#28408010.png"
+table_type = "natural8"
+
+[results.OM28408010.positions]
+top_left = "PROWL3R"
+top_right = "bufalobyll"
+left = "PlayTwice"
+right = "saadouniaber"
+bottom = "TeddyKGBEEF"
+
+[results.OM28435156]
+filename = "2025-04-28_ 02-22_AM_$1_$2_#28435156.png"
+table_type = "natural8"
+
+[results.OM28435156.positions]
+top_left = "PlayTwice"
+top_right = "Book0329"
+left = "JosiasRojas.."
+right = "PROWL3R"
+bottom = "TeddyKGBEEE"
+
+[results.OM28408114]
+filename = "2025-04-28_ 02-52_AM_$1_$2_#28408114.png"
+table_type = "natural8"
+
+[results.OM28408114.positions]
+top_left = ""
+top_right = "OmahaKing13"
+left = ""
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM28435513]
+filename = "2025-04-28_ 03-10_AM_$1_$2_#28435513.png"
+table_type = "natural8"
+
+[results.OM28435513.positions]
+top_left = ""
+top_right = "Ant34dai"
+left = "raphayakawa"
+right = "DuECeSWiLd22"
+bottom = "REiDaSelva"
+
+[results.OM28408160]
+filename = "2025-04-28_ 03-14_AM_$1_$2_#28408160.png"
+table_type = "natural8"
+
+[results.OM28408160.positions]
+top_left = "Ant34dai"
+top_right = "OmahaKing13"
+left = "Controlthem.."
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEF"
+
+[results.OM28435549]
+filename = "2025-04-28_ 03-15_AM_$1_$2_#28435549.png"
+table_type = "natural8"
+
+[results.OM28435549.positions]
+top_left = "Ant34dai"
+top_right = ""
+left = "DuECESWiLd22"
+right = "REiDaSelva"
+bottom = "TeddyKGBEEF"
+
+[results.OM28408183]
+filename = "2025-04-28_ 03-24_AM_$1_$2_#28408183.png"
+table_type = "natural8"
+
+[results.OM28408183.positions]
+top_left = "Ant34dai"
+top_right = "OmahaKing13"
+left = "p0kerParty"
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM28460910]
+filename = "2025-04-28_ 03-30_AM_$1_$2_#28460910.png"
+table_type = "natural8"
+
+[results.OM28460910.positions]
+top_left = "Bond James .."
+top_right = "OmahaKing13"
+left = "Ant34dai"
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM28408329]
+filename = "2025-04-28_ 04-14_AM_$1_$2_#28408329.png"
+table_type = "natural8"
+
+[results.OM28408329.positions]
+top_left = "Ant34dai"
+top_right = "SankaClaus"
+left = "Bond James .."
+right = "Duyen phan"
+bottom = "TeddyKGBEEF"
+
+[results.OM28448804]
+filename = "2025-04-28_ 08-36_AM_$1_$2_#28448804.png"
+table_type = "natural8"
+
+[results.OM28448804.positions]
+top_left = "Snagfrag"
+top_right = ""
+left = ""
+right = "Duyen phan"
+bottom = "TeddyKGBEEE"
+
+[results.OM28448903]
+filename = "2025-04-28_ 08-45_AM_$1_$2_#28448903.png"
+table_type = "natural8"
+
+[results.OM28448903.positions]
+top_left = "Snagfrag"
+top_right = ""
+left = ""
+right = "Duyen phan"
+bottom = "TeddyKGBEEE"
+
+[results.OM28448922]
+filename = "2025-04-28_ 08-47_AM_$1_$2_#28448922.png"
+table_type = "natural8"
+
+[results.OM28448922.positions]
+top_left = "Snagfrag"
+top_right = ""
+left = "AA_22"
+right = "Duyen phan"
+bottom = "TeddyKGBEEE"
+
+[results.OM28861872]
+filename = "2025-05-01_ 02-22_AM_$1_$2_#28861872.png"
+table_type = "natural8"
+
+[results.OM28861872.positions]
+top_left = "REiDaSelva"
+top_right = "Dowqh Santos"
+left = "HotStreak"
+right = "luck2pro1"
+bottom = "TeddyKGBEEE"
+
+[results.OM28861884]
+filename = "2025-05-01_ 02-24_AM_$1_$2_#28861884.png"
+table_type = "natural8"
+
+[results.OM28861884.positions]
+top_left = "REiDaSelva"
+top_right = "Dowqh Santos"
+left = "HotStreak"
+right = "luck2pro1"
+bottom = "TeddyKGBEEE"
+
+[results.OM28832807]
+filename = "2025-05-01_ 03-49_AM_$1_$2_#28832807.png"
+table_type = "natural8"
+
+[results.OM28832807.positions]
+top_left = "A casa"
+top_right = "Ant34dai"
+left = "Dowgh Santos"
+right = "REiDaSelva"
+bottom = "TeddyKGBEEE"
+
+[results.OM32896086]
+filename = "2025-05-30_ 06-25_AM_$2_$5_#32896086.png"
+table_type = "natural8"
+
+[results.OM32896086.positions]
+top_left = ""
+top_right = "BURRRO"
+left = ""
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM32896121]
+filename = "2025-05-30_ 06-26_AM_$2_$5_#32896121.png"
+table_type = "natural8"
+
+[results.OM32896121.positions]
+top_left = ""
+top_right = "BURRRO"
+left = "Sven Skurve.."
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM32896150]
+filename = "2025-05-30_ 06-29_AM_$2_$5_#32896150.png"
+table_type = "natural8"
+
+[results.OM32896150.positions]
+top_left = ""
+top_right = "BURRRO"
+left = "Sven Skurve.."
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM32950560]
+filename = "2025-05-30_ 06-33_AM_$1_$2_#32950560.png"
+table_type = "natural8"
+
+[results.OM32950560.positions]
+top_left = "Crushinskyy"
+top_right = "Liisa Ann"
+left = "PanJapa"
+right = "tomarnabroca"
+bottom = "TeddyKGBEEE"
+
+[results.OM32896239]
+filename = "2025-05-30_ 06-37_AM_$2_$5_#32896239.png"
+table_type = "natural8"
+
+[results.OM32896239.positions]
+top_left = ""
+top_right = "BURRRO"
+left = "Sven Skurve.."
+right = "berzebub1"
+bottom = "TeddyKGBEEF"
+
+[results.OM32950650]
+filename = "2025-05-30_ 06-40_AM_$1_$2_#32950650.png"
+table_type = "natural8"
+
+[results.OM32950650.positions]
+top_left = "Crushinskyy"
+top_right = "Liisa Ann"
+left = "PanJapa"
+right = "tomarnabroca"
+bottom = "TeddyKGBEEE"
+
+[results.OM32896350]
+filename = "2025-05-30_ 06-48_AM_$2_$5_#32896350.png"
+table_type = "natural8"
+
+[results.OM32896350.positions]
+top_left = "boudyy"
+top_right = "BURRRO"
+left = "Sven Skurve.."
+right = "berzebub1"
+bottom = "TeddyKGBEEF"
+
+[results.OM32878924]
+filename = "2025-05-30_ 06-53_AM_$2_$5_#32878924.png"
+table_type = "natural8"
+
+[results.OM32878924.positions]
+top_left = "BURRRO"
+top_right = "Sven Skurve.."
+left = "Liisa Ann"
+right = "true aces"
+bottom = "TeddyKGBEEF"
+
+[results.OM32879004]
+filename = "2025-05-30_ 06-58_AM_$2_$5_#32879004.png"
+table_type = "natural8"
+
+[results.OM32879004.positions]
+top_left = "BURRRO"
+top_right = "Sven Skurve.."
+left = "AA_22"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM32896459]
+filename = "2025-05-30_ 07-01_AM_$1_$2_#32896459.png"
+table_type = "natural8"
+
+[results.OM32896459.positions]
+top_left = "Get2TheRiver"
+top_right = "PanJapa"
+left = "Liisa Ann"
+right = "Crushinskyy"
+bottom = "TeddyKGBEEF"
+
+[results.OM32927174]
+filename = "2025-05-30_ 07-08_AM_$1_$2_#32927174.png"
+table_type = "natural8"
+
+[results.OM32927174.positions]
+top_left = "Liisa Ann"
+top_right = "dodo13"
+left = "Crushinsky"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM32927455]
+filename = "2025-05-30_ 07-35_AM_$1_$2_#32927455.png"
+table_type = "natural8"
+
+[results.OM32927455.positions]
+top_left = "Get2TheRiver"
+top_right = "Crushinskyy"
+left = "PanJapa"
+right = "Liisa Ann"
+bottom = "TeddyKGBEEF"
+
+[results.OM32917307]
+filename = "2025-05-30_ 07-38_AM_$1_$2_#32917307.png"
+table_type = "natural8"
+
+[results.OM32917307.positions]
+top_left = "Fernanado"
+top_right = "Liisa Ann"
+left = "kamyR1400"
+right = "Brainfarts"
+bottom = "TeddyKGBEEE"
+
+[results.OM32927541]
+filename = "2025-05-30_ 07-42_AM_$1_$2_#32927541.png"
+table_type = "natural8"
+
+[results.OM32927541.positions]
+top_left = "Get2TheRiver"
+top_right = "Crushinskyy"
+left = "PanJapa"
+right = "Liisa Ann"
+bottom = "TeddyKGBEEF"
+
+[results.OM32951265]
+filename = "2025-05-30_ 07-45_AM_$1_$2_#32951265.png"
+table_type = "natural8"
+
+[results.OM32951265.positions]
+top_left = "kokosikkk"
+top_right = "Liisa Ann"
+left = "Crushinskyy"
+right = "PanJapa"
+bottom = "TeddyKGBEEE"
+
+[results.OM32885505]
+filename = "2025-05-30_ 07-52_AM_$1_$2_#32885505.png"
+table_type = "natural8"
+
+[results.OM32885505.positions]
+top_left = "Liisa Ann"
+top_right = "WbkJGG"
+left = "PanJapa"
+right = "Crushinskyy"
+bottom = "TeddyKGBEEE"
+
+[results.OM32917464]
+filename = "2025-05-30_ 08-00_AM_$1_$2_#32917464.png"
+table_type = "natural8"
+
+[results.OM32917464.positions]
+top_left = "Fernanado"
+top_right = ""
+left = "kamyR1400"
+right = "Brainfarts"
+bottom = "TeddyKGBEEE"
+
+[results.OM32978891]
+filename = "2025-05-31_ 03-34_AM_$2_$5_#32978891.png"
+table_type = "natural8"
+
+[results.OM32978891.positions]
+top_left = "OmahaOmahaO.."
+top_right = "prosor"
+left = "p0kerParty"
+right = "IDreamOfJen.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33064680]
+filename = "2025-05-31_ 03-42_AM_$2_$5_#33064680.png"
+table_type = "natural8"
+
+[results.OM33064680.positions]
+top_left = "WisdomOfTra.."
+top_right = "Roy00"
+left = "Antony2025"
+right = "p0kerParty"
+bottom = "TeddyKGBEEE"
+
+[results.OM33036683]
+filename = "2025-05-31_ 03-58_AM_$1_$2_#33036683.png"
+table_type = "natural8"
+
+[results.OM33036683.positions]
+top_left = "Poipui"
+top_right = "Pazzlo96"
+left = "Meshhhh"
+right = "p0kerParty"
+bottom = "TeddyKGBEEE"
+
+[results.OM33064893]
+filename = "2025-05-31_ 04-08_AM_$2_$5_#33064893.png"
+table_type = "natural8"
+
+[results.OM33064893.positions]
+top_left = "Soeur Mirna"
+top_right = "Bobaking"
+left = "Antony2025"
+right = "Arbaiter"
+bottom = "TeddyKGBEEE"
+
+[results.OM33064991]
+filename = "2025-05-31_ 04-19_AM_$2_$5_#33064991.png"
+table_type = "natural8"
+
+[results.OM33064991.positions]
+top_left = "prosor"
+top_right = "p0kerParty"
+left = "lDreamOfJen.."
+right = "60162702"
+bottom = "TeddyKGBEEE"
+
+[results.OM32979201]
+filename = "2025-05-31_ 04-30_AM_$1_$2_#32979201.png"
+table_type = "natural8"
+
+[results.OM32979201.positions]
+top_left = "boulhk"
+top_right = "p0kerParty"
+left = "Tyler Durr.."
+right = "prosor"
+bottom = "TeddyKGBEEF"
+
+[results.OM32979258]
+filename = "2025-05-31_ 04-36_AM_$2_$5_#32979258.png"
+table_type = "natural8"
+
+[results.OM32979258.positions]
+top_left = "000MahAAA"
+top_right = "prosor"
+left = "p0kerParty"
+right = "OmahaOmaha0.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33045805]
+filename = "2025-05-31_ 04-56_AM_$2_$5_#33045805.png"
+table_type = "natural8"
+
+[results.OM33045805.positions]
+top_left = "Potshipper"
+top_right = "p0kerParty"
+left = "sebaru"
+right = "Niko353"
+bottom = "TeddyKGBEEF"
+
+[results.OM32979393]
+filename = "2025-05-31_ 04-59_AM_$2_$5_#32979393.png"
+table_type = "natural8"
+
+[results.OM32979393.positions]
+top_left = "000MahAAA"
+top_right = "prosor"
+left = "p0kerParty"
+right = "OmahaOmahaO.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33045847]
+filename = "2025-05-31_ 04-59_AM_$2_$5_#33045847.png"
+table_type = "natural8"
+
+[results.OM33045847.positions]
+top_left = "Potshipper"
+top_right = "p0kerParty"
+left = "sebaru"
+right = "Niko353"
+bottom = "TeddyKGBEEF"
+
+[results.OM33045939]
+filename = "2025-05-31_ 05-12_AM_$2_$5_#33045939.png"
+table_type = "natural8"
+
+[results.OM33045939.positions]
+top_left = "Potshipper"
+top_right = "p0kerParty"
+left = "sebaru"
+right = "Niko353"
+bottom = "TeddyKGBEEE"
+
+[results.OM33045993]
+filename = "2025-05-31_ 05-14_AM_$2_$5_#33045993.png"
+table_type = "natural8"
+
+[results.OM33045993.positions]
+top_left = "Iron-Jarhead"
+top_right = "HakkaKaisee"
+left = "sebaru"
+right = "p0kerParty"
+bottom = "TeddyKGBEEE"
+
+[results.OM33054497]
+filename = "2025-05-31_ 05-15_AM_$1_$2_#33054497.png"
+table_type = "natural8"
+
+[results.OM33054497.positions]
+top_left = "p0kerParty"
+top_right = "luck2pro1"
+left = "prosor"
+right = "bulldogboy"
+bottom = "TeddyKGBEEE"
+
+[results.OM33046000]
+filename = "2025-05-31_ 05-15_AM_$2_$5_#33046000.png"
+table_type = "natural8"
+
+[results.OM33046000.positions]
+top_left = "Potshipper"
+top_right = "p0kerParty"
+left = "sebaru"
+right = "Niko353"
+bottom = "TeddyKGBEEE"
+
+[results.OM33046013]
+filename = "2025-05-31_ 05-17_AM_$2_$5_#33046013.png"
+table_type = "natural8"
+
+[results.OM33046013.positions]
+top_left = "Potshipper"
+top_right = "p0kerParty"
+left = "sebaru"
+right = "Niko353"
+bottom = "TeddyKGBEEE"
+
+[results.OM33065488]
+filename = "2025-05-31_ 05-25_AM_$2_$5_#33065488.png"
+table_type = "natural8"
+
+[results.OM33065488.positions]
+top_left = "showmethemo.."
+top_right = "luck2pro1"
+left = "prosor"
+right = "MMMkk321"
+bottom = "TeddyKGBEEE"
+
+[results.OM32979672]
+filename = "2025-05-31_ 05-52_AM_$2_$5_#32979672.png"
+table_type = "natural8"
+
+[results.OM32979672.positions]
+top_left = "000MahAAA"
+top_right = "prosor"
+left = "p0kerParty"
+right = "OmahaOmahaO.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33046374]
+filename = "2025-05-31_ 05-53_AM_$2_$5_#33046374.png"
+table_type = "natural8"
+
+[results.OM33046374.positions]
+top_left = ""
+top_right = "luck2pro1"
+left = ""
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM32979718]
+filename = "2025-05-31_ 06-01_AM_$2_$5_#32979718.png"
+table_type = "natural8"
+
+[results.OM32979718.positions]
+top_left = "000MahAAA"
+top_right = "Potshipper"
+left = "p0kerParty"
+right = "OmahaOmahaO.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33065743]
+filename = "2025-05-31_ 06-02_AM_$2_$5_#33065743.png"
+table_type = "natural8"
+
+[results.OM33065743.positions]
+top_left = "doTheConga"
+top_right = "p0kerParty"
+left = "Tancred"
+right = "sebaru"
+bottom = "TeddyKGBEEF"
+
+[results.OM33065871]
+filename = "2025-05-31_ 06-17_AM_$2_$5_#33065871.png"
+table_type = "natural8"
+
+[results.OM33065871.positions]
+top_left = ""
+top_right = "dotheConga"
+left = ""
+right = "WisdomOfTra..."
+bottom = "TeddyKGBEEE"
+
+[results.OM33080324]
+filename = "2025-05-31_ 06-17_AM_$2_$5_#33080324.png"
+table_type = "natural8"
+
+[results.OM33080324.positions]
+top_left = ""
+top_right = "Fernanado"
+left = ""
+right = "showmethemo.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33071385]
+filename = "2025-05-31_ 06-21_AM_$1_$2_#33071385.png"
+table_type = "natural8"
+
+[results.OM33071385.positions]
+top_left = "bulldogboy"
+top_right = "Crushinskyy"
+left = "PanJapa"
+right = "Jasous"
+bottom = "TeddyKGBEEE"
+
+[results.OM33080361]
+filename = "2025-05-31_ 06-24_AM_$2_$5_#33080361.png"
+table_type = "natural8"
+
+[results.OM33080361.positions]
+top_left = "zzzz1979"
+top_right = "Fernanado"
+left = "dotheConga"
+right = "showmethemo.."
+bottom = "TeddyKGBEEF"
+
+[results.OM33080373]
+filename = "2025-05-31_ 06-26_AM_$2_$5_#33080373.png"
+table_type = "natural8"
+
+[results.OM33080373.positions]
+top_left = "zzzz1979"
+top_right = "Fernanado"
+left = "dotheConga"
+right = "snowmethemo.."
+bottom = "TeddyKGBEEF"
+
+[results.OM33066013]
+filename = "2025-05-31_ 06-34_AM_$2_$5_#33066013.png"
+table_type = "natural8"
+
+[results.OM33066013.positions]
+top_left = "OOOMahAAA"
+top_right = "CConstantinC"
+left = "Give2ShihTzu"
+right = "Fernanado"
+bottom = "TeddyKGBEEE"
+
+[results.OM33066045]
+filename = "2025-05-31_ 06-37_AM_$2_$5_#33066045.png"
+table_type = "natural8"
+
+[results.OM33066045.positions]
+top_left = "000MahAAA"
+top_right = "CCOnstantinC"
+left = "shubidubi"
+right = "Fernanado"
+bottom = "TeddyKGBEEE"
+
+[results.OM32979933]
+filename = "2025-05-31_ 06-52_AM_$2_$5_#32979933.png"
+table_type = "natural8"
+
+[results.OM32979933.positions]
+top_left = "MMMkk321"
+top_right = "WisdomOfTra.."
+left = "ThePressure"
+right = "Brainfarts"
+bottom = "TeddyKGBEEE"
+
+[results.OM33181060]
+filename = "2025-06-01_ 03-25_AM_$2_$5_#33181060.png"
+table_type = "natural8"
+
+[results.OM33181060.positions]
+top_left = ""
+top_right = ""
+left = "kingofrungo.."
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM33125692]
+filename = "2025-06-01_ 03-45_AM_$1_$2_#33125692.png"
+table_type = "natural8"
+
+[results.OM33125692.positions]
+top_left = "KannonePLAYA"
+top_right = "DOLLABILL420"
+left = "GG_GG"
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM33181186]
+filename = "2025-06-01_ 03-45_AM_$2_$5_#33181186.png"
+table_type = "natural8"
+
+[results.OM33181186.positions]
+top_left = ""
+top_right = "kingofrungo.."
+left = ""
+right = "Dor VaKnin"
+bottom = "TeddyKGBEEE"
+
+[results.OM33125704]
+filename = "2025-06-01_ 03-48_AM_$1_$2_#33125704.png"
+table_type = "natural8"
+
+[results.OM33125704.positions]
+top_left = "KannonePLAYA"
+top_right = "DOLLABILL420"
+left = "GG_GG"
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM33172499]
+filename = "2025-06-01_ 03-49_AM_$1_$2_#33172499.png"
+table_type = "natural8"
+
+[results.OM33172499.positions]
+top_left = "Melirazayii"
+top_right = "ebosher"
+left = "DOLLABILL420"
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM33172664]
+filename = "2025-06-01_ 04-28_AM_$1_$2_#33172664.png"
+table_type = "natural8"
+
+[results.OM33172664.positions]
+top_left = "Melirazayii"
+top_right = "ebosher"
+left = "sesalec"
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM33230297]
+filename = "2025-06-01_ 04-33_AM_$1_$2_#33230297.png"
+table_type = "natural8"
+
+[results.OM33230297.positions]
+top_left = "odonkey"
+top_right = "REiDaSelva_"
+left = "Z0Zulin"
+right = "ERii112"
+bottom = "TeddyKGBEEE"
+
+[results.OM33181430]
+filename = "2025-06-01_ 04-45_AM_$2_$5_#33181430.png"
+table_type = "natural8"
+
+[results.OM33181430.positions]
+top_left = "wisdomOfTra.."
+top_right = "Rex Ludus"
+left = "sebaru"
+right = "Dor Vaknin"
+bottom = "TeddyKGBEEF"
+
+[results.OM33172734]
+filename = "2025-06-01_ 04-53_AM_$1_$2_#33172734.png"
+table_type = "natural8"
+
+[results.OM33172734.positions]
+top_left = "Melirazavii"
+top_right = "ebosher"
+left = "way2loose"
+right = "Vvikx Mylr"
+bottom = "TeddyKGBEEE"
+
+[results.OM33201450]
+filename = "2025-06-01_ 05-08_AM_$1_$2_#33201450.png"
+table_type = "natural8"
+
+[results.OM33201450.positions]
+top_left = "Liisa Ann"
+top_right = "REiDaSelva_"
+left = "Nima-Sharifi"
+right = "way2loose"
+bottom = "TeddyKGBEEF"
+
+[results.OM33181561]
+filename = "2025-06-01_ 05-09_AM_$2_$5_#33181561.png"
+table_type = "natural8"
+
+[results.OM33181561.positions]
+top_left = ""
+top_right = "Rex Ludus"
+left = "sebaru"
+right = "shubidubi"
+bottom = "TeddyKGBEEE"
+
+[results.OM33266617]
+filename = "2025-06-02_ 03-59_AM_$1_$2_#33266617.png"
+table_type = "natural8"
+
+[results.OM33266617.positions]
+top_left = "tanxdax"
+top_right = "Mr_MadMaks"
+left = "alexandrinh.."
+right = "lwtw"
+bottom = "TeddyKGBEEE"
+
+[results.OM33266634]
+filename = "2025-06-02_ 04-04_AM_$1_$2_#33266634.png"
+table_type = "natural8"
+
+[results.OM33266634.positions]
+top_left = ""
+top_right = "tanxdax"
+left = "Mr_MadMaks"
+right = "alexandrinh.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33266797]
+filename = "2025-06-02_ 04-30_AM_$1_$2_#33266797.png"
+table_type = "natural8"
+
+[results.OM33266797.positions]
+top_left = ""
+top_right = "Bulkins 3"
+left = "sesalec"
+right = "odonkey"
+bottom = "TeddyKGBEEF"
+
+[results.OM33266809]
+filename = "2025-06-02_ 04-32_AM_$1_$2_#33266809.png"
+table_type = "natural8"
+
+[results.OM33266809.positions]
+top_left = ""
+top_right = "sesalec"
+left = "prosor"
+right = "akkareteam"
+bottom = "TeddyKGBEEE"
+
+[results.OM33266873]
+filename = "2025-06-02_ 04-41_AM_$1_$2_#33266873.png"
+table_type = "natural8"
+
+[results.OM33266873.positions]
+top_left = "PropbR0s"
+top_right = "sesalec"
+left = "odonkey"
+right = "alexandrinh.."
+bottom = "TeddyKGBEEF"
+
+[results.OM33293255]
+filename = "2025-06-02_ 04-49_AM_$2_$5_#33293255.png"
+table_type = "natural8"
+
+[results.OM33293255.positions]
+top_left = "Dor Vaknin"
+top_right = "Sven Skurve.."
+left = "Just numbers"
+right = "prosor"
+bottom = "TeddyKGBEEE"
+
+[results.OM33266934]
+filename = "2025-06-02_ 04-52_AM_$1_$2_#33266934.png"
+table_type = "natural8"
+
+[results.OM33266934.positions]
+top_left = "sesalec"
+top_right = "prosor"
+left = "akkareteam"
+right = "alexandrinh.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33303879]
+filename = "2025-06-02_ 04-59_AM_$1_$2_#33303879.png"
+table_type = "natural8"
+
+[results.OM33303879.positions]
+top_left = "alexandrinh.."
+top_right = "Mulkkujussi"
+left = "p0kerParty"
+right = "prosor"
+bottom = "TeddyKGBEEE"
+
+[results.OM33293318]
+filename = "2025-06-02_ 05-13_AM_$2_$5_#33293318.png"
+table_type = "natural8"
+
+[results.OM33293318.positions]
+top_left = "Dor Vaknin"
+top_right = "Sven Skurve.."
+left = "Just numbers"
+right = "prosor"
+bottom = "TeddyKGBEEE"
+
+[results.OM33259940]
+filename = "2025-06-02_ 05-15_AM_$2_$5_#33259940.png"
+table_type = "natural8"
+
+[results.OM33259940.positions]
+top_left = "Melitab"
+top_right = "Sven Skurve.."
+left = "odonkey"
+right = "prosor"
+bottom = "TeddyKGBEEE"
+
+[results.OM33340008]
+filename = "2025-06-02_ 05-34_AM_$2_$5_#33340008.png"
+table_type = "natural8"
+
+[results.OM33340008.positions]
+top_left = ""
+top_right = "Melitab"
+left = "Sven Skurve.."
+right = "odonkey"
+bottom = "TeddyKGBEEE"
+
+[results.OM33340034]
+filename = "2025-06-02_ 05-40_AM_$2_$5_#33340034.png"
+table_type = "natural8"
+
+[results.OM33340034.positions]
+top_left = "BURRRO"
+top_right = "AchHadaMmm"
+left = "River Magic"
+right = "Sven Skurve.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33293482]
+filename = "2025-06-02_ 05-50_AM_$2_$5_#33293482.png"
+table_type = "natural8"
+
+[results.OM33293482.positions]
+top_left = "Dor Vaknin"
+top_right = "Sven Skurve.."
+left = "Liisa Ann"
+right = "prosor"
+bottom = "TeddyKGBEEE"
+
+[results.OM33340079]
+filename = "2025-06-02_ 05-55_AM_$2_$5_#33340079.png"
+table_type = "natural8"
+
+[results.OM33340079.positions]
+top_left = "BURRRO"
+top_right = ""
+left = "River Magic"
+right = "Sven Skurve.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33267537]
+filename = "2025-06-02_ 05-57_AM_$2_$5_#33267537.png"
+table_type = "natural8"
+
+[results.OM33267537.positions]
+top_left = ""
+top_right = ""
+left = "BURRRO"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM33267603]
+filename = "2025-06-02_ 06-01_AM_$2_$5_#33267603.png"
+table_type = "natural8"
+
+[results.OM33267603.positions]
+top_left = "gutshotknob"
+top_right = "7777TG777"
+left = "BURRRO"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM33267795]
+filename = "2025-06-02_ 06-19_AM_$2_$5_#33267795.png"
+table_type = "natural8"
+
+[results.OM33267795.positions]
+top_left = "gutshotknob"
+top_right = "777TG777"
+left = "BURRRO"
+right = "Sven Skurve.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33267841]
+filename = "2025-06-02_ 06-22_AM_$2_$5_#33267841.png"
+table_type = "natural8"
+
+[results.OM33267841.positions]
+top_left = "gutshotknob"
+top_right = ""
+left = ""
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM33267907]
+filename = "2025-06-02_ 06-27_AM_$2_$5_#33267907.png"
+table_type = "natural8"
+
+[results.OM33267907.positions]
+top_left = "gutshotknob"
+top_right = "jigaro"
+left = "BURRRO"
+right = "Sven Skurve.."
+bottom = "TeddyKGBEEE"
+
+[results.OM33916619]
+filename = "2025-06-07_ 03-48_AM_$2_$5_#33916619.png"
+table_type = "natural8"
+
+[results.OM33916619.positions]
+top_left = "PlayTwice"
+top_right = "odonkey"
+left = "Monk3yTILT!"
+right = "sebaru"
+bottom = "TeddyKGBEEF"
+
+[results.OM34002290]
+filename = "2025-06-07_ 04-37_AM_$2_$5_#34002290.png"
+table_type = "natural8"
+
+[results.OM34002290.positions]
+top_left = "JackPotPls1.."
+top_right = "Potshipper"
+left = "sebaru"
+right = "Ant34dai"
+bottom = "TeddyKGBEEE"
+
+[results.OM33973804]
+filename = "2025-06-07_ 04-38_AM_$5_$10_#33973804.png"
+table_type = "natural8"
+
+[results.OM33973804.positions]
+top_left = "AiltonJrpc"
+top_right = "Potshipper"
+left = "Monk3yTILT!"
+right = "MisterAnder.."
+bottom = "TeddyKGBEEF"
+
+[results.OM33963856]
+filename = "2025-06-07_ 04-41_AM_$2_$5_#33963856.png"
+table_type = "natural8"
+
+[results.OM33963856.positions]
+top_left = "sebaru"
+top_right = "Potshipper"
+left = "P9499-3329"
+right = "Ant34dai"
+bottom = "TeddyKGBEEE"
+
+[results.OM34030542]
+filename = "2025-06-07_ 05-31_AM_$5_$10_#34030542.png"
+table_type = "natural8"
+
+[results.OM34030542.positions]
+top_left = ""
+top_right = "Aleksei Pet.."
+left = "CardCon"
+right = "Potshipper"
+bottom = "TeddyKGBEEE"
+
+[results.OM33963921]
+filename = "2025-06-07_ 05-34_AM_$2_$5_#33963921.png"
+table_type = "natural8"
+
+[results.OM33963921.positions]
+top_left = "doTheConga"
+top_right = "Potshipper"
+left = "Aleksei Pet.."
+right = "Bigdaddydex"
+bottom = "TeddyKGBEEF"
+
+[results.OM34002797]
+filename = "2025-06-07_ 05-38_AM_$2_$5_#34002797.png"
+table_type = "natural8"
+
+[results.OM34002797.positions]
+top_left = "Bigdaddydex"
+top_right = "Potshipper"
+left = "dotheConga"
+right = "Aleksei Pet.."
+bottom = "TeddyKGBEEF"
+
+[results.OM33996027]
+filename = "2025-06-07_ 05-41_AM_$2_$5_#33996027.png"
+table_type = "natural8"
+
+[results.OM33996027.positions]
+top_left = "Aleksei Pet.."
+top_right = "dotheConga"
+left = "Jakub Kolorz"
+right = "Bigdaddydex"
+bottom = "TeddyKGBEEE"
+
+[results.OM34002837]
+filename = "2025-06-07_ 05-45_AM_$2_$5_#34002837.png"
+table_type = "natural8"
+
+[results.OM34002837.positions]
+top_left = ""
+top_right = "Bigdaddydex"
+left = "Potshipper"
+right = "dotheConga"
+bottom = "TeddyKGBEEF"
+
+[results.OM34002844]
+filename = "2025-06-07_ 05-46_AM_$2_$5_#34002844.png"
+table_type = "natural8"
+
+[results.OM34002844.positions]
+top_left = ""
+top_right = "Bigdaddydex"
+left = "Potshipper"
+right = "dotheConga"
+bottom = "TeddyKGBEEF"
+
+[results.OM34176122]
+filename = "2025-06-09_ 04-09_AM_$2_$5_#34176122.png"
+table_type = "natural8"
+
+[results.OM34176122.positions]
+top_left = "WisdomOfTra.."
+top_right = "Sven Skurve.."
+left = "Betandwin"
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM34176150]
+filename = "2025-06-09_ 04-15_AM_$5_$10_#34176150.png"
+table_type = "natural8"
+
+[results.OM34176150.positions]
+top_left = "WisdomOfTra.."
+top_right = "clmlba"
+left = "spoongebobdog"
+right = "Ylling"
+bottom = "TeddyKGBEEE"
+
+[results.OM34176368]
+filename = "2025-06-09_ 04-52_AM_$2_$5_#34176368.png"
+table_type = "natural8"
+
+[results.OM34176368.positions]
+top_left = ""
+top_right = "Sven Skurve.."
+left = "Betandwin"
+right = "JackPotPls1.."
+bottom = "TeddyKGBEEE"
+
+[results.OM34261033]
+filename = "2025-06-09_ 04-52_AM_$2_$5_#34261033.png"
+table_type = "natural8"
+
+[results.OM34261033.positions]
+top_left = "Technosphera"
+top_right = "Maisteri"
+left = "Sven Skurve.."
+right = "kingofrungo.."
+bottom = "TeddyKGBEEE"
+
+[results.OM34176415]
+filename = "2025-06-09_ 04-57_AM_$5_$10_#34176415.png"
+table_type = "natural8"
+
+[results.OM34176415.positions]
+top_left = "F0re1qnerMe.."
+top_right = "monte111"
+left = "Rik Amb Bam.."
+right = "Ylling"
+bottom = "TeddyKGBEEF"
+
+[results.OM34176431]
+filename = "2025-06-09_ 05-00_AM_$5_$10_#34176431.png"
+table_type = "natural8"
+
+[results.OM34176431.positions]
+top_left = "F0re1qnerMe.."
+top_right = "monte111"
+left = "Rik Amb Bam.."
+right = "Ylling"
+bottom = "TeddyKGBEEE"
+
+[results.OM34226571]
+filename = "2025-06-09_ 05-03_AM_$2_$5_#34226571.png"
+table_type = "natural8"
+
+[results.OM34226571.positions]
+top_left = "Liisa Ann"
+top_right = "Sven Skurve.."
+left = "Pokeerrr"
+right = "AMSP"
+bottom = "TeddyKGBEEE"
+
+[results.OM34226813]
+filename = "2025-06-09_ 05-21_AM_$2_$5_#34226813.png"
+table_type = "natural8"
+
+[results.OM34226813.positions]
+top_left = ""
+top_right = "Sven Skurve.."
+left = "p0kerParty"
+right = "Mohiko65"
+bottom = "TeddyKGBEEE"
+
+[results.OM34176653]
+filename = "2025-06-09_ 05-25_AM_$2_$5_#34176653.png"
+table_type = "natural8"
+
+[results.OM34176653.positions]
+top_left = "sebaru"
+top_right = "Sven Skurve.."
+left = ""
+right = "Liisa Ann"
+bottom = "TeddyKGBEEF"
+
+[results.OM34176711]
+filename = "2025-06-09_ 05-32_AM_$2_$5_#34176711.png"
+table_type = "natural8"
+
+[results.OM34176711.positions]
+top_left = "sebaru"
+top_right = "Sven Skurve.."
+left = "Lootera"
+right = "Tower_PLO"
+bottom = "TeddyKGBEEE"
+
+[results.OM34176825]
+filename = "2025-06-09_ 05-46_AM_$5_$10_#34176825.png"
+table_type = "natural8"
+
+[results.OM34176825.positions]
+top_left = "F0re1qnerMe.."
+top_right = "BURRRO"
+left = "Rik Amb Bam.."
+right = ""
+bottom = "TeddyKGBEEF"
+
+[results.OM34176849]
+filename = "2025-06-09_ 05-49_AM_$5_$10_#34176849.png"
+table_type = "natural8"
+
+[results.OM34176849.positions]
+top_left = "F0re1qnerMe.."
+top_right = "BURRRO"
+left = "Rik Amb Bam.."
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM34519612]
+filename = "2025-06-12_ 02-13_AM_$2_$5_#34519612.png"
+table_type = "natural8"
+
+[results.OM34519612.positions]
+top_left = ""
+top_right = ""
+left = "PlayTwice"
+right = "batoura"
+bottom = "TeddyKGBEEE"
+
+[results.OM34519621]
+filename = "2025-06-12_ 02-16_AM_$2_$5_#34519621.png"
+table_type = "natural8"
+
+[results.OM34519621.positions]
+top_left = ""
+top_right = "PlayTwice"
+left = ""
+right = ""
+bottom = "TeddyKGBEEE"
+
+[results.OM34641524]
+filename = "2025-06-12_ 02-20_AM_$2_$5_#34641524.png"
+table_type = "natural8"
+
+[results.OM34641524.positions]
+top_left = "batoura"
+top_right = "PlayTwice"
+left = "Leogois1"
+right = "TeddyKGBEEE"
+bottom = ""
+
+[results.OM34651531]
+filename = "2025-06-12_ 02-23_AM_$2_$5_#34651531.png"
+table_type = "natural8"
+
+[results.OM34651531.positions]
+top_left = ""
+top_right = "PlayTwice"
+left = "VonExuberan.."
+right = "Tamcoc25"
+bottom = "Monk3yTILT!"
+
+[results.OM34641584]
+filename = "2025-06-12_ 02-29_AM_$2_$5_#34641584.png"
+table_type = "natural8"
+
+[results.OM34641584.positions]
+top_left = ""
+top_right = "batoura"
+left = "OtecDominic"
+right = "PlayTwice"
+bottom = "Leogois1"
+
+[results.OM34519713]
+filename = "2025-06-12_ 02-45_AM_$5_$10_#34519713.png"
+table_type = "natural8"
+
+[results.OM34519713.positions]
+top_left = "Le Bouffeur"
+top_right = ""
+left = "CardCon"
+right = "WisdomOfTra.."
+bottom = "TeddyKGBEEE"
+
+[results.OM34660058]
+filename = "2025-06-12_ 02-52_AM_$10_$20_#34660058.png"
+table_type = "natural8"
+
+[results.OM34660058.positions]
+top_left = "Hit hit!"
+top_right = "CardCon"
+left = "F0re1gnerMe.."
+right = "Pandadth"
+bottom = "TeddyKGBEEE"
+
+[results.OM34519816]
+filename = "2025-06-12_ 03-15_AM_$2_$5_#34519816.png"
+table_type = "natural8"
+
+[results.OM34519816.positions]
+top_left = "Gaucho Macho"
+top_right = "OmahaKing13"
+left = "BleffGawd"
+right = "prosor"
+bottom = "TeddyKGBEEF"
+
+[results.OM34652300]
+filename = "2025-06-12_ 03-28_AM_$1_$2_#34652300.png"
+table_type = "natural8"
+
+[results.OM34652300.positions]
+top_left = "Runing hot"
+top_right = "zoro1960"
+left = "Bulkins_3"
+right = "Wssafadao"
+bottom = "TeddyKGBEEE"
+
+[results.OM34623830]
+filename = "2025-06-12_ 03-42_AM_$5_$10_#34623830.png"
+table_type = "natural8"
+
+[results.OM34623830.positions]
+top_left = ""
+top_right = "CardCon"
+left = "trisaprat"
+right = "WorkHard!"
+bottom = "TeddyKGBEEE"
+
+[results.OM34623847]
+filename = "2025-06-12_ 03-44_AM_$5_$10_#34623847.png"
+table_type = "natural8"
+
+[results.OM34623847.positions]
+top_left = ""
+top_right = "CardCon"
+left = "trisaprat"
+right = "WorkHard!"
+bottom = "TeddyKGBEEE"
+
+[results.OM34585653]
+filename = "2025-06-12_ 04-13_AM_$1_$2_#34585653.png"
+table_type = "natural8"
+
+[results.OM34585653.positions]
+top_left = "Ant34dai"
+top_right = "Facchin83"
+left = "Dmytro Syne.."
+right = "3allout"
+bottom = "TeddyKGBEEE"
+
+[results.OM34624015]
+filename = "2025-06-12_ 04-13_AM_$5_$10_#34624015.png"
+table_type = "natural8"
+
+[results.OM34624015.positions]
+top_left = "Monk3yTILT!"
+top_right = "CardCon"
+left = "WisdomOfTra.."
+right = "WorkHard!"
+bottom = "TeddyKGBEEE"
+
+[results.OM34585668]
+filename = "2025-06-12_ 04-16_AM_$1_$2_#34585668.png"
+table_type = "natural8"
+
+[results.OM34585668.positions]
+top_left = "Ant34dai"
+top_right = "JackPotPls1.."
+left = "Dmytro Syne.."
+right = "3allout"
+bottom = "TeddyKGBEEE"
+
+[results.OM34624031]
+filename = "2025-06-12_ 04-16_AM_$5_$10_#34624031.png"
+table_type = "natural8"
+
+[results.OM34624031.positions]
+top_left = "Monk3yTILT!"
+top_right = "CardCon"
+left = "WisdomOfTra.."
+right = "WorkHard!"
+bottom = "TeddyKGBEEE"
+
+[results.OM34624183]
+filename = "2025-06-12_ 04-43_AM_$5_$10_#34624183.png"
+table_type = "natural8"
+
+[results.OM34624183.positions]
+top_left = "Monk3yTILT!"
+top_right = "CardCon"
+left = "WisdomOfTra.."
+right = "WorkHard!"
+bottom = "TeddyKGBEEE"
+
+[results.OM34595536]
+filename = "2025-06-12_ 04-45_AM_$10_$20_#34595536.png"
+table_type = "natural8"
+
+[results.OM34595536.positions]
+top_left = "Pandadth"
+top_right = "kingofrungo.."
+left = "Tom Vogelsa.."
+right = "Man Spaghet.."
+bottom = "TeddyKGBEEF"
+
+[results.OM34595635]
+filename = "2025-06-12_ 05-04_AM_$10_$20_#34595635.png"
+table_type = "natural8"
+
+[results.OM34595635.positions]
+top_left = "Man Spaghet.."
+top_right = "Pandadth"
+left = "Hit hit!"
+right = "kingofrungo.."
+bottom = "TeddyKGBEEF"
+
+[results.OM34653372]
+filename = "2025-06-12_ 05-25_AM_$2_$5_#34653372.png"
+table_type = "natural8"
+
+[results.OM34653372.positions]
+top_left = "sebaru"
+top_right = "Liisa Ann"
+left = "Jakub Kolorz"
+right = "prosor"
+bottom = "TeddyKGBEEE"
+
+[results.OM34709124]
+filename = "2025-06-13_ 01-52_AM_$2_$5_#34709124.png"
+table_type = "natural8"
+
+[results.OM34709124.positions]
+top_left = "Monk3yTILT!"
+top_right = "raphayakawa"
+left = "deurnebef"
+right = "EUROSENT"
+bottom = "TeddyKGBEEF"
+
+[results.OM34773136]
+filename = "2025-06-13_ 01-52_AM_$2_$5_#34773136.png"
+table_type = "natural8"
+
+[results.OM34773136.positions]
+top_left = "nemce"
+top_right = "Monk3yTILT!"
+left = ""
+right = "lv151"
+bottom = "TeddyKGBEEE"
+
+[results.OM34773313]
+filename = "2025-06-13_ 02-09_AM_$2_$5_#34773313.png"
+table_type = "natural8"
+
+[results.OM34773313.positions]
+top_left = "nemce"
+top_right = "deurnebef"
+left = "CardCon"
+right = "lv151"
+bottom = "TeddyKGBEEE"
+
+[results.OM34709345]
+filename = "2025-06-13_ 02-23_AM_$2_$5_#34709345.png"
+table_type = "natural8"
+
+[results.OM34709345.positions]
+top_left = "Monk3yTILT!"
+top_right = "CardCon"
+left = "deurnebef"
+right = "EUROSENT"
+bottom = "TeddyKGBEEF"
+
+[results.OM34765084]
+filename = "2025-06-13_ 02-44_AM_$2_$5_#34765084.png"
+table_type = "natural8"
+
+[results.OM34765084.positions]
+top_left = "deurnebef"
+top_right = "CardCon"
+left = "Monk3yTILT!"
+right = "EUROSENT"
+bottom = "TeddyKGBEEF"
+
+[results.OM34736056]
+filename = "2025-06-13_ 03-13_AM_$2_$5_#34736056.png"
+table_type = "natural8"
+
+[results.OM34736056.positions]
+top_left = "CardCon"
+top_right = "PiratSomaly"
+left = ""
+right = "Galadr1el"
+bottom = "TeddyKGBEEE"
+
+[results.OM34765211]
+filename = "2025-06-13_ 03-15_AM_$2_$5_#34765211.png"
+table_type = "natural8"
+
+[results.OM34765211.positions]
+top_left = "Realife"
+top_right = "Alex5879"
+left = "Csabi_Jedi"
+right = "deurnebef"
+bottom = "TeddyKGBEEE"
+
+[results.OM34736129]
+filename = "2025-06-13_ 03-21_AM_$2_$5_#34736129.png"
+table_type = "natural8"
+
+[results.OM34736129.positions]
+top_left = "CardCon"
+top_right = "PiratSomaly"
+left = "F0re1gnerMe.."
+right = "Galadr1el"
+bottom = "TeddyKGBEEE"
+
+[results.OM34736351]
+filename = "2025-06-13_ 03-47_AM_$2_$5_#34736351.png"
+table_type = "natural8"
+
+[results.OM34736351.positions]
+top_left = "FoodMucker"
+top_right = "PiratSomaly"
+left = "Maari"
+right = "Galadr1el"
+bottom = "TeddyKGBEEE"
+
+[results.OM34933653]
+filename = "2025-06-14_ 02-30_AM_$2_$5_#34933653.png"
+table_type = "natural8"
+
+[results.OM34933653.positions]
+top_left = "Wssafadao"
+top_right = "Blindraise25"
+left = "Monk3yTILT!"
+right = "CardCon"
+bottom = "philivey2964"
+
+[results.OM34924418]
+filename = "2025-06-14_ 02-48_AM_$2_$5_#34924418.png"
+table_type = "natural8"
+
+[results.OM34924418.positions]
+top_left = "Monk3yTILT!"
+top_right = ""
+left = ""
+right = ""
+bottom = "philivey2964"
+
+[results.OM34915385]
+filename = "2025-06-14_ 02-50_AM_$1_$2_#34915385.png"
+table_type = "natural8"
+
+[results.OM34915385.positions]
+top_left = "Blindraise25"
+top_right = "Zdevon"
+left = "sesalec"
+right = "Caroli"
+bottom = "philivey2964"
+
+[results.OM34924487]
+filename = "2025-06-14_ 02-54_AM_$2_$5_#34924487.png"
+table_type = "natural8"
+
+[results.OM34924487.positions]
+top_left = ""
+top_right = "Ahholdit"
+left = "Duyen phan"
+right = "Sven Skurve.."
+bottom = "philivey2964"
+
+[results.OM34924665]
+filename = "2025-06-14_ 03-07_AM_$2_$5_#34924665.png"
+table_type = "natural8"
+
+[results.OM34924665.positions]
+top_left = "Sven Skurve.."
+top_right = "OtecDominic"
+left = ""
+right = ""
+bottom = "philivey2964"
+
+[results.OM34924686]
+filename = "2025-06-14_ 03-10_AM_$2_$5_#34924686.png"
+table_type = "natural8"
+
+[results.OM34924686.positions]
+top_left = "Ale Giannel.."
+top_right = "Ahholdit"
+left = "Duyen phan"
+right = "Sven Skurve.."
+bottom = "philivey2964"
+
+[results.OM34924889]
+filename = "2025-06-14_ 03-28_AM_$2_$5_#34924889.png"
+table_type = "natural8"
+
+[results.OM34924889.positions]
+top_left = "OtecDominic"
+top_right = ""
+left = ""
+right = "Sven Skurve.."
+bottom = "philivey2964"
+
+[results.OM34925321]
+filename = "2025-06-14_ 04-07_AM_$2_$5_#34925321.png"
+table_type = "natural8"
+
+[results.OM34925321.positions]
+top_left = "CHINA@1"
+top_right = "CaesarMarcu.."
+left = "F0rest9"
+right = "prosor"
+bottom = "philivey2964"
+
+[results.OM34925568]
+filename = "2025-06-14_ 04-26_AM_$2_$5_#34925568.png"
+table_type = "natural8"
+
+[results.OM34925568.positions]
+top_left = "Sven Skurve.."
+top_right = "Jakub Kolorz"
+left = ""
+right = "F0rest9"
+bottom = "philivey2964"
+
+[results.OM34925607]
+filename = "2025-06-14_ 04-32_AM_$2_$5_#34925607.png"
+table_type = "natural8"
+
+[results.OM34925607.positions]
+top_left = "CaesarMarcu.."
+top_right = "Jakub Kolorz"
+left = "HakkaKaisee"
+right = "Sven Skurve.."
+bottom = "philivey2964"
+
+[results.OM34858615]
+filename = "2025-06-14_ 04-49_AM_$2_$5_#34858615.png"
+table_type = "natural8"
+
+[results.OM34858615.positions]
+top_left = ""
+top_right = "STTTT4444"
+left = "shubidubi"
+right = "Queen Yeye"
+bottom = "Sven Skurve.."
+
+[results.OM34971219]
+filename = "2025-06-14_ 04-57_AM_$2_$5_#34971219.png"
+table_type = "natural8"
+
+[results.OM34971219.positions]
+top_left = "shubidubi"
+top_right = "Sven Skurve.."
+left = "Ahholdit"
+right = "prosor"
+bottom = "philivey2964"
+
+[results.OM34858700]
+filename = "2025-06-14_ 05-09_AM_$2_$5_#34858700.png"
+table_type = "natural8"
+
+[results.OM34858700.positions]
+top_left = ""
+top_right = "shubidubi"
+left = "Just numbers"
+right = "sven skurve.."
+bottom = "philivey2964"
+
+[results.OM34916646]
+filename = "2025-06-14_ 05-20_AM_$2_$5_#34916646.png"
+table_type = "natural8"
+
+[results.OM34916646.positions]
+top_left = "prosor"
+top_right = "Wssafadao"
+left = "Sven Skurve.."
+right = "PessoMagnet"
+bottom = "philivey2964"
+
+[results.OM34916657]
+filename = "2025-06-14_ 05-23_AM_$2_$5_#34916657.png"
+table_type = "natural8"
+
+[results.OM34916657.positions]
+top_left = "prosor"
+top_right = ""
+left = "Sven Skurve.."
+right = "PessoMagnet"
+bottom = "philivey2964"
+
+[results.OM34935828]
+filename = "2025-06-14_ 05-26_AM_$2_$5_#34935828.png"
+table_type = "natural8"
+
+[results.OM34935828.positions]
+top_left = "Sven Skurve.."
+top_right = "Just numbers"
+left = "CaesarMarcu.."
+right = "anipantra"
+bottom = "philivey2964"
+
+[results.OM38443183]
+filename = "2025-07-10_ 01-15_PM_$2_$5_#38443183.png"
+table_type = "natural8"
+
+[results.OM38443183.positions]
+top_left = "Fernanado"
+top_right = "DriveTim3"
+left = "JackPotPls1.."
+right = "Pop Cornel"
+bottom = "philivey2964"
+
+[results.OM38443243]
+filename = "2025-07-10_ 01-21_PM_$2_$5_#38443243.png"
+table_type = "natural8"
+
+[results.OM38443243.positions]
+top_left = "Fernanado"
+top_right = "DriveTim3"
+left = "JackPotPls1.."
+right = "Pop Cornel"
+bottom = "philivey2964"
+
+[results.OM38379728]
+filename = "2025-07-10_ 01-35_PM_$2_$5_#38379728.png"
+table_type = "natural8"
+
+[results.OM38379728.positions]
+top_left = "Luka Zunic"
+top_right = "kababzi"
+left = ""
+right = "Antony2025"
+bottom = "philivey2964"
+
+[results.OM38443353]
+filename = "2025-07-10_ 01-39_PM_$2_$5_#38443353.png"
+table_type = "natural8"
+
+[results.OM38443353.positions]
+top_left = "Fernanado"
+top_right = "DriveTim3"
+left = "JackPotPls1.."
+right = "River Magic"
+bottom = "philivey2964"
+
+[results.OM38442789]
+filename = "2025-07-10_ 12-08_AM_$2_$5_#38442789.png"
+table_type = "natural8"
+
+[results.OM38442789.positions]
+top_left = "HBSil"
+top_right = "Fernanado"
+left = "Nikkooo"
+right = "Luka Zunic"
+bottom = "philivey2964"
+
+[results.OM38442857]
+filename = "2025-07-10_ 12-20_AM_$1_$2_#38442857.png"
+table_type = "natural8"
+
+[results.OM38442857.positions]
+top_left = "DiegoJ"
+top_right = "PleasePay1"
+left = "Luka Zunic"
+right = "sesalec"
+bottom = "philivey2964"
+
+[results.OM38417131]
+filename = "2025-07-10_ 12-27_AM_$1_$2_#38417131.png"
+table_type = "natural8"
+
+[results.OM38417131.positions]
+top_left = "Alaniting"
+top_right = "sesalec"
+left = "Littleass32"
+right = "PleasePay1"
+bottom = "philivey2964"
+
+[results.OM38462692]
+filename = "2025-07-10_ 12-38_AM_$2_$5_#38462692.png"
+table_type = "natural8"
+
+[results.OM38462692.positions]
+top_left = "abusinessman"
+top_right = "Nikkooo"
+left = "AchHadaMmm"
+right = "CConstantinC"
+bottom = "philivey2964"
+
+[results.OM38570767]
+filename = "2025-07-11_ 06-30_AM_$1_$2_#38570767.png"
+table_type = "natural8"
+
+[results.OM38570767.positions]
+top_left = "Maari"
+top_right = "Snagfrag"
+left = "sesalec"
+right = "kaviu1"
+bottom = "philivey2964"
+
+[results.OM38487747]
+filename = "2025-07-11_ 06-32_AM_$1_$2_#38487747.png"
+table_type = "natural8"
+
+[results.OM38487747.positions]
+top_left = "Luka Zunic"
+top_right = "777TG777"
+left = "kaviu1"
+right = "Snagfrag"
+bottom = "philivey2964"
+
+[results.OM38497442]
+filename = "2025-07-11_ 06-48_AM_$1_$2_#38497442.png"
+table_type = "natural8"
+
+[results.OM38497442.positions]
+top_left = "He Jin"
+top_right = "Fernando"
+left = "Snagfrag"
+right = "sesalec"
+bottom = "philivey2964"
+
+[results.OM38497466]
+filename = "2025-07-11_ 06-52_AM_$1_$2_#38497466.png"
+table_type = "natural8"
+
+[results.OM38497466.positions]
+top_left = "AsianGamble.."
+top_right = ""
+left = "Snagfrag"
+right = ""
+bottom = "philivey2964"
+
+[results.OM38571038]
+filename = "2025-07-11_ 06-56_AM_$1_$2_#38571038.png"
+table_type = "natural8"
+
+[results.OM38571038.positions]
+top_left = "Maari"
+top_right = "Snagfrag"
+left = "sesalec"
+right = "kaviu1"
+bottom = "philivey2964"
+
+[results.OM38664241]
+filename = "2025-07-12_ 06-46_AM_$2_$5_#38664241.png"
+table_type = "natural8"
+
+[results.OM38664241.positions]
+top_left = "bulldogboy"
+top_right = ""
+left = "ApaApa_Lu_M.."
+right = ""
+bottom = "philivey2964"
+
+[results.OM38713210]
+filename = "2025-07-12_ 09-47_AM_$2_$5_#38713210.png"
+table_type = "natural8"
+
+[results.OM38713210.positions]
+top_left = "slyw1"
+top_right = "octagonalo7.."
+left = "Dor Vaknin"
+right = "Potshipper"
+bottom = "philivey2964"
+
+[results.OM38676416]
+filename = "2025-07-12_ 10-20_AM_$2_$5_#38676416.png"
+table_type = "natural8"
+
+[results.OM38676416.positions]
+top_left = "octagonalo7.."
+top_right = "PanJapa"
+left = "Dor Vaknin"
+right = "Deniz Yelog.."
+bottom = "philivey2964"
+
+[results.OM38696670]
+filename = "2025-07-12_ 10-24_AM_$2_$5_#38696670.png"
+table_type = "natural8"
+
+[results.OM38696670.positions]
+top_left = "Deniz Yelog.."
+top_right = ""
+left = ""
+right = ""
+bottom = "philivey2964"
+
+[results.OM38696849]
+filename = "2025-07-12_ 10-41_AM_$2_$5_#38696849.png"
+table_type = "natural8"
+
+[results.OM38696849.positions]
+top_left = "Deniz Yelog.."
+top_right = ""
+left = ""
+right = ""
+bottom = "philivey2964"
+
+[results.OM38696873]
+filename = "2025-07-12_ 10-41_AM_$2_$5_#38696873.png"
+table_type = "natural8"
+
+[results.OM38696873.positions]
+top_left = "Deniz Yelog.."
+top_right = ""
+left = ""
+right = ""
+bottom = "philivey2964"
+
+[results.OM38696941]
+filename = "2025-07-12_ 10-48_AM_$2_$5_#38696941.png"
+table_type = "natural8"
+
+[results.OM38696941.positions]
+top_left = ""
+top_right = "Deniz Yelog.."
+left = ""
+right = ""
+bottom = "philivey2964"
+
+[results.OM38871585]
+filename = "2025-07-13_ 09-22_AM_$1_$2_#38871585.png"
+table_type = "natural8"
+
+[results.OM38871585.positions]
+top_left = "PanJapa"
+top_right = "JosiasRojas.."
+left = "P8501-1711"
+right = "Tightpl91"
+bottom = "philivey2964"
+
+[results.OM38871599]
+filename = "2025-07-13_ 09-23_AM_$1_$2_#38871599.png"
+table_type = "natural8"
+
+[results.OM38871599.positions]
+top_left = "PanJapa"
+top_right = "JosiasRojas.."
+left = "P8501-1711"
+right = "Tightpl91"
+bottom = "philivey2964"
+
+[results.OM38797582]
+filename = "2025-07-13_ 09-41_AM_$2_$5_#38797582.png"
+table_type = "natural8"
+
+[results.OM38797582.positions]
+top_left = "PanJapa"
+top_right = "Karpito82"
+left = "rocksolid03"
+right = "octagonalo7.."
+bottom = "philivey2964"
+
+[results.OM38871907]
+filename = "2025-07-13_ 09-58_AM_$2_$5_#38871907.png"
+table_type = "natural8"
+
+[results.OM38871907.positions]
+top_left = "P8501-1711"
+top_right = "llovepokerG.."
+left = "JackPotPls1.."
+right = "rocksolid03"
+bottom = "philivey2964"
+
+[results.OM38797819]
+filename = "2025-07-13_ 10-00_AM_$2_$5_#38797819.png"
+table_type = "natural8"
+
+[results.OM38797819.positions]
+top_left = "PanJapa"
+top_right = "bulldogboy"
+left = "rocksolid03"
+right = "octagonalo7.."
+bottom = "philivey2964"
+
+[results.OM38797855]
+filename = "2025-07-13_ 10-02_AM_$2_$5_#38797855.png"
+table_type = "natural8"
+
+[results.OM38797855.positions]
+top_left = "PanJapa"
+top_right = "bulldogboy"
+left = "rocksolid03"
+right = "octagonalo7.."
+bottom = "philivey2964"
+
+[results.OM49030293]
+filename = "2025-09-21_ 02-23_AM_$2_$5_#49030293.png"
+table_type = "natural8"
+
+[results.OM49030293.positions]
+top_left = ""
+top_right = "shlomimal1"
+left = ""
+right = "A!r Bluff888"
+bottom = "philivey2964"
+
+[results.OM49040070]
+filename = "2025-09-21_ 02-44_AM_$2_$5_#49040070.png"
+table_type = "natural8"
+
+[results.OM49040070.positions]
+top_left = "FFS TAKE IT"
+top_right = ""
+left = "sebaru"
+right = ""
+bottom = "philivey2964"
+
+[results.OM49040096]
+filename = "2025-09-21_ 02-47_AM_$2_$5_#49040096.png"
+table_type = "natural8"
+
+[results.OM49040096.positions]
+top_left = "FFS TAKE IT"
+top_right = "Pianos"
+left = "sebaru"
+right = ""
+bottom = "philivey2964"
+
+[results.OM49040163]
+filename = "2025-09-21_ 02-53_AM_$2_$5_#49040163.png"
+table_type = "natural8"
+
+[results.OM49040163.positions]
+top_left = "FFS TAKE IT"
+top_right = "Pianos"
+left = "sebaru"
+right = "24life"
+bottom = "philivey2964"
+
+[results.OM49030493]
+filename = "2025-09-21_ 02-57_AM_$2_$5_#49030493.png"
+table_type = "natural8"
+
+[results.OM49030493.positions]
+top_left = "sebaru"
+top_right = "Sven Skurve.."
+left = ""
+right = ""
+bottom = "philivey2964"
+
+[results.OM49030568]
+filename = "2025-09-21_ 03-14_AM_$2_$5_#49030568.png"
+table_type = "natural8"
+
+[results.OM49030568.positions]
+top_left = "sebaru"
+top_right = "Sven Skurve.."
+left = "Abu_l_foudo.."
+right = ""
+bottom = "philivey2964"
+
+[results.OM49040311]
+filename = "2025-09-21_ 03-16_AM_$2_$5_#49040311.png"
+table_type = "natural8"
+
+[results.OM49040311.positions]
+top_left = "btc_dz"
+top_right = "Sven Skurve.."
+left = "sebaru"
+right = "24life"
+bottom = "philivey2964"
+
+[results.OM49991883]
+filename = "2025-09-28_ 01-47_AM_$2_$5_#49991883.png"
+table_type = "natural8"
+
+[results.OM49991883.positions]
+top_left = "Alexkap1987"
+top_right = "OtecDominic"
+left = "1985gogogo"
+right = "prosor"
+bottom = "philivey2964"
+
+[results.OM49991905]
+filename = "2025-09-28_ 01-51_AM_$2_$5_#49991905.png"
+table_type = "natural8"
+
+[results.OM49991905.positions]
+top_left = "Alexkap1987"
+top_right = "OtecDominic"
+left = "1985gogogo"
+right = "prosor"
+bottom = "philivey2964"
+
+[results.OM49991933]
+filename = "2025-09-28_ 01-54_AM_$2_$5_#49991933.png"
+table_type = "natural8"
+
+[results.OM49991933.positions]
+top_left = ".xBGx"
+top_right = "OtecDominic"
+left = "1985gogogo"
+right = "prosor"
+bottom = "philivey2964"
+
+[results.OM49958521]
+filename = "2025-09-28_ 01-58_AM_$2_$5_#49958521.png"
+table_type = "natural8"
+
+[results.OM49958521.positions]
+top_left = ".xBGx"
+top_right = "prosor"
+left = "Alexkap1987"
+right = "1985gogogo"
+bottom = "philivey2964"
+
+[results.OM50030080]
+filename = "2025-09-28_ 05-02_AM_$2_$5_#50030080.png"
+table_type = "natural8"
+
+[results.OM50030080.positions]
+top_left = "King Midas"
+top_right = "KeVLiUli"
+left = "Flod-Trun"
+right = "Aleksei Pet.."
+bottom = "philivey2964"
+
+[results.OM50020039]
+filename = "2025-09-28_ 05-08_AM_$2_$5_#50020039.png"
+table_type = "natural8"
+
+[results.OM50020039.positions]
+top_left = "Cokehead"
+top_right = "Starintheni.."
+left = ""
+right = "King_Midas"
+bottom = "philivey2964"
+
+[results.OM50030259]
+filename = "2025-09-28_ 05-24_AM_$2_$5_#50030259.png"
+table_type = "natural8"
+
+[results.OM50030259.positions]
+top_left = "King Midas"
+top_right = "KeVLiUli"
+left = "Flod-Trun"
+right = "Aleksei Pet.."
+bottom = "philivey2964"
+
+[results.OM51071552]
+filename = "2025-10-05_ 03-09_AM_$2_$5_#51071552.png"
+table_type = "natural8"
+
+[results.OM51071552.positions]
+top_left = "bigbigmoney.."
+top_right = "Monk3yTILT!"
+left = "Neyou Z"
+right = "CaesarMarcu.."
+bottom = "philivey2964"
+
+[results.OM50976568]
+filename = "2025-10-05_ 04-01_AM_$5_$10_#50976568.png"
+table_type = "natural8"
+
+[results.OM50976568.positions]
+top_left = ""
+top_right = "TaaMin Teka.."
+left = "Monk3yTILT!"
+right = "philivey2964"
+bottom = ""
+
+[results.OM50976658]
+filename = "2025-10-05_ 04-23_AM_$5_$10_#50976658.png"
+table_type = "natural8"
+
+[results.OM50976658.positions]
+top_left = "CConstantinC"
+top_right = "TaaMin Teka.."
+left = "Ace300"
+right = "Monk3yTILT!"
+bottom = "philivey2964"
+
+[results.OM50976787]
+filename = "2025-10-05_ 04-57_AM_$5_$10_#50976787.png"
+table_type = "natural8"
+
+[results.OM50976787.positions]
+top_left = "CConstantinC"
+top_right = "Ilya Krupin"
+left = "Ace300"
+right = "Monk3yTILT!"
+bottom = "philivey2964"
+
+[results.OM51204747]
+filename = "2025-10-06_ 09-35_AM_$2_$5_#51204747.png"
+table_type = "natural8"
+
+[results.OM51204747.positions]
+top_left = "doTheConga"
+top_right = "Kimanyi20"
+left = ""
+right = "Kulfon112"
+bottom = "philivey2964"
+
+[results.OM51169627]
+filename = "2025-10-06_ 09-50_AM_$2_$5_#51169627.png"
+table_type = "natural8"
+
+[results.OM51169627.positions]
+top_left = "dotheConga"
+top_right = "player@55555"
+left = "kababzi"
+right = "llkkari"
+bottom = "philivey2964"
+
+[results.OM59552054]
+filename = "2025-11-27_ 05-47_AM_$2_$5_#59552054.png"
+table_type = "natural8"
+
+[results.OM59552054.positions]
+top_left = ""
+top_right = "Even Midboe"
+left = "LordHackfre.."
+right = ""
+bottom = "philivey2964"
+
+[results.OM60226699]
+filename = "2025-12-02_ 05-55_AM_$5_$10_#60226699.png"
+table_type = "natural8"
+
+[results.OM60226699.positions]
+top_left = "LordHackfre.."
+top_right = "CaioNautico"
+left = "Anton llyn"
+right = "TheSheriff"
+bottom = "philivey2964"
+
+[results.OM60226892]
+filename = "2025-12-02_ 06-18_AM_$5_$10_#60226892.png"
+table_type = "natural8"
+
+[results.OM60226892.positions]
+top_left = "LordHackfre.."
+top_right = "Anton Ilyn"
+left = "Nicola Ange.."
+right = "P2671-1129"
+bottom = "philivey2964"
+
+[results.OM60227091]
+filename = "2025-12-02_ 06-44_AM_$5_$10_#60227091.png"
+table_type = "natural8"
+
+[results.OM60227091.positions]
+top_left = "LordHackfre.."
+top_right = "Anton llyn"
+left = "Nicola Ange.."
+right = "P2671-1129"
+bottom = "philivey2964"
+
+[results.OM60209797]
+filename = "2025-12-02_ 06-47_AM_$2_$5_#60209797.png"
+table_type = "natural8"
+
+[results.OM60209797.positions]
+top_left = "CaesarMarcu.."
+top_right = "pr1sm"
+left = "LordHackfre.."
+right = "P2671-1129"
+bottom = "philivey2964"
+
+[results.OM60266937]
+filename = "2025-12-02_ 07-13_AM_$2_$5_#60266937.png"
+table_type = "natural8"
+
+[results.OM60266937.positions]
+top_left = ""
+top_right = "bulldogboy"
+left = "LordHackfre.."
+right = "pr1sm"
+bottom = "philivey2964"
+
+[results.OM60227426]
+filename = "2025-12-02_ 07-22_AM_$2_$5_#60227426.png"
+table_type = "natural8"
+
+[results.OM60227426.positions]
+top_left = "Jeffrey Bro.."
+top_right = "MarlonAndri.."
+left = "DreamOfJenn.."
+right = "LordHackfre.."
+bottom = "philivey2964"
+
+[results.OM60320292]
+filename = "2025-12-02_ 07-26_AM_$2_$5_#60320292.png"
+table_type = "natural8"
+
+[results.OM60320292.positions]
+top_left = "ioslat82"
+top_right = "pr1sm"
+left = "LordHackfre.."
+right = "P2671-1129"
+bottom = "philivey2964"
+
+[results.OM60320314]
+filename = "2025-12-02_ 07-29_AM_$2_$5_#60320314.png"
+table_type = "natural8"
+
+[results.OM60320314.positions]
+top_left = "ioslat82"
+top_right = "pr1sm"
+left = "LordHackfre.."
+right = ""
+bottom = "philivey2964"
+
+[results.OM60267123]
+filename = "2025-12-02_ 07-31_AM_$2_$5_#60267123.png"
+table_type = "natural8"
+
+[results.OM60267123.positions]
+top_left = "pr1sm"
+top_right = ""
+left = "FishyTim"
+right = "LordHackfre.."
+bottom = "philivey2964"
+
+[results.OM60311261]
+filename = "2025-12-02_ 08-30_AM_$2_$5_#60311261.png"
+table_type = "natural8"
+
+[results.OM60311261.positions]
+top_left = "Fernanado"
+top_right = "bebebe12"
+left = "morli16"
+right = "Simon Lofbe.."
+bottom = "philivey2964"
+
+[results.OM60340931]
+filename = "2025-12-02_ 08-34_AM_$2_$5_#60340931.png"
+table_type = "natural8"
+
+[results.OM60340931.positions]
+top_left = "N3c3sit0p@s.."
+top_right = "rhythm0r"
+left = "racs0911"
+right = "night_stalk.."
+bottom = "philivey2964"
+
+[results.OM60472583]
+filename = "2025-12-03_ 05-51_AM_$2_$5_#60472583.png"
+table_type = "natural8"
+
+[results.OM60472583.positions]
+top_left = "LordHackfre.."
+top_right = "BillyPrecup"
+left = ""
+right = "EvSecCT"
+bottom = "philivey2964"
+
+[results.OM60482952]
+filename = "2025-12-03_ 05-53_AM_$2_$5_#60482952.png"
+table_type = "natural8"
+
+[results.OM60482952.positions]
+top_left = "fd@aa"
+top_right = "cheguei"
+left = "EvSecCT"
+right = "LordHackfre.."
+bottom = "philivey2964"
+
+[results.OM60473330]
+filename = "2025-12-03_ 07-01_AM_$2_$5_#60473330.png"
+table_type = "natural8"
+
+[results.OM60473330.positions]
+top_left = "Fernanado"
+top_right = "Garfunckle"
+left = "EvSecCT"
+right = "LordHackfre.."
+bottom = "philivey2964"
+
+[results.OM60445997]
+filename = "2025-12-03_ 08-28_AM_$2_$5_#60445997.png"
+table_type = "natural8"
+
+[results.OM60445997.positions]
+top_left = "fd@aa"
+top_right = "Brandyballe"
+left = "EvSecCT"
+right = "Gooolo"
+bottom = "philivey2964"

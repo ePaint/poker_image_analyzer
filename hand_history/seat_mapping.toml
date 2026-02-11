@@ -1,7 +1,14 @@
-[seats]
+[ggpoker]
 bottom = 1
 bottom_left = 2
 top_left = 3
 top = 4
 top_right = 5
 bottom_right = 6
+
+[natural8]
+bottom = 1
+left = 2
+top_left = 3
+top_right = 5
+right = 6

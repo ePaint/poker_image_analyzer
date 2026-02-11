@@ -24,8 +24,13 @@ Keep these files updated with every code change:
 - Don't underestimate user's technical knowledge
 - Better to clarify than to build the wrong thing
 
-### 4. Test Before Commit
-- Run `uv run pytest` to verify tests pass
+### 4. Verify Before Commit
+Run these checks before committing:
+```bash
+uv run pytest              # Tests must pass
+uv run ruff check .        # Linting must pass
+uv tool run ty check       # Type checking must pass
+```
 - **Never** run the main application unless explicitly asked
 
 ### 5. No Dead Code
@@ -99,6 +104,12 @@ uv run pytest --cov=image_analyzer
 
 # Run specific test
 uv run pytest tests/test_image_analyzer.py::test_function_name
+
+# Linting (ruff)
+uv run ruff check .
+
+# Type checking (ty)
+uv tool run ty check
 
 # Run hand history converter
 uv run python convert.py --hands input/hands --screenshots input/screenshots --output output/

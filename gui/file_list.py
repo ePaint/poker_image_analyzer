@@ -130,6 +130,10 @@ class FileListWidget(QWidget):
         self._list.clear()
         self._header.setText(f"{self._title} (0 files)")
 
+    def set_title(self, title: str) -> None:
+        """Update the header text directly."""
+        self._header.setText(title)
+
     def get_files(self) -> list[Path]:
         """Get list of all file paths (including invalid ones)."""
         files = []

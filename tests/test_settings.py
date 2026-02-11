@@ -1,7 +1,6 @@
-import pytest
 import tomli_w
 from settings import load_settings, save_settings
-from settings.config import DEFAULT_SETTINGS, SETTINGS_PATH
+from settings.config import DEFAULT_SETTINGS
 
 
 class TestLoadSettings:

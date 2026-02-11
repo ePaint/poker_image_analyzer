@@ -8,7 +8,6 @@ from unittest.mock import patch, MagicMock
 import sys
 
 from hand_history import (
-    HandHistory,
     ConversionResult,
     parse_hand,
     parse_file,
@@ -19,8 +18,9 @@ from hand_history import (
     write_skipped_file,
     load_seat_mapping,
     position_to_seat,
-    DEFAULT_SEAT_MAPPING,
+    DEFAULT_SEAT_MAPPINGS,
 )
+from image_analyzer.ocr_dump import parse_ocr_dump, CURRENT_VERSION
 
 TESTS_DIR = Path(__file__).parent
 FIXTURES_DIR = TESTS_DIR / "fixtures"
@@ -262,49 +262,223 @@ class TestWriteFiles:
 
 
 class TestSeatMapping:
-    def test_default_seat_mapping(self):
-        assert DEFAULT_SEAT_MAPPING == {
+    def test_default_seat_mappings_ggpoker(self):
+        assert DEFAULT_SEAT_MAPPINGS["ggpoker"] == {
             "bottom": 1,
             "bottom_left": 2,
             "top_left": 3,
             "top": 4,
             "top_right": 5,
             "bottom_right": 6,
+        }
+
+    def test_default_seat_mappings_natural8(self):
+        assert DEFAULT_SEAT_MAPPINGS["natural8"] == {
+            "bottom": 1,
             "left": 2,
+            "top_left": 3,
+            "top_right": 5,
             "right": 6,
         }
 
     def test_load_seat_mapping_returns_default_for_missing_file(self):
-        mapping = load_seat_mapping(Path("/nonexistent/path.toml"))
-        assert mapping == DEFAULT_SEAT_MAPPING
+        mapping = load_seat_mapping("ggpoker", Path("/nonexistent/path.toml"))
+        assert mapping == DEFAULT_SEAT_MAPPINGS["ggpoker"]
+
+    def test_load_seat_mapping_natural8_for_missing_file(self):
+        mapping = load_seat_mapping("natural8", Path("/nonexistent/path.toml"))
+        assert mapping == DEFAULT_SEAT_MAPPINGS["natural8"]
 
     def test_load_seat_mapping_from_file(self):
         with TemporaryDirectory() as tmpdir:
             path = Path(tmpdir) / "mapping.toml"
-            path.write_text("[seats]\nbottom = 6\ntop = 1")
-            mapping = load_seat_mapping(path)
+            path.write_text("[ggpoker]\nbottom = 6\ntop = 1")
+            mapping = load_seat_mapping("ggpoker", path)
             assert mapping["bottom"] == 6
             assert mapping["top"] == 1
 
-    def test_position_to_seat(self):
+    def test_position_to_seat_ggpoker(self):
         position_names = {
             "bottom": "Hero",
             "top_left": "Player1",
             "bottom_right": "Player2",
         }
-        result = position_to_seat(position_names)
+        result = position_to_seat(position_names, "ggpoker")
         assert result == {1: "Hero", 3: "Player1", 6: "Player2"}
+
+    def test_position_to_seat_natural8(self):
+        position_names = {
+            "bottom": "Hero",
+            "left": "Player1",
+            "right": "Player2",
+        }
+        result = position_to_seat(position_names, "natural8")
+        assert result == {1: "Hero", 2: "Player1", 6: "Player2"}
 
     def test_position_to_seat_with_custom_mapping(self):
         position_names = {"bottom": "Hero"}
         custom_mapping = {"bottom": 5}
-        result = position_to_seat(position_names, custom_mapping)
+        result = position_to_seat(position_names, "ggpoker", custom_mapping)
         assert result == {5: "Hero"}
 
     def test_position_to_seat_ignores_unknown_positions(self):
         position_names = {"unknown_position": "Player"}
-        result = position_to_seat(position_names)
+        result = position_to_seat(position_names, "ggpoker")
         assert result == {}
+
+
+class TestParseOcrDump:
+    def test_parse_v1_format(self):
+        """Test parsing v1 format (keyed by hand_number only)."""
+        toml_content = """
+[metadata]
+version = "v1"
+total_successful = 2
+
+[results.OM123456]
+filename = "test1.png"
+table_type = "ggpoker"
+
+[results.OM123456.positions]
+bottom = "Hero"
+top_left = "Player2"
+top_right = "Player3"
+
+[results.OM789012]
+filename = "test2.png"
+table_type = "natural8"
+
+[results.OM789012.positions]
+bottom = "Hero"
+left = "Player4"
+"""
+        with TemporaryDirectory() as tmpdir:
+            path = Path(tmpdir) / "ocr_dump.toml"
+            path.write_text(toml_content)
+
+            result = parse_ocr_dump(path)
+
+            assert len(result) == 2
+            assert "OM123456" in result
+            assert "OM789012" in result
+            assert result["OM123456"][1] == "Hero"
+            assert result["OM123456"][3] == "Player2"
+            assert result["OM123456"][5] == "Player3"
+            assert result["OM789012"][1] == "Hero"
+            assert result["OM789012"][2] == "Player4"
+
+    def test_parse_v2_format(self):
+        """Test parsing v2 format (keyed by hand_datetime composite)."""
+        toml_content = """
+[metadata]
+version = "v2"
+total_successful = 2
+
+[results.OM123456_2024-01-15_10-30_AM]
+hand_number = "OM123456"
+filename = "2024-01-15_ 10-30_AM_$5_$10_#123456.png"
+table_type = "ggpoker"
+
+[results.OM123456_2024-01-15_10-30_AM.positions]
+bottom = "Hero"
+top_left = "Player2"
+top_right = "Player3"
+
+[results.OM789012_2024-01-15_11-00_AM]
+hand_number = "OM789012"
+filename = "2024-01-15_ 11-00_AM_$5_$10_#789012.png"
+table_type = "natural8"
+
+[results.OM789012_2024-01-15_11-00_AM.positions]
+bottom = "Hero"
+left = "Player4"
+"""
+        with TemporaryDirectory() as tmpdir:
+            path = Path(tmpdir) / "ocr_dump.toml"
+            path.write_text(toml_content)
+
+            result = parse_ocr_dump(path)
+
+            assert len(result) == 2
+            assert "OM123456" in result
+            assert "OM789012" in result
+            assert result["OM123456"][1] == "Hero"
+            assert result["OM123456"][3] == "Player2"
+            assert result["OM123456"][5] == "Player3"
+            assert result["OM789012"][1] == "Hero"
+            assert result["OM789012"][2] == "Player4"
+
+    def test_parse_defaults_to_v1_without_version(self):
+        """Test that files without version field parse as v1."""
+        toml_content = """
+[metadata]
+total_successful = 1
+
+[results.OM123456]
+filename = "test1.png"
+table_type = "ggpoker"
+
+[results.OM123456.positions]
+bottom = "Hero"
+"""
+        with TemporaryDirectory() as tmpdir:
+            path = Path(tmpdir) / "ocr_dump.toml"
+            path.write_text(toml_content)
+
+            result = parse_ocr_dump(path)
+
+            assert "OM123456" in result
+            assert result["OM123456"][1] == "Hero"
+
+    def test_parse_empty_results(self):
+        """Test parsing TOML with no results."""
+        toml_content = """
+[metadata]
+version = "v1"
+total_successful = 0
+"""
+        with TemporaryDirectory() as tmpdir:
+            path = Path(tmpdir) / "empty.toml"
+            path.write_text(toml_content)
+
+            result = parse_ocr_dump(path)
+            assert result == {}
+
+    def test_v2_duplicate_hand_numbers_last_wins(self):
+        """Test v2: when same hand_number appears multiple times, last entry wins."""
+        toml_content = """
+[metadata]
+version = "v2"
+total_successful = 2
+
+[results.OM123456_2024-01-15_10-30_AM]
+hand_number = "OM123456"
+filename = "earlier.png"
+table_type = "ggpoker"
+
+[results.OM123456_2024-01-15_10-30_AM.positions]
+bottom = "EarlierPlayer"
+
+[results.OM123456_2024-01-15_11-00_AM]
+hand_number = "OM123456"
+filename = "later.png"
+table_type = "ggpoker"
+
+[results.OM123456_2024-01-15_11-00_AM.positions]
+bottom = "LaterPlayer"
+"""
+        with TemporaryDirectory() as tmpdir:
+            path = Path(tmpdir) / "ocr_dump.toml"
+            path.write_text(toml_content)
+
+            result = parse_ocr_dump(path)
+
+            assert len(result) == 1
+            assert result["OM123456"][1] == "LaterPlayer"
+
+    def test_current_version_is_v2(self):
+        """Verify current version constant is v2."""
+        assert CURRENT_VERSION == "v2"
 
 
 @pytest.fixture
@@ -339,7 +513,7 @@ class TestIntegration:
             "top_right": "RealPlayer5",
             "bottom_right": "RealPlayer6",
         }
-        seat_names = position_to_seat(position_names)
+        seat_names = position_to_seat(position_names, "ggpoker")
 
         assert seat_names == {
             1: "Hero",
@@ -393,3 +567,125 @@ class TestIntegration:
             skipped_content = skipped_path.read_text()
             assert "OM262735456" in skipped_content
             assert "No matching screenshot" in skipped_content
+
+
+class TestIntegrationWithFixtures:
+    """Integration tests using real OCR dump and matching hand histories."""
+
+    INTEGRATION_DIR = FIXTURES_DIR / "integration"
+
+    @pytest.mark.parametrize("dump_filename,version", [
+        ("ocr_dump_v1.toml", "v1"),
+        ("ocr_dump_v2.toml", "v2"),
+        ("ocr_dump.toml", "v2"),  # Original fixture is v2
+    ])
+    def test_parse_ocr_dump_both_versions(self, dump_filename, version):
+        """Verify parsing OCR dump files in both v1 and v2 formats."""
+        dump_path = self.INTEGRATION_DIR / dump_filename
+        if not dump_path.exists():
+            pytest.skip(f"Integration fixture {dump_filename} not available")
+
+        hand_data = parse_ocr_dump(dump_path)
+
+        assert len(hand_data) == 570
+
+        # Verify first hand structure (same data regardless of format)
+        first_hand = hand_data.get("OM154753304")
+        assert first_hand is not None
+        # Natural8 positions: left=2, right=6, bottom=1, top_left=3, top_right=5
+        assert first_hand[1] == "TeddyKGBEEE"  # bottom
+        assert first_hand[2] == "shubidubi"    # left
+        assert first_hand[3] == "RussWestbro.."  # top_left
+        assert first_hand[5] == "AnnAmbre11"   # top_right
+        assert first_hand[6] == "dAvid-H"      # right
+
+    def test_v1_and_v2_produce_identical_hand_data(self):
+        """Verify v1 and v2 parsers produce identical output for same data."""
+        v1_path = self.INTEGRATION_DIR / "ocr_dump_v1.toml"
+        v2_path = self.INTEGRATION_DIR / "ocr_dump_v2.toml"
+        if not v1_path.exists() or not v2_path.exists():
+            pytest.skip("Integration fixtures not available")
+
+        v1_data = parse_ocr_dump(v1_path)
+        v2_data = parse_ocr_dump(v2_path)
+
+        assert len(v1_data) == len(v2_data)
+        assert set(v1_data.keys()) == set(v2_data.keys())
+
+        for hand_number in v1_data:
+            assert v1_data[hand_number] == v2_data[hand_number], f"Mismatch for {hand_number}"
+
+    def test_full_conversion_with_real_data(self):
+        """End-to-end conversion test with real fixtures."""
+        dump_path = self.INTEGRATION_DIR / "ocr_dump.toml"
+        hands_path = self.INTEGRATION_DIR / "sample_hands.txt"
+        if not dump_path.exists() or not hands_path.exists():
+            pytest.skip("Integration fixtures not available")
+
+        hand_data = parse_ocr_dump(dump_path)
+        hands = parse_file(hands_path)
+
+        assert len(hands) == 10
+
+        results = convert_hands(hands, hand_data)
+
+        # All 10 hands should match
+        successful = [r for r in results if r.success]
+        failed = [r for r in results if not r.success]
+
+        assert len(successful) == 10, f"Expected 10 successes, got {len(successful)}. Failed: {[r.hand_number for r in failed]}"
+        assert len(failed) == 0
+
+        # Verify specific replacement in first hand (OM154753304)
+        # Hand has seats 1, 3, 4 (Hero). OCR: seat1=TeddyKGBEEE, seat3=RussWestbro..
+        first_result = next(r for r in results if r.hand_number == "OM154753304")
+        assert "TeddyKGBEEE" in first_result.converted_text  # seat 1
+        assert "RussWestbro.." in first_result.converted_text  # seat 3
+        assert "Hero" in first_result.converted_text  # preserved
+        # Encrypted IDs should be gone
+        assert "1e1c80c2" not in first_result.converted_text
+        assert "8096fcb8" not in first_result.converted_text
+
+    def test_write_files_with_real_data(self):
+        """Test writing conversion output files."""
+        dump_path = self.INTEGRATION_DIR / "ocr_dump.toml"
+        hands_path = self.INTEGRATION_DIR / "sample_hands.txt"
+        if not dump_path.exists() or not hands_path.exists():
+            pytest.skip("Integration fixtures not available")
+
+        hand_data = parse_ocr_dump(dump_path)
+        hands = parse_file(hands_path)
+        results = convert_hands(hands, hand_data)
+
+        with TemporaryDirectory() as tmpdir:
+            converted_path = Path(tmpdir) / "converted.txt"
+            skipped_path = Path(tmpdir) / "skipped.txt"
+
+            write_converted_file(results, converted_path)
+            write_skipped_file(results, skipped_path)
+
+            # Converted file should exist with content
+            assert converted_path.exists()
+            content = converted_path.read_text()
+            assert "OM154753304" in content
+            assert "shubidubi" in content
+
+            # Skipped file should be empty (all hands matched)
+            assert not skipped_path.exists() or skipped_path.read_text() == ""
+
+    def test_position_mapping_natural8(self):
+        """Verify Natural8 position names map correctly."""
+        positions = {
+            "bottom": "Player1",
+            "left": "Player2",     # Natural8 specific
+            "top_left": "Player3",
+            "top_right": "Player4",
+            "right": "Player5",    # Natural8 specific
+        }
+        result = position_to_seat(positions, "natural8")
+
+        assert result[1] == "Player1"  # bottom
+        assert result[2] == "Player2"  # left
+        assert result[3] == "Player3"  # top_left
+        assert result[5] == "Player4"  # top_right
+        assert result[6] == "Player5"  # right

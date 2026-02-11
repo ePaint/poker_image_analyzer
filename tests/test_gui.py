@@ -1,11 +1,6 @@
 """Tests for GUI components using pytest-qt."""
-import os
-from pathlib import Path
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
-import pytest
-from PySide6.QtCore import Qt, QUrl, QMimeData
-from PySide6.QtGui import QDropEvent, QDragEnterEvent
 from PySide6.QtWidgets import QLineEdit
 
 from gui.drop_zone import DropZone
@@ -149,21 +144,30 @@ class TestSettingsDialog:
         dialog = SettingsDialog()
         qtbot.addWidget(dialog)
 
-        assert len(dialog._seat_spinboxes) == 6
-        for position in SettingsDialog.POSITIONS:
-            assert position in dialog._seat_spinboxes
+        # Now we have 2 table types
+        assert len(dialog._seat_spinboxes) == 2
+        assert "ggpoker" in dialog._seat_spinboxes
+        assert "natural8" in dialog._seat_spinboxes
+        # GGPoker has 6 positions, Natural8 has 5
+        assert len(dialog._seat_spinboxes["ggpoker"]) == 6
+        assert len(dialog._seat_spinboxes["natural8"]) == 5
 
     def test_settings_dialog_reset_seat_mapping(self, qtbot):
+        from gui.settings_dialog import DEFAULT_SEATS
         dialog = SettingsDialog()
         qtbot.addWidget(dialog)
 
-        for spinbox in dialog._seat_spinboxes.values():
-            spinbox.setValue(9)
+        # Set all spinboxes to 9
+        for table_type, spinboxes in dialog._seat_spinboxes.items():
+            for spinbox in spinboxes.values():
+                spinbox.setValue(9)
 
         dialog._reset_seat_mapping()
 
-        for position, spinbox in dialog._seat_spinboxes.items():
-            assert spinbox.value() == SettingsDialog.DEFAULT_SEATS[position]
+        # Verify all reset to defaults
+        for table_type, spinboxes in dialog._seat_spinboxes.items():
+            for position, spinbox in spinboxes.items():
+                assert spinbox.value() == DEFAULT_SEATS[table_type][position]
 
     def test_settings_dialog_add_correction_row(self, qtbot):
         dialog = SettingsDialog()
@@ -210,12 +214,17 @@ class TestSettingsFunctions:
         mapping_file = tmp_path / "seat_mapping.toml"
 
         with patch("gui.settings_dialog._get_seat_mapping_path", return_value=mapping_file):
-            test_mapping = {"bottom": 3, "top": 1}
+            test_mapping = {
+                "ggpoker": {"bottom": 3, "top": 1},
+                "natural8": {"bottom": 2, "left": 5},
+            }
             save_seat_mapping(test_mapping)
 
             loaded = load_seat_mapping()
-            assert loaded["bottom"] == 3
-            assert loaded["top"] == 1
+            assert loaded["ggpoker"]["bottom"] == 3
+            assert loaded["ggpoker"]["top"] == 1
+            assert loaded["natural8"]["bottom"] == 2
+            assert loaded["natural8"]["left"] == 5
 
     def test_save_and_load_corrections(self, tmp_path):
         corrections_file = tmp_path / "corrections.toml"

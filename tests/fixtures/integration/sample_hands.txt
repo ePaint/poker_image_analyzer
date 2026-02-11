@@ -1,0 +1,280 @@
+Poker Hand #OM154753304: PLO-5 ($2/$5) - 2025/12/22 10:56:03
+Table 'PLO-5Gold5' 6-max Seat #4 is the button
+Seat 1: 1e1c80c2 ($502 in chips)
+Seat 3: 8096fcb8 ($529.5 in chips)
+Seat 4: Hero ($500 in chips)
+1e1c80c2: posts small blind $2
+8096fcb8: posts big blind $5
+*** HOLE CARDS ***
+Dealt to 1e1c80c2 
+Dealt to 8096fcb8 
+Dealt to Hero [6d 7s 3c 4h Ah]
+Hero: raises $12 to $17
+1e1c80c2: folds
+8096fcb8: calls $12
+*** FLOP *** [Kd Jh 2h]
+8096fcb8: checks
+Hero: bets $18.72
+8096fcb8: calls $18.72
+*** TURN *** [Kd Jh 2h] [6c]
+8096fcb8: checks
+Hero: checks
+*** RIVER *** [Kd Jh 2h 6c] [3s]
+8096fcb8: checks
+Hero: checks
+8096fcb8: shows [Qs 9s 5d Td Ks] (a pair of Kings)
+Hero: shows [6d 7s 3c 4h Ah] (two pair, Sixes and Threes)
+*** SHOWDOWN ***
+Hero collected $69.77 from pot
+*** SUMMARY ***
+Total pot $73.44 | Rake $3.67 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Board [Kd Jh 2h 6c 3s]
+Seat 1: 1e1c80c2 (small blind) folded before Flop
+Seat 3: 8096fcb8 (big blind) showed [Qs 9s 5d Td Ks] and lost with a pair of Kings
+Seat 4: Hero (button) showed [6d 7s 3c 4h Ah] and won ($69.77) with two pair, Sixes and Threes
+
+
+Poker Hand #OM154735074: PLO-5 ($2/$5) - 2025/12/22 10:55:54
+Table 'PLO-5Gold5' 6-max Seat #3 is the button
+Seat 1: 1e1c80c2 ($500 in chips)
+Seat 3: 8096fcb8 ($529.5 in chips)
+Seat 4: Hero ($500 in chips)
+Hero: posts small blind $2
+1e1c80c2: posts big blind $5
+*** HOLE CARDS ***
+Dealt to 1e1c80c2 
+Dealt to 8096fcb8 
+Dealt to Hero [5c 2s 2c Ac 3d]
+8096fcb8: folds
+Hero: folds
+Uncalled bet ($3) returned to 1e1c80c2
+*** SHOWDOWN ***
+1e1c80c2 collected $4 from pot
+*** SUMMARY ***
+Total pot $4 | Rake $0 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Seat 1: 1e1c80c2 (big blind) collected ($4)
+Seat 3: 8096fcb8 (button) folded before Flop (didn't bet)
+Seat 4: Hero (small blind) folded before Flop
+
+
+Poker Hand #OM154753595: PLO-5 ($2/$5) - 2025/12/22 10:55:08
+Table 'PLO-5Gold5' 6-max Seat #6 is the button
+Seat 3: 8096fcb8 ($516 in chips)
+Seat 4: Hero ($510.2 in chips)
+Seat 6: 170679a6 ($500 in chips)
+8096fcb8: posts small blind $2
+Hero: posts big blind $5
+*** HOLE CARDS ***
+Dealt to 8096fcb8 
+Dealt to Hero [Qh 6h 7d Ks Kd]
+Dealt to 170679a6 
+170679a6: folds
+8096fcb8: raises $10 to $15
+Hero: calls $10
+*** FLOP *** [5d Ad 5s]
+8096fcb8: checks
+Hero: checks
+*** TURN *** [5d Ad 5s] [Th]
+8096fcb8: bets $15
+Hero: folds
+Uncalled bet ($15) returned to 8096fcb8
+*** SHOWDOWN ***
+8096fcb8 collected $28.5 from pot
+*** SUMMARY ***
+Total pot $30 | Rake $1.5 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Board [5d Ad 5s Th]
+Seat 3: 8096fcb8 (small blind) won ($28.5)
+Seat 4: Hero (big blind) folded on the Turn
+Seat 6: 170679a6 (button) folded before Flop (didn't bet)
+
+
+Poker Hand #OM154753630: PLO-5 ($2/$5) - 2025/12/22 10:54:57
+Table 'PLO-5Gold5' 6-max Seat #4 is the button
+Seat 3: 8096fcb8 ($514 in chips)
+Seat 4: Hero ($510.2 in chips)
+Seat 6: 170679a6 ($500 in chips)
+170679a6: posts small blind $2
+8096fcb8: posts big blind $5
+*** HOLE CARDS ***
+Dealt to 8096fcb8 
+Dealt to Hero [Kc 9d 4c 6h 5c]
+Dealt to 170679a6 
+Hero: folds
+170679a6: folds
+Uncalled bet ($3) returned to 8096fcb8
+*** SHOWDOWN ***
+8096fcb8 collected $4 from pot
+*** SUMMARY ***
+Total pot $4 | Rake $0 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Seat 3: 8096fcb8 (big blind) collected ($4)
+Seat 4: Hero (button) folded before Flop (didn't bet)
+Seat 6: 170679a6 (small blind) folded before Flop
+
+
+Poker Hand #OM154753659: PLO-5 ($2/$5) - 2025/12/22 10:54:40
+Table 'PLO-5Gold5' 6-max Seat #3 is the button
+Seat 2: dcd8f328 ($779.58 in chips)
+Seat 3: 8096fcb8 ($507 in chips)
+Seat 4: Hero ($512.2 in chips)
+Seat 6: 170679a6 ($500 in chips)
+Hero: posts small blind $2
+170679a6: posts big blind $5
+*** HOLE CARDS ***
+Dealt to dcd8f328 
+Dealt to 8096fcb8 
+Dealt to Hero [5c 3s 7h Jd 3h]
+Dealt to 170679a6 
+dcd8f328: folds
+8096fcb8: raises $12 to $17
+Hero: folds
+170679a6: folds
+Uncalled bet ($12) returned to 8096fcb8
+*** SHOWDOWN ***
+8096fcb8 collected $12 from pot
+*** SUMMARY ***
+Total pot $12 | Rake $0 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Seat 2: dcd8f328 folded before Flop (didn't bet)
+Seat 3: 8096fcb8 (button) collected ($12)
+Seat 4: Hero (small blind) folded before Flop
+Seat 6: 170679a6 (big blind) folded before Flop
+
+
+Poker Hand #OM154753686: PLO-5 ($2/$5) - 2025/12/22 10:54:27
+Table 'PLO-5Gold5' 6-max Seat #2 is the button
+Seat 2: dcd8f328 ($779.58 in chips)
+Seat 3: 8096fcb8 ($509 in chips)
+Seat 4: Hero ($510.2 in chips)
+Seat 6: 170679a6 ($500 in chips)
+8096fcb8: posts small blind $2
+Hero: posts big blind $5
+*** HOLE CARDS ***
+Dealt to dcd8f328 
+Dealt to 8096fcb8 
+Dealt to Hero [6c 6d Ac 4d Kh]
+Dealt to 170679a6 
+170679a6: folds
+dcd8f328: folds
+8096fcb8: folds
+Uncalled bet ($3) returned to Hero
+*** SHOWDOWN ***
+Hero collected $4 from pot
+*** SUMMARY ***
+Total pot $4 | Rake $0 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Seat 2: dcd8f328 (button) folded before Flop (didn't bet)
+Seat 3: 8096fcb8 (small blind) folded before Flop
+Seat 4: Hero (big blind) collected ($4)
+Seat 6: 170679a6 folded before Flop (didn't bet)
+
+
+Poker Hand #OM154735224: PLO-5 ($2/$5) - 2025/12/22 10:54:16
+Table 'PLO-5Gold5' 6-max Seat #6 is the button
+Seat 2: dcd8f328 ($781.58 in chips)
+Seat 3: 8096fcb8 ($507 in chips)
+Seat 4: Hero ($510.2 in chips)
+Seat 6: 170679a6 ($500 in chips)
+dcd8f328: posts small blind $2
+8096fcb8: posts big blind $5
+*** HOLE CARDS ***
+Dealt to dcd8f328 
+Dealt to 8096fcb8 
+Dealt to Hero [Td 3d 3h Qd Qs]
+Dealt to 170679a6 
+Hero: folds
+170679a6: folds
+dcd8f328: folds
+Uncalled bet ($3) returned to 8096fcb8
+*** SHOWDOWN ***
+8096fcb8 collected $4 from pot
+*** SUMMARY ***
+Total pot $4 | Rake $0 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Seat 2: dcd8f328 (small blind) folded before Flop
+Seat 3: 8096fcb8 (big blind) collected ($4)
+Seat 4: Hero folded before Flop (didn't bet)
+Seat 6: 170679a6 (button) folded before Flop (didn't bet)
+
+
+Poker Hand #OM154708144: PLO-5 ($2/$5) - 2025/12/22 10:54:05
+Table 'PLO-5Gold5' 6-max Seat #4 is the button
+Seat 2: dcd8f328 ($779.58 in chips)
+Seat 3: 8096fcb8 ($507 in chips)
+Seat 4: Hero ($510.2 in chips)
+Seat 6: 170679a6 ($500 in chips)
+170679a6: posts small blind $2
+dcd8f328: posts big blind $5
+*** HOLE CARDS ***
+Dealt to dcd8f328 
+Dealt to 8096fcb8 
+Dealt to Hero [Ts 5h 2h 3d 9s]
+Dealt to 170679a6 
+8096fcb8: folds
+Hero: folds
+170679a6: folds
+Uncalled bet ($3) returned to dcd8f328
+*** SHOWDOWN ***
+dcd8f328 collected $4 from pot
+*** SUMMARY ***
+Total pot $4 | Rake $0 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Seat 2: dcd8f328 (big blind) collected ($4)
+Seat 3: 8096fcb8 folded before Flop (didn't bet)
+Seat 4: Hero (button) folded before Flop (didn't bet)
+Seat 6: 170679a6 (small blind) folded before Flop
+
+
+Poker Hand #OM156719252: PLO-5 ($2/$5) - 2025/12/22 10:53:51
+Table 'PLO-5Gold5' 6-max Seat #3 is the button
+Seat 2: dcd8f328 ($779.58 in chips)
+Seat 3: 8096fcb8 ($500 in chips)
+Seat 4: Hero ($512.2 in chips)
+Seat 6: 170679a6 ($500 in chips)
+Hero: posts small blind $2
+170679a6: posts big blind $5
+*** HOLE CARDS ***
+Dealt to dcd8f328 
+Dealt to 8096fcb8 
+Dealt to Hero [As 5h Ks 9s Tc]
+Dealt to 170679a6 
+dcd8f328: folds
+8096fcb8: raises $12 to $17
+Hero: folds
+170679a6: folds
+Uncalled bet ($12) returned to 8096fcb8
+*** SHOWDOWN ***
+8096fcb8 collected $12 from pot
+*** SUMMARY ***
+Total pot $12 | Rake $0 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Seat 2: dcd8f328 folded before Flop (didn't bet)
+Seat 3: 8096fcb8 (button) collected ($12)
+Seat 4: Hero (small blind) folded before Flop
+Seat 6: 170679a6 (big blind) folded before Flop
+
+
+Poker Hand #OM156709144: PLO-5 ($2/$5) - 2025/12/22 10:53:29
+Table 'PLO-5Gold5' 6-max Seat #2 is the button
+Seat 2: dcd8f328 ($779.58 in chips)
+Seat 3: 8096fcb8 ($500 in chips)
+Seat 4: Hero ($517.2 in chips)
+Seat 5: e9a565e0 ($514.2 in chips)
+Seat 6: 170679a6 ($500 in chips)
+8096fcb8: posts small blind $2
+Hero: posts big blind $5
+*** HOLE CARDS ***
+Dealt to dcd8f328 
+Dealt to 8096fcb8 
+Dealt to Hero [4h Kh 3c 7s 8d]
+Dealt to e9a565e0 
+Dealt to 170679a6 
+e9a565e0: raises $12 to $17
+170679a6: folds
+dcd8f328: folds
+8096fcb8: folds
+Hero: folds
+Uncalled bet ($12) returned to e9a565e0
+*** SHOWDOWN ***
+e9a565e0 collected $12 from pot
+*** SUMMARY ***
+Total pot $12 | Rake $0 | Jackpot $0 | Bingo $0 | Fortune $0 | Tax $0
+Seat 2: dcd8f328 (button) folded before Flop (didn't bet)
+Seat 3: 8096fcb8 (small blind) folded before Flop
+Seat 4: Hero (big blind) folded before Flop
+Seat 5: e9a565e0 collected ($12)
+Seat 6: 170679a6 folded before Flop (didn't bet)
