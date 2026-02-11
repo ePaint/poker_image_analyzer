@@ -23,3 +23,12 @@ settings.toml
 
 # Temporary files, large data, and scratch work
 temp/
+
+# Build artifacts
+installer_output/
+
+# Local development docs
+CLAUDE.md
+LAST_STATE.md
+HEADER.md
+TESTS.md
