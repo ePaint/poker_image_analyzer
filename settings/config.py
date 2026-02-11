@@ -3,7 +3,13 @@ import tomllib
 import tomli_w
 
 SETTINGS_PATH = Path.cwd() / "settings.toml"
-DEFAULT_SETTINGS: dict = {}
+DEFAULT_SETTINGS: dict = {
+    "last_screenshots_folder": "",
+    "last_hands_folder": "",
+    "last_output_folder": "",
+    "parallel_api_calls": 5,
+    "api_rate_limit_per_minute": 50,
+}
 
 
 def load_settings() -> dict:

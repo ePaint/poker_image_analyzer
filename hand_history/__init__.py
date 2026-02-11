@@ -23,12 +23,16 @@ from hand_history.converter import (
 _SEAT_MAPPING_PATH = Path(__file__).parent / "seat_mapping.toml"
 
 DEFAULT_SEAT_MAPPING: dict[str, int] = {
+    # GGPoker 6-max positions
     "bottom": 1,
     "bottom_left": 2,
     "top_left": 3,
     "top": 4,
     "top_right": 5,
     "bottom_right": 6,
+    # Natural8 5-max positions
+    "left": 2,
+    "right": 6,
 }
 
 

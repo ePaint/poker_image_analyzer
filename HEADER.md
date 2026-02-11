@@ -440,3 +440,155 @@ def main(
 --output      Output directory (default: output)
 --api-key     API key for LLM provider (uses ANTHROPIC_API_KEY env var if not set)
 ```
+
+## gui/__init__.py (Public API)
+
+```python
+from gui.app import launch_app
+```
+
+## gui/app.py
+
+### Functions
+
+```python
+def apply_dark_theme(app: QApplication) -> None
+
+def launch_app() -> int
+```
+
+## gui/main_window.py
+
+### Classes
+
+```python
+class MainWindow(QMainWindow):
+    def __init__(self)
+
+    # Slots
+    def _on_screenshots_folder_changed(self, path: Path) -> None
+    def _on_hands_folder_changed(self, path: Path) -> None
+    def _on_output_changed(self, text: str) -> None
+    def _browse_output(self) -> None
+    def _update_convert_button(self) -> None
+    def _show_settings(self) -> None
+    def _start_conversion(self) -> None
+    def _cancel_conversion(self) -> None
+    def _save_folder_setting(self, key: str, path: Path) -> None
+    def _load_saved_folders(self) -> None
+    def _refresh_screenshots(self) -> None
+    def _refresh_hands(self) -> None
+
+    # Worker callbacks
+    def _on_screenshot_progress(self, current: int, total: int, filename: str) -> None
+    def _on_screenshot_result(self, hand_number: str, seat_names: dict) -> None
+    def _on_screenshot_error(self, filename: str, message: str) -> None
+    def _on_screenshots_done(self, hand_data: dict) -> None
+    def _on_conversion_progress(self, current: int, total: int, filename: str) -> None
+    def _on_hand_converted(self, hand_number: str, player_count: int) -> None
+    def _on_hand_skipped(self, hand_number: str, reason: str) -> None
+    def _on_conversion_done(self, success: int, failed: int) -> None
+```
+
+## gui/settings_dialog.py
+
+### Functions
+
+```python
+def load_api_key() -> str | None
+def save_api_key(key: str) -> None
+def load_seat_mapping() -> dict[str, int]
+def save_seat_mapping(mapping: dict[str, int]) -> None
+def load_corrections() -> dict[str, str]
+def save_corrections(corrections: dict[str, str]) -> None
+```
+
+### Classes
+
+```python
+class SettingsDialog(QDialog):
+    POSITIONS: list[str]  # 6 position names
+    DEFAULT_SEATS: dict[str, int]
+
+    def __init__(self, parent=None)
+    def get_api_key(self) -> str
+```
+
+## gui/drop_zone.py
+
+### Classes
+
+```python
+class DropZone(QFrame):
+    folder_dropped: Signal(Path)
+
+    def __init__(self, label: str, parent=None)
+    def dragEnterEvent(self, event: QDragEnterEvent) -> None
+    def dragLeaveEvent(self, event) -> None
+    def dropEvent(self, event: QDropEvent) -> None
+    def mousePressEvent(self, event: QMouseEvent) -> None
+    def clear(self) -> None
+    def get_folder(self) -> Path | None
+```
+
+## gui/file_list.py
+
+### Classes
+
+```python
+class FileListWidget(QWidget):
+    refresh_clicked: Signal()
+
+    def __init__(
+        self,
+        title: str,
+        validator: Callable[[str], bool] | None = None,
+        parent=None,
+    )
+
+    def set_folder(self, path: Path, pattern: str) -> int
+    def clear(self) -> None
+    def get_files(self) -> list[Path]
+    def get_valid_files(self) -> list[Path]
+    def count(self) -> int
+    def valid_count(self) -> int
+    def refresh(self) -> int
+```
+
+## gui/workers.py
+
+### Classes
+
+```python
+class ScreenshotWorker(QThread):
+    progress: Signal(int, int, str)  # current, total, filename
+    result: Signal(str, dict)  # hand_number, seat_names
+    error: Signal(str, str)  # filename, message
+    finished_processing: Signal(dict)  # hand_data
+
+    def __init__(
+        self,
+        screenshots_dir: Path,
+        api_key: str | None = None,
+        parent=None,
+    )
+    def cancel(self) -> None
+    def run(self) -> None
+
+
+class ConversionWorker(QThread):
+    progress: Signal(int, int, str)  # current, total, filename
+    hand_converted: Signal(str, int)  # hand_number, player_count
+    hand_skipped: Signal(str, str)  # hand_number, reason
+    finished_processing: Signal(int, int)  # success_count, failed_count
+
+    def __init__(
+        self,
+        hands_dir: Path,
+        hand_data: dict[str, dict[int, str]],
+        output_dir: Path,
+        parent=None,
+    )
+    def cancel(self) -> None
+    def run(self) -> None
+```

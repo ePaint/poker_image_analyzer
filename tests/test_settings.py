@@ -51,5 +51,7 @@ class TestSaveSettings:
 
 
 class TestDefaultSettings:
-    def test_default_settings_is_empty_dict(self):
-        assert DEFAULT_SETTINGS == {}
+    def test_default_settings_has_folder_keys(self):
+        assert "last_screenshots_folder" in DEFAULT_SETTINGS
+        assert "last_hands_folder" in DEFAULT_SETTINGS
+        assert "last_output_folder" in DEFAULT_SETTINGS

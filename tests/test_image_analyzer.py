@@ -9,9 +9,7 @@ from image_analyzer import (
     PlayerRegion,
     ScreenshotFilename,
     analyze_screenshot,
-    extract_hand_number_from_file,
     DEFAULT_REGIONS,
-    HAND_INFO_REGION,
 )
 
 TESTS_DIR = Path(__file__).parent
@@ -206,61 +204,3 @@ class TestIntegration:
             )
 
 
-FIXTURES_DIR = TESTS_DIR / "fixtures"
-
-
-class TestHandInfoRegion:
-    def test_region_exists(self):
-        assert HAND_INFO_REGION is not None
-        assert HAND_INFO_REGION.name == "hand_info"
-
-    def test_region_position(self):
-        assert HAND_INFO_REGION.x == 0
-        assert HAND_INFO_REGION.y == 0
-        assert HAND_INFO_REGION.width == 350
-        assert HAND_INFO_REGION.height == 25
-
-
-class TestExtractHandNumber:
-    def test_file_not_found(self):
-        with pytest.raises(FileNotFoundError):
-            extract_hand_number_from_file("nonexistent.png")
-
-    def test_extracts_hand_number(self, mock_anthropic):
-        fixture_image = FIXTURES_DIR / "sample_screenshot.png"
-        if not fixture_image.exists():
-            pytest.skip("Fixture image not available")
-
-        mock_module, mock_client = mock_anthropic
-        mock_response = MagicMock()
-        mock_response.content = [MagicMock(text="[0] #OM262735460")]
-        mock_client.messages.create.return_value = mock_response
-
-        result = extract_hand_number_from_file(fixture_image)
-        assert result == "OM262735460"
-
-    def test_returns_none_for_no_match(self, mock_anthropic):
-        fixture_image = FIXTURES_DIR / "sample_screenshot.png"
-        if not fixture_image.exists():
-            pytest.skip("Fixture image not available")
-
-        mock_module, mock_client = mock_anthropic
-        mock_response = MagicMock()
-        mock_response.content = [MagicMock(text="[0] No hand number found")]
-        mock_client.messages.create.return_value = mock_response
-
-        result = extract_hand_number_from_file(fixture_image)
-        assert result is None
-
-    def test_extracts_from_longer_text(self, mock_anthropic):
-        fixture_image = FIXTURES_DIR / "sample_screenshot.png"
-        if not fixture_image.exists():
-            pytest.skip("Fixture image not available")
-
-        mock_module, mock_client = mock_anthropic
-        mock_response = MagicMock()
-        mock_response.content = [MagicMock(text="[0] HH PL PLO-5 $2 / $5 - #OM262735460")]
-        mock_client.messages.create.return_value = mock_response
-
-        result = extract_hand_number_from_file(fixture_image)
-        assert result == "OM262735460"

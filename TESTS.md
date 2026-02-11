@@ -22,7 +22,7 @@
 
 | Test | Purpose |
 |------|---------|
-| `test_default_settings_is_empty_dict` | Verifies DEFAULT_SETTINGS is empty |
+| `test_default_settings_has_folder_keys` | Verifies DEFAULT_SETTINGS contains folder persistence keys |
 
 ## tests/test_image_analyzer.py
 
@@ -175,6 +175,57 @@ Located in `tests/images/`:
 | `test_extracts_hand_number` | Extracts OM number from LLM response |
 | `test_returns_none_for_no_match` | Returns None when no #OM pattern found |
 | `test_extracts_from_longer_text` | Extracts OM number from text with other content |
+| `test_extracts_from_raw_response_without_index` | Falls back to raw response when no indexed format (single crop) |
+
+## tests/test_gui.py
+
+### TestDropZone
+
+| Test | Purpose |
+|------|---------|
+| `test_drop_zone_initial_state` | Verifies drop zone starts with no folder and accepts drops |
+| `test_drop_zone_emits_signal_on_folder_set` | Signal emitted when folder is set |
+| `test_drop_zone_clear` | Clears folder and resets state |
+
+### TestFileListWidget
+
+| Test | Purpose |
+|------|---------|
+| `test_file_list_initial_state` | Empty list on initialization |
+| `test_file_list_populates_on_set_folder` | Populates with matching files |
+| `test_file_list_with_validator` | Validator marks invalid files |
+| `test_file_list_refresh_signal` | Refresh button emits signal |
+| `test_file_list_refresh_rereads_folder` | Refresh re-reads folder contents |
+| `test_file_list_handles_missing_folder` | Handles non-existent folders |
+
+### TestSettingsDialog
+
+| Test | Purpose |
+|------|---------|
+| `test_settings_dialog_masks_api_key` | API key input uses password mode |
+| `test_settings_dialog_toggles_key_visibility` | Show/Hide button toggles echo mode |
+| `test_settings_dialog_get_api_key` | Returns trimmed API key |
+| `test_settings_dialog_seat_spinboxes_exist` | All 6 position spinboxes exist |
+| `test_settings_dialog_reset_seat_mapping` | Reset button restores defaults |
+| `test_settings_dialog_add_correction_row` | Add button creates new row |
+| `test_settings_dialog_remove_correction_row` | Remove button deletes selected row |
+
+### TestSettingsFunctions
+
+| Test | Purpose |
+|------|---------|
+| `test_save_and_load_api_key` | Roundtrip API key to .env file |
+| `test_load_api_key_from_env_var` | Falls back to environment variable |
+| `test_save_and_load_seat_mapping` | Roundtrip seat mapping to TOML |
+| `test_save_and_load_corrections` | Roundtrip corrections to TOML |
+
+### TestMainWindow
+
+| Test | Purpose |
+|------|---------|
+| `test_main_window_initial_state` | Convert/Cancel buttons disabled on start |
+| `test_convert_button_disabled_without_inputs` | Button disabled without all inputs |
+| `test_convert_button_enabled_with_valid_inputs` | Button enabled with all valid inputs |
 
 ## Test Fixtures
 

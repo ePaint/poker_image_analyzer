@@ -90,20 +90,18 @@ oitnow2/
 
 ## Commands
 
-**IMPORTANT:** Always `cd` to the project directory before running `uv run` commands:
-
 ```bash
 # Run tests
-cd D:\MEDIA\DOCUMENTOS\ThatExcelGuy\TEG_Python\oitnow2 && uv run pytest
+uv run pytest
 
 # Run tests with coverage
-cd D:\MEDIA\DOCUMENTOS\ThatExcelGuy\TEG_Python\oitnow2 && uv run pytest --cov=image_analyzer
+uv run pytest --cov=image_analyzer
 
 # Run specific test
-cd D:\MEDIA\DOCUMENTOS\ThatExcelGuy\TEG_Python\oitnow2 && uv run pytest tests/test_image_analyzer.py::test_function_name
+uv run pytest tests/test_image_analyzer.py::test_function_name
 
 # Run hand history converter
-cd D:\MEDIA\DOCUMENTOS\ThatExcelGuy\TEG_Python\oitnow2 && uv run python convert.py --hands input/hands --screenshots input/screenshots --output output/
+uv run python convert.py --hands input/hands --screenshots input/screenshots --output output/
 ```
 
 ## Module Overview

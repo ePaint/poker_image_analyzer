@@ -1,5 +1,2 @@
-# Known OCR misreadings and their corrections
-# Format: "misread" = "correct"
-
 [corrections]
-"GY0KER_AA" = "GYOKER_AA"
+GY0KER_AA = "GYOKER_AA"

@@ -270,6 +270,8 @@ class TestSeatMapping:
             "top": 4,
             "top_right": 5,
             "bottom_right": 6,
+            "left": 2,
+            "right": 6,
         }
 
     def test_load_seat_mapping_returns_default_for_missing_file(self):

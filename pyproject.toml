@@ -8,6 +8,7 @@ dependencies = [
     "anthropic>=0.78.0",
     "opencv-python>=4.13.0.90",
     "pillow>=11.3.0",
+    "pyside6>=6.6.0",
     "python-dotenv>=1.2.1",
     "tomli-w>=1.2.0",
 ]
@@ -15,10 +16,11 @@ dependencies = [
 [dependency-groups]
 dev = [
     "pytest>=9.0.2",
+    "pytest-qt>=4.4.0",
 ]
 
 [tool.setuptools.packages.find]
-include = ["image_analyzer*", "settings*"]
+include = ["image_analyzer*", "settings*", "hand_history*", "gui*"]
 
 [tool.pytest.ini_options]
 filterwarnings = [

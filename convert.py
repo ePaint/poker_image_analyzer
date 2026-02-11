@@ -6,7 +6,6 @@ from pathlib import Path
 
 from image_analyzer import (
     analyze_screenshot,
-    extract_hand_number_from_file,
     ScreenshotFilename,
 )
 from hand_history import (
@@ -44,10 +43,8 @@ def process_screenshots(
         print(f"Processing screenshot {i}/{len(valid_files)}: {screenshot_path.name}")
 
         try:
-            hand_number = extract_hand_number_from_file(screenshot_path, api_key)
-            if not hand_number:
-                print(f"  Warning: Could not extract hand number")
-                continue
+            parsed = ScreenshotFilename.parse(screenshot_path)
+            hand_number = f"OM{parsed.table_id}"
 
             position_names = analyze_screenshot(screenshot_path, api_key=api_key)
             seat_names = position_to_seat(position_names, seat_mapping)

@@ -1,15 +1,3 @@
-# Seat mapping: screenshot position -> hand history seat number
-#
-# GGPoker 6-max table layout (from player's perspective):
-#   - bottom: Hero position (seat 1)
-#   - bottom_left: seat 2
-#   - top_left: seat 3
-#   - top: seat 4
-#   - top_right: seat 5
-#   - bottom_right: seat 6
-#
-# Adjust these values if the mapping proves incorrect for your table layout.
-
 [seats]
 bottom = 1
 bottom_left = 2

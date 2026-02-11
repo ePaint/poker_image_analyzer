@@ -100,4 +100,7 @@ class AnthropicProvider:
                 if 0 <= idx < num_crops:
                     results[idx] = text
 
+        if num_crops == 1 and results[0] == "":
+            results[0] = response_text.strip()
+
         return results

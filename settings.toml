@@ -1,3 +1,8 @@
+last_screenshots_folder = "/Users/pianosoftwareinc/Documents/TEG/oitnow2/temp/Screenshots_GG"
+last_hands_folder = "/Users/pianosoftwareinc/Documents/TEG/oitnow2/temp/Hands 1"
+last_output_folder = "/Users/pianosoftwareinc/Documents/TEG/oitnow2/temp/output"
+parallel_api_calls = 8
+
 [ocr]
-engine = "easyocr"  # Options: "easyocr", "tesseract"
+engine = "easyocr"
 gpu = false
