@@ -79,8 +79,8 @@ class MainWindow(QMainWindow):
         self._screenshots_drop.file_dropped.connect(self._on_ocr_dump_selected)
         self._hands_drop = DropZone("Hand Files")
         self._hands_drop.folder_dropped.connect(self._on_hands_folder_changed)
-        drop_layout.addWidget(self._screenshots_drop)
-        drop_layout.addWidget(self._hands_drop)
+        drop_layout.addWidget(self._screenshots_drop, 1)
+        drop_layout.addWidget(self._hands_drop, 1)
         layout.addLayout(drop_layout)
 
         lists_layout = QHBoxLayout()
@@ -164,6 +164,8 @@ class MainWindow(QMainWindow):
     def _on_screenshots_folder_changed(self, path: Path) -> None:
         self._screenshots_folder = path
         self._ocr_dump_path = None
+        self._screenshots_list.setVisible(True)
+        self._screenshots_list.set_title("Screenshots")
         self._screenshots_list.set_folder(path, "*.png")
         self._save_folder_setting("last_screenshots_folder", path)
         self._update_convert_button()
@@ -172,7 +174,7 @@ class MainWindow(QMainWindow):
         self._ocr_dump_path = path
         self._screenshots_folder = None
         self._screenshots_list.clear()
-        self._screenshots_list.set_title(f"OCR Dump: {path.name}")
+        self._screenshots_list.setVisible(False)
         self._save_folder_setting("last_ocr_dump_file", path)
         self._update_convert_button()
 

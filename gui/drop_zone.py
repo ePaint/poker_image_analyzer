@@ -3,7 +3,7 @@ from pathlib import Path
 
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QDragEnterEvent, QDropEvent, QMouseEvent
-from PySide6.QtWidgets import QFrame, QLabel, QVBoxLayout, QFileDialog, QStackedWidget
+from PySide6.QtWidgets import QFrame, QLabel, QVBoxLayout, QFileDialog, QStackedWidget, QSizePolicy
 
 
 class DropZone(QFrame):
@@ -24,6 +24,7 @@ class DropZone(QFrame):
 
     def _setup_ui(self) -> None:
         self.setFrameStyle(QFrame.Shape.StyledPanel | QFrame.Shadow.Sunken)
+        self.setSizePolicy(QSizePolicy.Policy.Ignored, QSizePolicy.Policy.Preferred)
         self.setStyleSheet("""
             DropZone {
                 border: 2px dashed #666;
@@ -61,10 +62,11 @@ class DropZone(QFrame):
         layout.addWidget(self._title_label)
         layout.addWidget(self._content_stack)
 
-    def set_file_mode(self, enabled: bool) -> None:
+    def set_file_mode(self, enabled: bool, file_mode_title: str | None = None) -> None:
         """Set whether the drop zone accepts files instead of folders."""
         self._file_mode = enabled
         if enabled:
+            self._title_label.setText(file_mode_title or "OCR Dump File")
             self._hint_label.setText("Drop .toml file here\nor click to browse")
             if self._file_path:
                 self._show_path(self._file_path)
@@ -72,6 +74,7 @@ class DropZone(QFrame):
             else:
                 self._clear_display()
         else:
+            self._title_label.setText(self._label_text)
             self._hint_label.setText("Drop folder here\nor click to browse")
             if self._folder_path:
                 self._show_path(self._folder_path)

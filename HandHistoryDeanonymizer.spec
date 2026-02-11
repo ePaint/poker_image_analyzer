@@ -13,6 +13,7 @@ project_root = Path(SPECPATH)
 datas = [
     (str(project_root / 'hand_history' / 'seat_mapping.toml'), 'hand_history'),
     (str(project_root / 'image_analyzer' / 'corrections.toml'), 'image_analyzer'),
+    (str(project_root / 'app.ico'), '.'),
 ]
 
 # Hidden imports that PyInstaller might miss
@@ -73,6 +74,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=str(project_root / 'app.ico') if sys.platform == 'win32' else None,
 )
 
 coll = COLLECT(
@@ -91,13 +93,13 @@ if sys.platform == 'darwin':
     app = BUNDLE(
         coll,
         name='Hand History De-anonymizer.app',
-        icon=None,  # Add icon path here if you have one: 'assets/icon.icns'
+        icon=str(project_root / 'app.icns') if (project_root / 'app.icns').exists() else None,
         bundle_identifier='com.oitnow.handhistory',
         info_plist={
             'CFBundleName': 'Hand History De-anonymizer',
             'CFBundleDisplayName': 'Hand History De-anonymizer',
-            'CFBundleShortVersionString': '1.0.0',
-            'CFBundleVersion': '1.0.0',
+            'CFBundleShortVersionString': '0.1.1',
+            'CFBundleVersion': '0.1.1',
             'NSHighResolutionCapable': True,
             'LSMinimumSystemVersion': '10.15',
         },
