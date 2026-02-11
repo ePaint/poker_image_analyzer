@@ -39,6 +39,8 @@ def launch_app() -> int:
     """Launch the application and return exit code."""
     app = QApplication(sys.argv)
     app.setApplicationName("Hand History De-anonymizer")
+    app.setApplicationDisplayName("Hand History De-anonymizer")
+    app.setDesktopFileName("Hand History De-anonymizer")
 
     apply_dark_theme(app)
 

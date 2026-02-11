@@ -193,22 +193,23 @@ class TestSettingsDialog:
 
 
 class TestSettingsFunctions:
-    def test_save_and_load_api_key(self, tmp_path, monkeypatch):
+    def test_save_and_load_api_key(self, tmp_path):
         env_file = tmp_path / ".env"
-        monkeypatch.chdir(tmp_path)
 
-        save_api_key("test-api-key-123")
-        assert env_file.exists()
+        with patch("gui.settings_dialog._get_env_path", return_value=env_file):
+            save_api_key("test-api-key-123")
+            assert env_file.exists()
 
-        loaded = load_api_key()
-        assert loaded == "test-api-key-123"
+            loaded = load_api_key()
+            assert loaded == "test-api-key-123"
 
     def test_load_api_key_from_env_var(self, tmp_path, monkeypatch):
-        monkeypatch.chdir(tmp_path)
+        env_file = tmp_path / ".env"
         monkeypatch.setenv("ANTHROPIC_API_KEY", "env-var-key")
 
-        loaded = load_api_key()
-        assert loaded == "env-var-key"
+        with patch("gui.settings_dialog._get_env_path", return_value=env_file):
+            loaded = load_api_key()
+            assert loaded == "env-var-key"
 
     def test_save_and_load_seat_mapping(self, tmp_path, monkeypatch):
         mapping_file = tmp_path / "seat_mapping.toml"

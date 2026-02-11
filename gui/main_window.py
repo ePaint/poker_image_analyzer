@@ -14,6 +14,7 @@ from PySide6.QtWidgets import (
     QTextEdit,
     QFileDialog,
     QMessageBox,
+    QCheckBox,
 )
 
 from image_analyzer import ScreenshotFilename
@@ -67,6 +68,10 @@ class MainWindow(QMainWindow):
         central = QWidget()
         self.setCentralWidget(central)
         layout = QVBoxLayout(central)
+
+        self._use_ocr_dump_checkbox = QCheckBox("Use existing OCR dump file")
+        self._use_ocr_dump_checkbox.toggled.connect(self._on_ocr_dump_mode_toggled)
+        layout.addWidget(self._use_ocr_dump_checkbox)
 
         drop_layout = QHBoxLayout()
         self._screenshots_drop = DropZone("Screenshots", allow_file_mode=True)
@@ -152,6 +157,9 @@ class MainWindow(QMainWindow):
         button_layout.addWidget(self._cancel_btn)
 
         layout.addLayout(button_layout)
+
+    def _on_ocr_dump_mode_toggled(self, checked: bool) -> None:
+        self._screenshots_drop.set_file_mode(checked)
 
     def _on_screenshots_folder_changed(self, path: Path) -> None:
         self._screenshots_folder = path

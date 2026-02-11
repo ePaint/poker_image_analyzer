@@ -28,7 +28,12 @@ from PySide6.QtWidgets import (
 
 
 def _get_env_path() -> Path:
-    return Path.cwd() / ".env"
+    """Get .env path, preferring local for development, else app data dir."""
+    local_path = Path.cwd() / ".env"
+    if local_path.exists():
+        return local_path
+    from settings.config import _get_app_data_dir
+    return _get_app_data_dir() / ".env"
 
 
 def _get_seat_mapping_path() -> Path:

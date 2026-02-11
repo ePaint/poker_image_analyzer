@@ -3,7 +3,7 @@ from pathlib import Path
 
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QDragEnterEvent, QDropEvent, QMouseEvent
-from PySide6.QtWidgets import QFrame, QLabel, QVBoxLayout, QFileDialog, QCheckBox, QStackedWidget
+from PySide6.QtWidgets import QFrame, QLabel, QVBoxLayout, QFileDialog, QStackedWidget
 
 
 class DropZone(QFrame):
@@ -44,11 +44,6 @@ class DropZone(QFrame):
         self._title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self._title_label.setStyleSheet("font-weight: bold; font-size: 14px;")
 
-        self._file_mode_checkbox: QCheckBox | None = None
-        if self._allow_file_mode:
-            self._file_mode_checkbox = QCheckBox("Use OCR dump file")
-            self._file_mode_checkbox.toggled.connect(self._on_file_mode_toggled)
-
         self._hint_label = QLabel("Drop folder here\nor click to browse")
         self._hint_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self._hint_label.setStyleSheet("color: #888;")
@@ -64,13 +59,12 @@ class DropZone(QFrame):
         self._content_stack.setCurrentIndex(0)
 
         layout.addWidget(self._title_label)
-        if self._file_mode_checkbox:
-            layout.addWidget(self._file_mode_checkbox)
         layout.addWidget(self._content_stack)
 
-    def _on_file_mode_toggled(self, checked: bool) -> None:
-        self._file_mode = checked
-        if checked:
+    def set_file_mode(self, enabled: bool) -> None:
+        """Set whether the drop zone accepts files instead of folders."""
+        self._file_mode = enabled
+        if enabled:
             self._hint_label.setText("Drop .toml file here\nor click to browse")
             if self._file_path:
                 self._show_path(self._file_path)
