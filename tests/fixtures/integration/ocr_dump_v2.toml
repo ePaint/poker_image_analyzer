@@ -5,7 +5,7 @@ total_successful = 570
 total_errors = 0
 version = "v2"
 
-[seat_mappings.ggpoker]
+[seat_mappings.6_player]
 bottom = 1
 bottom_left = 2
 top_left = 3
@@ -13,7 +13,7 @@ top = 4
 top_right = 5
 bottom_right = 6
 
-[seat_mappings.natural8]
+[seat_mappings.5_player]
 bottom = 1
 left = 2
 top_left = 3
@@ -23,7 +23,7 @@ right = 6
 [results.OM154753304_2024-02-08_09-39_AM]
 hand_number = "OM154753304"
 filename = "2024-02-08_ 09-39_AM_$2_$5_#154753304.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM154753304_2024-02-08_09-39_AM.positions]
 top_left = "RussWestbro.."
@@ -35,7 +35,7 @@ bottom = "TeddyKGBEEE"
 [results.OM154735074_2024-02-08_09-51_AM]
 hand_number = "OM154735074"
 filename = "2024-02-08_ 09-51_AM_$2_$5_#154735074.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM154735074_2024-02-08_09-51_AM.positions]
 top_left = "Alex Kalenin"
@@ -47,7 +47,7 @@ bottom = "TeddyKGBEEE"
 [results.OM154753595_2024-02-08_09-59_AM]
 hand_number = "OM154753595"
 filename = "2024-02-08_ 09-59_AM_$2_$5_#154753595.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM154753595_2024-02-08_09-59_AM.positions]
 top_left = "RussWestbro.."
@@ -59,7 +59,7 @@ bottom = "TeddyKGBEEE"
 [results.OM154753630_2024-02-08_10-01_AM]
 hand_number = "OM154753630"
 filename = "2024-02-08_ 10-01_AM_$2_$5_#154753630.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM154753630_2024-02-08_10-01_AM.positions]
 top_left = "top1020"
@@ -71,7 +71,7 @@ bottom = "TeddyKGBEEE"
 [results.OM154753659_2024-02-08_10-03_AM]
 hand_number = "OM154753659"
 filename = "2024-02-08_ 10-03_AM_$2_$5_#154753659.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM154753659_2024-02-08_10-03_AM.positions]
 top_left = "shubidubi"
@@ -83,7 +83,7 @@ bottom = "TeddyKGBEEE"
 [results.OM154753686_2024-02-08_10-05_AM]
 hand_number = "OM154753686"
 filename = "2024-02-08_ 10-05_AM_$2_$5_#154753686.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM154753686_2024-02-08_10-05_AM.positions]
 top_left = "RussWestbro.."
@@ -95,7 +95,7 @@ bottom = "TeddyKGBEEE"
 [results.OM154735224_2024-02-08_10-08_AM]
 hand_number = "OM154735224"
 filename = "2024-02-08_ 10-08_AM_$2_$5_#154735224.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM154735224_2024-02-08_10-08_AM.positions]
 top_left = "Alex Kalenin"
@@ -107,7 +107,7 @@ bottom = "TeddyKGBEEE"
 [results.OM154708144_2024-02-08_10-16_AM]
 hand_number = "OM154708144"
 filename = "2024-02-08_ 10-16_AM_$2_$5_#154708144.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM154708144_2024-02-08_10-16_AM.positions]
 top_left = "shubidubi"
@@ -119,7 +119,7 @@ bottom = "TeddyKGBEEE"
 [results.OM156719252_2024-02-18_04-59_AM]
 hand_number = "OM156719252"
 filename = "2024-02-18_ 04-59_AM_$1_$2_#156719252.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM156719252_2024-02-18_04-59_AM.positions]
 top_left = "Crushinskyy"
@@ -131,7 +131,7 @@ bottom = "TeddyKGBEEE"
 [results.OM156709144_2024-02-18_05-01_AM]
 hand_number = "OM156709144"
 filename = "2024-02-18_ 05-01_AM_$2_$5_#156709144.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM156709144_2024-02-18_05-01_AM.positions]
 top_left = "Sherlocksch.."
@@ -143,7 +143,7 @@ bottom = "TeddyKGBEEE"
 [results.OM156734252_2024-02-18_05-01_AM]
 hand_number = "OM156734252"
 filename = "2024-02-18_ 05-01_AM_$2_$5_#156734252.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM156734252_2024-02-18_05-01_AM.positions]
 top_left = "Andrei Must.."
@@ -155,7 +155,7 @@ bottom = "TeddyKGBEEE"
 [results.OM156748431_2024-02-18_05-22_AM]
 hand_number = "OM156748431"
 filename = "2024-02-18_ 05-22_AM_$5_$10_#156748431.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM156748431_2024-02-18_05-22_AM.positions]
 top_left = "L Protopapas"
@@ -167,7 +167,7 @@ bottom = "TeddyKGBEEE"
 [results.OM156983088_2024-02-19_05-46_AM]
 hand_number = "OM156983088"
 filename = "2024-02-19_ 05-46_AM_$5_$10_#156983088.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM156983088_2024-02-19_05-46_AM.positions]
 top_left = "Dealt"
@@ -179,7 +179,7 @@ bottom = "TeddyKGBEEE"
 [results.OM156953909_2024-02-19_05-47_AM]
 hand_number = "OM156953909"
 filename = "2024-02-19_ 05-47_AM_$2_$5_#156953909.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM156953909_2024-02-19_05-47_AM.positions]
 top_left = "Paintbrush"
@@ -191,7 +191,7 @@ bottom = "TeddyKGBEEE"
 [results.OM156935815_2024-02-19_05-49_AM]
 hand_number = "OM156935815"
 filename = "2024-02-19_ 05-49_AM_$2_$5_#156935815.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM156935815_2024-02-19_05-49_AM.positions]
 top_left = "Paintbrush"
@@ -203,7 +203,7 @@ bottom = "TeddyKGBEEE"
 [results.OM156935896_2024-02-19_06-01_AM]
 hand_number = "OM156935896"
 filename = "2024-02-19_ 06-01_AM_$2_$5_#156935896.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM156935896_2024-02-19_06-01_AM.positions]
 top_left = "Paintbrush"
@@ -215,7 +215,7 @@ bottom = "TeddyKGBEEE"
 [results.OM156983327_2024-02-19_06-17_AM]
 hand_number = "OM156983327"
 filename = "2024-02-19_ 06-17_AM_$5_$10_#156983327.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM156983327_2024-02-19_06-17_AM.positions]
 top_left = "L Protopapas"
@@ -227,7 +227,7 @@ bottom = "TeddyKGBEEE"
 [results.OM167835439_2024-04-17_04-16_AM]
 hand_number = "OM167835439"
 filename = "2024-04-17_ 04-16_AM_$200_$400_#167835439.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM167835439_2024-04-17_04-16_AM.positions]
 top_left = ""
@@ -239,7 +239,7 @@ bottom = "T Tabagari"
 [results.OM168159674_2024-04-17_04-16_AM]
 hand_number = "OM168159674"
 filename = "2024-04-17_ 04-16_AM_$50_$100_#168159674.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM168159674_2024-04-17_04-16_AM.positions]
 top_left = "Andras Neme.."
@@ -251,7 +251,7 @@ bottom = "T Tabagari"
 [results.OM167940795_2024-04-17_04-17_AM]
 hand_number = "OM167940795"
 filename = "2024-04-17_ 04-17_AM_$200_$400_#167940795.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM167940795_2024-04-17_04-17_AM.positions]
 top_left = ""
@@ -263,7 +263,7 @@ bottom = "Vasilev Ser.."
 [results.OM168159700_2024-04-17_04-23_AM]
 hand_number = "OM168159700"
 filename = "2024-04-17_ 04-23_AM_$50_$100_#168159700.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM168159700_2024-04-17_04-23_AM.positions]
 top_left = "T Tabagari"
@@ -275,7 +275,7 @@ bottom = "zamirovsky"
 [results.OM199002717_2024-09-22_12-49_AM]
 hand_number = "OM199002717"
 filename = "2024-09-22_ 12-49_AM_$1_$2_#199002717.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM199002717_2024-09-22_12-49_AM.positions]
 top = ""
@@ -288,7 +288,7 @@ bottom_right = ""
 [results.OM199438308_2024-09-24_03-08_PM]
 hand_number = "OM199438308"
 filename = "2024-09-24_ 03-08_PM_$1_$2_#199438308.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM199438308_2024-09-24_03-08_PM.positions]
 top = ""
@@ -301,7 +301,7 @@ bottom_right = ""
 [results.OM199482446_2024-09-24_03-33_PM]
 hand_number = "OM199482446"
 filename = "2024-09-24_ 03-33_PM_$1_$2_#199482446.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM199482446_2024-09-24_03-33_PM.positions]
 top = ""
@@ -314,7 +314,7 @@ bottom_right = ""
 [results.OM199619482_2024-09-25_10-28_AM]
 hand_number = "OM199619482"
 filename = "2024-09-25_ 10-28_AM_$1_$2_#199619482.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM199619482_2024-09-25_10-28_AM.positions]
 top = ""
@@ -327,7 +327,7 @@ bottom_right = ""
 [results.OM199619671_2024-09-25_10-42_AM]
 hand_number = "OM199619671"
 filename = "2024-09-25_ 10-42_AM_$1_$2_#199619671.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM199619671_2024-09-25_10-42_AM.positions]
 top = ""
@@ -340,7 +340,7 @@ bottom_right = ""
 [results.OM199823675_2024-09-26_08-53_AM]
 hand_number = "OM199823675"
 filename = "2024-09-26_ 08-53_AM_$1_$2_#199823675.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM199823675_2024-09-26_08-53_AM.positions]
 top = ""
@@ -353,7 +353,7 @@ bottom_right = ""
 [results.OM200658055_2024-09-30_02-57_PM]
 hand_number = "OM200658055"
 filename = "2024-09-30_ 02-57_PM_$1_$2_#200658055.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM200658055_2024-09-30_02-57_PM.positions]
 top = ""
@@ -366,7 +366,7 @@ bottom_right = ""
 [results.OM200891856_2024-10-01_10-24_AM]
 hand_number = "OM200891856"
 filename = "2024-10-01_ 10-24_AM_$2_$5_#200891856.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM200891856_2024-10-01_10-24_AM.positions]
 top = ""
@@ -379,7 +379,7 @@ bottom_right = ""
 [results.OM201116771_2024-10-02_01-26_PM]
 hand_number = "OM201116771"
 filename = "2024-10-02_ 01-26_PM_$2_$5_#201116771.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM201116771_2024-10-02_01-26_PM.positions]
 top = ""
@@ -392,7 +392,7 @@ bottom_right = ""
 [results.OM201029809_2024-10-02_09-50_AM]
 hand_number = "OM201029809"
 filename = "2024-10-02_ 09-50_AM_$2_$5_#201029809.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM201029809_2024-10-02_09-50_AM.positions]
 top = ""
@@ -405,7 +405,7 @@ bottom_right = ""
 [results.OM201611455_2024-10-04_01-30_PM]
 hand_number = "OM201611455"
 filename = "2024-10-04_ 01-30_PM_$2_$5_#201611455.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM201611455_2024-10-04_01-30_PM.positions]
 top = "BamboLeo74"
@@ -418,7 +418,7 @@ bottom_right = "boubouki"
 [results.OM201594669_2024-10-04_03-38_PM]
 hand_number = "OM201594669"
 filename = "2024-10-04_ 03-38_PM_$2_$5_#201594669.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM201594669_2024-10-04_03-38_PM.positions]
 top = ""
@@ -431,7 +431,7 @@ bottom_right = "topolompo"
 [results.OM201612841_2024-10-04_03-49_PM]
 hand_number = "OM201612841"
 filename = "2024-10-04_ 03-49_PM_$2_$5_#201612841.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM201612841_2024-10-04_03-49_PM.positions]
 top = "Route_66"
@@ -444,7 +444,7 @@ bottom_right = "opaobha"
 [results.OM201555289_2024-10-04_06-38_PM]
 hand_number = "OM201555289"
 filename = "2024-10-04_ 06-38_PM_$2_$5_#201555289.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM201555289_2024-10-04_06-38_PM.positions]
 top = "Craaaal!"
@@ -457,7 +457,7 @@ bottom_right = "tickettoride"
 [results.OM201700028_2024-10-05_06-58_AM]
 hand_number = "OM201700028"
 filename = "2024-10-05_ 06-58_AM_$1_$2_#201700028.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM201700028_2024-10-05_06-58_AM.positions]
 top = "long999ly"
@@ -470,7 +470,7 @@ bottom_right = "Minnnnn79"
 [results.OM202291345_2024-10-09_04-43_PM]
 hand_number = "OM202291345"
 filename = "2024-10-09_ 04-43_PM_$2_$5_#202291345.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202291345_2024-10-09_04-43_PM.positions]
 top = ""
@@ -483,7 +483,7 @@ bottom_right = "boubouki"
 [results.OM202218492_2024-10-09_04-45_PM]
 hand_number = "OM202218492"
 filename = "2024-10-09_ 04-45_PM_$5_$10_#202218492.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202218492_2024-10-09_04-45_PM.positions]
 top = ""
@@ -496,7 +496,7 @@ bottom_right = "saruman13"
 [results.OM202264782_2024-10-09_05-03_PM]
 hand_number = "OM202264782"
 filename = "2024-10-09_ 05-03_PM_$2_$5_#202264782.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202264782_2024-10-09_05-03_PM.positions]
 top = ""
@@ -509,7 +509,7 @@ bottom_right = ""
 [results.OM202264934_2024-10-09_05-24_PM]
 hand_number = "OM202264934"
 filename = "2024-10-09_ 05-24_PM_$2_$5_#202264934.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202264934_2024-10-09_05-24_PM.positions]
 top = "Absolut Free"
@@ -522,7 +522,7 @@ bottom_right = "Craaaal"
 [results.OM202402239_2024-10-10_01-29_PM]
 hand_number = "OM202402239"
 filename = "2024-10-10_ 01-29_PM_$2_$5_#202402239.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202402239_2024-10-10_01-29_PM.positions]
 top = "boubouki"
@@ -535,7 +535,7 @@ bottom_right = "Vesa M Takk..."
 [results.OM202336590_2024-10-10_11-57_AM]
 hand_number = "OM202336590"
 filename = "2024-10-10_ 11-57_AM_$5_$10_#202336590.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202336590_2024-10-10_11-57_AM.positions]
 top = "Carl Schrad.."
@@ -548,7 +548,7 @@ bottom_right = ""
 [results.OM202319908_2024-10-10_12-51_AM]
 hand_number = "OM202319908"
 filename = "2024-10-10_ 12-51_AM_$5_$10_#202319908.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202319908_2024-10-10_12-51_AM.positions]
 top = "Ceo And Fou.."
@@ -561,7 +561,7 @@ bottom_right = ""
 [results.OM202496181_2024-10-11_02-49_PM]
 hand_number = "OM202496181"
 filename = "2024-10-11_ 02-49_PM_$5_$10_#202496181.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202496181_2024-10-11_02-49_PM.positions]
 top = "PinaKapsa500"
@@ -574,7 +574,7 @@ bottom_right = "Steven Tool"
 [results.OM202496574_2024-10-11_03-20_PM]
 hand_number = "OM202496574"
 filename = "2024-10-11_ 03-20_PM_$5_$10_#202496574.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202496574_2024-10-11_03-20_PM.positions]
 top = "PinaKapsa500"
@@ -587,7 +587,7 @@ bottom_right = "flyholit13"
 [results.OM202581221_2024-10-11_08-53_PM]
 hand_number = "OM202581221"
 filename = "2024-10-11_ 08-53_PM_$5_$10_#202581221.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202581221_2024-10-11_08-53_PM.positions]
 top = "Gormezano"
@@ -600,7 +600,7 @@ bottom_right = "River Magic"
 [results.OM202525632_2024-10-11_09-11_PM]
 hand_number = "OM202525632"
 filename = "2024-10-11_ 09-11_PM_$5_$10_#202525632.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202525632_2024-10-11_09-11_PM.positions]
 top = ""
@@ -613,7 +613,7 @@ bottom_right = "Bernhard Ha.."
 [results.OM202554797_2024-10-11_09-11_PM]
 hand_number = "OM202554797"
 filename = "2024-10-11_ 09-11_PM_$5_$10_#202554797.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202554797_2024-10-11_09-11_PM.positions]
 top = "River Magic"
@@ -626,7 +626,7 @@ bottom_right = "Murilo Milh.."
 [results.OM202484698_2024-10-11_09-21_AM]
 hand_number = "OM202484698"
 filename = "2024-10-11_ 09-21_AM_$5_$10_#202484698.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202484698_2024-10-11_09-21_AM.positions]
 top = "V Rasskazov"
@@ -639,7 +639,7 @@ bottom_right = ""
 [results.OM202581617_2024-10-11_09-27_PM]
 hand_number = "OM202581617"
 filename = "2024-10-11_ 09-27_PM_$5_$10_#202581617.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202581617_2024-10-11_09-27_PM.positions]
 top = "Gormezano"
@@ -652,7 +652,7 @@ bottom_right = "imH14"
 [results.OM202600612_2024-10-11_09-29_PM]
 hand_number = "OM202600612"
 filename = "2024-10-11_ 09-29_PM_$5_$10_#202600612.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202600612_2024-10-11_09-29_PM.positions]
 top = "Mossberget"
@@ -665,7 +665,7 @@ bottom_right = "Melodica"
 [results.OM202445589_2024-10-11_10-20_AM]
 hand_number = "OM202445589"
 filename = "2024-10-11_ 10-20_AM_$2_$5_#202445589.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202445589_2024-10-11_10-20_AM.positions]
 top = "bortii"
@@ -678,7 +678,7 @@ bottom_right = "Joale2017"
 [results.OM202547781_2024-10-12_07-20_AM]
 hand_number = "OM202547781"
 filename = "2024-10-12_ 07-20_AM_$5_$10_#202547781.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202547781_2024-10-12_07-20_AM.positions]
 top = "Bane11"
@@ -691,7 +691,7 @@ bottom_right = ""
 [results.OM202578390_2024-10-12_07-31_AM]
 hand_number = "OM202578390"
 filename = "2024-10-12_ 07-31_AM_$5_$10_#202578390.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202578390_2024-10-12_07-31_AM.positions]
 top = "Yuriy Anisi..."
@@ -704,7 +704,7 @@ bottom_right = "RespectTheP..."
 [results.OM202578562_2024-10-12_07-50_AM]
 hand_number = "OM202578562"
 filename = "2024-10-12_ 07-50_AM_$5_$10_#202578562.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202578562_2024-10-12_07-50_AM.positions]
 top = "Yuriy Anisi..."
@@ -717,7 +717,7 @@ bottom_right = "RespectTheP..."
 [results.OM202737003_2024-10-13_05-42_PM]
 hand_number = "OM202737003"
 filename = "2024-10-13_ 05-42_PM_$2_$5_#202737003.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202737003_2024-10-13_05-42_PM.positions]
 top = "Steven Tool"
@@ -730,7 +730,7 @@ bottom_right = "River Magic"
 [results.OM202838714_2024-10-14_01-14_PM]
 hand_number = "OM202838714"
 filename = "2024-10-14_ 01-14_PM_$5_$10_#202838714.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202838714_2024-10-14_01-14_PM.positions]
 top = "Schlangach"
@@ -743,7 +743,7 @@ bottom_right = "Working9to5"
 [results.OM202838742_2024-10-14_01-17_PM]
 hand_number = "OM202838742"
 filename = "2024-10-14_ 01-17_PM_$5_$10_#202838742.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202838742_2024-10-14_01-17_PM.positions]
 top = "Schlangach"
@@ -756,7 +756,7 @@ bottom_right = "Working9to5"
 [results.OM202839724_2024-10-14_02-30_PM]
 hand_number = "OM202839724"
 filename = "2024-10-14_ 02-30_PM_$5_$10_#202839724.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202839724_2024-10-14_02-30_PM.positions]
 top = "Schlangach"
@@ -769,7 +769,7 @@ bottom_right = "AnnAmbre11"
 [results.OM202749512_2024-10-14_03-27_PM]
 hand_number = "OM202749512"
 filename = "2024-10-14_ 03-27_PM_$5_$10_#202749512.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202749512_2024-10-14_03-27_PM.positions]
 top = "Murilo Milh.."
@@ -782,7 +782,7 @@ bottom_right = ""
 [results.OM202807757_2024-10-14_12-49_AM]
 hand_number = "OM202807757"
 filename = "2024-10-14_ 12-49_AM_$5_$10_#202807757.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202807757_2024-10-14_12-49_AM.positions]
 top = "iLuvBeets"
@@ -795,7 +795,7 @@ bottom_right = "P9925-8943"
 [results.OM202807802_2024-10-14_12-56_AM]
 hand_number = "OM202807802"
 filename = "2024-10-14_ 12-56_AM_$5_$10_#202807802.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM202807802_2024-10-14_12-56_AM.positions]
 top = "C-137"
@@ -808,7 +808,7 @@ bottom_right = "Schlangach"
 [results.OM203002832_2024-10-15_01-00_PM]
 hand_number = "OM203002832"
 filename = "2024-10-15_ 01-00_PM_$5_$10_#203002832.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203002832_2024-10-15_01-00_PM.positions]
 top = "Betman"
@@ -821,7 +821,7 @@ bottom_right = "suerteyfort.."
 [results.OM203040305_2024-10-15_04-03_PM]
 hand_number = "OM203040305"
 filename = "2024-10-15_ 04-03_PM_$5_$10_#203040305.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203040305_2024-10-15_04-03_PM.positions]
 top = "Steven Tool"
@@ -834,7 +834,7 @@ bottom_right = ""
 [results.OM203059193_2024-10-16_10-03_AM]
 hand_number = "OM203059193"
 filename = "2024-10-16_ 10-03_AM_$5_$10_#203059193.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203059193_2024-10-16_10-03_AM.positions]
 top = "C-137"
@@ -847,7 +847,7 @@ bottom_right = "SUDOMAGODO"
 [results.OM203132544_2024-10-16_11-33_AM]
 hand_number = "OM203132544"
 filename = "2024-10-16_ 11-33_AM_$5_$10_#203132544.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203132544_2024-10-16_11-33_AM.positions]
 top = "Bane11"
@@ -860,7 +860,7 @@ bottom_right = "monkey_Ly"
 [results.OM203132591_2024-10-16_11-40_AM]
 hand_number = "OM203132591"
 filename = "2024-10-16_ 11-40_AM_$5_$10_#203132591.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203132591_2024-10-16_11-40_AM.positions]
 top = "Bane11"
@@ -873,7 +873,7 @@ bottom_right = "monkey_Ly"
 [results.OM203479016_2024-10-19_04-57_PM]
 hand_number = "OM203479016"
 filename = "2024-10-19_ 04-57_PM_$5_$10_#203479016.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203479016_2024-10-19_04-57_PM.positions]
 top = "Chris Schmi.."
@@ -886,7 +886,7 @@ bottom_right = "1931311"
 [results.OM203628753_2024-10-20_01-47_PM]
 hand_number = "OM203628753"
 filename = "2024-10-20_ 01-47_PM_$5_$10_#203628753.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203628753_2024-10-20_01-47_PM.positions]
 top = ""
@@ -899,7 +899,7 @@ bottom_right = ""
 [results.OM203664022_2024-10-20_04-08_PM]
 hand_number = "OM203664022"
 filename = "2024-10-20_ 04-08_PM_$5_$10_#203664022.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203664022_2024-10-20_04-08_PM.positions]
 top = "Crushinsky"
@@ -912,7 +912,7 @@ bottom_right = "Karakousi521"
 [results.OM203559920_2024-10-20_11-02_AM]
 hand_number = "OM203559920"
 filename = "2024-10-20_ 11-02_AM_$5_$10_#203559920.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203559920_2024-10-20_11-02_AM.positions]
 top = "Crushinsky"
@@ -925,7 +925,7 @@ bottom_right = "Groknl"
 [results.OM203594750_2024-10-20_11-34_AM]
 hand_number = "OM203594750"
 filename = "2024-10-20_ 11-34_AM_$5_$10_#203594750.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203594750_2024-10-20_11-34_AM.positions]
 top = ""
@@ -938,7 +938,7 @@ bottom_right = ""
 [results.OM203922919_2024-10-22_12-54_AM]
 hand_number = "OM203922919"
 filename = "2024-10-22_ 12-54_AM_$2_$5_#203922919.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203922919_2024-10-22_12-54_AM.positions]
 top = "P3281-9543"
@@ -951,7 +951,7 @@ bottom_right = "Crushinsky"
 [results.OM203818613_2024-10-22_12-56_AM]
 hand_number = "OM203818613"
 filename = "2024-10-22_ 12-56_AM_$5_$10_#203818613.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM203818613_2024-10-22_12-56_AM.positions]
 top = ""
@@ -964,7 +964,7 @@ bottom_right = "Crushinsky"
 [results.OM204260976_2024-10-24_03-30_PM]
 hand_number = "OM204260976"
 filename = "2024-10-24_ 03-30_PM_$5_$10_#204260976.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM204260976_2024-10-24_03-30_PM.positions]
 top = "Bruinbeer"
@@ -977,7 +977,7 @@ bottom_right = "Toncee"
 [results.OM204342775_2024-10-25_10-41_AM]
 hand_number = "OM204342775"
 filename = "2024-10-25_ 10-41_AM_$5_$10_#204342775.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM204342775_2024-10-25_10-41_AM.positions]
 top = "Bruinbeer"
@@ -990,7 +990,7 @@ bottom_right = "Yuriy Anisi.."
 [results.OM205098090_2024-10-30_05-32_PM]
 hand_number = "OM205098090"
 filename = "2024-10-30_ 05-32_PM_$5_$10_#205098090.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM205098090_2024-10-30_05-32_PM.positions]
 top = "Rui Sousa"
@@ -1003,7 +1003,7 @@ bottom_right = "YaZzTheFish"
 [results.OM205287037_2024-10-31_04-07_PM]
 hand_number = "OM205287037"
 filename = "2024-10-31_ 04-07_PM_$5_$10_#205287037.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM205287037_2024-10-31_04-07_PM.positions]
 top = ""
@@ -1016,7 +1016,7 @@ bottom_right = "Rui Sousa"
 [results.OM205274489_2024-10-31_05-09_PM]
 hand_number = "OM205274489"
 filename = "2024-10-31_ 05-09_PM_$5_$10_#205274489.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM205274489_2024-10-31_05-09_PM.positions]
 top_left = ""
@@ -1028,7 +1028,7 @@ bottom = "saruman13"
 [results.OM205520707_2024-11-01_03-56_PM]
 hand_number = "OM205520707"
 filename = "2024-11-01_ 03-56_PM_$5_$10_#205520707.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM205520707_2024-11-01_03-56_PM.positions]
 top = "Carl Schrad.."
@@ -1041,7 +1041,7 @@ bottom_right = "Melodica"
 [results.OM206513730_2024-11-08_02-23_PM]
 hand_number = "OM206513730"
 filename = "2024-11-08_ 02-23_PM_$1_$2_#206513730.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM206513730_2024-11-08_02-23_PM.positions]
 top = "Kirvesmiess"
@@ -1054,7 +1054,7 @@ bottom_right = ""
 [results.OM206506128_2024-11-08_04-49_PM]
 hand_number = "OM206506128"
 filename = "2024-11-08_ 04-49_PM_$1_$2_#206506128.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM206506128_2024-11-08_04-49_PM.positions]
 top = "johnwick66"
@@ -1067,7 +1067,7 @@ bottom_right = "sauvage hero"
 [results.OM206754641_2024-11-10_09-39_AM]
 hand_number = "OM206754641"
 filename = "2024-11-10_ 09-39_AM_$2_$5_#206754641.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM206754641_2024-11-10_09-39_AM.positions]
 top = "jiuooo"
@@ -1080,7 +1080,7 @@ bottom_right = "Dmytro Syne.."
 [results.OM207509370_2024-11-16_01-34_PM]
 hand_number = "OM207509370"
 filename = "2024-11-16_ 01-34_PM_$5_$10_#207509370.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM207509370_2024-11-16_01-34_PM.positions]
 top = "Aksel Hansen"
@@ -1093,7 +1093,7 @@ bottom_right = "Pavel Abram.."
 [results.OM207711036_2024-11-17_05-27_PM]
 hand_number = "OM207711036"
 filename = "2024-11-17_ 05-27_PM_$5_$10_#207711036.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM207711036_2024-11-17_05-27_PM.positions]
 top = "D Lazarevic"
@@ -1106,7 +1106,7 @@ bottom_right = "J4P2013"
 [results.OM207755985_2024-11-18_08-46_AM]
 hand_number = "OM207755985"
 filename = "2024-11-18_ 08-46_AM_$2_$5_#207755985.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM207755985_2024-11-18_08-46_AM.positions]
 top = "Reraiseme"
@@ -1119,7 +1119,7 @@ bottom_right = "horrorr"
 [results.OM208169349_2024-11-21_10-02_AM]
 hand_number = "OM208169349"
 filename = "2024-11-21_ 10-02_AM_$2_$5_#208169349.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208169349_2024-11-21_10-02_AM.positions]
 top = "AnnAmbre11"
@@ -1132,7 +1132,7 @@ bottom_right = "FastedState"
 [results.OM208369653_2024-11-23_03-46_PM]
 hand_number = "OM208369653"
 filename = "2024-11-23_ 03-46_PM_$10_$20_#208369653.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208369653_2024-11-23_03-46_PM.positions]
 top = "manila_natu.."
@@ -1145,7 +1145,7 @@ bottom_right = "P1381-9002"
 [results.OM208394926_2024-11-23_10-13_AM]
 hand_number = "OM208394926"
 filename = "2024-11-23_ 10-13_AM_$10_$20_#208394926.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208394926_2024-11-23_10-13_AM.positions]
 top = ""
@@ -1158,7 +1158,7 @@ bottom_right = "tahintouta"
 [results.OM208488555_2024-11-24_07-55_AM]
 hand_number = "OM208488555"
 filename = "2024-11-24_ 07-55_AM_$10_$20_#208488555.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208488555_2024-11-24_07-55_AM.positions]
 top = "Sweet Count.."
@@ -1171,7 +1171,7 @@ bottom_right = "Denis Konev"
 [results.OM208466276_2024-11-24_07-56_AM]
 hand_number = "OM208466276"
 filename = "2024-11-24_ 07-56_AM_$10_$20_#208466276.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208466276_2024-11-24_07-56_AM.positions]
 top = "Tripalo gen.."
@@ -1184,7 +1184,7 @@ bottom_right = "Rex Ludus"
 [results.OM208488634_2024-11-24_08-02_AM]
 hand_number = "OM208488634"
 filename = "2024-11-24_ 08-02_AM_$10_$20_#208488634.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208488634_2024-11-24_08-02_AM.positions]
 top = ""
@@ -1197,7 +1197,7 @@ bottom_right = "Denis Konev"
 [results.OM208533881_2024-11-24_08-03_AM]
 hand_number = "OM208533881"
 filename = "2024-11-24_ 08-03_AM_$10_$20_#208533881.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208533881_2024-11-24_08-03_AM.positions]
 top = ""
@@ -1210,7 +1210,7 @@ bottom_right = "saruman13"
 [results.OM208488931_2024-11-24_08-28_AM]
 hand_number = "OM208488931"
 filename = "2024-11-24_ 08-28_AM_$10_$20_#208488931.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208488931_2024-11-24_08-28_AM.positions]
 top = ""
@@ -1223,7 +1223,7 @@ bottom_right = "izlatbape"
 [results.OM208641168_2024-11-24_10-40_PM]
 hand_number = "OM208641168"
 filename = "2024-11-24_ 10-40_PM_$10_$20_#208641168.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208641168_2024-11-24_10-40_PM.positions]
 top = "Playboyfrom..."
@@ -1236,7 +1236,7 @@ bottom_right = "Elias Harala"
 [results.OM208637281_2024-11-25_12-13_AM]
 hand_number = "OM208637281"
 filename = "2024-11-25_ 12-13_AM_$10_$20_#208637281.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208637281_2024-11-25_12-13_AM.positions]
 top = "Andre Santos"
@@ -1249,7 +1249,7 @@ bottom_right = "crazygrinde.."
 [results.OM208608946_2024-11-25_12-45_AM]
 hand_number = "OM208608946"
 filename = "2024-11-25_ 12-45_AM_$10_$20_#208608946.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208608946_2024-11-25_12-45_AM.positions]
 top = "Working9to5"
@@ -1262,7 +1262,7 @@ bottom_right = ""
 [results.OM208805761_2024-11-26_03-52_PM]
 hand_number = "OM208805761"
 filename = "2024-11-26_ 03-52_PM_$10_$20_#208805761.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208805761_2024-11-26_03-52_PM.positions]
 top = "IStartGetti.."
@@ -1275,7 +1275,7 @@ bottom_right = "M Klosterme.."
 [results.OM208831916_2024-11-26_04-13_PM]
 hand_number = "OM208831916"
 filename = "2024-11-26_ 04-13_PM_$10_$20_#208831916.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208831916_2024-11-26_04-13_PM.positions]
 top = "R Nazarenko"
@@ -1288,7 +1288,7 @@ bottom_right = "Tom Vogelsa.."
 [results.OM208832383_2024-11-26_05-04_PM]
 hand_number = "OM208832383"
 filename = "2024-11-26_ 05-04_PM_$10_$20_#208832383.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM208832383_2024-11-26_05-04_PM.positions]
 top = "Bartalamif"
@@ -1301,7 +1301,7 @@ bottom_right = "Tom Vogelsa.."
 [results.OM209007290_2024-11-28_02-59_PM]
 hand_number = "OM209007290"
 filename = "2024-11-28_ 02-59_PM_$10_$20_#209007290.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM209007290_2024-11-28_02-59_PM.positions]
 top = ""
@@ -1314,7 +1314,7 @@ bottom_right = "Carlos A Br.."
 [results.OM209192839_2024-11-29_03-57_PM]
 hand_number = "OM209192839"
 filename = "2024-11-29_ 03-57_PM_$10_$20_#209192839.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM209192839_2024-11-29_03-57_PM.positions]
 top = ""
@@ -1327,7 +1327,7 @@ bottom_right = ""
 [results.OM209204542_2024-11-29_03-59_PM]
 hand_number = "OM209204542"
 filename = "2024-11-29_ 03-59_PM_$10_$20_#209204542.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM209204542_2024-11-29_03-59_PM.positions]
 top = "lLaperashv.."
@@ -1340,7 +1340,7 @@ bottom_right = "Toncee"
 [results.OM209173301_2024-11-29_11-35_AM]
 hand_number = "OM209173301"
 filename = "2024-11-29_ 11-35_AM_$5_$10_#209173301.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM209173301_2024-11-29_11-35_AM.positions]
 top = "Daniel Perk.."
@@ -1353,7 +1353,7 @@ bottom_right = "Spacecowboy.."
 [results.OM209173316_2024-11-29_11-37_AM]
 hand_number = "OM209173316"
 filename = "2024-11-29_ 11-37_AM_$5_$10_#209173316.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM209173316_2024-11-29_11-37_AM.positions]
 top = "Daniel Perk.."
@@ -1366,7 +1366,7 @@ bottom_right = "Spacecowboy.."
 [results.OM209245949_2024-11-30_11-12_AM]
 hand_number = "OM209245949"
 filename = "2024-11-30_ 11-12_AM_$10_$20_#209245949.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM209245949_2024-11-30_11-12_AM.positions]
 top = "V Javakhish.."
@@ -1379,7 +1379,7 @@ bottom_right = ""
 [results.OM209936515_2024-12-05_01-16_PM]
 hand_number = "OM209936515"
 filename = "2024-12-05_ 01-16_PM_$10_$20_#209936515.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM209936515_2024-12-05_01-16_PM.positions]
 top = "Markus Rist.."
@@ -1392,7 +1392,7 @@ bottom_right = "FastedState"
 [results.OM210018735_2024-12-05_11-07_PM]
 hand_number = "OM210018735"
 filename = "2024-12-05_ 11-07_PM_$10_$20_#210018735.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM210018735_2024-12-05_11-07_PM.positions]
 top = "baka444"
@@ -1405,7 +1405,7 @@ bottom_right = "Stanimir Ko.."
 [results.OM209936229_2024-12-05_12-45_AM]
 hand_number = "OM209936229"
 filename = "2024-12-05_ 12-45_AM_$10_$20_#209936229.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM209936229_2024-12-05_12-45_AM.positions]
 top = "Markus Rist.."
@@ -1418,7 +1418,7 @@ bottom_right = "FastedState"
 [results.OM210317464_2024-12-08_06-10_PM]
 hand_number = "OM210317464"
 filename = "2024-12-08_ 06-10_PM_$10_$20_#210317464.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM210317464_2024-12-08_06-10_PM.positions]
 top = "Dante Ferna.."
@@ -1431,7 +1431,7 @@ bottom_right = "Bruinbeer"
 [results.OM210317585_2024-12-08_06-30_PM]
 hand_number = "OM210317585"
 filename = "2024-12-08_ 06-30_PM_$10_$20_#210317585.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM210317585_2024-12-08_06-30_PM.positions]
 top = ""
@@ -1444,7 +1444,7 @@ bottom_right = ""
 [results.OM210327714_2024-12-08_06-51_PM]
 hand_number = "OM210327714"
 filename = "2024-12-08_ 06-51_PM_$2_$5_#210327714.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM210327714_2024-12-08_06-51_PM.positions]
 top = "JACKP0T23"
@@ -1457,7 +1457,7 @@ bottom_right = "GimmeMyCard"
 [results.OM210506232_2024-12-10_02-13_AM]
 hand_number = "OM210506232"
 filename = "2024-12-10_ 02-13_AM_$10_$20_#210506232.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM210506232_2024-12-10_02-13_AM.positions]
 top = "Einstein777"
@@ -1470,7 +1470,7 @@ bottom_right = "Jan Maule"
 [results.OM211878600_2024-12-20_02-04_PM]
 hand_number = "OM211878600"
 filename = "2024-12-20_ 02-04_PM_$5_$10_#211878600.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM211878600_2024-12-20_02-04_PM.positions]
 top = "V Rasskazov"
@@ -1483,7 +1483,7 @@ bottom_right = "Trinnity"
 [results.OM211937099_2024-12-20_04-27_PM]
 hand_number = "OM211937099"
 filename = "2024-12-20_ 04-27_PM_$10_$20_#211937099.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM211937099_2024-12-20_04-27_PM.positions]
 top = "Marcus Diel.."
@@ -1496,7 +1496,7 @@ bottom_right = "tuktuk1111"
 [results.OM211899842_2024-12-20_05-08_PM]
 hand_number = "OM211899842"
 filename = "2024-12-20_ 05-08_PM_$10_$20_#211899842.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM211899842_2024-12-20_05-08_PM.positions]
 top = "luxuryday999"
@@ -1509,7 +1509,7 @@ bottom_right = "C - 137"
 [results.OM211947794_2024-12-20_05-24_PM]
 hand_number = "OM211947794"
 filename = "2024-12-20_ 05-24_PM_$10_$20_#211947794.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM211947794_2024-12-20_05-24_PM.positions]
 top = "luxuryday999"
@@ -1522,7 +1522,7 @@ bottom_right = "C - 137"
 [results.OM211889056_2024-12-20_05-30_PM]
 hand_number = "OM211889056"
 filename = "2024-12-20_ 05-30_PM_$10_$20_#211889056.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM211889056_2024-12-20_05-30_PM.positions]
 top = "C-137"
@@ -1535,7 +1535,7 @@ bottom_right = "K Bouloutsos"
 [results.OM211977116_2024-12-21_10-53_AM]
 hand_number = "OM211977116"
 filename = "2024-12-21_ 10-53_AM_$10_$20_#211977116.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM211977116_2024-12-21_10-53_AM.positions]
 top = "Shearer91"
@@ -1548,7 +1548,7 @@ bottom_right = ""
 [results.OM211977166_2024-12-21_11-02_AM]
 hand_number = "OM211977166"
 filename = "2024-12-21_ 11-02_AM_$10_$20_#211977166.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM211977166_2024-12-21_11-02_AM.positions]
 top = "Shearer91"
@@ -1561,7 +1561,7 @@ bottom_right = ""
 [results.OM212081277_2024-12-21_11-07_AM]
 hand_number = "OM212081277"
 filename = "2024-12-21_ 11-07_AM_$10_$20_#212081277.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM212081277_2024-12-21_11-07_AM.positions]
 top = "Shearer91"
@@ -1574,7 +1574,7 @@ bottom_right = ""
 [results.OM212090653_2024-12-21_11-30_AM]
 hand_number = "OM212090653"
 filename = "2024-12-21_ 11-30_AM_$10_$20_#212090653.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM212090653_2024-12-21_11-30_AM.positions]
 top = "Titan1668"
@@ -1587,7 +1587,7 @@ bottom_right = "Anton llyn"
 [results.OM212158534_2024-12-22_04-42_PM]
 hand_number = "OM212158534"
 filename = "2024-12-22_ 04-42_PM_$5_$10_#212158534.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM212158534_2024-12-22_04-42_PM.positions]
 top = "Mercado"
@@ -1600,7 +1600,7 @@ bottom_right = "C - 137"
 [results.OM212260853_2024-12-22_07-38_PM]
 hand_number = "OM212260853"
 filename = "2024-12-22_ 07-38_PM_$10_$20_#212260853.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM212260853_2024-12-22_07-38_PM.positions]
 top = "Bruinbeer"
@@ -1613,7 +1613,7 @@ bottom_right = ""
 [results.OM212224526_2024-12-22_07-57_PM]
 hand_number = "OM212224526"
 filename = "2024-12-22_ 07-57_PM_$5_$10_#212224526.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM212224526_2024-12-22_07-57_PM.positions]
 top = ""
@@ -1626,7 +1626,7 @@ bottom_right = ""
 [results.OM213118268_2024-12-29_03-14_PM]
 hand_number = "OM213118268"
 filename = "2024-12-29_ 03-14_PM_$10_$20_#213118268.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM213118268_2024-12-29_03-14_PM.positions]
 top = "V Karakituk.."
@@ -1639,7 +1639,7 @@ bottom_right = "Jan Maule"
 [results.OM213163121_2024-12-29_04-03_PM]
 hand_number = "OM213163121"
 filename = "2024-12-29_ 04-03_PM_$10_$20_#213163121.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM213163121_2024-12-29_04-03_PM.positions]
 top = "takita"
@@ -1652,7 +1652,7 @@ bottom_right = "Dealt"
 [results.OM213097942_2024-12-29_04-17_PM]
 hand_number = "OM213097942"
 filename = "2024-12-29_ 04-17_PM_$10_$20_#213097942.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM213097942_2024-12-29_04-17_PM.positions]
 top = "crazygrinde.."
@@ -1665,7 +1665,7 @@ bottom_right = "Roger Tonde.."
 [results.OM213127946_2024-12-29_05-58_PM]
 hand_number = "OM213127946"
 filename = "2024-12-29_ 05-58_PM_$10_$20_#213127946.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM213127946_2024-12-29_05-58_PM.positions]
 top = ""
@@ -1678,7 +1678,7 @@ bottom_right = ""
 [results.OM213165084_2024-12-29_06-03_PM]
 hand_number = "OM213165084"
 filename = "2024-12-29_ 06-03_PM_$10_$20_#213165084.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM213165084_2024-12-29_06-03_PM.positions]
 top = "ThePLOitici.."
@@ -1691,7 +1691,7 @@ bottom_right = "Punktesamml.."
 [results.OM216910020_2025-01-25_04-08_PM]
 hand_number = "OM216910020"
 filename = "2025-01-25_ 04-08_PM_$10_$20_#216910020.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM216910020_2025-01-25_04-08_PM.positions]
 top = "Kapteeni La.."
@@ -1704,7 +1704,7 @@ bottom_right = "BTCETH"
 [results.OM22203180_2025-03-13_04-13_AM]
 hand_number = "OM22203180"
 filename = "2025-03-13_ 04-13_AM_$1_$2_#22203180.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22203180_2025-03-13_04-13_AM.positions]
 top_left = "gohu23"
@@ -1716,7 +1716,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22203196_2025-03-13_04-17_AM]
 hand_number = "OM22203196"
 filename = "2025-03-13_ 04-17_AM_$1_$2_#22203196.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22203196_2025-03-13_04-17_AM.positions]
 top_left = "gohu23"
@@ -1728,7 +1728,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22203209_2025-03-13_04-19_AM]
 hand_number = "OM22203209"
 filename = "2025-03-13_ 04-19_AM_$1_$2_#22203209.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22203209_2025-03-13_04-19_AM.positions]
 top_left = "gohu23"
@@ -1740,7 +1740,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22211882_2025-03-13_05-38_AM]
 hand_number = "OM22211882"
 filename = "2025-03-13_ 05-38_AM_$1_$2_#22211882.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22211882_2025-03-13_05-38_AM.positions]
 top_left = "gohu23"
@@ -1752,7 +1752,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22203643_2025-03-13_05-49_AM]
 hand_number = "OM22203643"
 filename = "2025-03-13_ 05-49_AM_$1_$2_#22203643.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22203643_2025-03-13_05-49_AM.positions]
 top_left = "CardCon"
@@ -1764,7 +1764,7 @@ bottom = "TeddyKGBEEF"
 [results.OM22203691_2025-03-13_05-56_AM]
 hand_number = "OM22203691"
 filename = "2025-03-13_ 05-56_AM_$1_$2_#22203691.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22203691_2025-03-13_05-56_AM.positions]
 top_left = "CardCon"
@@ -1776,7 +1776,7 @@ bottom = "TeddyKGBEEF"
 [results.OM22240247_2025-03-13_05-58_AM]
 hand_number = "OM22240247"
 filename = "2025-03-13_ 05-58_AM_$1_$2_#22240247.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22240247_2025-03-13_05-58_AM.positions]
 top_left = "CardCon"
@@ -1788,7 +1788,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22212075_2025-03-13_06-11_AM]
 hand_number = "OM22212075"
 filename = "2025-03-13_ 06-11_AM_$1_$2_#22212075.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22212075_2025-03-13_06-11_AM.positions]
 top_left = "Liisa Ann"
@@ -1800,7 +1800,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22157795_2025-03-13_07-42_AM]
 hand_number = "OM22157795"
 filename = "2025-03-13_ 07-42_AM_$2_$5_#22157795.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22157795_2025-03-13_07-42_AM.positions]
 top_left = ""
@@ -1812,7 +1812,7 @@ bottom = "TeddyKGBEEF"
 [results.OM22212673_2025-03-13_07-43_AM]
 hand_number = "OM22212673"
 filename = "2025-03-13_ 07-43_AM_$1_$2_#22212673.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22212673_2025-03-13_07-43_AM.positions]
 top_left = "He Jin"
@@ -1824,7 +1824,7 @@ bottom = "TeddyKGBEEF"
 [results.OM22351027_2025-03-14_04-00_AM]
 hand_number = "OM22351027"
 filename = "2025-03-14_ 04-00_AM_$2_$5_#22351027.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22351027_2025-03-14_04-00_AM.positions]
 top_left = "River Stf"
@@ -1836,7 +1836,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22332737_2025-03-14_04-03_AM]
 hand_number = "OM22332737"
 filename = "2025-03-14_ 04-03_AM_$5_$10_#22332737.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22332737_2025-03-14_04-03_AM.positions]
 top_left = "Jakub Kolorz"
@@ -1848,7 +1848,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22332746_2025-03-14_04-05_AM]
 hand_number = "OM22332746"
 filename = "2025-03-14_ 04-05_AM_$5_$10_#22332746.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22332746_2025-03-14_04-05_AM.positions]
 top_left = "Jakub Kolorz"
@@ -1860,7 +1860,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22332863_2025-03-14_04-23_AM]
 hand_number = "OM22332863"
 filename = "2025-03-14_ 04-23_AM_$5_$10_#22332863.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22332863_2025-03-14_04-23_AM.positions]
 top_left = "Jakub Kolorz"
@@ -1872,7 +1872,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22298567_2025-03-14_04-39_AM]
 hand_number = "OM22298567"
 filename = "2025-03-14_ 04-39_AM_$5_$10_#22298567.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22298567_2025-03-14_04-39_AM.positions]
 top_left = "lLaperashy.."
@@ -1884,7 +1884,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22351396_2025-03-14_05-02_AM]
 hand_number = "OM22351396"
 filename = "2025-03-14_ 05-02_AM_$2_$5_#22351396.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22351396_2025-03-14_05-02_AM.positions]
 top_left = "Gglai"
@@ -1896,7 +1896,7 @@ bottom = "TeddyKGBEEF"
 [results.OM22501378_2025-03-15_03-56_AM]
 hand_number = "OM22501378"
 filename = "2025-03-15_ 03-56_AM_$2_$5_#22501378.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22501378_2025-03-15_03-56_AM.positions]
 top_left = "Gglai"
@@ -1908,7 +1908,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22512347_2025-03-15_04-03_AM]
 hand_number = "OM22512347"
 filename = "2025-03-15_ 04-03_AM_$5_$10_#22512347.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22512347_2025-03-15_04-03_AM.positions]
 top_left = ""
@@ -1920,7 +1920,7 @@ bottom = "M Medlewski"
 [results.OM22456113_2025-03-15_04-05_AM]
 hand_number = "OM22456113"
 filename = "2025-03-15_ 04-05_AM_$1_$2_#22456113.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22456113_2025-03-15_04-05_AM.positions]
 top_left = "PadrinoPJP"
@@ -1932,7 +1932,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22456244_2025-03-15_04-21_AM]
 hand_number = "OM22456244"
 filename = "2025-03-15_ 04-21_AM_$2_$5_#22456244.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22456244_2025-03-15_04-21_AM.positions]
 top_left = "BMGR_OmahaO.."
@@ -1944,7 +1944,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22512794_2025-03-15_04-50_AM]
 hand_number = "OM22512794"
 filename = "2025-03-15_ 04-50_AM_$5_$10_#22512794.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22512794_2025-03-15_04-50_AM.positions]
 top_left = ""
@@ -1956,7 +1956,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22502080_2025-03-15_04-54_AM]
 hand_number = "OM22502080"
 filename = "2025-03-15_ 04-54_AM_$2_$5_#22502080.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22502080_2025-03-15_04-54_AM.positions]
 top_left = "shi shi qiu.."
@@ -1968,7 +1968,7 @@ bottom = "TeddyKGBEEF"
 [results.OM22502135_2025-03-15_05-06_AM]
 hand_number = "OM22502135"
 filename = "2025-03-15_ 05-06_AM_$2_$5_#22502135.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22502135_2025-03-15_05-06_AM.positions]
 top_left = ""
@@ -1980,7 +1980,7 @@ bottom = "BaoDingWang"
 [results.OM22513099_2025-03-15_05-27_AM]
 hand_number = "OM22513099"
 filename = "2025-03-15_ 05-27_AM_$5_$10_#22513099.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22513099_2025-03-15_05-27_AM.positions]
 top_left = ""
@@ -1992,7 +1992,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22457164_2025-03-15_06-09_AM]
 hand_number = "OM22457164"
 filename = "2025-03-15_ 06-09_AM_$2_$5_#22457164.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22457164_2025-03-15_06-09_AM.positions]
 top_left = "BMGR_OmahaO.."
@@ -2004,7 +2004,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22502890_2025-03-15_06-26_AM]
 hand_number = "OM22502890"
 filename = "2025-03-15_ 06-26_AM_$10_$20_#22502890.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22502890_2025-03-15_06-26_AM.positions]
 top_left = "Pandadth"
@@ -2016,7 +2016,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22484222_2025-03-15_06-26_AM]
 hand_number = "OM22484222"
 filename = "2025-03-15_ 06-26_AM_$2_$5_#22484222.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22484222_2025-03-15_06-26_AM.positions]
 top_left = "A Kurganskii"
@@ -2028,7 +2028,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22513612_2025-03-15_06-28_AM]
 hand_number = "OM22513612"
 filename = "2025-03-15_ 06-28_AM_$5_$10_#22513612.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22513612_2025-03-15_06-28_AM.positions]
 top_left = "dotheConga"
@@ -2040,7 +2040,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22502964_2025-03-15_06-33_AM]
 hand_number = "OM22502964"
 filename = "2025-03-15_ 06-33_AM_$10_$20_#22502964.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22502964_2025-03-15_06-33_AM.positions]
 top_left = "Pandadth"
@@ -2052,7 +2052,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22641773_2025-03-16_05-12_AM]
 hand_number = "OM22641773"
 filename = "2025-03-16_ 05-12_AM_$2_$5_#22641773.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22641773_2025-03-16_05-12_AM.positions]
 top_left = "shubidubi"
@@ -2064,7 +2064,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22641811_2025-03-16_05-23_AM]
 hand_number = "OM22641811"
 filename = "2025-03-16_ 05-23_AM_$2_$5_#22641811.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22641811_2025-03-16_05-23_AM.positions]
 top_left = "shubidubi"
@@ -2076,7 +2076,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22641814_2025-03-16_05-23_AM]
 hand_number = "OM22641814"
 filename = "2025-03-16_ 05-23_AM_$2_$5_#22641814.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22641814_2025-03-16_05-23_AM.positions]
 top_left = "shubidubi"
@@ -2088,7 +2088,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22585880_2025-03-16_05-46_AM]
 hand_number = "OM22585880"
 filename = "2025-03-16_ 05-46_AM_$1_$2_#22585880.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22585880_2025-03-16_05-46_AM.positions]
 top_left = "PlayTwice"
@@ -2100,7 +2100,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22617902_2025-03-16_06-05_AM]
 hand_number = "OM22617902"
 filename = "2025-03-16_ 06-05_AM_$2_$5_#22617902.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22617902_2025-03-16_06-05_AM.positions]
 top_left = "TUUTTU"
@@ -2112,7 +2112,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22618104_2025-03-16_06-29_AM]
 hand_number = "OM22618104"
 filename = "2025-03-16_ 06-29_AM_$2_$5_#22618104.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22618104_2025-03-16_06-29_AM.positions]
 top_left = "The Captain"
@@ -2124,7 +2124,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22618114_2025-03-16_06-30_AM]
 hand_number = "OM22618114"
 filename = "2025-03-16_ 06-30_AM_$2_$5_#22618114.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22618114_2025-03-16_06-30_AM.positions]
 top_left = "The Captain"
@@ -2136,7 +2136,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22594097_2025-03-16_06-34_AM]
 hand_number = "OM22594097"
 filename = "2025-03-16_ 06-34_AM_$2_$5_#22594097.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22594097_2025-03-16_06-34_AM.positions]
 top_left = "Wonthis"
@@ -2148,7 +2148,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22752185_2025-03-17_03-52_AM]
 hand_number = "OM22752185"
 filename = "2025-03-17_ 03-52_AM_$2_$5_#22752185.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22752185_2025-03-17_03-52_AM.positions]
 top_left = "BMGR_OmahaO.."
@@ -2160,7 +2160,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22752233_2025-03-17_04-00_AM]
 hand_number = "OM22752233"
 filename = "2025-03-17_ 04-00_AM_$2_$5_#22752233.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22752233_2025-03-17_04-00_AM.positions]
 top_left = "BMGR_OmahaO.."
@@ -2172,7 +2172,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22715011_2025-03-17_04-17_AM]
 hand_number = "OM22715011"
 filename = "2025-03-17_ 04-17_AM_$5_$10_#22715011.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22715011_2025-03-17_04-17_AM.positions]
 top_left = ""
@@ -2184,7 +2184,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22715171_2025-03-17_04-34_AM]
 hand_number = "OM22715171"
 filename = "2025-03-17_ 04-34_AM_$5_$10_#22715171.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22715171_2025-03-17_04-34_AM.positions]
 top_left = "Upsw1ng"
@@ -2196,7 +2196,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22772637_2025-03-17_04-41_AM]
 hand_number = "OM22772637"
 filename = "2025-03-17_ 04-41_AM_$2_$5_#22772637.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22772637_2025-03-17_04-41_AM.positions]
 top_left = "PloDaddy"
@@ -2208,7 +2208,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22695582_2025-03-17_04-42_AM]
 hand_number = "OM22695582"
 filename = "2025-03-17_ 04-42_AM_$2_$5_#22695582.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22695582_2025-03-17_04-42_AM.positions]
 top_left = "PloDaddy"
@@ -2220,7 +2220,7 @@ bottom = "TeddyKGBEEF"
 [results.OM22695607_2025-03-17_04-46_AM]
 hand_number = "OM22695607"
 filename = "2025-03-17_ 04-46_AM_$2_$5_#22695607.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22695607_2025-03-17_04-46_AM.positions]
 top_left = "PloDaddy"
@@ -2232,7 +2232,7 @@ bottom = "TeddyKGBEEF"
 [results.OM22715293_2025-03-17_04-52_AM]
 hand_number = "OM22715293"
 filename = "2025-03-17_ 04-52_AM_$5_$10_#22715293.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22715293_2025-03-17_04-52_AM.positions]
 top_left = "Upsw1ng"
@@ -2244,7 +2244,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22695714_2025-03-17_05-08_AM]
 hand_number = "OM22695714"
 filename = "2025-03-17_ 05-08_AM_$2_$5_#22695714.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22695714_2025-03-17_05-08_AM.positions]
 top_left = "The Captain"
@@ -2256,7 +2256,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22695742_2025-03-17_05-11_AM]
 hand_number = "OM22695742"
 filename = "2025-03-17_ 05-11_AM_$2_$5_#22695742.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22695742_2025-03-17_05-11_AM.positions]
 top_left = "The Captain"
@@ -2268,7 +2268,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22715432_2025-03-17_05-12_AM]
 hand_number = "OM22715432"
 filename = "2025-03-17_ 05-12_AM_$5_$10_#22715432.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22715432_2025-03-17_05-12_AM.positions]
 top_left = "Upsw1ng"
@@ -2280,7 +2280,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22715436_2025-03-17_05-16_AM]
 hand_number = "OM22715436"
 filename = "2025-03-17_ 05-16_AM_$5_$10_#22715436.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22715436_2025-03-17_05-16_AM.positions]
 top_left = "Upsw1ng"
@@ -2292,7 +2292,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22695901_2025-03-17_05-29_AM]
 hand_number = "OM22695901"
 filename = "2025-03-17_ 05-29_AM_$2_$5_#22695901.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22695901_2025-03-17_05-29_AM.positions]
 top_left = "ApaApa_Lu_M.."
@@ -2304,7 +2304,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22930442_2025-03-18_05-09_AM]
 hand_number = "OM22930442"
 filename = "2025-03-18_ 05-09_AM_$2_$5_#22930442.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22930442_2025-03-18_05-09_AM.positions]
 top_left = "The Captain"
@@ -2316,7 +2316,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22920746_2025-03-18_05-22_AM]
 hand_number = "OM22920746"
 filename = "2025-03-18_ 05-22_AM_$2_$5_#22920746.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22920746_2025-03-18_05-22_AM.positions]
 top_left = "romammadov"
@@ -2328,7 +2328,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22930603_2025-03-18_05-22_AM]
 hand_number = "OM22930603"
 filename = "2025-03-18_ 05-22_AM_$2_$5_#22930603.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22930603_2025-03-18_05-22_AM.positions]
 top_left = "The Captain"
@@ -2340,7 +2340,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22930906_2025-03-18_06-04_AM]
 hand_number = "OM22930906"
 filename = "2025-03-18_ 06-04_AM_$2_$5_#22930906.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22930906_2025-03-18_06-04_AM.positions]
 top_left = "Potshipper"
@@ -2352,7 +2352,7 @@ bottom = "TeddyKGBEEE"
 [results.OM22930982_2025-03-18_06-06_AM]
 hand_number = "OM22930982"
 filename = "2025-03-18_ 06-06_AM_$2_$5_#22930982.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM22930982_2025-03-18_06-06_AM.positions]
 top_left = "Potshipper"
@@ -2364,7 +2364,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23139777_2025-03-20_04-29_AM]
 hand_number = "OM23139777"
 filename = "2025-03-20_ 04-29_AM_$1_$2_#23139777.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23139777_2025-03-20_04-29_AM.positions]
 top_left = "PepinhAA"
@@ -2376,7 +2376,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23156851_2025-03-20_04-47_AM]
 hand_number = "OM23156851"
 filename = "2025-03-20_ 04-47_AM_$2_$5_#23156851.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23156851_2025-03-20_04-47_AM.positions]
 top_left = "Mitz137"
@@ -2388,7 +2388,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23220010_2025-03-20_05-21_AM]
 hand_number = "OM23220010"
 filename = "2025-03-20_ 05-21_AM_$2_$5_#23220010.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23220010_2025-03-20_05-21_AM.positions]
 top_left = "CardCon"
@@ -2400,7 +2400,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23220035_2025-03-20_05-30_AM]
 hand_number = "OM23220035"
 filename = "2025-03-20_ 05-30_AM_$2_$5_#23220035.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23220035_2025-03-20_05-30_AM.positions]
 top_left = "CardCon"
@@ -2412,7 +2412,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23220085_2025-03-20_05-41_AM]
 hand_number = "OM23220085"
 filename = "2025-03-20_ 05-41_AM_$2_$5_#23220085.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23220085_2025-03-20_05-41_AM.positions]
 top_left = "Tancred"
@@ -2424,7 +2424,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23108306_2025-03-20_05-42_AM]
 hand_number = "OM23108306"
 filename = "2025-03-20_ 05-42_AM_$2_$5_#23108306.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23108306_2025-03-20_05-42_AM.positions]
 top_left = "BMGR_OmahaO.."
@@ -2436,7 +2436,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23108324_2025-03-20_05-46_AM]
 hand_number = "OM23108324"
 filename = "2025-03-20_ 05-46_AM_$2_$5_#23108324.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23108324_2025-03-20_05-46_AM.positions]
 top_left = "BMGR_Omaha0.."
@@ -2448,7 +2448,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23118819_2025-03-20_05-47_AM]
 hand_number = "OM23118819"
 filename = "2025-03-20_ 05-47_AM_$2_$5_#23118819.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23118819_2025-03-20_05-47_AM.positions]
 top_left = "A5stone"
@@ -2460,7 +2460,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23118838_2025-03-20_05-47_AM]
 hand_number = "OM23118838"
 filename = "2025-03-20_ 05-47_AM_$2_$5_#23118838.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23118838_2025-03-20_05-47_AM.positions]
 top_left = "A5stone"
@@ -2472,7 +2472,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23118845_2025-03-20_05-48_AM]
 hand_number = "OM23118845"
 filename = "2025-03-20_ 05-48_AM_$2_$5_#23118845.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23118845_2025-03-20_05-48_AM.positions]
 top_left = "A5stone"
@@ -2484,7 +2484,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23108364_2025-03-20_05-54_AM]
 hand_number = "OM23108364"
 filename = "2025-03-20_ 05-54_AM_$2_$5_#23108364.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23108364_2025-03-20_05-54_AM.positions]
 top_left = "Potshipper"
@@ -2496,7 +2496,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23210655_2025-03-20_06-17_AM]
 hand_number = "OM23210655"
 filename = "2025-03-20_ 06-17_AM_$2_$5_#23210655.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23210655_2025-03-20_06-17_AM.positions]
 top_left = "GTA Wizard"
@@ -2508,7 +2508,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23184926_2025-03-20_06-29_AM]
 hand_number = "OM23184926"
 filename = "2025-03-20_ 06-29_AM_$2_$5_#23184926.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23184926_2025-03-20_06-29_AM.positions]
 top_left = "REiDaSelva"
@@ -2520,7 +2520,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23210827_2025-03-20_06-33_AM]
 hand_number = "OM23210827"
 filename = "2025-03-20_ 06-33_AM_$2_$5_#23210827.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23210827_2025-03-20_06-33_AM.positions]
 top_left = "GTA Wizard"
@@ -2532,7 +2532,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23185099_2025-03-20_06-51_AM]
 hand_number = "OM23185099"
 filename = "2025-03-20_ 06-51_AM_$2_$5_#23185099.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23185099_2025-03-20_06-51_AM.positions]
 top_left = "REiDaSelva"
@@ -2544,7 +2544,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23220645_2025-03-20_06-58_AM]
 hand_number = "OM23220645"
 filename = "2025-03-20_ 06-58_AM_$2_$5_#23220645.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23220645_2025-03-20_06-58_AM.positions]
 top_left = "inandez875"
@@ -2556,7 +2556,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23220660_2025-03-20_06-58_AM]
 hand_number = "OM23220660"
 filename = "2025-03-20_ 06-58_AM_$2_$5_#23220660.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23220660_2025-03-20_06-58_AM.positions]
 top_left = ""
@@ -2568,7 +2568,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23185182_2025-03-20_06-59_AM]
 hand_number = "OM23185182"
 filename = "2025-03-20_ 06-59_AM_$2_$5_#23185182.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23185182_2025-03-20_06-59_AM.positions]
 top_left = "REiDaSelva"
@@ -2580,7 +2580,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23108832_2025-03-20_07-01_AM]
 hand_number = "OM23108832"
 filename = "2025-03-20_ 07-01_AM_$2_$5_#23108832.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23108832_2025-03-20_07-01_AM.positions]
 top_left = "Gglaj"
@@ -2592,7 +2592,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23312884_2025-03-21_04-51_AM]
 hand_number = "OM23312884"
 filename = "2025-03-21_ 04-51_AM_$5_$10_#23312884.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23312884_2025-03-21_04-51_AM.positions]
 top_left = ""
@@ -2604,7 +2604,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23332306_2025-03-21_05-13_AM]
 hand_number = "OM23332306"
 filename = "2025-03-21_ 05-13_AM_$5_$10_#23332306.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23332306_2025-03-21_05-13_AM.positions]
 top_left = "whale66"
@@ -2616,7 +2616,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23313025_2025-03-21_05-17_AM]
 hand_number = "OM23313025"
 filename = "2025-03-21_ 05-17_AM_$5_$10_#23313025.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23313025_2025-03-21_05-17_AM.positions]
 top_left = "CardCon"
@@ -2628,7 +2628,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23313104_2025-03-21_05-26_AM]
 hand_number = "OM23313104"
 filename = "2025-03-21_ 05-26_AM_$5_$10_#23313104.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23313104_2025-03-21_05-26_AM.positions]
 top_left = "CardCon"
@@ -2640,7 +2640,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23359976_2025-03-22_05-00_AM]
 hand_number = "OM23359976"
 filename = "2025-03-22_ 05-00_AM_$0.50_$1_#23359976.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23359976_2025-03-22_05-00_AM.positions]
 top_left = "Bedutidol68"
@@ -2652,7 +2652,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23490152_2025-03-22_05-27_AM]
 hand_number = "OM23490152"
 filename = "2025-03-22_ 05-27_AM_$0.50_$1_#23490152.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23490152_2025-03-22_05-27_AM.positions]
 top_left = "Szu1971"
@@ -2664,7 +2664,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23490265_2025-03-22_05-44_AM]
 hand_number = "OM23490265"
 filename = "2025-03-22_ 05-44_AM_$0.50_$1_#23490265.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23490265_2025-03-22_05-44_AM.positions]
 top_left = "HarryPote"
@@ -2676,7 +2676,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23490288_2025-03-22_05-48_AM]
 hand_number = "OM23490288"
 filename = "2025-03-22_ 05-48_AM_$0.50_$1_#23490288.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23490288_2025-03-22_05-48_AM.positions]
 top_left = "foulsoul"
@@ -2688,7 +2688,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23454084_2025-03-22_05-57_AM]
 hand_number = "OM23454084"
 filename = "2025-03-22_ 05-57_AM_$0.50_$1_#23454084.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23454084_2025-03-22_05-57_AM.positions]
 top_left = "Seppo Taala.."
@@ -2700,7 +2700,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23490335_2025-03-22_05-58_AM]
 hand_number = "OM23490335"
 filename = "2025-03-22_ 05-58_AM_$0.50_$1_#23490335.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23490335_2025-03-22_05-58_AM.positions]
 top_left = "foulsoul"
@@ -2712,7 +2712,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23490372_2025-03-22_06-03_AM]
 hand_number = "OM23490372"
 filename = "2025-03-22_ 06-03_AM_$0.50_$1_#23490372.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23490372_2025-03-22_06-03_AM.positions]
 top_left = "foulsoul"
@@ -2724,7 +2724,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23454159_2025-03-22_06-08_AM]
 hand_number = "OM23454159"
 filename = "2025-03-22_ 06-08_AM_$0.50_$1_#23454159.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23454159_2025-03-22_06-08_AM.positions]
 top_left = "Seppo Taala.."
@@ -2736,7 +2736,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23490453_2025-03-22_06-15_AM]
 hand_number = "OM23490453"
 filename = "2025-03-22_ 06-15_AM_$0.50_$1_#23490453.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23490453_2025-03-22_06-15_AM.positions]
 top_left = "HarryPote"
@@ -2748,7 +2748,7 @@ bottom = "TeddyKGBEEF"
 [results.OM23819916_2025-03-25_06-10_AM]
 hand_number = "OM23819916"
 filename = "2025-03-25_ 06-10_AM_$0.50_$1_#23819916.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23819916_2025-03-25_06-10_AM.positions]
 top_left = "Mu1tiWay"
@@ -2760,7 +2760,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23828232_2025-03-25_06-20_AM]
 hand_number = "OM23828232"
 filename = "2025-03-25_ 06-20_AM_$1_$2_#23828232.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23828232_2025-03-25_06-20_AM.positions]
 top_left = "so hot"
@@ -2772,7 +2772,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23890003_2025-03-25_06-41_AM]
 hand_number = "OM23890003"
 filename = "2025-03-25_ 06-41_AM_$0.50_$1_#23890003.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23890003_2025-03-25_06-41_AM.positions]
 top_left = "TynamiteDits"
@@ -2784,7 +2784,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23828488_2025-03-25_06-43_AM]
 hand_number = "OM23828488"
 filename = "2025-03-25_ 06-43_AM_$1_$2_#23828488.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23828488_2025-03-25_06-43_AM.positions]
 top_left = "so hot"
@@ -2796,7 +2796,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23890046_2025-03-25_06-46_AM]
 hand_number = "OM23890046"
 filename = "2025-03-25_ 06-46_AM_$0.50_$1_#23890046.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23890046_2025-03-25_06-46_AM.positions]
 top_left = "TynamiteDits"
@@ -2808,7 +2808,7 @@ bottom = "TeddyKGBEEE"
 [results.OM23796272_2025-03-25_06-58_AM]
 hand_number = "OM23796272"
 filename = "2025-03-25_ 06-58_AM_$0.50_$1_#23796272.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM23796272_2025-03-25_06-58_AM.positions]
 top_left = "Baylife"
@@ -2820,7 +2820,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27293989_2025-04-19_02-46_AM]
 hand_number = "OM27293989"
 filename = "2025-04-19_ 02-46_AM_$1_$2_#27293989.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27293989_2025-04-19_02-46_AM.positions]
 top_left = "Olexii Golu.."
@@ -2832,7 +2832,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27238713_2025-04-19_02-55_AM]
 hand_number = "OM27238713"
 filename = "2025-04-19_ 02-55_AM_$1_$2_#27238713.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27238713_2025-04-19_02-55_AM.positions]
 top_left = "OYHE MAMUT"
@@ -2844,7 +2844,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27238721_2025-04-19_02-56_AM]
 hand_number = "OM27238721"
 filename = "2025-04-19_ 02-56_AM_$1_$2_#27238721.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27238721_2025-04-19_02-56_AM.positions]
 top_left = "0YHEAMUT"
@@ -2856,7 +2856,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27238731_2025-04-19_02-57_AM]
 hand_number = "OM27238731"
 filename = "2025-04-19_ 02-57_AM_$1_$2_#27238731.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27238731_2025-04-19_02-57_AM.positions]
 top_left = "deurnebef"
@@ -2868,7 +2868,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27256149_2025-04-19_02-59_AM]
 hand_number = "OM27256149"
 filename = "2025-04-19_ 02-59_AM_$1_$2_#27256149.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256149_2025-04-19_02-59_AM.positions]
 top_left = "7allin7"
@@ -2880,7 +2880,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27256177_2025-04-19_03-05_AM]
 hand_number = "OM27256177"
 filename = "2025-04-19_ 03-05_AM_$1_$2_#27256177.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256177_2025-04-19_03-05_AM.positions]
 top_left = "7allin7"
@@ -2892,7 +2892,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27238827_2025-04-19_03-13_AM]
 hand_number = "OM27238827"
 filename = "2025-04-19_ 03-13_AM_$1_$2_#27238827.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27238827_2025-04-19_03-13_AM.positions]
 top_left = "vaoniming@3.."
@@ -2904,7 +2904,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27279606_2025-04-19_03-23_AM]
 hand_number = "OM27279606"
 filename = "2025-04-19_ 03-23_AM_$1_$2_#27279606.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27279606_2025-04-19_03-23_AM.positions]
 top_left = "_zwwdai57"
@@ -2916,7 +2916,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27279694_2025-04-19_03-29_AM]
 hand_number = "OM27279694"
 filename = "2025-04-19_ 03-29_AM_$1_$2_#27279694.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27279694_2025-04-19_03-29_AM.positions]
 top_left = ""
@@ -2928,7 +2928,7 @@ bottom = "7allin7"
 [results.OM27238953_2025-04-19_03-37_AM]
 hand_number = "OM27238953"
 filename = "2025-04-19_ 03-37_AM_$1_$2_#27238953.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27238953_2025-04-19_03-37_AM.positions]
 top_left = "vaoniming@3.."
@@ -2940,7 +2940,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27256492_2025-04-19_03-40_AM]
 hand_number = "OM27256492"
 filename = "2025-04-19_ 03-40_AM_$1_$2_#27256492.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256492_2025-04-19_03-40_AM.positions]
 top_left = "zwwdai57"
@@ -2952,7 +2952,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27294242_2025-04-19_03-43_AM]
 hand_number = "OM27294242"
 filename = "2025-04-19_ 03-43_AM_$1_$2_#27294242.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27294242_2025-04-19_03-43_AM.positions]
 top_left = "sesalec"
@@ -2964,7 +2964,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27284443_2025-04-19_03-53_AM]
 hand_number = "OM27284443"
 filename = "2025-04-19_ 03-53_AM_$1_$2_#27284443.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27284443_2025-04-19_03-53_AM.positions]
 top_left = "GutiGuti"
@@ -2976,7 +2976,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27294329_2025-04-19_03-53_AM]
 hand_number = "OM27294329"
 filename = "2025-04-19_ 03-53_AM_$1_$2_#27294329.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27294329_2025-04-19_03-53_AM.positions]
 top_left = "sesalec"
@@ -2988,7 +2988,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27284433_2025-04-19_03-54_AM]
 hand_number = "OM27284433"
 filename = "2025-04-19_ 03-54_AM_$1_$2_#27284433.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27284433_2025-04-19_03-54_AM.positions]
 top_left = "GutiGuti"
@@ -3000,7 +3000,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27284484_2025-04-19_04-04_AM]
 hand_number = "OM27284484"
 filename = "2025-04-19_ 04-04_AM_$1_$2_#27284484.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27284484_2025-04-19_04-04_AM.positions]
 top_left = ""
@@ -3012,7 +3012,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27256604_2025-04-19_04-10_AM]
 hand_number = "OM27256604"
 filename = "2025-04-19_ 04-10_AM_$1_$2_#27256604.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256604_2025-04-19_04-10_AM.positions]
 top_left = "zwwdal57"
@@ -3024,7 +3024,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27239319_2025-04-19_04-36_AM]
 hand_number = "OM27239319"
 filename = "2025-04-19_ 04-36_AM_$1_$2_#27239319.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27239319_2025-04-19_04-36_AM.positions]
 top_left = "PikaGonavic.."
@@ -3036,7 +3036,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27239403_2025-04-19_04-46_AM]
 hand_number = "OM27239403"
 filename = "2025-04-19_ 04-46_AM_$1_$2_#27239403.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27239403_2025-04-19_04-46_AM.positions]
 top_left = "PikaGonavic.."
@@ -3048,7 +3048,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27239445_2025-04-19_04-51_AM]
 hand_number = "OM27239445"
 filename = "2025-04-19_ 04-51_AM_$1_$2_#27239445.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27239445_2025-04-19_04-51_AM.positions]
 top_left = "PikaGonavic.."
@@ -3060,7 +3060,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27256720_2025-04-19_04-51_AM]
 hand_number = "OM27256720"
 filename = "2025-04-19_ 04-51_AM_$1_$2_#27256720.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256720_2025-04-19_04-51_AM.positions]
 top_left = "ebosher"
@@ -3072,7 +3072,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27294571_2025-04-19_04-54_AM]
 hand_number = "OM27294571"
 filename = "2025-04-19_ 04-54_AM_$1_$2_#27294571.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27294571_2025-04-19_04-54_AM.positions]
 top_left = "ebosher"
@@ -3084,7 +3084,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27294575_2025-04-19_04-54_AM]
 hand_number = "OM27294575"
 filename = "2025-04-19_ 04-54_AM_$1_$2_#27294575.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27294575_2025-04-19_04-54_AM.positions]
 top_left = "ebosher"
@@ -3096,7 +3096,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27256746_2025-04-19_05-00_AM]
 hand_number = "OM27256746"
 filename = "2025-04-19_ 05-00_AM_$1_$2_#27256746.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256746_2025-04-19_05-00_AM.positions]
 top_left = "ebosher"
@@ -3108,7 +3108,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27239570_2025-04-19_05-03_AM]
 hand_number = "OM27239570"
 filename = "2025-04-19_ 05-03_AM_$1_$2_#27239570.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27239570_2025-04-19_05-03_AM.positions]
 top_left = "PikaGonavic.."
@@ -3120,7 +3120,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27239604_2025-04-19_05-07_AM]
 hand_number = "OM27239604"
 filename = "2025-04-19_ 05-07_AM_$1_$2_#27239604.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27239604_2025-04-19_05-07_AM.positions]
 top_left = "PikaGonavic.."
@@ -3132,7 +3132,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27256792_2025-04-19_05-10_AM]
 hand_number = "OM27256792"
 filename = "2025-04-19_ 05-10_AM_$1_$2_#27256792.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256792_2025-04-19_05-10_AM.positions]
 top_left = "ebosher"
@@ -3144,7 +3144,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27256794_2025-04-19_05-10_AM]
 hand_number = "OM27256794"
 filename = "2025-04-19_ 05-10_AM_$1_$2_#27256794.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256794_2025-04-19_05-10_AM.positions]
 top_left = "Yummy"
@@ -3156,7 +3156,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27239674_2025-04-19_05-12_AM]
 hand_number = "OM27239674"
 filename = "2025-04-19_ 05-12_AM_$1_$2_#27239674.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27239674_2025-04-19_05-12_AM.positions]
 top_left = "PikaGonavic.."
@@ -3168,7 +3168,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27239692_2025-04-19_05-14_AM]
 hand_number = "OM27239692"
 filename = "2025-04-19_ 05-14_AM_$1_$2_#27239692.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27239692_2025-04-19_05-14_AM.positions]
 top_left = "PikaGonavic.."
@@ -3180,7 +3180,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27239788_2025-04-19_05-22_AM]
 hand_number = "OM27239788"
 filename = "2025-04-19_ 05-22_AM_$1_$2_#27239788.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27239788_2025-04-19_05-22_AM.positions]
 top_left = "PikaGonavic.."
@@ -3192,7 +3192,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27256883_2025-04-19_05-24_AM]
 hand_number = "OM27256883"
 filename = "2025-04-19_ 05-24_AM_$1_$2_#27256883.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256883_2025-04-19_05-24_AM.positions]
 top_left = "GutiGuti"
@@ -3204,7 +3204,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27256928_2025-04-19_05-35_AM]
 hand_number = "OM27256928"
 filename = "2025-04-19_ 05-35_AM_$1_$2_#27256928.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256928_2025-04-19_05-35_AM.positions]
 top_left = "Yummy"
@@ -3216,7 +3216,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27256960_2025-04-19_05-40_AM]
 hand_number = "OM27256960"
 filename = "2025-04-19_ 05-40_AM_$1_$2_#27256960.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27256960_2025-04-19_05-40_AM.positions]
 top_left = "GutiGuti"
@@ -3228,7 +3228,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27330055_2025-04-19_05-45_AM]
 hand_number = "OM27330055"
 filename = "2025-04-19_ 05-45_AM_$1_$2_#27330055.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27330055_2025-04-19_05-45_AM.positions]
 top_left = "Liisa Ann"
@@ -3240,7 +3240,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27416504_2025-04-20_02-19_AM]
 hand_number = "OM27416504"
 filename = "2025-04-20_ 02-19_AM_$1_$2_#27416504.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27416504_2025-04-20_02-19_AM.positions]
 top_left = "wang1985"
@@ -3252,7 +3252,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27339518_2025-04-20_02-20_AM]
 hand_number = "OM27339518"
 filename = "2025-04-20_ 02-20_AM_$1_$2_#27339518.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27339518_2025-04-20_02-20_AM.positions]
 top_left = "deurnebef"
@@ -3264,7 +3264,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27405829_2025-04-20_02-23_AM]
 hand_number = "OM27405829"
 filename = "2025-04-20_ 02-23_AM_$1_$2_#27405829.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27405829_2025-04-20_02-23_AM.positions]
 top_left = ""
@@ -3276,7 +3276,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27396694_2025-04-20_02-41_AM]
 hand_number = "OM27396694"
 filename = "2025-04-20_ 02-41_AM_$1_$2_#27396694.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27396694_2025-04-20_02-41_AM.positions]
 top_left = ""
@@ -3288,7 +3288,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27339688_2025-04-20_02-49_AM]
 hand_number = "OM27339688"
 filename = "2025-04-20_ 02-49_AM_$1_$2_#27339688.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27339688_2025-04-20_02-49_AM.positions]
 top_left = "Contre1"
@@ -3300,7 +3300,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27396780_2025-04-20_02-57_AM]
 hand_number = "OM27396780"
 filename = "2025-04-20_ 02-57_AM_$1_$2_#27396780.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27396780_2025-04-20_02-57_AM.positions]
 top_left = "deurnebef"
@@ -3312,7 +3312,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27423734_2025-04-20_03-09_AM]
 hand_number = "OM27423734"
 filename = "2025-04-20_ 03-09_AM_$2_$5_#27423734.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27423734_2025-04-20_03-09_AM.positions]
 top_left = "OYHE MAMUT"
@@ -3324,7 +3324,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27416904_2025-04-20_03-13_AM]
 hand_number = "OM27416904"
 filename = "2025-04-20_ 03-13_AM_$1_$2_#27416904.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27416904_2025-04-20_03-13_AM.positions]
 top_left = "wang1985"
@@ -3336,7 +3336,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27339966_2025-04-20_03-36_AM]
 hand_number = "OM27339966"
 filename = "2025-04-20_ 03-36_AM_$1_$2_#27339966.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27339966_2025-04-20_03-36_AM.positions]
 top_left = "Yummy"
@@ -3348,7 +3348,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27339972_2025-04-20_03-37_AM]
 hand_number = "OM27339972"
 filename = "2025-04-20_ 03-37_AM_$1_$2_#27339972.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27339972_2025-04-20_03-37_AM.positions]
 top_left = "Yummy"
@@ -3360,7 +3360,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27339982_2025-04-20_03-39_AM]
 hand_number = "OM27339982"
 filename = "2025-04-20_ 03-39_AM_$1_$2_#27339982.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27339982_2025-04-20_03-39_AM.positions]
 top_left = "7allin7"
@@ -3372,7 +3372,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27430000_2025-04-20_03-44_AM]
 hand_number = "OM27430000"
 filename = "2025-04-20_ 03-44_AM_$1_$2_#27430000.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27430000_2025-04-20_03-44_AM.positions]
 top_left = ""
@@ -3384,7 +3384,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27430019_2025-04-20_03-49_AM]
 hand_number = "OM27430019"
 filename = "2025-04-20_ 03-49_AM_$1_$2_#27430019.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27430019_2025-04-20_03-49_AM.positions]
 top_left = "Yummy"
@@ -3396,7 +3396,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27386302_2025-04-20_03-51_AM]
 hand_number = "OM27386302"
 filename = "2025-04-20_ 03-51_AM_$1_$2_#27386302.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27386302_2025-04-20_03-51_AM.positions]
 top_left = "zwwdal57"
@@ -3408,7 +3408,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27417276_2025-04-20_03-55_AM]
 hand_number = "OM27417276"
 filename = "2025-04-20_ 03-55_AM_$1_$2_#27417276.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27417276_2025-04-20_03-55_AM.positions]
 top_left = "Labarbadels.."
@@ -3420,7 +3420,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27386332_2025-04-20_04-00_AM]
 hand_number = "OM27386332"
 filename = "2025-04-20_ 04-00_AM_$1_$2_#27386332.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27386332_2025-04-20_04-00_AM.positions]
 top_left = "zwwdal57"
@@ -3432,7 +3432,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27430068_2025-04-20_04-02_AM]
 hand_number = "OM27430068"
 filename = "2025-04-20_ 04-02_AM_$1_$2_#27430068.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27430068_2025-04-20_04-02_AM.positions]
 top_left = "Yummy"
@@ -3444,7 +3444,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27430072_2025-04-20_04-03_AM]
 hand_number = "OM27430072"
 filename = "2025-04-20_ 04-03_AM_$1_$2_#27430072.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27430072_2025-04-20_04-03_AM.positions]
 top_left = "Yummy"
@@ -3456,7 +3456,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27386416_2025-04-20_04-17_AM]
 hand_number = "OM27386416"
 filename = "2025-04-20_ 04-17_AM_$1_$2_#27386416.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27386416_2025-04-20_04-17_AM.positions]
 top_left = "zwwdai57"
@@ -3468,7 +3468,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27417529_2025-04-20_04-28_AM]
 hand_number = "OM27417529"
 filename = "2025-04-20_ 04-28_AM_$1_$2_#27417529.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27417529_2025-04-20_04-28_AM.positions]
 top_left = "Labarbadels.."
@@ -3480,7 +3480,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27386465_2025-04-20_04-30_AM]
 hand_number = "OM27386465"
 filename = "2025-04-20_ 04-30_AM_$1_$2_#27386465.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27386465_2025-04-20_04-30_AM.positions]
 top_left = "zwwdal57"
@@ -3492,7 +3492,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27430178_2025-04-20_04-30_AM]
 hand_number = "OM27430178"
 filename = "2025-04-20_ 04-30_AM_$1_$2_#27430178.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27430178_2025-04-20_04-30_AM.positions]
 top_left = "Vvikx Mylr"
@@ -3504,7 +3504,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27430198_2025-04-20_04-34_AM]
 hand_number = "OM27430198"
 filename = "2025-04-20_ 04-34_AM_$1_$2_#27430198.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27430198_2025-04-20_04-34_AM.positions]
 top_left = "Yummy"
@@ -3516,7 +3516,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27346220_2025-04-20_04-42_AM]
 hand_number = "OM27346220"
 filename = "2025-04-20_ 04-42_AM_$2_$5_#27346220.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27346220_2025-04-20_04-42_AM.positions]
 top_left = "clmlba"
@@ -3528,7 +3528,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27417595_2025-04-20_04-43_AM]
 hand_number = "OM27417595"
 filename = "2025-04-20_ 04-43_AM_$1_$2_#27417595.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27417595_2025-04-20_04-43_AM.positions]
 top_left = "Labarbadels.."
@@ -3540,7 +3540,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27417608_2025-04-20_04-47_AM]
 hand_number = "OM27417608"
 filename = "2025-04-20_ 04-47_AM_$1_$2_#27417608.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27417608_2025-04-20_04-47_AM.positions]
 top_left = "Labarbadels.."
@@ -3552,7 +3552,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27430272_2025-04-20_04-51_AM]
 hand_number = "OM27430272"
 filename = "2025-04-20_ 04-51_AM_$1_$2_#27430272.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27430272_2025-04-20_04-51_AM.positions]
 top_left = "Vvikx Mylr"
@@ -3564,7 +3564,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27397372_2025-04-20_04-54_AM]
 hand_number = "OM27397372"
 filename = "2025-04-20_ 04-54_AM_$1_$2_#27397372.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27397372_2025-04-20_04-54_AM.positions]
 top_left = "zwwdal57"
@@ -3576,7 +3576,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27397387_2025-04-20_04-58_AM]
 hand_number = "OM27397387"
 filename = "2025-04-20_ 04-58_AM_$1_$2_#27397387.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27397387_2025-04-20_04-58_AM.positions]
 top_left = "zwwdal57"
@@ -3588,7 +3588,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27417712_2025-04-20_05-01_AM]
 hand_number = "OM27417712"
 filename = "2025-04-20_ 05-01_AM_$1_$2_#27417712.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27417712_2025-04-20_05-01_AM.positions]
 top_left = "Labarbadels.."
@@ -3600,7 +3600,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27346252_2025-04-20_05-08_AM]
 hand_number = "OM27346252"
 filename = "2025-04-20_ 05-08_AM_$2_$5_#27346252.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27346252_2025-04-20_05-08_AM.positions]
 top_left = "raphayakawa"
@@ -3612,7 +3612,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27346256_2025-04-20_05-10_AM]
 hand_number = "OM27346256"
 filename = "2025-04-20_ 05-10_AM_$2_$5_#27346256.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27346256_2025-04-20_05-10_AM.positions]
 top_left = "raphayakawa"
@@ -3624,7 +3624,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27430393_2025-04-20_05-20_AM]
 hand_number = "OM27430393"
 filename = "2025-04-20_ 05-20_AM_$1_$2_#27430393.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27430393_2025-04-20_05-20_AM.positions]
 top_left = "7allin7"
@@ -3636,7 +3636,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27430415_2025-04-20_05-27_AM]
 hand_number = "OM27430415"
 filename = "2025-04-20_ 05-27_AM_$1_$2_#27430415.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27430415_2025-04-20_05-27_AM.positions]
 top_left = "7allin7"
@@ -3648,7 +3648,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27533290_2025-04-21_02-21_AM]
 hand_number = "OM27533290"
 filename = "2025-04-21_ 02-21_AM_$1_$2_#27533290.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27533290_2025-04-21_02-21_AM.positions]
 top_left = "Doug Barclay"
@@ -3660,7 +3660,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27533300_2025-04-21_02-33_AM]
 hand_number = "OM27533300"
 filename = "2025-04-21_ 02-33_AM_$1_$2_#27533300.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27533300_2025-04-21_02-33_AM.positions]
 top_left = "A5stone"
@@ -3672,7 +3672,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27457384_2025-04-21_02-31_AM]
 hand_number = "OM27457384"
 filename = "2025-04-21_ 02-31_AM_$1_$2_#27457384.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27457384_2025-04-21_02-31_AM.positions]
 top_left = "Bond James .."
@@ -3684,7 +3684,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27533524_2025-04-21_02-40_AM]
 hand_number = "OM27533524"
 filename = "2025-04-21_ 02-40_AM_$1_$2_#27533524.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27533524_2025-04-21_02-40_AM.positions]
 top_left = "zwwdai57"
@@ -3696,7 +3696,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27457485_2025-04-21_02-43_AM]
 hand_number = "OM27457485"
 filename = "2025-04-21_ 02-43_AM_$1_$2_#27457485.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27457485_2025-04-21_02-43_AM.positions]
 top_left = "Bond James .."
@@ -3708,7 +3708,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27533573_2025-04-21_02-43_AM]
 hand_number = "OM27533573"
 filename = "2025-04-21_ 02-43_AM_$1_$2_#27533573.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27533573_2025-04-21_02-43_AM.positions]
 top_left = "zwwdal57"
@@ -3720,7 +3720,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27533596_2025-04-21_02-47_AM]
 hand_number = "OM27533596"
 filename = "2025-04-21_ 02-47_AM_$1_$2_#27533596.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27533596_2025-04-21_02-47_AM.positions]
 top_left = "zwwdal57"
@@ -3732,7 +3732,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27533773_2025-04-21_03-01_AM]
 hand_number = "OM27533773"
 filename = "2025-04-21_ 03-01_AM_$1_$2_#27533773.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27533773_2025-04-21_03-01_AM.positions]
 top_left = "zwwdal57"
@@ -3744,7 +3744,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27533780_2025-04-21_03-01_AM]
 hand_number = "OM27533780"
 filename = "2025-04-21_ 03-01_AM_$1_$2_#27533780.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27533780_2025-04-21_03-01_AM.positions]
 top_left = "A5stone"
@@ -3756,7 +3756,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27457827_2025-04-21_03-24_AM]
 hand_number = "OM27457827"
 filename = "2025-04-21_ 03-24_AM_$1_$2_#27457827.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27457827_2025-04-21_03-24_AM.positions]
 top_left = ""
@@ -3768,7 +3768,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27534031_2025-04-21_03-25_AM]
 hand_number = "OM27534031"
 filename = "2025-04-21_ 03-25_AM_$1_$2_#27534031.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27534031_2025-04-21_03-25_AM.positions]
 top_left = "zwwdai57"
@@ -3780,7 +3780,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27553161_2025-04-21_03-34_AM]
 hand_number = "OM27553161"
 filename = "2025-04-21_ 03-34_AM_$1_$2_#27553161.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27553161_2025-04-21_03-34_AM.positions]
 top_left = ""
@@ -3792,7 +3792,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27534208_2025-04-21_03-38_AM]
 hand_number = "OM27534208"
 filename = "2025-04-21_ 03-38_AM_$1_$2_#27534208.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27534208_2025-04-21_03-38_AM.positions]
 top_left = "zwwdal57"
@@ -3804,7 +3804,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27553275_2025-04-21_03-44_AM]
 hand_number = "OM27553275"
 filename = "2025-04-21_ 03-44_AM_$1_$2_#27553275.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27553275_2025-04-21_03-44_AM.positions]
 top_left = "SankaClaus"
@@ -3816,7 +3816,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27534327_2025-04-21_03-48_AM]
 hand_number = "OM27534327"
 filename = "2025-04-21_ 03-48_AM_$1_$2_#27534327.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27534327_2025-04-21_03-48_AM.positions]
 top_left = "zwwdal57"
@@ -3828,7 +3828,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27534385_2025-04-21_03-55_AM]
 hand_number = "OM27534385"
 filename = "2025-04-21_ 03-55_AM_$1_$2_#27534385.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27534385_2025-04-21_03-55_AM.positions]
 top_left = "zwwdai57"
@@ -3840,7 +3840,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27534510_2025-04-21_04-06_AM]
 hand_number = "OM27534510"
 filename = "2025-04-21_ 04-06_AM_$1_$2_#27534510.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27534510_2025-04-21_04-06_AM.positions]
 top_left = "zwwdai57"
@@ -3852,7 +3852,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27534719_2025-04-21_04-29_AM]
 hand_number = "OM27534719"
 filename = "2025-04-21_ 04-29_AM_$1_$2_#27534719.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27534719_2025-04-21_04-29_AM.positions]
 top_left = "zwwdal57"
@@ -3864,7 +3864,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27560054_2025-04-21_04-33_AM]
 hand_number = "OM27560054"
 filename = "2025-04-21_ 04-33_AM_$2_$5_#27560054.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27560054_2025-04-21_04-33_AM.positions]
 top_left = "Bigdaddydex"
@@ -3876,7 +3876,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27553709_2025-04-21_04-40_AM]
 hand_number = "OM27553709"
 filename = "2025-04-21_ 04-40_AM_$1_$2_#27553709.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27553709_2025-04-21_04-40_AM.positions]
 top_left = "SankaClaus"
@@ -3888,7 +3888,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27517136_2025-04-21_05-04_AM]
 hand_number = "OM27517136"
 filename = "2025-04-21_ 05-04_AM_$1_$2_#27517136.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27517136_2025-04-21_05-04_AM.positions]
 top_left = "kingleo777"
@@ -3900,7 +3900,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27649921_2025-04-22_03-03_AM]
 hand_number = "OM27649921"
 filename = "2025-04-22_ 03-03_AM_$1_$2_#27649921.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27649921_2025-04-22_03-03_AM.positions]
 top_left = "sinoda"
@@ -3912,7 +3912,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27680774_2025-04-22_03-10_AM]
 hand_number = "OM27680774"
 filename = "2025-04-22_ 03-10_AM_$1_$2_#27680774.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27680774_2025-04-22_03-10_AM.positions]
 top_left = "Mitz137"
@@ -3924,7 +3924,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27638269_2025-04-22_03-11_AM]
 hand_number = "OM27638269"
 filename = "2025-04-22_ 03-11_AM_$1_$2_#27638269.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27638269_2025-04-22_03-11_AM.positions]
 top_left = "Duyen phan"
@@ -3936,7 +3936,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27638271_2025-04-22_03-11_AM]
 hand_number = "OM27638271"
 filename = "2025-04-22_ 03-11_AM_$1_$2_#27638271.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27638271_2025-04-22_03-11_AM.positions]
 top_left = ""
@@ -3948,7 +3948,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27638281_2025-04-22_03-13_AM]
 hand_number = "OM27638281"
 filename = "2025-04-22_ 03-13_AM_$1_$2_#27638281.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27638281_2025-04-22_03-13_AM.positions]
 top_left = "Duyen phan"
@@ -3960,7 +3960,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27700034_2025-04-22_03-15_AM]
 hand_number = "OM27700034"
 filename = "2025-04-22_ 03-15_AM_$1_$2_#27700034.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27700034_2025-04-22_03-15_AM.positions]
 top_left = ""
@@ -3972,7 +3972,7 @@ bottom = "Sagittarius3"
 [results.OM27638477_2025-04-22_03-35_AM]
 hand_number = "OM27638477"
 filename = "2025-04-22_ 03-35_AM_$1_$2_#27638477.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27638477_2025-04-22_03-35_AM.positions]
 top_left = "Duyen phan"
@@ -3984,7 +3984,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27700282_2025-04-22_03-53_AM]
 hand_number = "OM27700282"
 filename = "2025-04-22_ 03-53_AM_$1_$2_#27700282.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27700282_2025-04-22_03-53_AM.positions]
 top_left = "Curator1"
@@ -3996,7 +3996,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27700300_2025-04-22_03-56_AM]
 hand_number = "OM27700300"
 filename = "2025-04-22_ 03-56_AM_$1_$2_#27700300.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27700300_2025-04-22_03-56_AM.positions]
 top_left = "Curator1"
@@ -4008,7 +4008,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27680933_2025-04-22_04-13_AM]
 hand_number = "OM27680933"
 filename = "2025-04-22_ 04-13_AM_$1_$2_#27680933.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27680933_2025-04-22_04-13_AM.positions]
 top_left = "TheRealGoat"
@@ -4020,7 +4020,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27700476_2025-04-22_04-28_AM]
 hand_number = "OM27700476"
 filename = "2025-04-22_ 04-28_AM_$1_$2_#27700476.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27700476_2025-04-22_04-28_AM.positions]
 top_left = "Curator1"
@@ -4032,7 +4032,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27700494_2025-04-22_04-31_AM]
 hand_number = "OM27700494"
 filename = "2025-04-22_ 04-31_AM_$1_$2_#27700494.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27700494_2025-04-22_04-31_AM.positions]
 top_left = "Curator1"
@@ -4044,7 +4044,7 @@ bottom = "TeddyKGBEEE"
 [results.OM27639210_2025-04-22_04-47_AM]
 hand_number = "OM27639210"
 filename = "2025-04-22_ 04-47_AM_$1_$2_#27639210.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27639210_2025-04-22_04-47_AM.positions]
 top_left = "ORappabr"
@@ -4056,7 +4056,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27639219_2025-04-22_04-49_AM]
 hand_number = "OM27639219"
 filename = "2025-04-22_ 04-49_AM_$1_$2_#27639219.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27639219_2025-04-22_04-49_AM.positions]
 top_left = "ORappabr"
@@ -4068,7 +4068,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27906095_2025-04-24_03-01_AM]
 hand_number = "OM27906095"
 filename = "2025-04-24_ 03-01_AM_$1_$2_#27906095.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27906095_2025-04-24_03-01_AM.positions]
 top_left = "PotCrusher"
@@ -4080,7 +4080,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27888108_2025-04-24_05-25_AM]
 hand_number = "OM27888108"
 filename = "2025-04-24_ 05-25_AM_$2_$5_#27888108.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27888108_2025-04-24_05-25_AM.positions]
 top_left = "odonkey"
@@ -4092,7 +4092,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27907154_2025-04-24_05-27_AM]
 hand_number = "OM27907154"
 filename = "2025-04-24_ 05-27_AM_$1_$2_#27907154.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27907154_2025-04-24_05-27_AM.positions]
 top_left = "Alkiviadis .."
@@ -4104,7 +4104,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27907164_2025-04-24_05-29_AM]
 hand_number = "OM27907164"
 filename = "2025-04-24_ 05-29_AM_$1_$2_#27907164.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27907164_2025-04-24_05-29_AM.positions]
 top_left = "Alkiviadis .."
@@ -4116,7 +4116,7 @@ bottom = "TeddyKGBEEF"
 [results.OM27888153_2025-04-24_05-32_AM]
 hand_number = "OM27888153"
 filename = "2025-04-24_ 05-32_AM_$2_$5_#27888153.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM27888153_2025-04-24_05-32_AM.positions]
 top_left = "odonkey"
@@ -4128,7 +4128,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28155889_2025-04-26_02-32_AM]
 hand_number = "OM28155889"
 filename = "2025-04-26_ 02-32_AM_$1_$2_#28155889.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28155889_2025-04-26_02-32_AM.positions]
 top_left = "Ant34dai"
@@ -4140,7 +4140,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28192908_2025-04-26_02-32_AM]
 hand_number = "OM28192908"
 filename = "2025-04-26_ 02-32_AM_$1_$2_#28192908.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28192908_2025-04-26_02-32_AM.positions]
 top_left = "RibaFish1"
@@ -4152,7 +4152,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28155900_2025-04-26_02-33_AM]
 hand_number = "OM28155900"
 filename = "2025-04-26_ 02-33_AM_$1_$2_#28155900.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28155900_2025-04-26_02-33_AM.positions]
 top_left = "Ant34dai"
@@ -4164,7 +4164,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28193401_2025-04-26_03-20_AM]
 hand_number = "OM28193401"
 filename = "2025-04-26_ 03-20_AM_$1_$2_#28193401.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28193401_2025-04-26_03-20_AM.positions]
 top_left = "OmahaKing13"
@@ -4176,7 +4176,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28193516_2025-04-26_03-31_AM]
 hand_number = "OM28193516"
 filename = "2025-04-26_ 03-31_AM_$1_$2_#28193516.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28193516_2025-04-26_03-31_AM.positions]
 top_left = "OmahaKing13"
@@ -4188,7 +4188,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28193528_2025-04-26_03-31_AM]
 hand_number = "OM28193528"
 filename = "2025-04-26_ 03-31_AM_$1_$2_#28193528.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28193528_2025-04-26_03-31_AM.positions]
 top_left = "AmarilloSli.."
@@ -4200,7 +4200,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28193539_2025-04-26_03-32_AM]
 hand_number = "OM28193539"
 filename = "2025-04-26_ 03-32_AM_$1_$2_#28193539.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28193539_2025-04-26_03-32_AM.positions]
 top_left = "AmarilloSli.."
@@ -4212,7 +4212,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28193555_2025-04-26_03-33_AM]
 hand_number = "OM28193555"
 filename = "2025-04-26_ 03-33_AM_$1_$2_#28193555.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28193555_2025-04-26_03-33_AM.positions]
 top_left = "OmahaKing13"
@@ -4224,7 +4224,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28156438_2025-04-26_04-11_AM]
 hand_number = "OM28156438"
 filename = "2025-04-26_ 04-11_AM_$1_$2_#28156438.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28156438_2025-04-26_04-11_AM.positions]
 top_left = ""
@@ -4236,7 +4236,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28194002_2025-04-26_04-13_AM]
 hand_number = "OM28194002"
 filename = "2025-04-26_ 04-13_AM_$1_$2_#28194002.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28194002_2025-04-26_04-13_AM.positions]
 top_left = ""
@@ -4248,7 +4248,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28203896_2025-04-26_04-18_AM]
 hand_number = "OM28203896"
 filename = "2025-04-26_ 04-18_AM_$1_$2_#28203896.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28203896_2025-04-26_04-18_AM.positions]
 top_left = "Lichtziende.."
@@ -4260,7 +4260,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28231418_2025-04-26_04-20_AM]
 hand_number = "OM28231418"
 filename = "2025-04-26_ 04-20_AM_$1_$2_#28231418.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28231418_2025-04-26_04-20_AM.positions]
 top_left = "TiltPoker"
@@ -4272,7 +4272,7 @@ bottom = "TeddyKGBEEF"
 [results.OM28204110_2025-04-26_04-42_AM]
 hand_number = "OM28204110"
 filename = "2025-04-26_ 04-42_AM_$1_$2_#28204110.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28204110_2025-04-26_04-42_AM.positions]
 top_left = "Lichtziende.."
@@ -4284,7 +4284,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28231651_2025-04-26_05-12_AM]
 hand_number = "OM28231651"
 filename = "2025-04-26_ 05-12_AM_$1_$2_#28231651.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28231651_2025-04-26_05-12_AM.positions]
 top_left = "M lakovlev"
@@ -4296,7 +4296,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28429914_2025-04-28_01-45_AM]
 hand_number = "OM28429914"
 filename = "2025-04-28_ 01-45_AM_$1_$2_#28429914.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28429914_2025-04-28_01-45_AM.positions]
 top_left = "Kobi belo"
@@ -4308,7 +4308,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28435052_2025-04-28_02-06_AM]
 hand_number = "OM28435052"
 filename = "2025-04-28_ 02-06_AM_$1_$2_#28435052.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28435052_2025-04-28_02-06_AM.positions]
 top_left = "PlayTwice"
@@ -4320,7 +4320,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28435064_2025-04-28_02-08_AM]
 hand_number = "OM28435064"
 filename = "2025-04-28_ 02-08_AM_$1_$2_#28435064.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28435064_2025-04-28_02-08_AM.positions]
 top_left = "PlayTwice"
@@ -4332,7 +4332,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28444580_2025-04-28_02-10_AM]
 hand_number = "OM28444580"
 filename = "2025-04-28_ 02-10_AM_$1_$2_#28444580.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28444580_2025-04-28_02-10_AM.positions]
 top_left = "cleov"
@@ -4344,7 +4344,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28408001_2025-04-28_02-10_AM]
 hand_number = "OM28408001"
 filename = "2025-04-28_ 02-10_AM_$1_$2_#28408001.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28408001_2025-04-28_02-10_AM.positions]
 top_left = "PROWL3R"
@@ -4356,7 +4356,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28408010_2025-04-28_02-12_AM]
 hand_number = "OM28408010"
 filename = "2025-04-28_ 02-12_AM_$1_$2_#28408010.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28408010_2025-04-28_02-12_AM.positions]
 top_left = "PROWL3R"
@@ -4368,7 +4368,7 @@ bottom = "TeddyKGBEEF"
 [results.OM28435156_2025-04-28_02-22_AM]
 hand_number = "OM28435156"
 filename = "2025-04-28_ 02-22_AM_$1_$2_#28435156.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28435156_2025-04-28_02-22_AM.positions]
 top_left = "PlayTwice"
@@ -4380,7 +4380,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28408114_2025-04-28_02-52_AM]
 hand_number = "OM28408114"
 filename = "2025-04-28_ 02-52_AM_$1_$2_#28408114.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28408114_2025-04-28_02-52_AM.positions]
 top_left = ""
@@ -4392,7 +4392,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28435513_2025-04-28_03-10_AM]
 hand_number = "OM28435513"
 filename = "2025-04-28_ 03-10_AM_$1_$2_#28435513.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28435513_2025-04-28_03-10_AM.positions]
 top_left = ""
@@ -4404,7 +4404,7 @@ bottom = "REiDaSelva"
 [results.OM28408160_2025-04-28_03-14_AM]
 hand_number = "OM28408160"
 filename = "2025-04-28_ 03-14_AM_$1_$2_#28408160.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28408160_2025-04-28_03-14_AM.positions]
 top_left = "Ant34dai"
@@ -4416,7 +4416,7 @@ bottom = "TeddyKGBEEF"
 [results.OM28435549_2025-04-28_03-15_AM]
 hand_number = "OM28435549"
 filename = "2025-04-28_ 03-15_AM_$1_$2_#28435549.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28435549_2025-04-28_03-15_AM.positions]
 top_left = "Ant34dai"
@@ -4428,7 +4428,7 @@ bottom = "TeddyKGBEEF"
 [results.OM28408183_2025-04-28_03-24_AM]
 hand_number = "OM28408183"
 filename = "2025-04-28_ 03-24_AM_$1_$2_#28408183.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28408183_2025-04-28_03-24_AM.positions]
 top_left = "Ant34dai"
@@ -4440,7 +4440,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28460910_2025-04-28_03-30_AM]
 hand_number = "OM28460910"
 filename = "2025-04-28_ 03-30_AM_$1_$2_#28460910.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28460910_2025-04-28_03-30_AM.positions]
 top_left = "Bond James .."
@@ -4452,7 +4452,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28408329_2025-04-28_04-14_AM]
 hand_number = "OM28408329"
 filename = "2025-04-28_ 04-14_AM_$1_$2_#28408329.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28408329_2025-04-28_04-14_AM.positions]
 top_left = "Ant34dai"
@@ -4464,7 +4464,7 @@ bottom = "TeddyKGBEEF"
 [results.OM28448804_2025-04-28_08-36_AM]
 hand_number = "OM28448804"
 filename = "2025-04-28_ 08-36_AM_$1_$2_#28448804.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28448804_2025-04-28_08-36_AM.positions]
 top_left = "Snagfrag"
@@ -4476,7 +4476,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28448903_2025-04-28_08-45_AM]
 hand_number = "OM28448903"
 filename = "2025-04-28_ 08-45_AM_$1_$2_#28448903.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28448903_2025-04-28_08-45_AM.positions]
 top_left = "Snagfrag"
@@ -4488,7 +4488,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28448922_2025-04-28_08-47_AM]
 hand_number = "OM28448922"
 filename = "2025-04-28_ 08-47_AM_$1_$2_#28448922.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28448922_2025-04-28_08-47_AM.positions]
 top_left = "Snagfrag"
@@ -4500,7 +4500,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28861872_2025-05-01_02-22_AM]
 hand_number = "OM28861872"
 filename = "2025-05-01_ 02-22_AM_$1_$2_#28861872.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28861872_2025-05-01_02-22_AM.positions]
 top_left = "REiDaSelva"
@@ -4512,7 +4512,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28861884_2025-05-01_02-24_AM]
 hand_number = "OM28861884"
 filename = "2025-05-01_ 02-24_AM_$1_$2_#28861884.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28861884_2025-05-01_02-24_AM.positions]
 top_left = "REiDaSelva"
@@ -4524,7 +4524,7 @@ bottom = "TeddyKGBEEE"
 [results.OM28832807_2025-05-01_03-49_AM]
 hand_number = "OM28832807"
 filename = "2025-05-01_ 03-49_AM_$1_$2_#28832807.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM28832807_2025-05-01_03-49_AM.positions]
 top_left = "A casa"
@@ -4536,7 +4536,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32896086_2025-05-30_06-25_AM]
 hand_number = "OM32896086"
 filename = "2025-05-30_ 06-25_AM_$2_$5_#32896086.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32896086_2025-05-30_06-25_AM.positions]
 top_left = ""
@@ -4548,7 +4548,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32896121_2025-05-30_06-26_AM]
 hand_number = "OM32896121"
 filename = "2025-05-30_ 06-26_AM_$2_$5_#32896121.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32896121_2025-05-30_06-26_AM.positions]
 top_left = ""
@@ -4560,7 +4560,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32896150_2025-05-30_06-29_AM]
 hand_number = "OM32896150"
 filename = "2025-05-30_ 06-29_AM_$2_$5_#32896150.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32896150_2025-05-30_06-29_AM.positions]
 top_left = ""
@@ -4572,7 +4572,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32950560_2025-05-30_06-33_AM]
 hand_number = "OM32950560"
 filename = "2025-05-30_ 06-33_AM_$1_$2_#32950560.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32950560_2025-05-30_06-33_AM.positions]
 top_left = "Crushinskyy"
@@ -4584,7 +4584,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32896239_2025-05-30_06-37_AM]
 hand_number = "OM32896239"
 filename = "2025-05-30_ 06-37_AM_$2_$5_#32896239.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32896239_2025-05-30_06-37_AM.positions]
 top_left = ""
@@ -4596,7 +4596,7 @@ bottom = "TeddyKGBEEF"
 [results.OM32950650_2025-05-30_06-40_AM]
 hand_number = "OM32950650"
 filename = "2025-05-30_ 06-40_AM_$1_$2_#32950650.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32950650_2025-05-30_06-40_AM.positions]
 top_left = "Crushinskyy"
@@ -4608,7 +4608,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32896350_2025-05-30_06-48_AM]
 hand_number = "OM32896350"
 filename = "2025-05-30_ 06-48_AM_$2_$5_#32896350.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32896350_2025-05-30_06-48_AM.positions]
 top_left = "boudyy"
@@ -4620,7 +4620,7 @@ bottom = "TeddyKGBEEF"
 [results.OM32878924_2025-05-30_06-53_AM]
 hand_number = "OM32878924"
 filename = "2025-05-30_ 06-53_AM_$2_$5_#32878924.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32878924_2025-05-30_06-53_AM.positions]
 top_left = "BURRRO"
@@ -4632,7 +4632,7 @@ bottom = "TeddyKGBEEF"
 [results.OM32879004_2025-05-30_06-58_AM]
 hand_number = "OM32879004"
 filename = "2025-05-30_ 06-58_AM_$2_$5_#32879004.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32879004_2025-05-30_06-58_AM.positions]
 top_left = "BURRRO"
@@ -4644,7 +4644,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32896459_2025-05-30_07-01_AM]
 hand_number = "OM32896459"
 filename = "2025-05-30_ 07-01_AM_$1_$2_#32896459.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32896459_2025-05-30_07-01_AM.positions]
 top_left = "Get2TheRiver"
@@ -4656,7 +4656,7 @@ bottom = "TeddyKGBEEF"
 [results.OM32927174_2025-05-30_07-08_AM]
 hand_number = "OM32927174"
 filename = "2025-05-30_ 07-08_AM_$1_$2_#32927174.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32927174_2025-05-30_07-08_AM.positions]
 top_left = "Liisa Ann"
@@ -4668,7 +4668,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32927455_2025-05-30_07-35_AM]
 hand_number = "OM32927455"
 filename = "2025-05-30_ 07-35_AM_$1_$2_#32927455.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32927455_2025-05-30_07-35_AM.positions]
 top_left = "Get2TheRiver"
@@ -4680,7 +4680,7 @@ bottom = "TeddyKGBEEF"
 [results.OM32917307_2025-05-30_07-38_AM]
 hand_number = "OM32917307"
 filename = "2025-05-30_ 07-38_AM_$1_$2_#32917307.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32917307_2025-05-30_07-38_AM.positions]
 top_left = "Fernanado"
@@ -4692,7 +4692,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32927541_2025-05-30_07-42_AM]
 hand_number = "OM32927541"
 filename = "2025-05-30_ 07-42_AM_$1_$2_#32927541.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32927541_2025-05-30_07-42_AM.positions]
 top_left = "Get2TheRiver"
@@ -4704,7 +4704,7 @@ bottom = "TeddyKGBEEF"
 [results.OM32951265_2025-05-30_07-45_AM]
 hand_number = "OM32951265"
 filename = "2025-05-30_ 07-45_AM_$1_$2_#32951265.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32951265_2025-05-30_07-45_AM.positions]
 top_left = "kokosikkk"
@@ -4716,7 +4716,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32885505_2025-05-30_07-52_AM]
 hand_number = "OM32885505"
 filename = "2025-05-30_ 07-52_AM_$1_$2_#32885505.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32885505_2025-05-30_07-52_AM.positions]
 top_left = "Liisa Ann"
@@ -4728,7 +4728,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32917464_2025-05-30_08-00_AM]
 hand_number = "OM32917464"
 filename = "2025-05-30_ 08-00_AM_$1_$2_#32917464.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32917464_2025-05-30_08-00_AM.positions]
 top_left = "Fernanado"
@@ -4740,7 +4740,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32978891_2025-05-31_03-34_AM]
 hand_number = "OM32978891"
 filename = "2025-05-31_ 03-34_AM_$2_$5_#32978891.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32978891_2025-05-31_03-34_AM.positions]
 top_left = "OmahaOmahaO.."
@@ -4752,7 +4752,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33064680_2025-05-31_03-42_AM]
 hand_number = "OM33064680"
 filename = "2025-05-31_ 03-42_AM_$2_$5_#33064680.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33064680_2025-05-31_03-42_AM.positions]
 top_left = "WisdomOfTra.."
@@ -4764,7 +4764,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33036683_2025-05-31_03-58_AM]
 hand_number = "OM33036683"
 filename = "2025-05-31_ 03-58_AM_$1_$2_#33036683.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33036683_2025-05-31_03-58_AM.positions]
 top_left = "Poipui"
@@ -4776,7 +4776,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33064893_2025-05-31_04-08_AM]
 hand_number = "OM33064893"
 filename = "2025-05-31_ 04-08_AM_$2_$5_#33064893.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33064893_2025-05-31_04-08_AM.positions]
 top_left = "Soeur Mirna"
@@ -4788,7 +4788,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33064991_2025-05-31_04-19_AM]
 hand_number = "OM33064991"
 filename = "2025-05-31_ 04-19_AM_$2_$5_#33064991.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33064991_2025-05-31_04-19_AM.positions]
 top_left = "prosor"
@@ -4800,7 +4800,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32979201_2025-05-31_04-30_AM]
 hand_number = "OM32979201"
 filename = "2025-05-31_ 04-30_AM_$1_$2_#32979201.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32979201_2025-05-31_04-30_AM.positions]
 top_left = "boulhk"
@@ -4812,7 +4812,7 @@ bottom = "TeddyKGBEEF"
 [results.OM32979258_2025-05-31_04-36_AM]
 hand_number = "OM32979258"
 filename = "2025-05-31_ 04-36_AM_$2_$5_#32979258.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32979258_2025-05-31_04-36_AM.positions]
 top_left = "000MahAAA"
@@ -4824,7 +4824,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33045805_2025-05-31_04-56_AM]
 hand_number = "OM33045805"
 filename = "2025-05-31_ 04-56_AM_$2_$5_#33045805.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33045805_2025-05-31_04-56_AM.positions]
 top_left = "Potshipper"
@@ -4836,7 +4836,7 @@ bottom = "TeddyKGBEEF"
 [results.OM32979393_2025-05-31_04-59_AM]
 hand_number = "OM32979393"
 filename = "2025-05-31_ 04-59_AM_$2_$5_#32979393.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32979393_2025-05-31_04-59_AM.positions]
 top_left = "000MahAAA"
@@ -4848,7 +4848,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33045847_2025-05-31_04-59_AM]
 hand_number = "OM33045847"
 filename = "2025-05-31_ 04-59_AM_$2_$5_#33045847.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33045847_2025-05-31_04-59_AM.positions]
 top_left = "Potshipper"
@@ -4860,7 +4860,7 @@ bottom = "TeddyKGBEEF"
 [results.OM33045939_2025-05-31_05-12_AM]
 hand_number = "OM33045939"
 filename = "2025-05-31_ 05-12_AM_$2_$5_#33045939.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33045939_2025-05-31_05-12_AM.positions]
 top_left = "Potshipper"
@@ -4872,7 +4872,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33045993_2025-05-31_05-14_AM]
 hand_number = "OM33045993"
 filename = "2025-05-31_ 05-14_AM_$2_$5_#33045993.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33045993_2025-05-31_05-14_AM.positions]
 top_left = "Iron-Jarhead"
@@ -4884,7 +4884,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33054497_2025-05-31_05-15_AM]
 hand_number = "OM33054497"
 filename = "2025-05-31_ 05-15_AM_$1_$2_#33054497.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33054497_2025-05-31_05-15_AM.positions]
 top_left = "p0kerParty"
@@ -4896,7 +4896,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33046000_2025-05-31_05-15_AM]
 hand_number = "OM33046000"
 filename = "2025-05-31_ 05-15_AM_$2_$5_#33046000.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33046000_2025-05-31_05-15_AM.positions]
 top_left = "Potshipper"
@@ -4908,7 +4908,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33046013_2025-05-31_05-17_AM]
 hand_number = "OM33046013"
 filename = "2025-05-31_ 05-17_AM_$2_$5_#33046013.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33046013_2025-05-31_05-17_AM.positions]
 top_left = "Potshipper"
@@ -4920,7 +4920,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33065488_2025-05-31_05-25_AM]
 hand_number = "OM33065488"
 filename = "2025-05-31_ 05-25_AM_$2_$5_#33065488.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33065488_2025-05-31_05-25_AM.positions]
 top_left = "showmethemo.."
@@ -4932,7 +4932,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32979672_2025-05-31_05-52_AM]
 hand_number = "OM32979672"
 filename = "2025-05-31_ 05-52_AM_$2_$5_#32979672.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32979672_2025-05-31_05-52_AM.positions]
 top_left = "000MahAAA"
@@ -4944,7 +4944,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33046374_2025-05-31_05-53_AM]
 hand_number = "OM33046374"
 filename = "2025-05-31_ 05-53_AM_$2_$5_#33046374.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33046374_2025-05-31_05-53_AM.positions]
 top_left = ""
@@ -4956,7 +4956,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32979718_2025-05-31_06-01_AM]
 hand_number = "OM32979718"
 filename = "2025-05-31_ 06-01_AM_$2_$5_#32979718.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32979718_2025-05-31_06-01_AM.positions]
 top_left = "000MahAAA"
@@ -4968,7 +4968,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33065743_2025-05-31_06-02_AM]
 hand_number = "OM33065743"
 filename = "2025-05-31_ 06-02_AM_$2_$5_#33065743.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33065743_2025-05-31_06-02_AM.positions]
 top_left = "doTheConga"
@@ -4980,7 +4980,7 @@ bottom = "TeddyKGBEEF"
 [results.OM33065871_2025-05-31_06-17_AM]
 hand_number = "OM33065871"
 filename = "2025-05-31_ 06-17_AM_$2_$5_#33065871.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33065871_2025-05-31_06-17_AM.positions]
 top_left = ""
@@ -4992,7 +4992,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33080324_2025-05-31_06-17_AM]
 hand_number = "OM33080324"
 filename = "2025-05-31_ 06-17_AM_$2_$5_#33080324.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33080324_2025-05-31_06-17_AM.positions]
 top_left = ""
@@ -5004,7 +5004,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33071385_2025-05-31_06-21_AM]
 hand_number = "OM33071385"
 filename = "2025-05-31_ 06-21_AM_$1_$2_#33071385.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33071385_2025-05-31_06-21_AM.positions]
 top_left = "bulldogboy"
@@ -5016,7 +5016,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33080361_2025-05-31_06-24_AM]
 hand_number = "OM33080361"
 filename = "2025-05-31_ 06-24_AM_$2_$5_#33080361.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33080361_2025-05-31_06-24_AM.positions]
 top_left = "zzzz1979"
@@ -5028,7 +5028,7 @@ bottom = "TeddyKGBEEF"
 [results.OM33080373_2025-05-31_06-26_AM]
 hand_number = "OM33080373"
 filename = "2025-05-31_ 06-26_AM_$2_$5_#33080373.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33080373_2025-05-31_06-26_AM.positions]
 top_left = "zzzz1979"
@@ -5040,7 +5040,7 @@ bottom = "TeddyKGBEEF"
 [results.OM33066013_2025-05-31_06-34_AM]
 hand_number = "OM33066013"
 filename = "2025-05-31_ 06-34_AM_$2_$5_#33066013.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33066013_2025-05-31_06-34_AM.positions]
 top_left = "OOOMahAAA"
@@ -5052,7 +5052,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33066045_2025-05-31_06-37_AM]
 hand_number = "OM33066045"
 filename = "2025-05-31_ 06-37_AM_$2_$5_#33066045.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33066045_2025-05-31_06-37_AM.positions]
 top_left = "000MahAAA"
@@ -5064,7 +5064,7 @@ bottom = "TeddyKGBEEE"
 [results.OM32979933_2025-05-31_06-52_AM]
 hand_number = "OM32979933"
 filename = "2025-05-31_ 06-52_AM_$2_$5_#32979933.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM32979933_2025-05-31_06-52_AM.positions]
 top_left = "MMMkk321"
@@ -5076,7 +5076,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33181060_2025-06-01_03-25_AM]
 hand_number = "OM33181060"
 filename = "2025-06-01_ 03-25_AM_$2_$5_#33181060.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33181060_2025-06-01_03-25_AM.positions]
 top_left = ""
@@ -5088,7 +5088,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33125692_2025-06-01_03-45_AM]
 hand_number = "OM33125692"
 filename = "2025-06-01_ 03-45_AM_$1_$2_#33125692.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33125692_2025-06-01_03-45_AM.positions]
 top_left = "KannonePLAYA"
@@ -5100,7 +5100,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33181186_2025-06-01_03-45_AM]
 hand_number = "OM33181186"
 filename = "2025-06-01_ 03-45_AM_$2_$5_#33181186.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33181186_2025-06-01_03-45_AM.positions]
 top_left = ""
@@ -5112,7 +5112,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33125704_2025-06-01_03-48_AM]
 hand_number = "OM33125704"
 filename = "2025-06-01_ 03-48_AM_$1_$2_#33125704.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33125704_2025-06-01_03-48_AM.positions]
 top_left = "KannonePLAYA"
@@ -5124,7 +5124,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33172499_2025-06-01_03-49_AM]
 hand_number = "OM33172499"
 filename = "2025-06-01_ 03-49_AM_$1_$2_#33172499.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33172499_2025-06-01_03-49_AM.positions]
 top_left = "Melirazayii"
@@ -5136,7 +5136,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33172664_2025-06-01_04-28_AM]
 hand_number = "OM33172664"
 filename = "2025-06-01_ 04-28_AM_$1_$2_#33172664.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33172664_2025-06-01_04-28_AM.positions]
 top_left = "Melirazayii"
@@ -5148,7 +5148,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33230297_2025-06-01_04-33_AM]
 hand_number = "OM33230297"
 filename = "2025-06-01_ 04-33_AM_$1_$2_#33230297.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33230297_2025-06-01_04-33_AM.positions]
 top_left = "odonkey"
@@ -5160,7 +5160,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33181430_2025-06-01_04-45_AM]
 hand_number = "OM33181430"
 filename = "2025-06-01_ 04-45_AM_$2_$5_#33181430.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33181430_2025-06-01_04-45_AM.positions]
 top_left = "wisdomOfTra.."
@@ -5172,7 +5172,7 @@ bottom = "TeddyKGBEEF"
 [results.OM33172734_2025-06-01_04-53_AM]
 hand_number = "OM33172734"
 filename = "2025-06-01_ 04-53_AM_$1_$2_#33172734.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33172734_2025-06-01_04-53_AM.positions]
 top_left = "Melirazavii"
@@ -5184,7 +5184,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33201450_2025-06-01_05-08_AM]
 hand_number = "OM33201450"
 filename = "2025-06-01_ 05-08_AM_$1_$2_#33201450.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33201450_2025-06-01_05-08_AM.positions]
 top_left = "Liisa Ann"
@@ -5196,7 +5196,7 @@ bottom = "TeddyKGBEEF"
 [results.OM33181561_2025-06-01_05-09_AM]
 hand_number = "OM33181561"
 filename = "2025-06-01_ 05-09_AM_$2_$5_#33181561.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33181561_2025-06-01_05-09_AM.positions]
 top_left = ""
@@ -5208,7 +5208,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33266617_2025-06-02_03-59_AM]
 hand_number = "OM33266617"
 filename = "2025-06-02_ 03-59_AM_$1_$2_#33266617.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33266617_2025-06-02_03-59_AM.positions]
 top_left = "tanxdax"
@@ -5220,7 +5220,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33266634_2025-06-02_04-04_AM]
 hand_number = "OM33266634"
 filename = "2025-06-02_ 04-04_AM_$1_$2_#33266634.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33266634_2025-06-02_04-04_AM.positions]
 top_left = ""
@@ -5232,7 +5232,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33266797_2025-06-02_04-30_AM]
 hand_number = "OM33266797"
 filename = "2025-06-02_ 04-30_AM_$1_$2_#33266797.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33266797_2025-06-02_04-30_AM.positions]
 top_left = ""
@@ -5244,7 +5244,7 @@ bottom = "TeddyKGBEEF"
 [results.OM33266809_2025-06-02_04-32_AM]
 hand_number = "OM33266809"
 filename = "2025-06-02_ 04-32_AM_$1_$2_#33266809.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33266809_2025-06-02_04-32_AM.positions]
 top_left = ""
@@ -5256,7 +5256,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33266873_2025-06-02_04-41_AM]
 hand_number = "OM33266873"
 filename = "2025-06-02_ 04-41_AM_$1_$2_#33266873.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33266873_2025-06-02_04-41_AM.positions]
 top_left = "PropbR0s"
@@ -5268,7 +5268,7 @@ bottom = "TeddyKGBEEF"
 [results.OM33293255_2025-06-02_04-49_AM]
 hand_number = "OM33293255"
 filename = "2025-06-02_ 04-49_AM_$2_$5_#33293255.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33293255_2025-06-02_04-49_AM.positions]
 top_left = "Dor Vaknin"
@@ -5280,7 +5280,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33266934_2025-06-02_04-52_AM]
 hand_number = "OM33266934"
 filename = "2025-06-02_ 04-52_AM_$1_$2_#33266934.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33266934_2025-06-02_04-52_AM.positions]
 top_left = "sesalec"
@@ -5292,7 +5292,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33303879_2025-06-02_04-59_AM]
 hand_number = "OM33303879"
 filename = "2025-06-02_ 04-59_AM_$1_$2_#33303879.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33303879_2025-06-02_04-59_AM.positions]
 top_left = "alexandrinh.."
@@ -5304,7 +5304,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33293318_2025-06-02_05-13_AM]
 hand_number = "OM33293318"
 filename = "2025-06-02_ 05-13_AM_$2_$5_#33293318.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33293318_2025-06-02_05-13_AM.positions]
 top_left = "Dor Vaknin"
@@ -5316,7 +5316,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33259940_2025-06-02_05-15_AM]
 hand_number = "OM33259940"
 filename = "2025-06-02_ 05-15_AM_$2_$5_#33259940.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33259940_2025-06-02_05-15_AM.positions]
 top_left = "Melitab"
@@ -5328,7 +5328,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33340008_2025-06-02_05-34_AM]
 hand_number = "OM33340008"
 filename = "2025-06-02_ 05-34_AM_$2_$5_#33340008.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33340008_2025-06-02_05-34_AM.positions]
 top_left = ""
@@ -5340,7 +5340,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33340034_2025-06-02_05-40_AM]
 hand_number = "OM33340034"
 filename = "2025-06-02_ 05-40_AM_$2_$5_#33340034.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33340034_2025-06-02_05-40_AM.positions]
 top_left = "BURRRO"
@@ -5352,7 +5352,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33293482_2025-06-02_05-50_AM]
 hand_number = "OM33293482"
 filename = "2025-06-02_ 05-50_AM_$2_$5_#33293482.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33293482_2025-06-02_05-50_AM.positions]
 top_left = "Dor Vaknin"
@@ -5364,7 +5364,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33340079_2025-06-02_05-55_AM]
 hand_number = "OM33340079"
 filename = "2025-06-02_ 05-55_AM_$2_$5_#33340079.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33340079_2025-06-02_05-55_AM.positions]
 top_left = "BURRRO"
@@ -5376,7 +5376,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33267537_2025-06-02_05-57_AM]
 hand_number = "OM33267537"
 filename = "2025-06-02_ 05-57_AM_$2_$5_#33267537.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33267537_2025-06-02_05-57_AM.positions]
 top_left = ""
@@ -5388,7 +5388,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33267603_2025-06-02_06-01_AM]
 hand_number = "OM33267603"
 filename = "2025-06-02_ 06-01_AM_$2_$5_#33267603.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33267603_2025-06-02_06-01_AM.positions]
 top_left = "gutshotknob"
@@ -5400,7 +5400,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33267795_2025-06-02_06-19_AM]
 hand_number = "OM33267795"
 filename = "2025-06-02_ 06-19_AM_$2_$5_#33267795.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33267795_2025-06-02_06-19_AM.positions]
 top_left = "gutshotknob"
@@ -5412,7 +5412,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33267841_2025-06-02_06-22_AM]
 hand_number = "OM33267841"
 filename = "2025-06-02_ 06-22_AM_$2_$5_#33267841.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33267841_2025-06-02_06-22_AM.positions]
 top_left = "gutshotknob"
@@ -5424,7 +5424,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33267907_2025-06-02_06-27_AM]
 hand_number = "OM33267907"
 filename = "2025-06-02_ 06-27_AM_$2_$5_#33267907.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33267907_2025-06-02_06-27_AM.positions]
 top_left = "gutshotknob"
@@ -5436,7 +5436,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33916619_2025-06-07_03-48_AM]
 hand_number = "OM33916619"
 filename = "2025-06-07_ 03-48_AM_$2_$5_#33916619.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33916619_2025-06-07_03-48_AM.positions]
 top_left = "PlayTwice"
@@ -5448,7 +5448,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34002290_2025-06-07_04-37_AM]
 hand_number = "OM34002290"
 filename = "2025-06-07_ 04-37_AM_$2_$5_#34002290.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34002290_2025-06-07_04-37_AM.positions]
 top_left = "JackPotPls1.."
@@ -5460,7 +5460,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33973804_2025-06-07_04-38_AM]
 hand_number = "OM33973804"
 filename = "2025-06-07_ 04-38_AM_$5_$10_#33973804.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33973804_2025-06-07_04-38_AM.positions]
 top_left = "AiltonJrpc"
@@ -5472,7 +5472,7 @@ bottom = "TeddyKGBEEF"
 [results.OM33963856_2025-06-07_04-41_AM]
 hand_number = "OM33963856"
 filename = "2025-06-07_ 04-41_AM_$2_$5_#33963856.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33963856_2025-06-07_04-41_AM.positions]
 top_left = "sebaru"
@@ -5484,7 +5484,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34030542_2025-06-07_05-31_AM]
 hand_number = "OM34030542"
 filename = "2025-06-07_ 05-31_AM_$5_$10_#34030542.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34030542_2025-06-07_05-31_AM.positions]
 top_left = ""
@@ -5496,7 +5496,7 @@ bottom = "TeddyKGBEEE"
 [results.OM33963921_2025-06-07_05-34_AM]
 hand_number = "OM33963921"
 filename = "2025-06-07_ 05-34_AM_$2_$5_#33963921.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33963921_2025-06-07_05-34_AM.positions]
 top_left = "doTheConga"
@@ -5508,7 +5508,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34002797_2025-06-07_05-38_AM]
 hand_number = "OM34002797"
 filename = "2025-06-07_ 05-38_AM_$2_$5_#34002797.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34002797_2025-06-07_05-38_AM.positions]
 top_left = "Bigdaddydex"
@@ -5520,7 +5520,7 @@ bottom = "TeddyKGBEEF"
 [results.OM33996027_2025-06-07_05-41_AM]
 hand_number = "OM33996027"
 filename = "2025-06-07_ 05-41_AM_$2_$5_#33996027.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM33996027_2025-06-07_05-41_AM.positions]
 top_left = "Aleksei Pet.."
@@ -5532,7 +5532,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34002837_2025-06-07_05-45_AM]
 hand_number = "OM34002837"
 filename = "2025-06-07_ 05-45_AM_$2_$5_#34002837.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34002837_2025-06-07_05-45_AM.positions]
 top_left = ""
@@ -5544,7 +5544,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34002844_2025-06-07_05-46_AM]
 hand_number = "OM34002844"
 filename = "2025-06-07_ 05-46_AM_$2_$5_#34002844.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34002844_2025-06-07_05-46_AM.positions]
 top_left = ""
@@ -5556,7 +5556,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34176122_2025-06-09_04-09_AM]
 hand_number = "OM34176122"
 filename = "2025-06-09_ 04-09_AM_$2_$5_#34176122.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34176122_2025-06-09_04-09_AM.positions]
 top_left = "WisdomOfTra.."
@@ -5568,7 +5568,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34176150_2025-06-09_04-15_AM]
 hand_number = "OM34176150"
 filename = "2025-06-09_ 04-15_AM_$5_$10_#34176150.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34176150_2025-06-09_04-15_AM.positions]
 top_left = "WisdomOfTra.."
@@ -5580,7 +5580,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34176368_2025-06-09_04-52_AM]
 hand_number = "OM34176368"
 filename = "2025-06-09_ 04-52_AM_$2_$5_#34176368.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34176368_2025-06-09_04-52_AM.positions]
 top_left = ""
@@ -5592,7 +5592,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34261033_2025-06-09_04-52_AM]
 hand_number = "OM34261033"
 filename = "2025-06-09_ 04-52_AM_$2_$5_#34261033.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34261033_2025-06-09_04-52_AM.positions]
 top_left = "Technosphera"
@@ -5604,7 +5604,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34176415_2025-06-09_04-57_AM]
 hand_number = "OM34176415"
 filename = "2025-06-09_ 04-57_AM_$5_$10_#34176415.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34176415_2025-06-09_04-57_AM.positions]
 top_left = "F0re1qnerMe.."
@@ -5616,7 +5616,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34176431_2025-06-09_05-00_AM]
 hand_number = "OM34176431"
 filename = "2025-06-09_ 05-00_AM_$5_$10_#34176431.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34176431_2025-06-09_05-00_AM.positions]
 top_left = "F0re1qnerMe.."
@@ -5628,7 +5628,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34226571_2025-06-09_05-03_AM]
 hand_number = "OM34226571"
 filename = "2025-06-09_ 05-03_AM_$2_$5_#34226571.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34226571_2025-06-09_05-03_AM.positions]
 top_left = "Liisa Ann"
@@ -5640,7 +5640,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34226813_2025-06-09_05-21_AM]
 hand_number = "OM34226813"
 filename = "2025-06-09_ 05-21_AM_$2_$5_#34226813.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34226813_2025-06-09_05-21_AM.positions]
 top_left = ""
@@ -5652,7 +5652,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34176653_2025-06-09_05-25_AM]
 hand_number = "OM34176653"
 filename = "2025-06-09_ 05-25_AM_$2_$5_#34176653.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34176653_2025-06-09_05-25_AM.positions]
 top_left = "sebaru"
@@ -5664,7 +5664,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34176711_2025-06-09_05-32_AM]
 hand_number = "OM34176711"
 filename = "2025-06-09_ 05-32_AM_$2_$5_#34176711.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34176711_2025-06-09_05-32_AM.positions]
 top_left = "sebaru"
@@ -5676,7 +5676,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34176825_2025-06-09_05-46_AM]
 hand_number = "OM34176825"
 filename = "2025-06-09_ 05-46_AM_$5_$10_#34176825.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34176825_2025-06-09_05-46_AM.positions]
 top_left = "F0re1qnerMe.."
@@ -5688,7 +5688,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34176849_2025-06-09_05-49_AM]
 hand_number = "OM34176849"
 filename = "2025-06-09_ 05-49_AM_$5_$10_#34176849.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34176849_2025-06-09_05-49_AM.positions]
 top_left = "F0re1qnerMe.."
@@ -5700,7 +5700,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34519612_2025-06-12_02-13_AM]
 hand_number = "OM34519612"
 filename = "2025-06-12_ 02-13_AM_$2_$5_#34519612.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34519612_2025-06-12_02-13_AM.positions]
 top_left = ""
@@ -5712,7 +5712,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34519621_2025-06-12_02-16_AM]
 hand_number = "OM34519621"
 filename = "2025-06-12_ 02-16_AM_$2_$5_#34519621.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34519621_2025-06-12_02-16_AM.positions]
 top_left = ""
@@ -5724,7 +5724,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34641524_2025-06-12_02-20_AM]
 hand_number = "OM34641524"
 filename = "2025-06-12_ 02-20_AM_$2_$5_#34641524.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34641524_2025-06-12_02-20_AM.positions]
 top_left = "batoura"
@@ -5736,7 +5736,7 @@ bottom = ""
 [results.OM34651531_2025-06-12_02-23_AM]
 hand_number = "OM34651531"
 filename = "2025-06-12_ 02-23_AM_$2_$5_#34651531.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34651531_2025-06-12_02-23_AM.positions]
 top_left = ""
@@ -5748,7 +5748,7 @@ bottom = "Monk3yTILT!"
 [results.OM34641584_2025-06-12_02-29_AM]
 hand_number = "OM34641584"
 filename = "2025-06-12_ 02-29_AM_$2_$5_#34641584.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34641584_2025-06-12_02-29_AM.positions]
 top_left = ""
@@ -5760,7 +5760,7 @@ bottom = "Leogois1"
 [results.OM34519713_2025-06-12_02-45_AM]
 hand_number = "OM34519713"
 filename = "2025-06-12_ 02-45_AM_$5_$10_#34519713.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34519713_2025-06-12_02-45_AM.positions]
 top_left = "Le Bouffeur"
@@ -5772,7 +5772,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34660058_2025-06-12_02-52_AM]
 hand_number = "OM34660058"
 filename = "2025-06-12_ 02-52_AM_$10_$20_#34660058.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34660058_2025-06-12_02-52_AM.positions]
 top_left = "Hit hit!"
@@ -5784,7 +5784,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34519816_2025-06-12_03-15_AM]
 hand_number = "OM34519816"
 filename = "2025-06-12_ 03-15_AM_$2_$5_#34519816.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34519816_2025-06-12_03-15_AM.positions]
 top_left = "Gaucho Macho"
@@ -5796,7 +5796,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34652300_2025-06-12_03-28_AM]
 hand_number = "OM34652300"
 filename = "2025-06-12_ 03-28_AM_$1_$2_#34652300.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34652300_2025-06-12_03-28_AM.positions]
 top_left = "Runing hot"
@@ -5808,7 +5808,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34623830_2025-06-12_03-42_AM]
 hand_number = "OM34623830"
 filename = "2025-06-12_ 03-42_AM_$5_$10_#34623830.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34623830_2025-06-12_03-42_AM.positions]
 top_left = ""
@@ -5820,7 +5820,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34623847_2025-06-12_03-44_AM]
 hand_number = "OM34623847"
 filename = "2025-06-12_ 03-44_AM_$5_$10_#34623847.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34623847_2025-06-12_03-44_AM.positions]
 top_left = ""
@@ -5832,7 +5832,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34585653_2025-06-12_04-13_AM]
 hand_number = "OM34585653"
 filename = "2025-06-12_ 04-13_AM_$1_$2_#34585653.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34585653_2025-06-12_04-13_AM.positions]
 top_left = "Ant34dai"
@@ -5844,7 +5844,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34624015_2025-06-12_04-13_AM]
 hand_number = "OM34624015"
 filename = "2025-06-12_ 04-13_AM_$5_$10_#34624015.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34624015_2025-06-12_04-13_AM.positions]
 top_left = "Monk3yTILT!"
@@ -5856,7 +5856,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34585668_2025-06-12_04-16_AM]
 hand_number = "OM34585668"
 filename = "2025-06-12_ 04-16_AM_$1_$2_#34585668.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34585668_2025-06-12_04-16_AM.positions]
 top_left = "Ant34dai"
@@ -5868,7 +5868,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34624031_2025-06-12_04-16_AM]
 hand_number = "OM34624031"
 filename = "2025-06-12_ 04-16_AM_$5_$10_#34624031.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34624031_2025-06-12_04-16_AM.positions]
 top_left = "Monk3yTILT!"
@@ -5880,7 +5880,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34624183_2025-06-12_04-43_AM]
 hand_number = "OM34624183"
 filename = "2025-06-12_ 04-43_AM_$5_$10_#34624183.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34624183_2025-06-12_04-43_AM.positions]
 top_left = "Monk3yTILT!"
@@ -5892,7 +5892,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34595536_2025-06-12_04-45_AM]
 hand_number = "OM34595536"
 filename = "2025-06-12_ 04-45_AM_$10_$20_#34595536.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34595536_2025-06-12_04-45_AM.positions]
 top_left = "Pandadth"
@@ -5904,7 +5904,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34595635_2025-06-12_05-04_AM]
 hand_number = "OM34595635"
 filename = "2025-06-12_ 05-04_AM_$10_$20_#34595635.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34595635_2025-06-12_05-04_AM.positions]
 top_left = "Man Spaghet.."
@@ -5916,7 +5916,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34653372_2025-06-12_05-25_AM]
 hand_number = "OM34653372"
 filename = "2025-06-12_ 05-25_AM_$2_$5_#34653372.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34653372_2025-06-12_05-25_AM.positions]
 top_left = "sebaru"
@@ -5928,7 +5928,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34709124_2025-06-13_01-52_AM]
 hand_number = "OM34709124"
 filename = "2025-06-13_ 01-52_AM_$2_$5_#34709124.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34709124_2025-06-13_01-52_AM.positions]
 top_left = "Monk3yTILT!"
@@ -5940,7 +5940,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34773136_2025-06-13_01-52_AM]
 hand_number = "OM34773136"
 filename = "2025-06-13_ 01-52_AM_$2_$5_#34773136.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34773136_2025-06-13_01-52_AM.positions]
 top_left = "nemce"
@@ -5952,7 +5952,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34773313_2025-06-13_02-09_AM]
 hand_number = "OM34773313"
 filename = "2025-06-13_ 02-09_AM_$2_$5_#34773313.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34773313_2025-06-13_02-09_AM.positions]
 top_left = "nemce"
@@ -5964,7 +5964,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34709345_2025-06-13_02-23_AM]
 hand_number = "OM34709345"
 filename = "2025-06-13_ 02-23_AM_$2_$5_#34709345.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34709345_2025-06-13_02-23_AM.positions]
 top_left = "Monk3yTILT!"
@@ -5976,7 +5976,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34765084_2025-06-13_02-44_AM]
 hand_number = "OM34765084"
 filename = "2025-06-13_ 02-44_AM_$2_$5_#34765084.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34765084_2025-06-13_02-44_AM.positions]
 top_left = "deurnebef"
@@ -5988,7 +5988,7 @@ bottom = "TeddyKGBEEF"
 [results.OM34736056_2025-06-13_03-13_AM]
 hand_number = "OM34736056"
 filename = "2025-06-13_ 03-13_AM_$2_$5_#34736056.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34736056_2025-06-13_03-13_AM.positions]
 top_left = "CardCon"
@@ -6000,7 +6000,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34765211_2025-06-13_03-15_AM]
 hand_number = "OM34765211"
 filename = "2025-06-13_ 03-15_AM_$2_$5_#34765211.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34765211_2025-06-13_03-15_AM.positions]
 top_left = "Realife"
@@ -6012,7 +6012,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34736129_2025-06-13_03-21_AM]
 hand_number = "OM34736129"
 filename = "2025-06-13_ 03-21_AM_$2_$5_#34736129.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34736129_2025-06-13_03-21_AM.positions]
 top_left = "CardCon"
@@ -6024,7 +6024,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34736351_2025-06-13_03-47_AM]
 hand_number = "OM34736351"
 filename = "2025-06-13_ 03-47_AM_$2_$5_#34736351.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34736351_2025-06-13_03-47_AM.positions]
 top_left = "FoodMucker"
@@ -6036,7 +6036,7 @@ bottom = "TeddyKGBEEE"
 [results.OM34933653_2025-06-14_02-30_AM]
 hand_number = "OM34933653"
 filename = "2025-06-14_ 02-30_AM_$2_$5_#34933653.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34933653_2025-06-14_02-30_AM.positions]
 top_left = "Wssafadao"
@@ -6048,7 +6048,7 @@ bottom = "philivey2964"
 [results.OM34924418_2025-06-14_02-48_AM]
 hand_number = "OM34924418"
 filename = "2025-06-14_ 02-48_AM_$2_$5_#34924418.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34924418_2025-06-14_02-48_AM.positions]
 top_left = "Monk3yTILT!"
@@ -6060,7 +6060,7 @@ bottom = "philivey2964"
 [results.OM34915385_2025-06-14_02-50_AM]
 hand_number = "OM34915385"
 filename = "2025-06-14_ 02-50_AM_$1_$2_#34915385.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34915385_2025-06-14_02-50_AM.positions]
 top_left = "Blindraise25"
@@ -6072,7 +6072,7 @@ bottom = "philivey2964"
 [results.OM34924487_2025-06-14_02-54_AM]
 hand_number = "OM34924487"
 filename = "2025-06-14_ 02-54_AM_$2_$5_#34924487.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34924487_2025-06-14_02-54_AM.positions]
 top_left = ""
@@ -6084,7 +6084,7 @@ bottom = "philivey2964"
 [results.OM34924665_2025-06-14_03-07_AM]
 hand_number = "OM34924665"
 filename = "2025-06-14_ 03-07_AM_$2_$5_#34924665.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34924665_2025-06-14_03-07_AM.positions]
 top_left = "Sven Skurve.."
@@ -6096,7 +6096,7 @@ bottom = "philivey2964"
 [results.OM34924686_2025-06-14_03-10_AM]
 hand_number = "OM34924686"
 filename = "2025-06-14_ 03-10_AM_$2_$5_#34924686.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34924686_2025-06-14_03-10_AM.positions]
 top_left = "Ale Giannel.."
@@ -6108,7 +6108,7 @@ bottom = "philivey2964"
 [results.OM34924889_2025-06-14_03-28_AM]
 hand_number = "OM34924889"
 filename = "2025-06-14_ 03-28_AM_$2_$5_#34924889.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34924889_2025-06-14_03-28_AM.positions]
 top_left = "OtecDominic"
@@ -6120,7 +6120,7 @@ bottom = "philivey2964"
 [results.OM34925321_2025-06-14_04-07_AM]
 hand_number = "OM34925321"
 filename = "2025-06-14_ 04-07_AM_$2_$5_#34925321.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34925321_2025-06-14_04-07_AM.positions]
 top_left = "CHINA@1"
@@ -6132,7 +6132,7 @@ bottom = "philivey2964"
 [results.OM34925568_2025-06-14_04-26_AM]
 hand_number = "OM34925568"
 filename = "2025-06-14_ 04-26_AM_$2_$5_#34925568.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34925568_2025-06-14_04-26_AM.positions]
 top_left = "Sven Skurve.."
@@ -6144,7 +6144,7 @@ bottom = "philivey2964"
 [results.OM34925607_2025-06-14_04-32_AM]
 hand_number = "OM34925607"
 filename = "2025-06-14_ 04-32_AM_$2_$5_#34925607.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34925607_2025-06-14_04-32_AM.positions]
 top_left = "CaesarMarcu.."
@@ -6156,7 +6156,7 @@ bottom = "philivey2964"
 [results.OM34858615_2025-06-14_04-49_AM]
 hand_number = "OM34858615"
 filename = "2025-06-14_ 04-49_AM_$2_$5_#34858615.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34858615_2025-06-14_04-49_AM.positions]
 top_left = ""
@@ -6168,7 +6168,7 @@ bottom = "Sven Skurve.."
 [results.OM34971219_2025-06-14_04-57_AM]
 hand_number = "OM34971219"
 filename = "2025-06-14_ 04-57_AM_$2_$5_#34971219.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34971219_2025-06-14_04-57_AM.positions]
 top_left = "shubidubi"
@@ -6180,7 +6180,7 @@ bottom = "philivey2964"
 [results.OM34858700_2025-06-14_05-09_AM]
 hand_number = "OM34858700"
 filename = "2025-06-14_ 05-09_AM_$2_$5_#34858700.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34858700_2025-06-14_05-09_AM.positions]
 top_left = ""
@@ -6192,7 +6192,7 @@ bottom = "philivey2964"
 [results.OM34916646_2025-06-14_05-20_AM]
 hand_number = "OM34916646"
 filename = "2025-06-14_ 05-20_AM_$2_$5_#34916646.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34916646_2025-06-14_05-20_AM.positions]
 top_left = "prosor"
@@ -6204,7 +6204,7 @@ bottom = "philivey2964"
 [results.OM34916657_2025-06-14_05-23_AM]
 hand_number = "OM34916657"
 filename = "2025-06-14_ 05-23_AM_$2_$5_#34916657.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34916657_2025-06-14_05-23_AM.positions]
 top_left = "prosor"
@@ -6216,7 +6216,7 @@ bottom = "philivey2964"
 [results.OM34935828_2025-06-14_05-26_AM]
 hand_number = "OM34935828"
 filename = "2025-06-14_ 05-26_AM_$2_$5_#34935828.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM34935828_2025-06-14_05-26_AM.positions]
 top_left = "Sven Skurve.."
@@ -6228,7 +6228,7 @@ bottom = "philivey2964"
 [results.OM38443183_2025-07-10_01-15_PM]
 hand_number = "OM38443183"
 filename = "2025-07-10_ 01-15_PM_$2_$5_#38443183.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38443183_2025-07-10_01-15_PM.positions]
 top_left = "Fernanado"
@@ -6240,7 +6240,7 @@ bottom = "philivey2964"
 [results.OM38443243_2025-07-10_01-21_PM]
 hand_number = "OM38443243"
 filename = "2025-07-10_ 01-21_PM_$2_$5_#38443243.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38443243_2025-07-10_01-21_PM.positions]
 top_left = "Fernanado"
@@ -6252,7 +6252,7 @@ bottom = "philivey2964"
 [results.OM38379728_2025-07-10_01-35_PM]
 hand_number = "OM38379728"
 filename = "2025-07-10_ 01-35_PM_$2_$5_#38379728.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38379728_2025-07-10_01-35_PM.positions]
 top_left = "Luka Zunic"
@@ -6264,7 +6264,7 @@ bottom = "philivey2964"
 [results.OM38443353_2025-07-10_01-39_PM]
 hand_number = "OM38443353"
 filename = "2025-07-10_ 01-39_PM_$2_$5_#38443353.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38443353_2025-07-10_01-39_PM.positions]
 top_left = "Fernanado"
@@ -6276,7 +6276,7 @@ bottom = "philivey2964"
 [results.OM38442789_2025-07-10_12-08_AM]
 hand_number = "OM38442789"
 filename = "2025-07-10_ 12-08_AM_$2_$5_#38442789.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38442789_2025-07-10_12-08_AM.positions]
 top_left = "HBSil"
@@ -6288,7 +6288,7 @@ bottom = "philivey2964"
 [results.OM38442857_2025-07-10_12-20_AM]
 hand_number = "OM38442857"
 filename = "2025-07-10_ 12-20_AM_$1_$2_#38442857.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38442857_2025-07-10_12-20_AM.positions]
 top_left = "DiegoJ"
@@ -6300,7 +6300,7 @@ bottom = "philivey2964"
 [results.OM38417131_2025-07-10_12-27_AM]
 hand_number = "OM38417131"
 filename = "2025-07-10_ 12-27_AM_$1_$2_#38417131.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38417131_2025-07-10_12-27_AM.positions]
 top_left = "Alaniting"
@@ -6312,7 +6312,7 @@ bottom = "philivey2964"
 [results.OM38462692_2025-07-10_12-38_AM]
 hand_number = "OM38462692"
 filename = "2025-07-10_ 12-38_AM_$2_$5_#38462692.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38462692_2025-07-10_12-38_AM.positions]
 top_left = "abusinessman"
@@ -6324,7 +6324,7 @@ bottom = "philivey2964"
 [results.OM38570767_2025-07-11_06-30_AM]
 hand_number = "OM38570767"
 filename = "2025-07-11_ 06-30_AM_$1_$2_#38570767.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38570767_2025-07-11_06-30_AM.positions]
 top_left = "Maari"
@@ -6336,7 +6336,7 @@ bottom = "philivey2964"
 [results.OM38487747_2025-07-11_06-32_AM]
 hand_number = "OM38487747"
 filename = "2025-07-11_ 06-32_AM_$1_$2_#38487747.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38487747_2025-07-11_06-32_AM.positions]
 top_left = "Luka Zunic"
@@ -6348,7 +6348,7 @@ bottom = "philivey2964"
 [results.OM38497442_2025-07-11_06-48_AM]
 hand_number = "OM38497442"
 filename = "2025-07-11_ 06-48_AM_$1_$2_#38497442.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38497442_2025-07-11_06-48_AM.positions]
 top_left = "He Jin"
@@ -6360,7 +6360,7 @@ bottom = "philivey2964"
 [results.OM38497466_2025-07-11_06-52_AM]
 hand_number = "OM38497466"
 filename = "2025-07-11_ 06-52_AM_$1_$2_#38497466.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38497466_2025-07-11_06-52_AM.positions]
 top_left = "AsianGamble.."
@@ -6372,7 +6372,7 @@ bottom = "philivey2964"
 [results.OM38571038_2025-07-11_06-56_AM]
 hand_number = "OM38571038"
 filename = "2025-07-11_ 06-56_AM_$1_$2_#38571038.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38571038_2025-07-11_06-56_AM.positions]
 top_left = "Maari"
@@ -6384,7 +6384,7 @@ bottom = "philivey2964"
 [results.OM38664241_2025-07-12_06-46_AM]
 hand_number = "OM38664241"
 filename = "2025-07-12_ 06-46_AM_$2_$5_#38664241.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38664241_2025-07-12_06-46_AM.positions]
 top_left = "bulldogboy"
@@ -6396,7 +6396,7 @@ bottom = "philivey2964"
 [results.OM38713210_2025-07-12_09-47_AM]
 hand_number = "OM38713210"
 filename = "2025-07-12_ 09-47_AM_$2_$5_#38713210.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38713210_2025-07-12_09-47_AM.positions]
 top_left = "slyw1"
@@ -6408,7 +6408,7 @@ bottom = "philivey2964"
 [results.OM38676416_2025-07-12_10-20_AM]
 hand_number = "OM38676416"
 filename = "2025-07-12_ 10-20_AM_$2_$5_#38676416.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38676416_2025-07-12_10-20_AM.positions]
 top_left = "octagonalo7.."
@@ -6420,7 +6420,7 @@ bottom = "philivey2964"
 [results.OM38696670_2025-07-12_10-24_AM]
 hand_number = "OM38696670"
 filename = "2025-07-12_ 10-24_AM_$2_$5_#38696670.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38696670_2025-07-12_10-24_AM.positions]
 top_left = "Deniz Yelog.."
@@ -6432,7 +6432,7 @@ bottom = "philivey2964"
 [results.OM38696849_2025-07-12_10-41_AM]
 hand_number = "OM38696849"
 filename = "2025-07-12_ 10-41_AM_$2_$5_#38696849.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38696849_2025-07-12_10-41_AM.positions]
 top_left = "Deniz Yelog.."
@@ -6444,7 +6444,7 @@ bottom = "philivey2964"
 [results.OM38696873_2025-07-12_10-41_AM]
 hand_number = "OM38696873"
 filename = "2025-07-12_ 10-41_AM_$2_$5_#38696873.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38696873_2025-07-12_10-41_AM.positions]
 top_left = "Deniz Yelog.."
@@ -6456,7 +6456,7 @@ bottom = "philivey2964"
 [results.OM38696941_2025-07-12_10-48_AM]
 hand_number = "OM38696941"
 filename = "2025-07-12_ 10-48_AM_$2_$5_#38696941.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38696941_2025-07-12_10-48_AM.positions]
 top_left = ""
@@ -6468,7 +6468,7 @@ bottom = "philivey2964"
 [results.OM38871585_2025-07-13_09-22_AM]
 hand_number = "OM38871585"
 filename = "2025-07-13_ 09-22_AM_$1_$2_#38871585.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38871585_2025-07-13_09-22_AM.positions]
 top_left = "PanJapa"
@@ -6480,7 +6480,7 @@ bottom = "philivey2964"
 [results.OM38871599_2025-07-13_09-23_AM]
 hand_number = "OM38871599"
 filename = "2025-07-13_ 09-23_AM_$1_$2_#38871599.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38871599_2025-07-13_09-23_AM.positions]
 top_left = "PanJapa"
@@ -6492,7 +6492,7 @@ bottom = "philivey2964"
 [results.OM38797582_2025-07-13_09-41_AM]
 hand_number = "OM38797582"
 filename = "2025-07-13_ 09-41_AM_$2_$5_#38797582.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38797582_2025-07-13_09-41_AM.positions]
 top_left = "PanJapa"
@@ -6504,7 +6504,7 @@ bottom = "philivey2964"
 [results.OM38871907_2025-07-13_09-58_AM]
 hand_number = "OM38871907"
 filename = "2025-07-13_ 09-58_AM_$2_$5_#38871907.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38871907_2025-07-13_09-58_AM.positions]
 top_left = "P8501-1711"
@@ -6516,7 +6516,7 @@ bottom = "philivey2964"
 [results.OM38797819_2025-07-13_10-00_AM]
 hand_number = "OM38797819"
 filename = "2025-07-13_ 10-00_AM_$2_$5_#38797819.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38797819_2025-07-13_10-00_AM.positions]
 top_left = "PanJapa"
@@ -6528,7 +6528,7 @@ bottom = "philivey2964"
 [results.OM38797855_2025-07-13_10-02_AM]
 hand_number = "OM38797855"
 filename = "2025-07-13_ 10-02_AM_$2_$5_#38797855.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM38797855_2025-07-13_10-02_AM.positions]
 top_left = "PanJapa"
@@ -6540,7 +6540,7 @@ bottom = "philivey2964"
 [results.OM49030293_2025-09-21_02-23_AM]
 hand_number = "OM49030293"
 filename = "2025-09-21_ 02-23_AM_$2_$5_#49030293.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49030293_2025-09-21_02-23_AM.positions]
 top_left = ""
@@ -6552,7 +6552,7 @@ bottom = "philivey2964"
 [results.OM49040070_2025-09-21_02-44_AM]
 hand_number = "OM49040070"
 filename = "2025-09-21_ 02-44_AM_$2_$5_#49040070.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49040070_2025-09-21_02-44_AM.positions]
 top_left = "FFS TAKE IT"
@@ -6564,7 +6564,7 @@ bottom = "philivey2964"
 [results.OM49040096_2025-09-21_02-47_AM]
 hand_number = "OM49040096"
 filename = "2025-09-21_ 02-47_AM_$2_$5_#49040096.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49040096_2025-09-21_02-47_AM.positions]
 top_left = "FFS TAKE IT"
@@ -6576,7 +6576,7 @@ bottom = "philivey2964"
 [results.OM49040163_2025-09-21_02-53_AM]
 hand_number = "OM49040163"
 filename = "2025-09-21_ 02-53_AM_$2_$5_#49040163.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49040163_2025-09-21_02-53_AM.positions]
 top_left = "FFS TAKE IT"
@@ -6588,7 +6588,7 @@ bottom = "philivey2964"
 [results.OM49030493_2025-09-21_02-57_AM]
 hand_number = "OM49030493"
 filename = "2025-09-21_ 02-57_AM_$2_$5_#49030493.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49030493_2025-09-21_02-57_AM.positions]
 top_left = "sebaru"
@@ -6600,7 +6600,7 @@ bottom = "philivey2964"
 [results.OM49030568_2025-09-21_03-14_AM]
 hand_number = "OM49030568"
 filename = "2025-09-21_ 03-14_AM_$2_$5_#49030568.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49030568_2025-09-21_03-14_AM.positions]
 top_left = "sebaru"
@@ -6612,7 +6612,7 @@ bottom = "philivey2964"
 [results.OM49040311_2025-09-21_03-16_AM]
 hand_number = "OM49040311"
 filename = "2025-09-21_ 03-16_AM_$2_$5_#49040311.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49040311_2025-09-21_03-16_AM.positions]
 top_left = "btc_dz"
@@ -6624,7 +6624,7 @@ bottom = "philivey2964"
 [results.OM49991883_2025-09-28_01-47_AM]
 hand_number = "OM49991883"
 filename = "2025-09-28_ 01-47_AM_$2_$5_#49991883.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49991883_2025-09-28_01-47_AM.positions]
 top_left = "Alexkap1987"
@@ -6636,7 +6636,7 @@ bottom = "philivey2964"
 [results.OM49991905_2025-09-28_01-51_AM]
 hand_number = "OM49991905"
 filename = "2025-09-28_ 01-51_AM_$2_$5_#49991905.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49991905_2025-09-28_01-51_AM.positions]
 top_left = "Alexkap1987"
@@ -6648,7 +6648,7 @@ bottom = "philivey2964"
 [results.OM49991933_2025-09-28_01-54_AM]
 hand_number = "OM49991933"
 filename = "2025-09-28_ 01-54_AM_$2_$5_#49991933.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49991933_2025-09-28_01-54_AM.positions]
 top_left = ".xBGx"
@@ -6660,7 +6660,7 @@ bottom = "philivey2964"
 [results.OM49958521_2025-09-28_01-58_AM]
 hand_number = "OM49958521"
 filename = "2025-09-28_ 01-58_AM_$2_$5_#49958521.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM49958521_2025-09-28_01-58_AM.positions]
 top_left = ".xBGx"
@@ -6672,7 +6672,7 @@ bottom = "philivey2964"
 [results.OM50030080_2025-09-28_05-02_AM]
 hand_number = "OM50030080"
 filename = "2025-09-28_ 05-02_AM_$2_$5_#50030080.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM50030080_2025-09-28_05-02_AM.positions]
 top_left = "King Midas"
@@ -6684,7 +6684,7 @@ bottom = "philivey2964"
 [results.OM50020039_2025-09-28_05-08_AM]
 hand_number = "OM50020039"
 filename = "2025-09-28_ 05-08_AM_$2_$5_#50020039.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM50020039_2025-09-28_05-08_AM.positions]
 top_left = "Cokehead"
@@ -6696,7 +6696,7 @@ bottom = "philivey2964"
 [results.OM50030259_2025-09-28_05-24_AM]
 hand_number = "OM50030259"
 filename = "2025-09-28_ 05-24_AM_$2_$5_#50030259.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM50030259_2025-09-28_05-24_AM.positions]
 top_left = "King Midas"
@@ -6708,7 +6708,7 @@ bottom = "philivey2964"
 [results.OM51071552_2025-10-05_03-09_AM]
 hand_number = "OM51071552"
 filename = "2025-10-05_ 03-09_AM_$2_$5_#51071552.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM51071552_2025-10-05_03-09_AM.positions]
 top_left = "bigbigmoney.."
@@ -6720,7 +6720,7 @@ bottom = "philivey2964"
 [results.OM50976568_2025-10-05_04-01_AM]
 hand_number = "OM50976568"
 filename = "2025-10-05_ 04-01_AM_$5_$10_#50976568.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM50976568_2025-10-05_04-01_AM.positions]
 top_left = ""
@@ -6732,7 +6732,7 @@ bottom = ""
 [results.OM50976658_2025-10-05_04-23_AM]
 hand_number = "OM50976658"
 filename = "2025-10-05_ 04-23_AM_$5_$10_#50976658.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM50976658_2025-10-05_04-23_AM.positions]
 top_left = "CConstantinC"
@@ -6744,7 +6744,7 @@ bottom = "philivey2964"
 [results.OM50976787_2025-10-05_04-57_AM]
 hand_number = "OM50976787"
 filename = "2025-10-05_ 04-57_AM_$5_$10_#50976787.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM50976787_2025-10-05_04-57_AM.positions]
 top_left = "CConstantinC"
@@ -6756,7 +6756,7 @@ bottom = "philivey2964"
 [results.OM51204747_2025-10-06_09-35_AM]
 hand_number = "OM51204747"
 filename = "2025-10-06_ 09-35_AM_$2_$5_#51204747.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM51204747_2025-10-06_09-35_AM.positions]
 top_left = "doTheConga"
@@ -6768,7 +6768,7 @@ bottom = "philivey2964"
 [results.OM51169627_2025-10-06_09-50_AM]
 hand_number = "OM51169627"
 filename = "2025-10-06_ 09-50_AM_$2_$5_#51169627.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM51169627_2025-10-06_09-50_AM.positions]
 top_left = "dotheConga"
@@ -6780,7 +6780,7 @@ bottom = "philivey2964"
 [results.OM59552054_2025-11-27_05-47_AM]
 hand_number = "OM59552054"
 filename = "2025-11-27_ 05-47_AM_$2_$5_#59552054.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM59552054_2025-11-27_05-47_AM.positions]
 top_left = ""
@@ -6792,7 +6792,7 @@ bottom = "philivey2964"
 [results.OM60226699_2025-12-02_05-55_AM]
 hand_number = "OM60226699"
 filename = "2025-12-02_ 05-55_AM_$5_$10_#60226699.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60226699_2025-12-02_05-55_AM.positions]
 top_left = "LordHackfre.."
@@ -6804,7 +6804,7 @@ bottom = "philivey2964"
 [results.OM60226892_2025-12-02_06-18_AM]
 hand_number = "OM60226892"
 filename = "2025-12-02_ 06-18_AM_$5_$10_#60226892.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60226892_2025-12-02_06-18_AM.positions]
 top_left = "LordHackfre.."
@@ -6816,7 +6816,7 @@ bottom = "philivey2964"
 [results.OM60227091_2025-12-02_06-44_AM]
 hand_number = "OM60227091"
 filename = "2025-12-02_ 06-44_AM_$5_$10_#60227091.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60227091_2025-12-02_06-44_AM.positions]
 top_left = "LordHackfre.."
@@ -6828,7 +6828,7 @@ bottom = "philivey2964"
 [results.OM60209797_2025-12-02_06-47_AM]
 hand_number = "OM60209797"
 filename = "2025-12-02_ 06-47_AM_$2_$5_#60209797.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60209797_2025-12-02_06-47_AM.positions]
 top_left = "CaesarMarcu.."
@@ -6840,7 +6840,7 @@ bottom = "philivey2964"
 [results.OM60266937_2025-12-02_07-13_AM]
 hand_number = "OM60266937"
 filename = "2025-12-02_ 07-13_AM_$2_$5_#60266937.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60266937_2025-12-02_07-13_AM.positions]
 top_left = ""
@@ -6852,7 +6852,7 @@ bottom = "philivey2964"
 [results.OM60227426_2025-12-02_07-22_AM]
 hand_number = "OM60227426"
 filename = "2025-12-02_ 07-22_AM_$2_$5_#60227426.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60227426_2025-12-02_07-22_AM.positions]
 top_left = "Jeffrey Bro.."
@@ -6864,7 +6864,7 @@ bottom = "philivey2964"
 [results.OM60320292_2025-12-02_07-26_AM]
 hand_number = "OM60320292"
 filename = "2025-12-02_ 07-26_AM_$2_$5_#60320292.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60320292_2025-12-02_07-26_AM.positions]
 top_left = "ioslat82"
@@ -6876,7 +6876,7 @@ bottom = "philivey2964"
 [results.OM60320314_2025-12-02_07-29_AM]
 hand_number = "OM60320314"
 filename = "2025-12-02_ 07-29_AM_$2_$5_#60320314.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60320314_2025-12-02_07-29_AM.positions]
 top_left = "ioslat82"
@@ -6888,7 +6888,7 @@ bottom = "philivey2964"
 [results.OM60267123_2025-12-02_07-31_AM]
 hand_number = "OM60267123"
 filename = "2025-12-02_ 07-31_AM_$2_$5_#60267123.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60267123_2025-12-02_07-31_AM.positions]
 top_left = "pr1sm"
@@ -6900,7 +6900,7 @@ bottom = "philivey2964"
 [results.OM60311261_2025-12-02_08-30_AM]
 hand_number = "OM60311261"
 filename = "2025-12-02_ 08-30_AM_$2_$5_#60311261.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60311261_2025-12-02_08-30_AM.positions]
 top_left = "Fernanado"
@@ -6912,7 +6912,7 @@ bottom = "philivey2964"
 [results.OM60340931_2025-12-02_08-34_AM]
 hand_number = "OM60340931"
 filename = "2025-12-02_ 08-34_AM_$2_$5_#60340931.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60340931_2025-12-02_08-34_AM.positions]
 top_left = "N3c3sit0p@s.."
@@ -6924,7 +6924,7 @@ bottom = "philivey2964"
 [results.OM60472583_2025-12-03_05-51_AM]
 hand_number = "OM60472583"
 filename = "2025-12-03_ 05-51_AM_$2_$5_#60472583.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60472583_2025-12-03_05-51_AM.positions]
 top_left = "LordHackfre.."
@@ -6936,7 +6936,7 @@ bottom = "philivey2964"
 [results.OM60482952_2025-12-03_05-53_AM]
 hand_number = "OM60482952"
 filename = "2025-12-03_ 05-53_AM_$2_$5_#60482952.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60482952_2025-12-03_05-53_AM.positions]
 top_left = "fd@aa"
@@ -6948,7 +6948,7 @@ bottom = "philivey2964"
 [results.OM60473330_2025-12-03_07-01_AM]
 hand_number = "OM60473330"
 filename = "2025-12-03_ 07-01_AM_$2_$5_#60473330.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60473330_2025-12-03_07-01_AM.positions]
 top_left = "Fernanado"
@@ -6960,7 +6960,7 @@ bottom = "philivey2964"
 [results.OM60445997_2025-12-03_08-28_AM]
 hand_number = "OM60445997"
 filename = "2025-12-03_ 08-28_AM_$2_$5_#60445997.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM60445997_2025-12-03_08-28_AM.positions]
 top_left = "fd@aa"
