@@ -62,7 +62,7 @@ def save_api_key(key: str) -> None:
 
 
 DEFAULT_SEATS = {
-    "ggpoker": {
+    "6_player": {
         "bottom": 1,
         "bottom_left": 2,
         "top_left": 3,
@@ -70,7 +70,7 @@ DEFAULT_SEATS = {
         "top_right": 5,
         "bottom_right": 6,
     },
-    "natural8": {
+    "5_player": {
         "bottom": 1,
         "left": 2,
         "top_left": 3,
@@ -88,8 +88,8 @@ def load_seat_mapping() -> dict[str, dict[str, int]]:
     with open(path, "rb") as f:
         data = tomllib.load(f)
     return {
-        "ggpoker": data.get("ggpoker", DEFAULT_SEATS["ggpoker"].copy()),
-        "natural8": data.get("natural8", DEFAULT_SEATS["natural8"].copy()),
+        "6_player": data.get("6_player", DEFAULT_SEATS["6_player"].copy()),
+        "5_player": data.get("5_player", DEFAULT_SEATS["5_player"].copy()),
     }
 
 
@@ -121,8 +121,8 @@ def save_corrections(corrections: dict[str, str]) -> None:
 class SettingsDialog(QDialog):
     """Settings dialog with tabs for API key, seat mapping, and corrections."""
 
-    GGPOKER_POSITIONS = ["bottom", "bottom_left", "top_left", "top", "top_right", "bottom_right"]
-    NATURAL8_POSITIONS = ["bottom", "left", "top_left", "top_right", "right"]
+    SIX_PLAYER_POSITIONS = ["bottom", "bottom_left", "top_left", "top", "top_right", "bottom_right"]
+    FIVE_PLAYER_POSITIONS = ["bottom", "left", "top_left", "top_right", "right"]
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -216,12 +216,12 @@ class SettingsDialog(QDialog):
         # Sub-tabs for each table type
         self._seat_tabs = QTabWidget()
         self._seat_tabs.addTab(
-            self._create_seat_form("ggpoker", self.GGPOKER_POSITIONS),
-            "GGPoker (6-max)"
+            self._create_seat_form("6_player", self.SIX_PLAYER_POSITIONS),
+            "6-player"
         )
         self._seat_tabs.addTab(
-            self._create_seat_form("natural8", self.NATURAL8_POSITIONS),
-            "Natural8 (5-max)"
+            self._create_seat_form("5_player", self.FIVE_PLAYER_POSITIONS),
+            "5-player"
         )
         layout.addWidget(self._seat_tabs)
 

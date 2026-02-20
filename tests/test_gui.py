@@ -146,11 +146,11 @@ class TestSettingsDialog:
 
         # Now we have 2 table types
         assert len(dialog._seat_spinboxes) == 2
-        assert "ggpoker" in dialog._seat_spinboxes
-        assert "natural8" in dialog._seat_spinboxes
-        # GGPoker has 6 positions, Natural8 has 5
-        assert len(dialog._seat_spinboxes["ggpoker"]) == 6
-        assert len(dialog._seat_spinboxes["natural8"]) == 5
+        assert "6_player" in dialog._seat_spinboxes
+        assert "5_player" in dialog._seat_spinboxes
+        # 6-player has 6 positions, 5-player has 5
+        assert len(dialog._seat_spinboxes["6_player"]) == 6
+        assert len(dialog._seat_spinboxes["5_player"]) == 5
 
     def test_settings_dialog_reset_seat_mapping(self, qtbot):
         from gui.settings_dialog import DEFAULT_SEATS
@@ -216,16 +216,16 @@ class TestSettingsFunctions:
 
         with patch("gui.settings_dialog._get_seat_mapping_path", return_value=mapping_file):
             test_mapping = {
-                "ggpoker": {"bottom": 3, "top": 1},
-                "natural8": {"bottom": 2, "left": 5},
+                "6_player": {"bottom": 3, "top": 1},
+                "5_player": {"bottom": 2, "left": 5},
             }
             save_seat_mapping(test_mapping)
 
             loaded = load_seat_mapping()
-            assert loaded["ggpoker"]["bottom"] == 3
-            assert loaded["ggpoker"]["top"] == 1
-            assert loaded["natural8"]["bottom"] == 2
-            assert loaded["natural8"]["left"] == 5
+            assert loaded["6_player"]["bottom"] == 3
+            assert loaded["6_player"]["top"] == 1
+            assert loaded["5_player"]["bottom"] == 2
+            assert loaded["5_player"]["left"] == 5
 
     def test_save_and_load_corrections(self, tmp_path):
         corrections_file = tmp_path / "corrections.toml"

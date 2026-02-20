@@ -7,7 +7,7 @@ import tomllib
 from pathlib import Path
 from typing import Literal
 
-TableType = Literal["ggpoker", "natural8"]
+TableType = Literal["6_player", "5_player"]
 
 from hand_history.parser import (
     HandHistory,
@@ -26,7 +26,7 @@ from hand_history.converter import (
 _SEAT_MAPPING_PATH = Path(__file__).parent / "seat_mapping.toml"
 
 DEFAULT_SEAT_MAPPINGS: dict[str, dict[str, int]] = {
-    "ggpoker": {
+    "6_player": {
         "bottom": 1,
         "bottom_left": 2,
         "top_left": 3,
@@ -34,7 +34,7 @@ DEFAULT_SEAT_MAPPINGS: dict[str, dict[str, int]] = {
         "top_right": 5,
         "bottom_right": 6,
     },
-    "natural8": {
+    "5_player": {
         "bottom": 1,
         "left": 2,
         "top_left": 3,
@@ -43,19 +43,30 @@ DEFAULT_SEAT_MAPPINGS: dict[str, dict[str, int]] = {
     },
 }
 
+_TABLE_TYPE_ALIASES = {
+    "ggpoker": "6_player",
+    "natural8": "5_player",
+}
 
-def load_seat_mapping(table_type: TableType = "ggpoker", path: Path | None = None) -> dict[str, int]:
+
+def _normalize_table_type(table_type: str) -> str:
+    """Normalize legacy table type names to new format."""
+    return _TABLE_TYPE_ALIASES.get(table_type, table_type)
+
+
+def load_seat_mapping(table_type: str = "6_player", path: Path | None = None) -> dict[str, int]:
     """Load seat mapping for a specific table type.
 
     Args:
-        table_type: Table type ("ggpoker" or "natural8")
+        table_type: Table type ("6_player" or "5_player", legacy "ggpoker"/"natural8" also supported)
         path: Path to seat_mapping.toml (uses default if None)
 
     Returns:
         Dict mapping position name to seat number
     """
+    normalized_type = _normalize_table_type(table_type)
     config_path = path or _SEAT_MAPPING_PATH
-    default = DEFAULT_SEAT_MAPPINGS.get(table_type, DEFAULT_SEAT_MAPPINGS["ggpoker"])
+    default = DEFAULT_SEAT_MAPPINGS.get(normalized_type, DEFAULT_SEAT_MAPPINGS["6_player"])
 
     if not config_path.exists():
         return default.copy()
@@ -63,25 +74,26 @@ def load_seat_mapping(table_type: TableType = "ggpoker", path: Path | None = Non
     with open(config_path, "rb") as f:
         data = tomllib.load(f)
 
-    return data.get(table_type, default.copy())
+    return data.get(normalized_type, default.copy())
 
 
 def position_to_seat(
     position_names: dict[str, str],
-    table_type: TableType = "ggpoker",
+    table_type: str = "6_player",
     seat_mapping: dict[str, int] | None = None,
 ) -> dict[int, str]:
     """Convert position-based names to seat-based names.
 
     Args:
         position_names: Dict from position name to player name (from OCR)
-        table_type: Table type ("ggpoker" or "natural8")
+        table_type: Table type ("6_player" or "5_player", legacy "ggpoker"/"natural8" also supported)
         seat_mapping: Position to seat number mapping (loads default if None)
 
     Returns:
         Dict from seat number to player name
     """
-    mapping = seat_mapping or load_seat_mapping(table_type)
+    normalized_type = _normalize_table_type(table_type)
+    mapping = seat_mapping or load_seat_mapping(normalized_type)
     result: dict[int, str] = {}
 
     for position, player_name in position_names.items():

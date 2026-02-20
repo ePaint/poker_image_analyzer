@@ -57,7 +57,7 @@ def process_screenshots(
                 continue
 
             regions = detect_table_type(image)
-            table_type: TableType = "ggpoker" if len(regions) == 6 else "natural8"
+            table_type: TableType = "6_player" if len(regions) == 6 else "5_player"
 
             position_names = analyze_screenshot(screenshot_path, api_key=api_key)
             seat_names = position_to_seat(position_names, table_type)

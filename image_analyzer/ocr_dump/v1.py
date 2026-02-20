@@ -86,7 +86,7 @@ def parse(path: Path) -> dict[str, dict[int, str]]:
 
     for hand_number, info in data.get("results", {}).items():
         positions = info.get("positions", {})
-        table_type = info.get("table_type", "ggpoker")
+        table_type = info.get("table_type", "6_player")
         seat_names = position_to_seat(positions, table_type)
         result[hand_number] = seat_names
 

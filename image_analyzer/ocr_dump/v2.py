@@ -108,7 +108,7 @@ def parse(path: Path) -> dict[str, dict[int, str]]:
         # v2 stores hand_number explicitly, v1 uses key as hand_number
         hand_number = info.get("hand_number") or _extract_hand_number(key)
         positions = info.get("positions", {})
-        table_type = info.get("table_type", "ggpoker")
+        table_type = info.get("table_type", "6_player")
         seat_names = position_to_seat(positions, table_type)
         result[hand_number] = seat_names
 

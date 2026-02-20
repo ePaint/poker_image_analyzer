@@ -262,8 +262,8 @@ class TestWriteFiles:
 
 
 class TestSeatMapping:
-    def test_default_seat_mappings_ggpoker(self):
-        assert DEFAULT_SEAT_MAPPINGS["ggpoker"] == {
+    def test_default_seat_mappings_6_player(self):
+        assert DEFAULT_SEAT_MAPPINGS["6_player"] == {
             "bottom": 1,
             "bottom_left": 2,
             "top_left": 3,
@@ -272,8 +272,8 @@ class TestSeatMapping:
             "bottom_right": 6,
         }
 
-    def test_default_seat_mappings_natural8(self):
-        assert DEFAULT_SEAT_MAPPINGS["natural8"] == {
+    def test_default_seat_mappings_5_player(self):
+        assert DEFAULT_SEAT_MAPPINGS["5_player"] == {
             "bottom": 1,
             "left": 2,
             "top_left": 3,
@@ -282,48 +282,48 @@ class TestSeatMapping:
         }
 
     def test_load_seat_mapping_returns_default_for_missing_file(self):
-        mapping = load_seat_mapping("ggpoker", Path("/nonexistent/path.toml"))
-        assert mapping == DEFAULT_SEAT_MAPPINGS["ggpoker"]
+        mapping = load_seat_mapping("6_player", Path("/nonexistent/path.toml"))
+        assert mapping == DEFAULT_SEAT_MAPPINGS["6_player"]
 
-    def test_load_seat_mapping_natural8_for_missing_file(self):
-        mapping = load_seat_mapping("natural8", Path("/nonexistent/path.toml"))
-        assert mapping == DEFAULT_SEAT_MAPPINGS["natural8"]
+    def test_load_seat_mapping_5_player_for_missing_file(self):
+        mapping = load_seat_mapping("5_player", Path("/nonexistent/path.toml"))
+        assert mapping == DEFAULT_SEAT_MAPPINGS["5_player"]
 
     def test_load_seat_mapping_from_file(self):
         with TemporaryDirectory() as tmpdir:
             path = Path(tmpdir) / "mapping.toml"
-            path.write_text("[ggpoker]\nbottom = 6\ntop = 1")
-            mapping = load_seat_mapping("ggpoker", path)
+            path.write_text("[6_player]\nbottom = 6\ntop = 1")
+            mapping = load_seat_mapping("6_player", path)
             assert mapping["bottom"] == 6
             assert mapping["top"] == 1
 
-    def test_position_to_seat_ggpoker(self):
+    def test_position_to_seat_6_player(self):
         position_names = {
             "bottom": "Hero",
             "top_left": "Player1",
             "bottom_right": "Player2",
         }
-        result = position_to_seat(position_names, "ggpoker")
+        result = position_to_seat(position_names, "6_player")
         assert result == {1: "Hero", 3: "Player1", 6: "Player2"}
 
-    def test_position_to_seat_natural8(self):
+    def test_position_to_seat_5_player(self):
         position_names = {
             "bottom": "Hero",
             "left": "Player1",
             "right": "Player2",
         }
-        result = position_to_seat(position_names, "natural8")
+        result = position_to_seat(position_names, "5_player")
         assert result == {1: "Hero", 2: "Player1", 6: "Player2"}
 
     def test_position_to_seat_with_custom_mapping(self):
         position_names = {"bottom": "Hero"}
         custom_mapping = {"bottom": 5}
-        result = position_to_seat(position_names, "ggpoker", custom_mapping)
+        result = position_to_seat(position_names, "6_player", custom_mapping)
         assert result == {5: "Hero"}
 
     def test_position_to_seat_ignores_unknown_positions(self):
         position_names = {"unknown_position": "Player"}
-        result = position_to_seat(position_names, "ggpoker")
+        result = position_to_seat(position_names, "6_player")
         assert result == {}
 
 
@@ -337,7 +337,7 @@ total_successful = 2
 
 [results.OM123456]
 filename = "test1.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM123456.positions]
 bottom = "Hero"
@@ -346,7 +346,7 @@ top_right = "Player3"
 
 [results.OM789012]
 filename = "test2.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM789012.positions]
 bottom = "Hero"
@@ -377,7 +377,7 @@ total_successful = 2
 [results.OM123456_2024-01-15_10-30_AM]
 hand_number = "OM123456"
 filename = "2024-01-15_ 10-30_AM_$5_$10_#123456.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM123456_2024-01-15_10-30_AM.positions]
 bottom = "Hero"
@@ -387,7 +387,7 @@ top_right = "Player3"
 [results.OM789012_2024-01-15_11-00_AM]
 hand_number = "OM789012"
 filename = "2024-01-15_ 11-00_AM_$5_$10_#789012.png"
-table_type = "natural8"
+table_type = "5_player"
 
 [results.OM789012_2024-01-15_11-00_AM.positions]
 bottom = "Hero"
@@ -416,7 +416,7 @@ total_successful = 1
 
 [results.OM123456]
 filename = "test1.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM123456.positions]
 bottom = "Hero"
@@ -454,7 +454,7 @@ total_successful = 2
 [results.OM123456_2024-01-15_10-30_AM]
 hand_number = "OM123456"
 filename = "earlier.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM123456_2024-01-15_10-30_AM.positions]
 bottom = "EarlierPlayer"
@@ -462,7 +462,7 @@ bottom = "EarlierPlayer"
 [results.OM123456_2024-01-15_11-00_AM]
 hand_number = "OM123456"
 filename = "later.png"
-table_type = "ggpoker"
+table_type = "6_player"
 
 [results.OM123456_2024-01-15_11-00_AM.positions]
 bottom = "LaterPlayer"
@@ -513,7 +513,7 @@ class TestIntegration:
             "top_right": "RealPlayer5",
             "bottom_right": "RealPlayer6",
         }
-        seat_names = position_to_seat(position_names, "ggpoker")
+        seat_names = position_to_seat(position_names, "6_player")
 
         assert seat_names == {
             1: "Hero",
@@ -682,7 +682,7 @@ class TestIntegrationWithFixtures:
             "top_right": "Player4",
             "right": "Player5",    # Natural8 specific
         }
-        result = position_to_seat(positions, "natural8")
+        result = position_to_seat(positions, "5_player")
 
         assert result[1] == "Player1"  # bottom
         assert result[2] == "Player2"  # left
