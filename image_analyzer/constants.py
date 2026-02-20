@@ -102,7 +102,7 @@ FEWSHOT_ZERO_ALT_B64 = (
 )
 FEWSHOT_ZERO_ALT_NAME = "H0T M0USE!"
 
-DEFAULT_REGIONS = (
+SIX_PLAYER_REGIONS = (
     PlayerRegion("top", 347, 152),
     PlayerRegion("top_left", 29, 234),
     PlayerRegion("top_right", 666, 234),
@@ -115,3 +115,10 @@ GGPOKER_DETECTION_PIXEL = (702, 64)
 GGPOKER_COLOR_BGR = (6, 15, 219)
 NATURAL8_DETECTION_PIXEL = (880, 72)
 NATURAL8_COLOR_BGR = (145, 39, 140)
+
+# 5max vs 6max detection: sample at top center position where 6th player would be
+# On 6max: pixel is bright (player avatar/text) - max(BGR) > 100
+# On 5max: pixel is dark (background) - max(BGR) < 100
+GGPOKER_TOP_CENTER_PIXEL = (400, 160)  # Center of "top" player name area
+NATURAL8_TOP_CENTER_PIXEL = (480, 130)  # Center of "top" player avatar area (960px base)
+BRIGHTNESS_THRESHOLD = 100  # If max(BGR) > this, player is present (6max)

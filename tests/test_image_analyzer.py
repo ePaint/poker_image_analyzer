@@ -9,7 +9,7 @@ from image_analyzer import (
     PlayerRegion,
     ScreenshotFilename,
     analyze_screenshot,
-    DEFAULT_REGIONS,
+    SIX_PLAYER_REGIONS,
 )
 
 TESTS_DIR = Path(__file__).parent
@@ -109,12 +109,12 @@ class TestScreenshotFilename:
         assert info.stakes == "$0.25/$0.50"
 
 
-class TestDefaultRegions:
+class TestSixPlayerRegions:
     def test_has_six_regions(self):
-        assert len(DEFAULT_REGIONS) == 6
+        assert len(SIX_PLAYER_REGIONS) == 6
 
     def test_region_names(self):
-        names = {r.name for r in DEFAULT_REGIONS}
+        names = {r.name for r in SIX_PLAYER_REGIONS}
         expected = {"top", "top_left", "top_right", "bottom_left", "bottom", "bottom_right"}
         assert names == expected
 
@@ -182,7 +182,7 @@ class TestIntegration:
         }
         mock_client.messages.create.return_value = create_mock_anthropic_response(mock_results)
 
-        results = analyze_screenshot(images[0], regions=DEFAULT_REGIONS)
+        results = analyze_screenshot(images[0], regions=SIX_PLAYER_REGIONS)
         expected_keys = {"top", "top_left", "top_right", "bottom_left", "bottom", "bottom_right"}
         assert set(results.keys()) == expected_keys
 
@@ -199,7 +199,7 @@ class TestIntegration:
         mock_module, mock_client = mock_anthropic
         mock_client.messages.create.return_value = create_mock_anthropic_response(expected)
 
-        results = analyze_screenshot(image_path, regions=DEFAULT_REGIONS)
+        results = analyze_screenshot(image_path, regions=SIX_PLAYER_REGIONS)
 
         for position, expected_name in expected.items():
             ocr_name = results.get(position, "")

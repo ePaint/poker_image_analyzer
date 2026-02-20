@@ -7,19 +7,31 @@ from PIL import Image, ImageEnhance
 
 
 from image_analyzer.constants import (
-    GGPOKER_DETECTION_PIXEL, GGPOKER_COLOR_BGR, DEFAULT_REGIONS,
+    GGPOKER_DETECTION_PIXEL, GGPOKER_COLOR_BGR, SIX_PLAYER_REGIONS,
     NATURAL8_DETECTION_PIXEL, NATURAL8_COLOR_BGR,
+    GGPOKER_TOP_CENTER_PIXEL, NATURAL8_TOP_CENTER_PIXEL, BRIGHTNESS_THRESHOLD,
     FEWSHOT_ZERO_B64, FEWSHOT_ZERO_NAME,
     FEWSHOT_I_VS_L_B64, FEWSHOT_I_VS_L_NAME,
     FEWSHOT_ZERO_ALT_B64, FEWSHOT_ZERO_ALT_NAME,
     load_corrections,
 )
-from image_analyzer.models import PlayerRegion, BASE_WIDTH, NATURAL8_BASE_WIDTH, NATURAL8_5MAX_REGIONS
+from image_analyzer.models import (
+    PlayerRegion, BASE_WIDTH, FIVE_PLAYER_REGIONS,
+)
 from image_analyzer.llm import get_provider, ProviderName
 
 
 def detect_table_type(image: np.ndarray, tolerance: int = 30) -> tuple[PlayerRegion, ...]:
-    """Detect table type by sampling pixel colors at known UI locations."""
+    """Detect table type by sampling pixel colors at known UI locations.
+
+    Detection logic:
+    1. Detect platform (GGPoker vs Natural8) via brand color in header
+    2. Detect 5-player vs 6-player by checking brightness at top center position
+       - 6-player: bright pixel (player avatar/text present)
+       - 5-player: dark pixel (no player at top)
+
+    The same region sets work for both platforms - scaling handles resolution differences.
+    """
     image_width = image.shape[1]
 
     def sample_pixel(coords: tuple[int, int], base_width: int) -> tuple[int, int, int]:
@@ -31,15 +43,29 @@ def detect_table_type(image: np.ndarray, tolerance: int = 30) -> tuple[PlayerReg
     def color_distance(c1: tuple, c2: tuple) -> float:
         return sum((int(a) - int(b)) ** 2 for a, b in zip(c1, c2)) ** 0.5
 
+    def has_player_at_top(pixel: tuple) -> bool:
+        """Check if pixel is bright enough to indicate a player is present."""
+        return max(int(c) for c in pixel) > BRIGHTNESS_THRESHOLD
+
+    # Detect GGPoker (800px base)
     gg_pixel = sample_pixel(GGPOKER_DETECTION_PIXEL, BASE_WIDTH)
     if color_distance(gg_pixel, GGPOKER_COLOR_BGR) < tolerance:
-        return DEFAULT_REGIONS
+        top_pixel = sample_pixel(GGPOKER_TOP_CENTER_PIXEL, BASE_WIDTH)
+        if has_player_at_top(top_pixel):
+            return SIX_PLAYER_REGIONS
+        return FIVE_PLAYER_REGIONS
 
-    n8_pixel = sample_pixel(NATURAL8_DETECTION_PIXEL, NATURAL8_BASE_WIDTH)
+    # Detect Natural8 (960px base) - use FIVE_PLAYER base width for detection pixel
+    five_player_base = FIVE_PLAYER_REGIONS[0].base_width
+    n8_pixel = sample_pixel(NATURAL8_DETECTION_PIXEL, five_player_base)
     if color_distance(n8_pixel, NATURAL8_COLOR_BGR) < tolerance:
-        return NATURAL8_5MAX_REGIONS
+        top_pixel = sample_pixel(NATURAL8_TOP_CENTER_PIXEL, five_player_base)
+        if has_player_at_top(top_pixel):
+            return SIX_PLAYER_REGIONS
+        return FIVE_PLAYER_REGIONS
 
-    return NATURAL8_5MAX_REGIONS
+    # Fallback to 5-player
+    return FIVE_PLAYER_REGIONS
 
 
 def _enhance_crop(image: Image.Image) -> Image.Image:
@@ -179,7 +205,7 @@ def _call_llm(
 
 def analyze_image(
     image: np.ndarray,
-    regions: tuple[PlayerRegion, ...] = DEFAULT_REGIONS,
+    regions: tuple[PlayerRegion, ...] = SIX_PLAYER_REGIONS,
     api_key: str | None = None,
     provider: ProviderName = "anthropic",
     model: str | None = None,

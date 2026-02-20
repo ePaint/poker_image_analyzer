@@ -12,7 +12,6 @@ from image_analyzer import (
     analyze_image,
     detect_table_type,
     ScreenshotFilename,
-    DEFAULT_REGIONS,
 )
 from hand_history import (
     TableType,
@@ -101,7 +100,7 @@ class ScreenshotWorker(QThread):
                 return (screenshot_path, hand_number, None, None, None, "Could not load image")
 
             regions = detect_table_type(image)
-            table_type: TableType = "ggpoker" if regions == DEFAULT_REGIONS else "natural8"
+            table_type: TableType = "ggpoker" if len(regions) == 6 else "natural8"
 
             position_names = self._call_with_backoff(image, regions)
             seat_names = position_to_seat(position_names, table_type)

@@ -1,15 +1,14 @@
 from image_analyzer.models import (
     PlayerRegion,
     ScreenshotFilename,
-    NATURAL8_5MAX_REGIONS,
-    NATURAL8_BASE_WIDTH,
+    FIVE_PLAYER_REGIONS,
 )
+from image_analyzer.constants import SIX_PLAYER_REGIONS
 from image_analyzer.analyzer import (
     analyze_screenshot,
     analyze_screenshots_batch,
     analyze_image,
     detect_table_type,
-    DEFAULT_REGIONS,
 )
 from image_analyzer.llm import LLMProvider, ProviderName, get_provider
 
@@ -20,9 +19,8 @@ __all__ = [
     "detect_table_type",
     "PlayerRegion",
     "ScreenshotFilename",
-    "DEFAULT_REGIONS",
-    "NATURAL8_5MAX_REGIONS",
-    "NATURAL8_BASE_WIDTH",
+    "SIX_PLAYER_REGIONS",
+    "FIVE_PLAYER_REGIONS",
     "LLMProvider",
     "ProviderName",
     "get_provider",

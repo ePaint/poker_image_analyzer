@@ -8,7 +8,6 @@ from image_analyzer import (
     analyze_screenshot,
     detect_table_type,
     ScreenshotFilename,
-    DEFAULT_REGIONS,
 )
 from hand_history import (
     TableType,
@@ -58,7 +57,7 @@ def process_screenshots(
                 continue
 
             regions = detect_table_type(image)
-            table_type: TableType = "ggpoker" if regions == DEFAULT_REGIONS else "natural8"
+            table_type: TableType = "ggpoker" if len(regions) == 6 else "natural8"
 
             position_names = analyze_screenshot(screenshot_path, api_key=api_key)
             seat_names = position_to_seat(position_names, table_type)

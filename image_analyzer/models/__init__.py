@@ -3,10 +3,7 @@ from .PlayerRegion import (
     DEFAULT_BOX_WIDTH,
     DEFAULT_BOX_HEIGHT,
     BASE_WIDTH,
-    NATURAL8_BASE_WIDTH,
-    NATURAL8_BOX_WIDTH,
-    NATURAL8_BOX_HEIGHT,
-    NATURAL8_5MAX_REGIONS,
+    FIVE_PLAYER_REGIONS,
 )
 from .ScreenshotFilename import ScreenshotFilename
 
@@ -16,8 +13,5 @@ __all__ = [
     "DEFAULT_BOX_WIDTH",
     "DEFAULT_BOX_HEIGHT",
     "BASE_WIDTH",
-    "NATURAL8_BASE_WIDTH",
-    "NATURAL8_BOX_WIDTH",
-    "NATURAL8_BOX_HEIGHT",
-    "NATURAL8_5MAX_REGIONS",
+    "FIVE_PLAYER_REGIONS",
 ]
