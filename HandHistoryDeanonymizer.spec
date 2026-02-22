@@ -98,8 +98,8 @@ if sys.platform == 'darwin':
         info_plist={
             'CFBundleName': 'Hand History De-anonymizer',
             'CFBundleDisplayName': 'Hand History De-anonymizer',
-            'CFBundleShortVersionString': '0.1.3',
-            'CFBundleVersion': '0.1.3',
+            'CFBundleShortVersionString': '0.1.4',
+            'CFBundleVersion': '0.1.4',
             'NSHighResolutionCapable': True,
             'LSMinimumSystemVersion': '10.15',
         },

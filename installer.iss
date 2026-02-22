@@ -2,7 +2,7 @@
 ; Run this on Windows after building with PyInstaller
 
 #define MyAppName "Hand History De-anonymizer"
-#define MyAppVersion "0.1.3"
+#define MyAppVersion "0.1.4"
 #define MyAppPublisher "OIT Now"
 #define MyAppExeName "Hand History De-anonymizer.exe"
 
