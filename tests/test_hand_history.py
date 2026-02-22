@@ -277,25 +277,34 @@ class TestSeatMapping:
             "bottom": 1,
             "left": 2,
             "top_left": 3,
-            "top_right": 5,
-            "right": 6,
+            "top_right": 4,
+            "right": 5,
         }
 
-    def test_load_seat_mapping_returns_default_for_missing_file(self):
-        mapping = load_seat_mapping("6_player", Path("/nonexistent/path.toml"))
-        assert mapping == DEFAULT_SEAT_MAPPINGS["6_player"]
+    def test_load_seat_mapping_returns_default_when_no_files(self):
+        with patch("hand_history.get_user_data_path") as mock_user, \
+             patch("hand_history.get_bundled_path") as mock_bundled:
+            mock_user.return_value = Path("/nonexistent/user/path.toml")
+            mock_bundled.return_value = None
+            mapping = load_seat_mapping("6_player")
+            assert mapping == DEFAULT_SEAT_MAPPINGS["6_player"]
 
-    def test_load_seat_mapping_5_player_for_missing_file(self):
-        mapping = load_seat_mapping("5_player", Path("/nonexistent/path.toml"))
-        assert mapping == DEFAULT_SEAT_MAPPINGS["5_player"]
+    def test_load_seat_mapping_5_player_default(self):
+        with patch("hand_history.get_user_data_path") as mock_user, \
+             patch("hand_history.get_bundled_path") as mock_bundled:
+            mock_user.return_value = Path("/nonexistent/user/path.toml")
+            mock_bundled.return_value = None
+            mapping = load_seat_mapping("5_player")
+            assert mapping == DEFAULT_SEAT_MAPPINGS["5_player"]
 
-    def test_load_seat_mapping_from_file(self):
+    def test_load_seat_mapping_from_user_file(self):
         with TemporaryDirectory() as tmpdir:
-            path = Path(tmpdir) / "mapping.toml"
+            path = Path(tmpdir) / "seat_mapping.toml"
             path.write_text("[6_player]\nbottom = 6\ntop = 1")
-            mapping = load_seat_mapping("6_player", path)
-            assert mapping["bottom"] == 6
-            assert mapping["top"] == 1
+            with patch("hand_history.get_user_data_path", return_value=path):
+                mapping = load_seat_mapping("6_player")
+                assert mapping["bottom"] == 6
+                assert mapping["top"] == 1
 
     def test_position_to_seat_6_player(self):
         position_names = {
@@ -313,7 +322,7 @@ class TestSeatMapping:
             "right": "Player2",
         }
         result = position_to_seat(position_names, "5_player")
-        assert result == {1: "Hero", 2: "Player1", 6: "Player2"}
+        assert result == {1: "Hero", 2: "Player1", 5: "Player2"}
 
     def test_position_to_seat_with_custom_mapping(self):
         position_names = {"bottom": "Hero"}
@@ -592,12 +601,12 @@ class TestIntegrationWithFixtures:
         # Verify first hand structure (same data regardless of format)
         first_hand = hand_data.get("OM154753304")
         assert first_hand is not None
-        # Natural8 positions: left=2, right=6, bottom=1, top_left=3, top_right=5
+        # 5-player positions: bottom=1, left=2, top_left=3, top_right=4, right=5
         assert first_hand[1] == "TeddyKGBEEE"  # bottom
         assert first_hand[2] == "shubidubi"    # left
         assert first_hand[3] == "RussWestbro.."  # top_left
-        assert first_hand[5] == "AnnAmbre11"   # top_right
-        assert first_hand[6] == "dAvid-H"      # right
+        assert first_hand[4] == "AnnAmbre11"   # top_right
+        assert first_hand[5] == "dAvid-H"      # right
 
     def test_v1_and_v2_produce_identical_hand_data(self):
         """Verify v1 and v2 parsers produce identical output for same data."""
@@ -674,18 +683,18 @@ class TestIntegrationWithFixtures:
             assert not skipped_path.exists() or skipped_path.read_text() == ""
 
     def test_position_mapping_natural8(self):
-        """Verify Natural8 position names map correctly."""
+        """Verify 5-player position names map correctly."""
         positions = {
             "bottom": "Player1",
-            "left": "Player2",     # Natural8 specific
+            "left": "Player2",
             "top_left": "Player3",
             "top_right": "Player4",
-            "right": "Player5",    # Natural8 specific
+            "right": "Player5",
         }
         result = position_to_seat(positions, "5_player")
 
         assert result[1] == "Player1"  # bottom
         assert result[2] == "Player2"  # left
         assert result[3] == "Player3"  # top_left
-        assert result[5] == "Player4"  # top_right
-        assert result[6] == "Player5"  # right
+        assert result[4] == "Player4"  # top_right
+        assert result[5] == "Player5"  # right

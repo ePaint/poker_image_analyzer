@@ -1,8 +1,12 @@
 import sys
 import tomllib
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 import tomli_w
+
+if TYPE_CHECKING:
+    pass
 
 
 def _get_app_data_dir() -> Path:
@@ -24,6 +28,27 @@ def _get_settings_path() -> Path:
     if local_path.exists():
         return local_path
     return _get_app_data_dir() / "settings.toml"
+
+
+def get_user_data_path(filename: str) -> Path:
+    """Get path for user-editable file in %APPDATA%. Prefers local file for dev."""
+    local_path = Path.cwd() / filename
+    if local_path.exists():
+        return local_path
+    return _get_app_data_dir() / filename
+
+
+def get_bundled_path(package: str, filename: str) -> Path | None:
+    """Get path to bundled default file (read-only).
+
+    Returns None if the file doesn't exist in the bundle.
+    """
+    if getattr(sys, "frozen", False):
+        base = Path(sys._MEIPASS)  # type: ignore[attr-defined]
+    else:
+        base = Path(__file__).parent.parent
+    path = base / package / filename
+    return path if path.exists() else None
 
 
 DEFAULT_SETTINGS: dict = {

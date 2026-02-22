@@ -1,4 +1,5 @@
 """Tests for GUI components using pytest-qt."""
+from pathlib import Path
 from unittest.mock import patch
 
 from PySide6.QtWidgets import QLineEdit
@@ -15,6 +16,38 @@ from gui.settings_dialog import (
     save_corrections,
 )
 from gui.main_window import MainWindow
+from gui.version import get_version, _read_pyproject_version
+
+
+class TestVersion:
+    def test_get_version_returns_string(self):
+        version = get_version()
+        assert isinstance(version, str)
+        assert len(version) > 0
+
+    def test_get_version_matches_pyproject(self):
+        pyproject_path = Path(__file__).parent.parent / "pyproject.toml"
+        assert pyproject_path.exists(), "pyproject.toml should exist"
+
+        import tomllib
+        with open(pyproject_path, "rb") as f:
+            data = tomllib.load(f)
+        expected_version = data["project"]["version"]
+
+        assert get_version() == expected_version
+
+    def test_read_pyproject_version_returns_version(self):
+        version = _read_pyproject_version()
+        assert version is not None
+        assert isinstance(version, str)
+        assert "." in version  # Version should have at least one dot (e.g., "0.1.3")
+
+    def test_get_version_fallback_to_dev(self):
+        from importlib.metadata import PackageNotFoundError
+        with patch("gui.version._read_pyproject_version", return_value=None):
+            with patch("gui.version.version", side_effect=PackageNotFoundError("oitnow2")):
+                version = get_version()
+                assert version == "dev"
 
 
 class TestDropZone:
@@ -214,7 +247,7 @@ class TestSettingsFunctions:
     def test_save_and_load_seat_mapping(self, tmp_path, monkeypatch):
         mapping_file = tmp_path / "seat_mapping.toml"
 
-        with patch("gui.settings_dialog._get_seat_mapping_path", return_value=mapping_file):
+        with patch("gui.settings_dialog._get_user_seat_mapping_path", return_value=mapping_file):
             test_mapping = {
                 "6_player": {"bottom": 3, "top": 1},
                 "5_player": {"bottom": 2, "left": 5},
@@ -230,7 +263,7 @@ class TestSettingsFunctions:
     def test_save_and_load_corrections(self, tmp_path):
         corrections_file = tmp_path / "corrections.toml"
 
-        with patch("gui.settings_dialog._get_corrections_path", return_value=corrections_file):
+        with patch("gui.settings_dialog._get_user_corrections_path", return_value=corrections_file):
             test_corrections = {"WRONG": "RIGHT", "BAD": "GOOD"}
             save_corrections(test_corrections)
 

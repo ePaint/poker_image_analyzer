@@ -1,18 +1,24 @@
 import tomllib
-from pathlib import Path
 
 from image_analyzer import PlayerRegion
-
-_CORRECTIONS_PATH = Path(__file__).parent / "corrections.toml"
+from settings import get_user_data_path, get_bundled_path
 
 
 def load_corrections() -> dict[str, str]:
-    """Load OCR corrections from TOML file."""
-    if not _CORRECTIONS_PATH.exists():
-        return {}
-    with open(_CORRECTIONS_PATH, "rb") as f:
-        data = tomllib.load(f)
-    return data.get("corrections", {})
+    """Load OCR corrections from TOML file. User file takes priority over bundled."""
+    user_path = get_user_data_path("corrections.toml")
+    if user_path.exists():
+        with open(user_path, "rb") as f:
+            data = tomllib.load(f)
+        return data.get("corrections", {})
+
+    bundled_path = get_bundled_path("image_analyzer", "corrections.toml")
+    if bundled_path:
+        with open(bundled_path, "rb") as f:
+            data = tomllib.load(f)
+        return data.get("corrections", {})
+
+    return {}
 
 
 FEWSHOT_ZERO_B64 = (

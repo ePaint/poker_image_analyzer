@@ -24,6 +24,7 @@ from PySide6.QtWidgets import (
     QFormLayout,
     QMessageBox,
     QHeaderView,
+    QFileDialog,
 )
 
 
@@ -36,12 +37,28 @@ def _get_env_path() -> Path:
     return _get_app_data_dir() / ".env"
 
 
-def _get_seat_mapping_path() -> Path:
-    return Path(__file__).parent.parent / "hand_history" / "seat_mapping.toml"
+def _get_user_seat_mapping_path() -> Path:
+    """Get user's seat mapping path in %APPDATA%."""
+    from settings import get_user_data_path
+    return get_user_data_path("seat_mapping.toml")
 
 
-def _get_corrections_path() -> Path:
-    return Path(__file__).parent.parent / "image_analyzer" / "corrections.toml"
+def _get_bundled_seat_mapping_path() -> Path | None:
+    """Get bundled seat mapping path (read-only)."""
+    from settings import get_bundled_path
+    return get_bundled_path("hand_history", "seat_mapping.toml")
+
+
+def _get_user_corrections_path() -> Path:
+    """Get user's corrections path in %APPDATA%."""
+    from settings import get_user_data_path
+    return get_user_data_path("corrections.toml")
+
+
+def _get_bundled_corrections_path() -> Path | None:
+    """Get bundled corrections path (read-only)."""
+    from settings import get_bundled_path
+    return get_bundled_path("image_analyzer", "corrections.toml")
 
 
 def load_api_key() -> str | None:
@@ -74,45 +91,64 @@ DEFAULT_SEATS = {
         "bottom": 1,
         "left": 2,
         "top_left": 3,
-        "top_right": 5,
-        "right": 6,
+        "top_right": 4,
+        "right": 5,
     },
 }
 
 
 def load_seat_mapping() -> dict[str, dict[str, int]]:
-    """Load seat mappings for all table types."""
-    path = _get_seat_mapping_path()
-    if not path.exists():
-        return {k: v.copy() for k, v in DEFAULT_SEATS.items()}
-    with open(path, "rb") as f:
-        data = tomllib.load(f)
-    return {
-        "6_player": data.get("6_player", DEFAULT_SEATS["6_player"].copy()),
-        "5_player": data.get("5_player", DEFAULT_SEATS["5_player"].copy()),
-    }
+    """Load seat mappings for all table types. User file takes priority over bundled."""
+    user_path = _get_user_seat_mapping_path()
+    if user_path.exists():
+        with open(user_path, "rb") as f:
+            data = tomllib.load(f)
+        return {
+            "6_player": data.get("6_player", DEFAULT_SEATS["6_player"].copy()),
+            "5_player": data.get("5_player", DEFAULT_SEATS["5_player"].copy()),
+        }
+
+    bundled_path = _get_bundled_seat_mapping_path()
+    if bundled_path:
+        with open(bundled_path, "rb") as f:
+            data = tomllib.load(f)
+        return {
+            "6_player": data.get("6_player", DEFAULT_SEATS["6_player"].copy()),
+            "5_player": data.get("5_player", DEFAULT_SEATS["5_player"].copy()),
+        }
+
+    return {k: v.copy() for k, v in DEFAULT_SEATS.items()}
 
 
 def save_seat_mapping(mappings: dict[str, dict[str, int]]) -> None:
-    """Save seat mappings to TOML file."""
-    path = _get_seat_mapping_path()
+    """Save seat mappings to user data directory."""
+    path = _get_user_seat_mapping_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "wb") as f:
         tomli_w.dump(mappings, f)
 
 
 def load_corrections() -> dict[str, str]:
-    """Load corrections from TOML file."""
-    path = _get_corrections_path()
-    if not path.exists():
-        return {}
-    with open(path, "rb") as f:
-        data = tomllib.load(f)
-    return data.get("corrections", {})
+    """Load corrections from TOML file. User file takes priority over bundled."""
+    user_path = _get_user_corrections_path()
+    if user_path.exists():
+        with open(user_path, "rb") as f:
+            data = tomllib.load(f)
+        return data.get("corrections", {})
+
+    bundled_path = _get_bundled_corrections_path()
+    if bundled_path:
+        with open(bundled_path, "rb") as f:
+            data = tomllib.load(f)
+        return data.get("corrections", {})
+
+    return {}
 
 
 def save_corrections(corrections: dict[str, str]) -> None:
-    """Save corrections to TOML file."""
-    path = _get_corrections_path()
+    """Save corrections to user data directory."""
+    path = _get_user_corrections_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
     data = {"corrections": corrections}
     with open(path, "wb") as f:
         tomli_w.dump(data, f)
@@ -270,6 +306,13 @@ class SettingsDialog(QDialog):
         btn_layout.addWidget(add_btn)
         btn_layout.addWidget(remove_btn)
         btn_layout.addStretch()
+
+        export_btn = QPushButton("Export...")
+        export_btn.clicked.connect(self._export_corrections)
+        import_btn = QPushButton("Import...")
+        import_btn.clicked.connect(self._import_corrections)
+        btn_layout.addWidget(export_btn)
+        btn_layout.addWidget(import_btn)
         layout.addLayout(btn_layout)
 
         return widget
@@ -338,6 +381,76 @@ class SettingsDialog(QDialog):
         current_row = self._corrections_table.currentRow()
         if current_row >= 0:
             self._corrections_table.removeRow(current_row)
+
+    def _get_corrections_from_table(self) -> dict[str, str]:
+        """Extract corrections dict from the table widget."""
+        corrections: dict[str, str] = {}
+        for row in range(self._corrections_table.rowCount()):
+            misread_item = self._corrections_table.item(row, 0)
+            correct_item = self._corrections_table.item(row, 1)
+            if misread_item and correct_item:
+                misread = misread_item.text().strip()
+                correct = correct_item.text().strip()
+                if misread and correct:
+                    corrections[misread] = correct
+        return corrections
+
+    def _export_corrections(self) -> None:
+        """Export corrections to a TOML file."""
+        path, _ = QFileDialog.getSaveFileName(
+            self,
+            "Export Corrections",
+            "corrections.toml",
+            "TOML files (*.toml)",
+        )
+        if not path:
+            return
+
+        corrections = self._get_corrections_from_table()
+        try:
+            with open(path, "wb") as f:
+                tomli_w.dump({"corrections": corrections}, f)
+            QMessageBox.information(
+                self, "Export Complete", f"Exported {len(corrections)} corrections."
+            )
+        except Exception as e:
+            QMessageBox.critical(self, "Export Failed", str(e))
+
+    def _import_corrections(self) -> None:
+        """Import corrections from a TOML file and merge into table."""
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Import Corrections",
+            "",
+            "TOML files (*.toml)",
+        )
+        if not path:
+            return
+
+        try:
+            with open(path, "rb") as f:
+                data = tomllib.load(f)
+            imported = data.get("corrections", {})
+            if not imported:
+                QMessageBox.warning(self, "Import", "No corrections found in file.")
+                return
+
+            existing = self._get_corrections_from_table()
+            merged = {**existing, **imported}
+
+            self._corrections_table.setRowCount(len(merged))
+            for i, (misread, correct) in enumerate(merged.items()):
+                self._corrections_table.setItem(i, 0, QTableWidgetItem(misread))
+                self._corrections_table.setItem(i, 1, QTableWidgetItem(correct))
+
+            added = len(merged) - len(existing)
+            QMessageBox.information(
+                self,
+                "Import Complete",
+                f"Imported {len(imported)} corrections ({added} new).",
+            )
+        except Exception as e:
+            QMessageBox.critical(self, "Import Failed", str(e))
 
     def _save(self) -> None:
         from settings import load_settings, save_settings

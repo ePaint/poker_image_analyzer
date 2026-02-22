@@ -24,6 +24,7 @@ from gui.drop_zone import DropZone
 from gui.file_list import FileListWidget
 from gui.workers import ScreenshotWorker, ConversionWorker
 from gui.settings_dialog import SettingsDialog, load_api_key
+from gui.version import get_version
 
 
 class MainWindow(QMainWindow):
@@ -31,7 +32,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Hand History De-anonymizer")
+        self.setWindowTitle(f"Hand History De-anonymizer v{get_version()}")
         self.setMinimumSize(800, 600)
 
         self._screenshots_folder: Path | None = None
