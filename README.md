@@ -9,6 +9,8 @@ De-anonymize GGPoker/Natural8 hand histories by extracting real player names fro
 - **GUI application** - Drag-and-drop interface for easy use
 - **CLI tool** - Command-line interface for automation
 - **OCR dump files** - Save/load OCR results to avoid re-processing
+- **OCR corrections** - Define corrections for recurring OCR errors, with export/import support
+- **Persistent settings** - User settings survive application updates
 
 ## Installation
 
@@ -75,14 +77,30 @@ YYYY-MM-DD_ HH-MM_AM/PM_$SB_$BB_#TABLEID.png
 - Windows 10/11 or macOS 10.15+
 - Anthropic API key (for OCR processing)
 
+## Settings Location
+
+User settings (API key, seat mappings, OCR corrections) are stored in:
+- **Windows:** `%APPDATA%\HandHistoryDeanonymizer\`
+- **macOS:** `~/Library/Application Support/HandHistoryDeanonymizer/`
+- **Linux:** `~/.config/handhistorydeanonymizer/`
+
+These settings persist across application updates.
+
 ## Building
 
 ```bash
-# Build installer (bumps version automatically)
+# Build installer (bumps patch version automatically)
 uv run python build.py
 
 # Build without version bump
 uv run python build.py --no-bump
+
+# Build and create GitHub release
+uv run python build.py --release
+
+# Bump minor/major version
+uv run python build.py minor
+uv run python build.py major
 ```
 
 ## License
