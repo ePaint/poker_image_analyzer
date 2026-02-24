@@ -11,6 +11,7 @@ project_root = Path(SPECPATH)
 
 # Data files to include
 datas = [
+    (str(project_root / 'pyproject.toml'), '.'),
     (str(project_root / 'hand_history' / 'seat_mapping.toml'), 'hand_history'),
     (str(project_root / 'image_analyzer' / 'corrections.toml'), 'image_analyzer'),
     (str(project_root / 'app.ico'), '.'),
@@ -98,8 +99,8 @@ if sys.platform == 'darwin':
         info_plist={
             'CFBundleName': 'Hand History De-anonymizer',
             'CFBundleDisplayName': 'Hand History De-anonymizer',
-            'CFBundleShortVersionString': '0.1.4',
-            'CFBundleVersion': '0.1.4',
+            'CFBundleShortVersionString': '0.1.5',
+            'CFBundleVersion': '0.1.5',
             'NSHighResolutionCapable': True,
             'LSMinimumSystemVersion': '10.15',
         },
