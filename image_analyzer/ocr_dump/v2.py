@@ -53,15 +53,17 @@ def write(
 
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    results_dict = {
-        _make_key(r["hand_number"], r["filename"]): {
+    results_dict = {}
+    for r in sorted(results, key=lambda x: x["filename"]):
+        entry = {
             "hand_number": r["hand_number"],
             "filename": r["filename"],
             "table_type": r["table_type"],
             "positions": r["position_names"],
         }
-        for r in sorted(results, key=lambda x: x["filename"])
-    }
+        if r.get("button_position"):
+            entry["button_position"] = r["button_position"]
+        results_dict[_make_key(r["hand_number"], r["filename"])] = entry
 
     data = {
         "metadata": {
@@ -111,5 +113,33 @@ def parse(path: Path) -> dict[str, dict[int, str]]:
         table_type = info.get("table_type", "6_player")
         seat_names = position_to_seat(positions, table_type)
         result[hand_number] = seat_names
+
+    return result
+
+
+def parse_to_ocr_data(path: Path) -> dict[str, dict]:
+    """Parse OCR dump TOML file into OcrData format for button-aware conversion.
+
+    Note: For v2 format with composite keys, this returns the LAST entry
+    for each hand number.
+
+    Args:
+        path: Path to OCR results TOML file
+
+    Returns:
+        Dict mapping hand number to OcrData dict with position_names, table_type, button_position
+    """
+    with open(path, "rb") as f:
+        data = tomllib.load(f)
+
+    result: dict[str, dict] = {}
+
+    for key, info in data.get("results", {}).items():
+        hand_number = info.get("hand_number") or _extract_hand_number(key)
+        result[hand_number] = {
+            "position_names": info.get("positions", {}),
+            "table_type": info.get("table_type", "6_player"),
+            "button_position": info.get("button_position"),
+        }
 
     return result

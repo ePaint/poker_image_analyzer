@@ -91,3 +91,29 @@ def parse(path: Path) -> dict[str, dict[int, str]]:
         result[hand_number] = seat_names
 
     return result
+
+
+def parse_to_ocr_data(path: Path) -> dict[str, dict]:
+    """Parse OCR dump TOML file into OcrData format for button-aware conversion.
+
+    Note: v1 format doesn't store button_position, so it will be None.
+
+    Args:
+        path: Path to OCR results TOML file
+
+    Returns:
+        Dict mapping hand number to OcrData dict with position_names, table_type, button_position
+    """
+    with open(path, "rb") as f:
+        data = tomllib.load(f)
+
+    result: dict[str, dict] = {}
+
+    for hand_number, info in data.get("results", {}).items():
+        result[hand_number] = {
+            "position_names": info.get("positions", {}),
+            "table_type": info.get("table_type", "6_player"),
+            "button_position": None,  # v1 doesn't have button_position
+        }
+
+    return result

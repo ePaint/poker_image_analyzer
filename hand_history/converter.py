@@ -2,8 +2,16 @@
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import TypedDict
 
 from hand_history.parser import HandHistory
+
+
+class OcrData(TypedDict, total=False):
+    """OCR data from screenshot processing."""
+    position_names: dict[str, str]
+    table_type: str
+    button_position: str | None
 
 
 @dataclass
@@ -82,6 +90,55 @@ def convert_hands(
                 error="No matching screenshot found",
             ))
             continue
+
+        result = convert_hand(hand, seat_data)
+        results.append(result)
+
+    return results
+
+
+def convert_hands_with_ocr(
+    hands: list[HandHistory],
+    hand_number_to_ocr: dict[str, OcrData],
+) -> list[ConversionResult]:
+    """Convert multiple hands using OCR data with button-aware seat mapping.
+
+    Uses the dealer button position from screenshots and hand histories
+    to correctly map positions to seats regardless of Hero's seat.
+
+    Args:
+        hands: List of parsed hand histories
+        hand_number_to_ocr: Mapping from hand number to OCR data
+
+    Returns:
+        List of ConversionResult objects
+    """
+    from hand_history import position_to_seat
+
+    results = []
+
+    for hand in hands:
+        ocr_data = hand_number_to_ocr.get(hand.hand_number)
+
+        if ocr_data is None:
+            results.append(ConversionResult(
+                hand_number=hand.hand_number,
+                success=False,
+                original_text=hand.raw_text,
+                error="No matching screenshot found",
+            ))
+            continue
+
+        position_names = ocr_data.get("position_names", {})
+        table_type = ocr_data.get("table_type", "6_player")
+        button_position = ocr_data.get("button_position")
+
+        seat_data = position_to_seat(
+            position_names,
+            table_type,
+            screenshot_button_position=button_position,
+            hand_button_seat=hand.button_seat if hand.button_seat else None,
+        )
 
         result = convert_hand(hand, seat_data)
         results.append(result)

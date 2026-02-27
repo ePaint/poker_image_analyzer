@@ -8,7 +8,7 @@ from pathlib import Path
 HAND_HEADER_PATTERN = re.compile(
     r"^Poker Hand #(OM\d+): .+ - (\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})$"
 )
-TABLE_PATTERN = re.compile(r"^Table '([^']+)' 6-max Seat #\d+ is the button$")
+TABLE_PATTERN = re.compile(r"^Table '([^']+)' (\d+)-max Seat #(\d+) is the button$")
 SEAT_PATTERN = re.compile(r"^Seat (\d+): (.+) \(\$[\d,.]+ in chips\)$")
 
 
@@ -21,6 +21,7 @@ class HandHistory:
     timestamp: datetime
     seats: dict[int, str]
     raw_text: str
+    button_seat: int
 
     def get_player_at_seat(self, seat: int) -> str | None:
         """Get player name at given seat number."""
@@ -55,6 +56,7 @@ def parse_hand(text: str) -> HandHistory | None:
     timestamp = datetime.strptime(header_match.group(2), "%Y/%m/%d %H:%M:%S")
 
     table_name = ""
+    button_seat = 0
     seats: dict[int, str] = {}
 
     for line in lines[1:]:
@@ -64,6 +66,7 @@ def parse_hand(text: str) -> HandHistory | None:
         table_match = TABLE_PATTERN.match(line)
         if table_match:
             table_name = table_match.group(1)
+            button_seat = int(table_match.group(3))
             continue
 
         seat_match = SEAT_PATTERN.match(line)
@@ -81,6 +84,7 @@ def parse_hand(text: str) -> HandHistory | None:
         timestamp=timestamp,
         seats=seats,
         raw_text=text,
+        button_seat=button_seat,
     )
 
 

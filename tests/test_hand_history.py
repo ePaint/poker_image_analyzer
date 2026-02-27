@@ -698,3 +698,114 @@ class TestIntegrationWithFixtures:
         assert result[3] == "Player3"  # top_left
         assert result[4] == "Player4"  # top_right
         assert result[5] == "Player5"  # right
+
+
+class TestButtonSeat:
+    """Tests for button_seat field and button-aware seat mapping."""
+
+    def test_parses_button_seat(self):
+        """Test that button_seat is parsed from hand history."""
+        hand = parse_hand(SAMPLE_HAND)
+        assert hand.button_seat == 2  # "Seat #2 is the button"
+
+    def test_parses_button_seat_different_value(self):
+        """Test button_seat with different seat number."""
+        hand = parse_hand(SAMPLE_HAND_2)
+        assert hand.button_seat == 1  # "Seat #1 is the button"
+
+
+class TestCalculateSeatMapping:
+    """Tests for calculate_seat_mapping function."""
+
+    def test_button_at_bottom_seat_1(self):
+        """When button is at bottom and seat 1, mapping should be default."""
+        from hand_history import calculate_seat_mapping
+        mapping = calculate_seat_mapping("bottom", 1, "6_player")
+        assert mapping["bottom"] == 1
+        assert mapping["bottom_left"] == 2
+        assert mapping["top_left"] == 3
+        assert mapping["top"] == 4
+        assert mapping["top_right"] == 5
+        assert mapping["bottom_right"] == 6
+
+    def test_button_at_top_left_seat_3(self):
+        """When button is at top_left and seat 3, mapping should rotate."""
+        from hand_history import calculate_seat_mapping
+        mapping = calculate_seat_mapping("top_left", 3, "6_player")
+        # top_left -> 3, positions continue clockwise
+        assert mapping["top_left"] == 3
+        assert mapping["top"] == 4
+        assert mapping["top_right"] == 5
+        assert mapping["bottom_right"] == 6
+        assert mapping["bottom"] == 1
+        assert mapping["bottom_left"] == 2
+
+    def test_button_at_bottom_right_seat_6(self):
+        """When button is at bottom_right and seat 6."""
+        from hand_history import calculate_seat_mapping
+        mapping = calculate_seat_mapping("bottom_right", 6, "6_player")
+        assert mapping["bottom_right"] == 6
+        assert mapping["bottom"] == 1
+        assert mapping["bottom_left"] == 2
+        assert mapping["top_left"] == 3
+        assert mapping["top"] == 4
+        assert mapping["top_right"] == 5
+
+    def test_5_player_rotation(self):
+        """Test rotation for 5-player table."""
+        from hand_history import calculate_seat_mapping
+        mapping = calculate_seat_mapping("top_left", 3, "5_player")
+        assert mapping["top_left"] == 3
+        assert mapping["top_right"] == 4
+        assert mapping["right"] == 5
+        assert mapping["bottom"] == 1
+        assert mapping["left"] == 2
+
+    def test_invalid_position_returns_default(self):
+        """When button position is invalid, return default mapping."""
+        from hand_history import calculate_seat_mapping
+        mapping = calculate_seat_mapping("invalid_position", 3, "6_player")
+        # Should return default
+        assert mapping["bottom"] == 1
+
+
+class TestButtonAwarePositionToSeat:
+    """Tests for position_to_seat with button awareness."""
+
+    def test_button_aware_mapping(self):
+        """Test position_to_seat uses button info when provided."""
+        position_names = {
+            "bottom": "Hero",
+            "top_left": "ButtonPlayer",
+            "top": "Player4",
+        }
+        # Button is at top_left on screen, and seat 3 in hand history
+        result = position_to_seat(
+            position_names,
+            "6_player",
+            screenshot_button_position="top_left",
+            hand_button_seat=3,
+        )
+        # top_left=3, so top=4, bottom=1
+        assert result[1] == "Hero"
+        assert result[3] == "ButtonPlayer"
+        assert result[4] == "Player4"
+
+    def test_static_mapping_when_no_button_info(self):
+        """Test position_to_seat uses static mapping when button info missing."""
+        position_names = {"bottom": "Hero", "top_left": "Player3"}
+        result = position_to_seat(position_names, "6_player")
+        assert result[1] == "Hero"
+        assert result[3] == "Player3"
+
+    def test_partial_button_info_uses_static(self):
+        """Test that partial button info falls back to static mapping."""
+        position_names = {"bottom": "Hero"}
+        # Only position provided, not seat
+        result = position_to_seat(
+            position_names,
+            "6_player",
+            screenshot_button_position="top_left",
+            hand_button_seat=None,
+        )
+        assert result[1] == "Hero"

@@ -7,16 +7,18 @@ from PIL import Image, ImageEnhance
 
 
 from image_analyzer.constants import (
-    GGPOKER_DETECTION_PIXEL, GGPOKER_COLOR_BGR, SIX_PLAYER_REGIONS,
+    GGPOKER_DETECTION_PIXEL, GGPOKER_COLOR_BGR,
     NATURAL8_DETECTION_PIXEL, NATURAL8_COLOR_BGR,
     GGPOKER_TOP_CENTER_PIXEL, NATURAL8_TOP_CENTER_PIXEL, BRIGHTNESS_THRESHOLD,
     FEWSHOT_ZERO_B64, FEWSHOT_ZERO_NAME,
     FEWSHOT_I_VS_L_B64, FEWSHOT_I_VS_L_NAME,
     FEWSHOT_ZERO_ALT_B64, FEWSHOT_ZERO_ALT_NAME,
     load_corrections,
+    BUTTON_OFFSET_6PLAYER, BUTTON_OFFSET_5PLAYER,
+    BUTTON_COLOR_BGR, BUTTON_COLOR_TOLERANCE,
 )
 from image_analyzer.models import (
-    PlayerRegion, BASE_WIDTH, FIVE_PLAYER_REGIONS,
+    PlayerRegion, BASE_WIDTH, FIVE_PLAYER_REGIONS, SIX_PLAYER_REGIONS,
 )
 from image_analyzer.llm import get_provider, ProviderName
 
@@ -66,6 +68,43 @@ def detect_table_type(image: np.ndarray, tolerance: int = 30) -> tuple[PlayerReg
 
     # Fallback to 5-player
     return FIVE_PLAYER_REGIONS
+
+
+def detect_button_position(
+    image: np.ndarray,
+    regions: tuple[PlayerRegion, ...],
+) -> str | None:
+    """Detect which position has the dealer button.
+
+    Checks each player region for the D button indicator at a known offset.
+
+    Args:
+        image: BGR numpy array (from cv2.imread)
+        regions: Player region definitions (must match the table type)
+
+    Returns:
+        Position name (e.g., "bottom", "top_left") or None if not found.
+    """
+    image_height, image_width = image.shape[:2]
+    is_5player = len(regions) == 5
+    offset = BUTTON_OFFSET_5PLAYER if is_5player else BUTTON_OFFSET_6PLAYER
+
+    def color_distance(c1: tuple, c2: tuple) -> float:
+        return sum((int(a) - int(b)) ** 2 for a, b in zip(c1, c2)) ** 0.5
+
+    for region in regions:
+        scaled = region.scale(image_width)
+        x = scaled.x + offset[0]
+        y = scaled.y + offset[1]
+
+        if x < 0 or y < 0 or x >= image_width or y >= image_height:
+            continue
+
+        pixel = tuple(image[y, x])
+        if color_distance(pixel, BUTTON_COLOR_BGR) < BUTTON_COLOR_TOLERANCE:
+            return region.name
+
+    return None
 
 
 def _enhance_crop(image: Image.Image) -> Image.Image:

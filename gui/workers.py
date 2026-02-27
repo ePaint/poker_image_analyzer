@@ -11,12 +11,14 @@ import cv2
 from image_analyzer import (
     analyze_image,
     detect_table_type,
+    detect_button_position,
     ScreenshotFilename,
 )
 from hand_history import (
     TableType,
+    OcrData,
     parse_file,
-    convert_hands,
+    convert_hands_with_ocr,
     write_converted_file,
     write_skipped_file,
     position_to_seat,
@@ -83,34 +85,35 @@ class ScreenshotWorker(QThread):
 
     def _process_screenshot(
         self, screenshot_path: Path
-    ) -> tuple[Path, str | None, TableType | None, dict | None, dict | None, str | None]:
+    ) -> tuple[Path, str | None, TableType | None, dict | None, dict | None, str | None, str | None]:
         """Process single screenshot in thread pool.
 
-        Returns: (path, hand_number, table_type, position_names, seat_names, error)
+        Returns: (path, hand_number, table_type, position_names, seat_names, button_position, error)
         """
         try:
             parsed = ScreenshotFilename.parse(screenshot_path)
             if not parsed:
-                return (screenshot_path, None, None, None, None, "Invalid filename format")
+                return (screenshot_path, None, None, None, None, None, "Invalid filename format")
 
             hand_number = f"OM{parsed.table_id}"
 
             image = cv2.imread(str(screenshot_path))
             if image is None:
-                return (screenshot_path, hand_number, None, None, None, "Could not load image")
+                return (screenshot_path, hand_number, None, None, None, None, "Could not load image")
 
             regions = detect_table_type(image)
             table_type: TableType = "6_player" if len(regions) == 6 else "5_player"
 
             position_names = self._call_with_backoff(image, regions)
+            button_position = detect_button_position(image, regions)
             seat_names = position_to_seat(position_names, table_type)
 
-            return (screenshot_path, hand_number, table_type, position_names, seat_names, None)
+            return (screenshot_path, hand_number, table_type, position_names, seat_names, button_position, None)
         except Exception as e:
-            return (screenshot_path, None, None, None, None, str(e))
+            return (screenshot_path, None, None, None, None, None, str(e))
 
     def run(self) -> None:
-        hand_data: dict[str, dict[int, str]] = {}
+        ocr_data: dict[str, OcrData] = {}
         ocr_results: list[dict] = []
         ocr_errors: list[dict] = []
 
@@ -131,7 +134,7 @@ class ScreenshotWorker(QThread):
                     return
 
                 processed += 1
-                path, hand_number, table_type, position_names, seat_names, error = future.result()
+                path, hand_number, table_type, position_names, seat_names, button_position, error = future.result()
 
                 self.progress.emit(processed, total, path.name)
 
@@ -139,17 +142,26 @@ class ScreenshotWorker(QThread):
                     self.error.emit(path.name, error)
                     ocr_errors.append({"filename": path.name, "error": error})
                 else:
-                    hand_data[hand_number] = seat_names
+                    assert hand_number is not None
+                    assert position_names is not None
+                    assert table_type is not None
+                    assert seat_names is not None
+                    ocr_data[hand_number] = OcrData(
+                        position_names=position_names,
+                        table_type=table_type,
+                        button_position=button_position,
+                    )
                     ocr_results.append({
                         "filename": path.name,
                         "hand_number": hand_number,
                         "table_type": table_type,
                         "position_names": position_names,
                         "seat_names": seat_names,
+                        "button_position": button_position,
                     })
                     self.result.emit(hand_number, path.name, len(position_names), len(seat_names))
 
-        self.finished_processing.emit((hand_data, ocr_results, ocr_errors))
+        self.finished_processing.emit((ocr_data, ocr_results, ocr_errors))
 
 
 class ConversionWorker(QThread):
@@ -163,13 +175,13 @@ class ConversionWorker(QThread):
     def __init__(
         self,
         hands_dir: Path,
-        hand_data: dict[str, dict[int, str]],
+        ocr_data: dict[str, OcrData],
         output_dir: Path,
         parent=None,
     ):
         super().__init__(parent)
         self._hands_dir = hands_dir
-        self._hand_data = hand_data
+        self._ocr_data = ocr_data
         self._output_dir = output_dir
         self._cancelled = False
 
@@ -193,7 +205,7 @@ class ConversionWorker(QThread):
 
             try:
                 hands = parse_file(hand_file)
-                results = convert_hands(hands, self._hand_data)
+                results = convert_hands_with_ocr(hands, self._ocr_data)
 
                 successful = [r for r in results if r.success]
                 failed = [r for r in results if not r.success]

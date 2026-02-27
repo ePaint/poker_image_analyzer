@@ -42,3 +42,13 @@ FIVE_PLAYER_REGIONS = (
     PlayerRegion("right", 804, 496, FIVE_PLAYER_BOX_WIDTH, FIVE_PLAYER_BOX_HEIGHT, FIVE_PLAYER_BASE_WIDTH),
     PlayerRegion("bottom", 414, 672, FIVE_PLAYER_BOX_WIDTH, FIVE_PLAYER_BOX_HEIGHT, FIVE_PLAYER_BASE_WIDTH),
 )
+
+# 6-player table regions (GGPoker 800px base)
+SIX_PLAYER_REGIONS = (
+    PlayerRegion("top", 347, 152),
+    PlayerRegion("top_left", 29, 234),
+    PlayerRegion("top_right", 666, 234),
+    PlayerRegion("bottom_left", 29, 459),
+    PlayerRegion("bottom", 347, 565),
+    PlayerRegion("bottom_right", 666, 459),
+)

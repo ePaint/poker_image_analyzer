@@ -4,6 +4,7 @@ from .PlayerRegion import (
     DEFAULT_BOX_HEIGHT,
     BASE_WIDTH,
     FIVE_PLAYER_REGIONS,
+    SIX_PLAYER_REGIONS,
 )
 from .ScreenshotFilename import ScreenshotFilename
 
@@ -14,4 +15,5 @@ __all__ = [
     "DEFAULT_BOX_HEIGHT",
     "BASE_WIDTH",
     "FIVE_PLAYER_REGIONS",
+    "SIX_PLAYER_REGIONS",
 ]

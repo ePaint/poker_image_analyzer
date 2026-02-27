@@ -18,7 +18,8 @@ from PySide6.QtWidgets import (
 )
 
 from image_analyzer import ScreenshotFilename
-from image_analyzer.ocr_dump import write_ocr_dump, parse_ocr_dump
+from image_analyzer.ocr_dump import write_ocr_dump, parse_ocr_dump_to_ocr_data
+from hand_history import OcrData
 from settings import load_settings, save_settings
 from gui.drop_zone import DropZone
 from gui.file_list import FileListWidget
@@ -41,7 +42,7 @@ class MainWindow(QMainWindow):
         self._output_folder: Path | None = None
         self._screenshot_worker: ScreenshotWorker | None = None
         self._conversion_worker: ConversionWorker | None = None
-        self._hand_data: dict[str, dict[int, str]] = {}
+        self._hand_data: dict[str, OcrData] = {}
 
         self._setup_menu()
         self._setup_ui()
@@ -272,9 +273,9 @@ class MainWindow(QMainWindow):
         self._screenshots_progress_bar.setValue(1)
 
         try:
-            hand_data = parse_ocr_dump(self._ocr_dump_path)
-            self._hand_data = hand_data
-            self._log.append(f"Loaded data for {len(hand_data)} hands\n")
+            ocr_data = parse_ocr_dump_to_ocr_data(self._ocr_dump_path)
+            self._hand_data = ocr_data  # type: ignore[assignment]
+            self._log.append(f"Loaded data for {len(ocr_data)} hands\n")
             self._start_conversion_step2()
         except Exception as e:
             self._log.append(f"Error loading dump file: {e}")

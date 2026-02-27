@@ -23,6 +23,11 @@ _PARSERS = {
     "v2": v2.parse,
 }
 
+_OCR_DATA_PARSERS = {
+    "v1": v1.parse_to_ocr_data,
+    "v2": v2.parse_to_ocr_data,
+}
+
 
 def write_ocr_dump(
     results: list[dict],
@@ -70,4 +75,31 @@ def parse_ocr_dump(path: Path) -> dict[str, dict[int, str]]:
     return parser(path)
 
 
-__all__ = ["write_ocr_dump", "parse_ocr_dump", "OcrDumpVersion", "CURRENT_VERSION"]
+def parse_ocr_dump_to_ocr_data(path: Path) -> dict[str, dict]:
+    """Parse OCR dump TOML file into OcrData format for button-aware conversion.
+
+    Automatically detects version from metadata and uses appropriate parser.
+
+    Args:
+        path: Path to OCR results TOML file
+
+    Returns:
+        Dict mapping hand number to OcrData dict with position_names, table_type, button_position
+    """
+    with open(path, "rb") as f:
+        data = tomllib.load(f)
+
+    version = data.get("metadata", {}).get("version", "v1")
+    parser = _OCR_DATA_PARSERS.get(version)
+    if not parser:
+        raise ValueError(f"Unknown OCR dump version: {version}")
+    return parser(path)
+
+
+__all__ = [
+    "write_ocr_dump",
+    "parse_ocr_dump",
+    "parse_ocr_dump_to_ocr_data",
+    "OcrDumpVersion",
+    "CURRENT_VERSION",
+]

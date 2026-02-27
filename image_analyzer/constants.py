@@ -1,6 +1,5 @@
 import tomllib
 
-from image_analyzer import PlayerRegion
 from settings import get_user_data_path, get_bundled_path
 
 
@@ -108,15 +107,6 @@ FEWSHOT_ZERO_ALT_B64 = (
 )
 FEWSHOT_ZERO_ALT_NAME = "H0T M0USE!"
 
-SIX_PLAYER_REGIONS = (
-    PlayerRegion("top", 347, 152),
-    PlayerRegion("top_left", 29, 234),
-    PlayerRegion("top_right", 666, 234),
-    PlayerRegion("bottom_left", 29, 459),
-    PlayerRegion("bottom", 347, 565),
-    PlayerRegion("bottom_right", 666, 459),
-)
-
 GGPOKER_DETECTION_PIXEL = (702, 64)
 GGPOKER_COLOR_BGR = (6, 15, 219)
 NATURAL8_DETECTION_PIXEL = (880, 72)
@@ -128,3 +118,9 @@ NATURAL8_COLOR_BGR = (145, 39, 140)
 GGPOKER_TOP_CENTER_PIXEL = (400, 160)  # Center of "top" player name area
 NATURAL8_TOP_CENTER_PIXEL = (480, 130)  # Center of "top" player avatar area (960px base)
 BRIGHTNESS_THRESHOLD = 100  # If max(BGR) > this, player is present (6max)
+
+# D button detection - offset from player region top-left corner to button center
+BUTTON_OFFSET_6PLAYER = (-15, -2)  # 800px base
+BUTTON_OFFSET_5PLAYER = (-16, 2)   # 960px base
+BUTTON_COLOR_BGR = (33, 195, 239)  # #efc321 in BGR
+BUTTON_COLOR_TOLERANCE = 50
