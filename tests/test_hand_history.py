@@ -9,11 +9,13 @@ import sys
 
 from hand_history import (
     ConversionResult,
+    OcrData,
     parse_hand,
     parse_file,
     find_hand_by_number,
     convert_hand,
     convert_hands,
+    convert_hands_with_propagation,
     write_converted_file,
     write_skipped_file,
     load_seat_mapping,
@@ -809,3 +811,165 @@ class TestButtonAwarePositionToSeat:
             hand_button_seat=None,
         )
         assert result[1] == "Hero"
+
+
+class TestConvertHandsWithPropagation:
+    """Tests for convert_hands_with_propagation function."""
+
+    HAND_1 = """Poker Hand #OM100001: PLO-5 ($5/$10) - 2025/12/21 15:09:46
+Table 'TableA' 6-max Seat #2 is the button
+Seat 1: Hero ($1,000 in chips)
+Seat 2: enc_player1 ($1,000 in chips)
+Seat 3: enc_player2 ($1,000 in chips)
+enc_player1: posts small blind $5
+enc_player2: posts big blind $10
+*** SUMMARY ***
+Seat 1: Hero won ($10)"""
+
+    HAND_2 = """Poker Hand #OM100002: PLO-5 ($5/$10) - 2025/12/21 15:10:00
+Table 'TableA' 6-max Seat #3 is the button
+Seat 1: Hero ($1,000 in chips)
+Seat 2: enc_player1 ($1,000 in chips)
+Seat 3: enc_player2 ($1,000 in chips)
+enc_player1: posts small blind $5
+enc_player2: posts big blind $10
+*** SUMMARY ***
+Seat 1: Hero won ($10)"""
+
+    HAND_3 = """Poker Hand #OM100003: PLO-5 ($5/$10) - 2025/12/21 15:11:00
+Table 'TableB' 6-max Seat #1 is the button
+Seat 1: Hero ($1,000 in chips)
+Seat 4: enc_player3 ($1,000 in chips)
+enc_player3: posts small blind $5
+*** SUMMARY ***
+Seat 1: Hero won ($5)"""
+
+    def test_propagation_same_table(self):
+        """Hand without screenshot gets converted using mapping from same table."""
+        hand1 = parse_hand(self.HAND_1)
+        hand2 = parse_hand(self.HAND_2)
+
+        # Only hand1 has OCR data
+        ocr_data = {
+            "OM100001": OcrData(
+                position_names={
+                    "bottom": "Hero",
+                    "bottom_left": "RealPlayer1",
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="bottom_left",  # seat 2 is button
+            ),
+        }
+
+        results = convert_hands_with_propagation([hand1, hand2], ocr_data)
+
+        assert len(results) == 2
+        # Both hands should succeed because they're at the same table
+        assert results[0].success
+        assert results[1].success
+
+        # hand2 should have the same player replacements even without direct screenshot
+        assert "RealPlayer1" in results[1].converted_text
+        assert "RealPlayer2" in results[1].converted_text
+        assert "enc_player1" not in results[1].converted_text
+        assert "enc_player2" not in results[1].converted_text
+
+    def test_propagation_different_tables(self):
+        """Hands from different tables use separate mappings."""
+        hand1 = parse_hand(self.HAND_1)  # TableA
+        hand3 = parse_hand(self.HAND_3)  # TableB
+
+        # Only hand1 has OCR data (for TableA)
+        ocr_data = {
+            "OM100001": OcrData(
+                position_names={
+                    "bottom": "Hero",
+                    "bottom_left": "RealPlayer1",
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="bottom_left",
+            ),
+        }
+
+        results = convert_hands_with_propagation([hand1, hand3], ocr_data)
+
+        assert len(results) == 2
+        # hand1 (TableA) should succeed
+        assert results[0].success
+        # hand3 (TableB) should fail - no screenshot data for TableB
+        assert not results[1].success
+        assert "No screenshot data for this table" in results[1].error
+
+    def test_propagation_no_mapping(self):
+        """Hand from unknown table fails gracefully."""
+        hand3 = parse_hand(self.HAND_3)  # TableB
+
+        # Empty OCR data
+        ocr_data: dict[str, OcrData] = {}
+
+        results = convert_hands_with_propagation([hand3], ocr_data)
+
+        assert len(results) == 1
+        assert not results[0].success
+        assert "No screenshot data for this table" in results[0].error
+
+    def test_propagation_preserves_hero(self):
+        """Hero is never replaced even when propagating."""
+        hand1 = parse_hand(self.HAND_1)
+        hand2 = parse_hand(self.HAND_2)
+
+        ocr_data = {
+            "OM100001": OcrData(
+                position_names={
+                    "bottom": "SomeOtherName",  # Should not replace Hero
+                    "bottom_left": "RealPlayer1",
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="bottom_left",
+            ),
+        }
+
+        results = convert_hands_with_propagation([hand1, hand2], ocr_data)
+
+        # Hero should be preserved in both hands
+        assert "Hero" in results[0].converted_text
+        assert "Hero" in results[1].converted_text
+
+    def test_propagation_multiple_screenshots_same_table(self):
+        """Multiple screenshots from same table combine their mappings."""
+        hand1 = parse_hand(self.HAND_1)
+        hand2 = parse_hand(self.HAND_2)
+
+        # Both hands have OCR data, but different players detected
+        ocr_data = {
+            "OM100001": OcrData(
+                position_names={
+                    "bottom": "Hero",
+                    "bottom_left": "RealPlayer1",
+                    # top_left not detected in this screenshot
+                },
+                table_type="6_player",
+                button_position="bottom_left",
+            ),
+            "OM100002": OcrData(
+                position_names={
+                    "bottom": "Hero",
+                    # bottom_left not detected in this screenshot
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="top_left",  # seat 3 is button
+            ),
+        }
+
+        results = convert_hands_with_propagation([hand1, hand2], ocr_data)
+
+        # Both should succeed and have both player names
+        assert results[0].success
+        assert results[1].success
+        # Combined mappings should be available to both hands
+        assert "RealPlayer1" in results[0].converted_text
+        assert "RealPlayer1" in results[1].converted_text

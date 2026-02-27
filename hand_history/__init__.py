@@ -18,6 +18,7 @@ from hand_history.converter import (
     convert_hand,
     convert_hands,
     convert_hands_with_ocr,
+    convert_hands_with_propagation,
     write_converted_file,
     write_skipped_file,
 )
@@ -173,6 +174,7 @@ __all__ = [
     "convert_hand",
     "convert_hands",
     "convert_hands_with_ocr",
+    "convert_hands_with_propagation",
     "write_converted_file",
     "write_skipped_file",
     "load_seat_mapping",

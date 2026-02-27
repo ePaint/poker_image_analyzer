@@ -146,6 +146,86 @@ def convert_hands_with_ocr(
     return results
 
 
+def convert_hands_with_propagation(
+    hands: list[HandHistory],
+    hand_number_to_ocr: dict[str, OcrData],
+) -> list[ConversionResult]:
+    """Convert hands, propagating mappings to same-table hands without screenshots.
+
+    Unlike convert_hands_with_ocr which only converts hands with direct screenshot
+    matches, this function learns encrypted_id -> real_name mappings from hands
+    with screenshots and applies them to ALL hands from the same table.
+
+    Args:
+        hands: List of parsed hand histories
+        hand_number_to_ocr: Mapping from hand number to OCR data
+
+    Returns:
+        List of ConversionResult objects
+    """
+    from hand_history import position_to_seat
+
+    # Step 1: Build encrypted_id -> name mappings per table from hands with screenshots
+    table_mappings: dict[str, dict[str, str]] = {}  # table_name -> {encrypted_id: real_name}
+
+    for hand in hands:
+        ocr_data = hand_number_to_ocr.get(hand.hand_number)
+        if ocr_data is None:
+            continue
+
+        seat_to_name = position_to_seat(
+            ocr_data.get("position_names", {}),
+            ocr_data.get("table_type", "6_player"),
+            screenshot_button_position=ocr_data.get("button_position"),
+            hand_button_seat=hand.button_seat if hand.button_seat else None,
+        )
+
+        if hand.table_name not in table_mappings:
+            table_mappings[hand.table_name] = {}
+
+        for seat, encrypted_id in hand.seats.items():
+            if encrypted_id == "Hero":
+                continue
+            real_name = seat_to_name.get(seat)
+            if real_name and real_name != "EMPTY":
+                table_mappings[hand.table_name][encrypted_id] = real_name
+
+    # Step 2: Convert ALL hands using table mappings
+    results = []
+    for hand in hands:
+        encrypted_to_name = table_mappings.get(hand.table_name, {})
+
+        if not encrypted_to_name:
+            results.append(ConversionResult(
+                hand_number=hand.hand_number,
+                success=False,
+                original_text=hand.raw_text,
+                error="No screenshot data for this table",
+            ))
+            continue
+
+        # Apply replacements
+        text = hand.raw_text
+        replacements: dict[str, str] = {}
+        for seat, encrypted_id in hand.seats.items():
+            if encrypted_id == "Hero":
+                continue
+            real_name = encrypted_to_name.get(encrypted_id)
+            if real_name:
+                replacements[encrypted_id] = real_name
+                text = re.sub(rf"\b{re.escape(encrypted_id)}\b", real_name, text)
+
+        results.append(ConversionResult(
+            hand_number=hand.hand_number,
+            success=True,
+            original_text=hand.raw_text,
+            converted_text=text,
+            replacements=replacements,
+        ))
+
+    return results
+
+
 def write_converted_file(
     results: list[ConversionResult],
     output_path: Path,

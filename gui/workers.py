@@ -18,7 +18,7 @@ from hand_history import (
     TableType,
     OcrData,
     parse_file,
-    convert_hands_with_ocr,
+    convert_hands_with_propagation,
     write_converted_file,
     write_skipped_file,
     position_to_seat,
@@ -205,7 +205,7 @@ class ConversionWorker(QThread):
 
             try:
                 hands = parse_file(hand_file)
-                results = convert_hands_with_ocr(hands, self._ocr_data)
+                results = convert_hands_with_propagation(hands, self._ocr_data)
 
                 successful = [r for r in results if r.success]
                 failed = [r for r in results if not r.success]

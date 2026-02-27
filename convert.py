@@ -7,15 +7,16 @@ from pathlib import Path
 from image_analyzer import (
     analyze_screenshot,
     detect_table_type,
+    detect_button_position,
     ScreenshotFilename,
 )
 from hand_history import (
     TableType,
+    OcrData,
     parse_file,
-    convert_hands,
+    convert_hands_with_propagation,
     write_converted_file,
     write_skipped_file,
-    position_to_seat,
 )
 import cv2
 
@@ -23,7 +24,7 @@ import cv2
 def process_screenshots(
     screenshots_dir: Path,
     api_key: str | None = None,
-) -> dict[str, dict[int, str]]:
+) -> dict[str, OcrData]:
     """Process all screenshots and extract hand numbers + player names.
 
     Args:
@@ -31,9 +32,9 @@ def process_screenshots(
         api_key: API key for LLM provider
 
     Returns:
-        Dict mapping hand number to seat->name mapping
+        Dict mapping hand number to OcrData (position_names, table_type, button_position)
     """
-    result: dict[str, dict[int, str]] = {}
+    result: dict[str, OcrData] = {}
 
     png_files = list(screenshots_dir.glob("*.png"))
     valid_files = [f for f in png_files if ScreenshotFilename.is_valid(f.name)]
@@ -60,10 +61,14 @@ def process_screenshots(
             table_type: TableType = "6_player" if len(regions) == 6 else "5_player"
 
             position_names = analyze_screenshot(screenshot_path, api_key=api_key)
-            seat_names = position_to_seat(position_names, table_type)
+            button_position = detect_button_position(image, regions)
 
-            result[hand_number] = seat_names
-            print(f"  Hand #{hand_number}: {len(seat_names)} players ({table_type})")
+            result[hand_number] = OcrData(
+                position_names=position_names,
+                table_type=table_type,
+                button_position=button_position,
+            )
+            print(f"  Hand #{hand_number}: {len(position_names)} players ({table_type})")
 
         except Exception as e:
             print(f"  Error: {e}")
@@ -73,14 +78,17 @@ def process_screenshots(
 
 def process_hands(
     hands_dir: Path,
-    hand_data: dict[str, dict[int, str]],
+    ocr_data: dict[str, OcrData],
     output_dir: Path,
 ) -> tuple[int, int]:
     """Process all hand history files and convert them.
 
+    Uses mapping propagation to convert hands without direct screenshots
+    by learning encrypted_id -> real_name from other hands at the same table.
+
     Args:
         hands_dir: Directory containing hand history files
-        hand_data: Mapping from hand number to seat->name
+        ocr_data: Mapping from hand number to OCR data
         output_dir: Output directory for converted files
 
     Returns:
@@ -102,7 +110,7 @@ def process_hands(
             hands = parse_file(hand_file)
             print(f"  Parsed {len(hands)} hands")
 
-            results = convert_hands(hands, hand_data)
+            results = convert_hands_with_propagation(hands, ocr_data)
 
             successful = [r for r in results if r.success]
             failed = [r for r in results if not r.success]
@@ -157,15 +165,15 @@ def main(
     print(f"Output:      {output_dir}\n")
 
     print("Step 1: Processing screenshots...")
-    hand_data = process_screenshots(screenshots_dir, api_key)
-    print(f"\nExtracted data for {len(hand_data)} hands\n")
+    ocr_data = process_screenshots(screenshots_dir, api_key)
+    print(f"\nExtracted data for {len(ocr_data)} hands\n")
 
-    if not hand_data:
+    if not ocr_data:
         print("No screenshot data extracted. Nothing to convert.")
         return 1
 
-    print("Step 2: Converting hand histories...")
-    success, failed = process_hands(hands_dir, hand_data, output_dir)
+    print("Step 2: Converting hand histories (with mapping propagation)...")
+    success, failed = process_hands(hands_dir, ocr_data, output_dir)
 
     print("\n=== Summary ===")
     print(f"Converted: {success} hands")
