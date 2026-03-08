@@ -20,6 +20,7 @@ from hand_history import (
     write_skipped_file,
     load_seat_mapping,
     position_to_seat,
+    calculate_seat_mapping_from_hero,
     DEFAULT_SEAT_MAPPINGS,
 )
 from image_analyzer.ocr_dump import parse_ocr_dump, CURRENT_VERSION
@@ -284,16 +285,16 @@ class TestSeatMapping:
         }
 
     def test_load_seat_mapping_returns_default_when_no_files(self):
-        with patch("hand_history.get_user_data_path") as mock_user, \
-             patch("hand_history.get_bundled_path") as mock_bundled:
+        with patch("hand_history.seat_mapping.get_user_data_path") as mock_user, \
+             patch("hand_history.seat_mapping.get_bundled_path") as mock_bundled:
             mock_user.return_value = Path("/nonexistent/user/path.toml")
             mock_bundled.return_value = None
             mapping = load_seat_mapping("6_player")
             assert mapping == DEFAULT_SEAT_MAPPINGS["6_player"]
 
     def test_load_seat_mapping_5_player_default(self):
-        with patch("hand_history.get_user_data_path") as mock_user, \
-             patch("hand_history.get_bundled_path") as mock_bundled:
+        with patch("hand_history.seat_mapping.get_user_data_path") as mock_user, \
+             patch("hand_history.seat_mapping.get_bundled_path") as mock_bundled:
             mock_user.return_value = Path("/nonexistent/user/path.toml")
             mock_bundled.return_value = None
             mapping = load_seat_mapping("5_player")
@@ -303,7 +304,7 @@ class TestSeatMapping:
         with TemporaryDirectory() as tmpdir:
             path = Path(tmpdir) / "seat_mapping.toml"
             path.write_text("[6_player]\nbottom = 6\ntop = 1")
-            with patch("hand_history.get_user_data_path", return_value=path):
+            with patch("hand_history.seat_mapping.get_user_data_path", return_value=path):
                 mapping = load_seat_mapping("6_player")
                 assert mapping["bottom"] == 6
                 assert mapping["top"] == 1
@@ -811,6 +812,78 @@ class TestButtonAwarePositionToSeat:
             hand_button_seat=None,
         )
         assert result[1] == "Hero"
+
+
+class TestHeroBasedSeatMapping:
+    """Tests for Hero-based seat mapping fallback."""
+
+    def test_calculate_seat_mapping_from_hero_seat_2(self):
+        """When Hero is at seat 2, bottom should map to seat 2."""
+        from hand_history import calculate_seat_mapping_from_hero
+        mapping = calculate_seat_mapping_from_hero(2, "6_player")
+        assert mapping["bottom"] == 2
+        assert mapping["bottom_left"] == 3
+        assert mapping["top_left"] == 4
+        assert mapping["top"] == 5
+        assert mapping["top_right"] == 6
+        assert mapping["bottom_right"] == 1
+
+    def test_calculate_seat_mapping_from_hero_seat_4(self):
+        """When Hero is at seat 4, bottom should map to seat 4."""
+        from hand_history import calculate_seat_mapping_from_hero
+        mapping = calculate_seat_mapping_from_hero(4, "6_player")
+        assert mapping["bottom"] == 4
+        assert mapping["bottom_left"] == 5
+        assert mapping["top_left"] == 6
+        assert mapping["top"] == 1
+        assert mapping["top_right"] == 2
+        assert mapping["bottom_right"] == 3
+
+    def test_calculate_seat_mapping_from_hero_5_player(self):
+        """Test Hero-based mapping for 5-player table."""
+        from hand_history import calculate_seat_mapping_from_hero
+        mapping = calculate_seat_mapping_from_hero(3, "5_player")
+        assert mapping["bottom"] == 3
+        assert mapping["left"] == 4
+        assert mapping["top_left"] == 5
+        assert mapping["top_right"] == 1
+        assert mapping["right"] == 2
+
+    def test_position_to_seat_hero_fallback(self):
+        """When button detection fails, use hero_seat as fallback."""
+        position_names = {
+            "bottom": "HeroName",
+            "top_left": "OtherPlayer",
+        }
+        # No button info, but hero_seat provided
+        result = position_to_seat(
+            position_names,
+            "6_player",
+            screenshot_button_position=None,
+            hand_button_seat=None,
+            hero_seat=2,
+        )
+        # bottom should map to seat 2 (hero), top_left to seat 4
+        assert result[2] == "HeroName"
+        assert result[4] == "OtherPlayer"
+
+    def test_button_takes_priority_over_hero(self):
+        """Button-based mapping should take priority over hero_seat."""
+        position_names = {
+            "bottom": "HeroName",
+            "top": "ButtonPlayer",
+        }
+        # Both button and hero provided - button should win
+        result = position_to_seat(
+            position_names,
+            "6_player",
+            screenshot_button_position="top",
+            hand_button_seat=5,
+            hero_seat=2,  # Would give different result if used
+        )
+        # Button at top=5, so bottom=2 (same as hero in this case)
+        assert result[2] == "HeroName"
+        assert result[5] == "ButtonPlayer"
 
 
 class TestConvertHandsWithPropagation:

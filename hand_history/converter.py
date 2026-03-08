@@ -132,12 +132,14 @@ def convert_hands_with_ocr(
         position_names = ocr_data.get("position_names", {})
         table_type = ocr_data.get("table_type", "6_player")
         button_position = ocr_data.get("button_position")
+        hero_seat = hand.get_seat_for_player("Hero")
 
         seat_data = position_to_seat(
             position_names,
             table_type,
             screenshot_button_position=button_position,
             hand_button_seat=hand.button_seat if hand.button_seat else None,
+            hero_seat=hero_seat,
         )
 
         result = convert_hand(hand, seat_data)
@@ -173,11 +175,15 @@ def convert_hands_with_propagation(
         if ocr_data is None:
             continue
 
+        # Find Hero's seat for fallback mapping
+        hero_seat = hand.get_seat_for_player("Hero")
+
         seat_to_name = position_to_seat(
             ocr_data.get("position_names", {}),
             ocr_data.get("table_type", "6_player"),
             screenshot_button_position=ocr_data.get("button_position"),
             hand_button_seat=hand.button_seat if hand.button_seat else None,
+            hero_seat=hero_seat,
         )
 
         if hand.table_name not in table_mappings:
