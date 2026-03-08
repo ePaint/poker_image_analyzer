@@ -236,7 +236,10 @@ def main() -> int:
         print("Skipping build, creating release only")
     elif skip_version_bump:
         new_version = current_version
-        print("Skipping version bump")
+        print("Skipping version bump, syncing version files")
+        # Still sync version to iss and spec (pyproject.toml is source of truth)
+        update_iss_version(iss_path, new_version)
+        update_spec_version(spec_path, new_version)
     else:
         new_version = bump_version(current_version, bump_part)
         print(f"New version: {new_version}")
