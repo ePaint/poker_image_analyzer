@@ -988,15 +988,16 @@ Seat 1: Hero won ($5)"""
         assert not results[0].success
         assert "No screenshot data for this table" in results[0].error
 
-    def test_propagation_preserves_hero(self):
-        """Hero is never replaced even when propagating."""
+    def test_propagation_replaces_hero_with_real_name(self):
+        """Hero is replaced with real name from OCR when available."""
+        import re
         hand1 = parse_hand(self.HAND_1)
         hand2 = parse_hand(self.HAND_2)
 
         ocr_data = {
             "OM100001": OcrData(
                 position_names={
-                    "bottom": "SomeOtherName",  # Should not replace Hero
+                    "bottom": "ActualPlayerName",  # Hero's real name from OCR
                     "bottom_left": "RealPlayer1",
                     "top_left": "RealPlayer2",
                 },
@@ -1007,9 +1008,11 @@ Seat 1: Hero won ($5)"""
 
         results = convert_hands_with_propagation([hand1, hand2], ocr_data)
 
-        # Hero should be preserved in both hands
-        assert "Hero" in results[0].converted_text
-        assert "Hero" in results[1].converted_text
+        # Hero should be replaced with ActualPlayerName in both hands
+        assert "ActualPlayerName" in results[0].converted_text
+        assert not re.search(r"\bHero\b", results[0].converted_text)
+        assert "ActualPlayerName" in results[1].converted_text
+        assert not re.search(r"\bHero\b", results[1].converted_text)
 
     def test_propagation_multiple_screenshots_same_table(self):
         """Multiple screenshots from same table combine their mappings."""
@@ -1046,3 +1049,81 @@ Seat 1: Hero won ($5)"""
         # Combined mappings should be available to both hands
         assert "RealPlayer1" in results[0].converted_text
         assert "RealPlayer1" in results[1].converted_text
+
+    def test_hero_replacement_with_real_name(self):
+        """Hero gets replaced with real name from OCR."""
+        hand1 = parse_hand(self.HAND_1)
+
+        ocr_data = {
+            "OM100001": OcrData(
+                position_names={
+                    "bottom": "HotMouse",  # Hero's real name
+                    "bottom_left": "RealPlayer1",
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="bottom_left",
+            ),
+        }
+
+        results = convert_hands_with_propagation([hand1], ocr_data)
+
+        assert len(results) == 1
+        assert results[0].success
+        # Hero should be replaced with HotMouse
+        assert "HotMouse" in results[0].converted_text
+        assert "Hero" not in results[0].converted_text
+        # Check replacements dict includes Hero
+        assert results[0].replacements.get("Hero") == "HotMouse"
+
+    def test_hero_replacement_propagates_to_all_hands(self):
+        """Hero name propagates to hands without screenshots."""
+        hand1 = parse_hand(self.HAND_1)
+        hand2 = parse_hand(self.HAND_2)
+
+        # Only hand1 has OCR data
+        ocr_data = {
+            "OM100001": OcrData(
+                position_names={
+                    "bottom": "HotMouse",  # Hero's real name
+                    "bottom_left": "RealPlayer1",
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="bottom_left",
+            ),
+        }
+
+        results = convert_hands_with_propagation([hand1, hand2], ocr_data)
+
+        assert len(results) == 2
+        # Both hands should have Hero replaced
+        assert "HotMouse" in results[0].converted_text
+        assert "Hero" not in results[0].converted_text
+        assert "HotMouse" in results[1].converted_text
+        assert "Hero" not in results[1].converted_text
+
+    def test_hero_unchanged_if_no_mapping(self):
+        """Hero stays unchanged if we don't know the real name."""
+        hand1 = parse_hand(self.HAND_1)
+
+        # OCR doesn't include the "bottom" position (no Hero name)
+        ocr_data = {
+            "OM100001": OcrData(
+                position_names={
+                    "bottom_left": "RealPlayer1",
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="bottom_left",
+            ),
+        }
+
+        results = convert_hands_with_propagation([hand1], ocr_data)
+
+        assert len(results) == 1
+        assert results[0].success
+        # Hero should remain unchanged
+        assert "Hero" in results[0].converted_text
+        # Other players should still be replaced
+        assert "RealPlayer1" in results[0].converted_text

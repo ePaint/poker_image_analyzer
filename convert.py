@@ -86,6 +86,10 @@ def process_hands(
     Uses mapping propagation to convert hands without direct screenshots
     by learning encrypted_id -> real_name from other hands at the same table.
 
+    All files are processed together so mappings are shared across files for
+    the same table (e.g., mappings from file1 apply to hands in file2 if they
+    share a table).
+
     Args:
         hands_dir: Directory containing hand history files
         ocr_data: Mapping from hand number to OCR data
@@ -94,42 +98,68 @@ def process_hands(
     Returns:
         Tuple of (successful_count, failed_count)
     """
+    from collections import defaultdict
+
     converted_dir = output_dir / "converted"
     skipped_dir = output_dir / "skipped"
 
     txt_files = list(hands_dir.glob("*.txt"))
     print(f"\nFound {len(txt_files)} hand history files")
 
+    # Step 1: Parse all hands from all files, tracking origin file
+    all_hands = []
+    hand_to_file: dict[str, Path] = {}
+
+    for hand_file in txt_files:
+        print(f"Parsing: {hand_file.name}")
+        try:
+            hands = parse_file(hand_file)
+            print(f"  Found {len(hands)} hands")
+            for hand in hands:
+                hand_to_file[hand.hand_number] = hand_file
+            all_hands.extend(hands)
+        except Exception as e:
+            print(f"  Error: {e}")
+
+    print(f"\nTotal hands parsed: {len(all_hands)}")
+
+    if not all_hands:
+        return 0, 0
+
+    # Step 2: Convert ALL hands together (shared mappings across files)
+    results = convert_hands_with_propagation(all_hands, ocr_data)
+
+    # Step 3: Group results by original file
+    file_results: dict[Path, list] = defaultdict(list)
+    for result in results:
+        original_file = hand_to_file.get(result.hand_number)
+        if original_file:
+            file_results[original_file].append(result)
+
+    # Step 4: Write output per file
     total_success = 0
     total_failed = 0
 
     for hand_file in txt_files:
-        print(f"Processing: {hand_file.name}")
+        results_for_file = file_results.get(hand_file, [])
+        if not results_for_file:
+            continue
 
-        try:
-            hands = parse_file(hand_file)
-            print(f"  Parsed {len(hands)} hands")
+        successful = [r for r in results_for_file if r.success]
+        failed = [r for r in results_for_file if not r.success]
 
-            results = convert_hands_with_propagation(hands, ocr_data)
+        if successful:
+            output_path = converted_dir / hand_file.name
+            write_converted_file(results_for_file, output_path)
+            print(f"Converted {len(successful)} hands from {hand_file.name}")
 
-            successful = [r for r in results if r.success]
-            failed = [r for r in results if not r.success]
+        if failed:
+            output_path = skipped_dir / hand_file.name
+            write_skipped_file(results_for_file, output_path)
+            print(f"Skipped {len(failed)} hands from {hand_file.name}")
 
-            if successful:
-                output_path = converted_dir / hand_file.name
-                write_converted_file(results, output_path)
-                print(f"  Converted {len(successful)} hands -> {output_path}")
-
-            if failed:
-                output_path = skipped_dir / hand_file.name
-                write_skipped_file(results, output_path)
-                print(f"  Skipped {len(failed)} hands -> {output_path}")
-
-            total_success += len(successful)
-            total_failed += len(failed)
-
-        except Exception as e:
-            print(f"  Error: {e}")
+        total_success += len(successful)
+        total_failed += len(failed)
 
     return total_success, total_failed
 

@@ -158,6 +158,8 @@ def convert_hands_with_propagation(
     matches, this function learns encrypted_id -> real_name mappings from hands
     with screenshots and applies them to ALL hands from the same table.
 
+    Also replaces "Hero" with the real player name when detected from OCR data.
+
     Args:
         hands: List of parsed hand histories
         hand_number_to_ocr: Mapping from hand number to OCR data
@@ -168,7 +170,9 @@ def convert_hands_with_propagation(
     from hand_history import position_to_seat
 
     # Step 1: Build encrypted_id -> name mappings per table from hands with screenshots
+    # Also track Hero's real name per table
     table_mappings: dict[str, dict[str, str]] = {}  # table_name -> {encrypted_id: real_name}
+    table_hero_names: dict[str, str] = {}  # table_name -> hero_real_name
 
     for hand in hands:
         ocr_data = hand_number_to_ocr.get(hand.hand_number)
@@ -191,6 +195,10 @@ def convert_hands_with_propagation(
 
         for seat, encrypted_id in hand.seats.items():
             if encrypted_id == "Hero":
+                # Store Hero's real name for this table
+                hero_real_name = seat_to_name.get(seat)
+                if hero_real_name and hero_real_name != "EMPTY":
+                    table_hero_names[hand.table_name] = hero_real_name
                 continue
             real_name = seat_to_name.get(seat)
             if real_name and real_name != "EMPTY":
@@ -200,8 +208,9 @@ def convert_hands_with_propagation(
     results = []
     for hand in hands:
         encrypted_to_name = table_mappings.get(hand.table_name, {})
+        hero_real_name = table_hero_names.get(hand.table_name)
 
-        if not encrypted_to_name:
+        if not encrypted_to_name and not hero_real_name:
             results.append(ConversionResult(
                 hand_number=hand.hand_number,
                 success=False,
@@ -213,6 +222,8 @@ def convert_hands_with_propagation(
         # Apply replacements
         text = hand.raw_text
         replacements: dict[str, str] = {}
+
+        # Replace encrypted IDs with real names
         for seat, encrypted_id in hand.seats.items():
             if encrypted_id == "Hero":
                 continue
@@ -220,6 +231,11 @@ def convert_hands_with_propagation(
             if real_name:
                 replacements[encrypted_id] = real_name
                 text = re.sub(rf"\b{re.escape(encrypted_id)}\b", real_name, text)
+
+        # Replace "Hero" with real name if known
+        if hero_real_name:
+            replacements["Hero"] = hero_real_name
+            text = re.sub(r"\bHero\b", hero_real_name, text)
 
         results.append(ConversionResult(
             hand_number=hand.hand_number,
