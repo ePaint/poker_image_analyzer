@@ -29,12 +29,14 @@ class ConversionResult:
 def convert_hand(
     hand: HandHistory,
     seat_to_name: dict[int, str],
+    hero_seat: int | None = None,
 ) -> ConversionResult:
     """Convert a single hand by replacing encrypted IDs with real names.
 
     Args:
         hand: Parsed hand history
         seat_to_name: Mapping from seat number to real player name
+        hero_seat: Hero's seat number (skip this seat from conversion)
 
     Returns:
         ConversionResult with converted text or error
@@ -43,7 +45,11 @@ def convert_hand(
     replacements: dict[str, str] = {}
 
     for seat, encrypted_id in hand.seats.items():
-        if encrypted_id == "Hero":
+        # Skip hero: by seat if provided, otherwise by name "Hero" for backwards compat
+        if hero_seat is not None:
+            if seat == hero_seat:
+                continue
+        elif encrypted_id == "Hero":
             continue
 
         real_name = seat_to_name.get(seat)
@@ -132,7 +138,15 @@ def convert_hands_with_ocr(
         position_names = ocr_data.get("position_names", {})
         table_type = ocr_data.get("table_type", "6_player")
         button_position = ocr_data.get("button_position")
-        hero_seat = hand.get_seat_for_player("Hero")
+
+        # Detect hero by matching OCR bottom position to player in seats
+        hero_seat = None
+        bottom_name = position_names.get("bottom", "")
+        if bottom_name:
+            for seat, player in hand.seats.items():
+                if player.lower() == bottom_name.lower():
+                    hero_seat = seat
+                    break
 
         seat_data = position_to_seat(
             position_names,
@@ -142,7 +156,7 @@ def convert_hands_with_ocr(
             hero_seat=hero_seat,
         )
 
-        result = convert_hand(hand, seat_data)
+        result = convert_hand(hand, seat_data, hero_seat=hero_seat)
         results.append(result)
 
     return results
@@ -170,17 +184,27 @@ def convert_hands_with_propagation(
     from hand_history import position_to_seat
 
     # Step 1: Build encrypted_id -> name mappings per table from hands with screenshots
-    # Also track Hero's real name per table
+    # Also track Hero's real name and seat per table
     table_mappings: dict[str, dict[str, str]] = {}  # table_name -> {encrypted_id: real_name}
     table_hero_names: dict[str, str] = {}  # table_name -> hero_real_name
+    table_hero_seats: dict[str, int] = {}  # table_name -> hero's seat number
+    table_hero_player_names: dict[str, str] = {}  # table_name -> hero's name in hand history
 
     for hand in hands:
         ocr_data = hand_number_to_ocr.get(hand.hand_number)
         if ocr_data is None:
             continue
 
-        # Find Hero's seat for fallback mapping
-        hero_seat = hand.get_seat_for_player("Hero")
+        # Find Hero's seat by matching OCR bottom position to player in seats
+        hero_seat = None
+        hero_player_name = None
+        bottom_name = ocr_data.get("position_names", {}).get("bottom", "")
+        if bottom_name:
+            for seat, player in hand.seats.items():
+                if player.lower() == bottom_name.lower():
+                    hero_seat = seat
+                    hero_player_name = player
+                    break
 
         seat_to_name = position_to_seat(
             ocr_data.get("position_names", {}),
@@ -193,12 +217,18 @@ def convert_hands_with_propagation(
         if hand.table_name not in table_mappings:
             table_mappings[hand.table_name] = {}
 
+        # Track hero's seat and name for this table
+        if hero_seat is not None:
+            table_hero_seats[hand.table_name] = hero_seat
+            if hero_player_name:
+                table_hero_player_names[hand.table_name] = hero_player_name
+            # Store Hero's real name from OCR
+            hero_real_name = seat_to_name.get(hero_seat)
+            if hero_real_name and hero_real_name != "EMPTY":
+                table_hero_names[hand.table_name] = hero_real_name
+
         for seat, encrypted_id in hand.seats.items():
-            if encrypted_id == "Hero":
-                # Store Hero's real name for this table
-                hero_real_name = seat_to_name.get(seat)
-                if hero_real_name and hero_real_name != "EMPTY":
-                    table_hero_names[hand.table_name] = hero_real_name
+            if seat == hero_seat:
                 continue
             real_name = seat_to_name.get(seat)
             if real_name and real_name != "EMPTY":
@@ -209,6 +239,8 @@ def convert_hands_with_propagation(
     for hand in hands:
         encrypted_to_name = table_mappings.get(hand.table_name, {})
         hero_real_name = table_hero_names.get(hand.table_name)
+        hero_seat = table_hero_seats.get(hand.table_name)
+        hero_player_name = table_hero_player_names.get(hand.table_name)
 
         if not encrypted_to_name and not hero_real_name:
             results.append(ConversionResult(
@@ -223,19 +255,19 @@ def convert_hands_with_propagation(
         text = hand.raw_text
         replacements: dict[str, str] = {}
 
-        # Replace encrypted IDs with real names
+        # Replace encrypted IDs with real names (skip hero's seat)
         for seat, encrypted_id in hand.seats.items():
-            if encrypted_id == "Hero":
+            if seat == hero_seat:
                 continue
             real_name = encrypted_to_name.get(encrypted_id)
             if real_name:
                 replacements[encrypted_id] = real_name
                 text = re.sub(rf"\b{re.escape(encrypted_id)}\b", real_name, text)
 
-        # Replace "Hero" with real name if known
-        if hero_real_name:
-            replacements["Hero"] = hero_real_name
-            text = re.sub(r"\bHero\b", hero_real_name, text)
+        # Replace hero's name (whatever it is: "Hero" or custom) with real name
+        if hero_real_name and hero_player_name:
+            replacements[hero_player_name] = hero_real_name
+            text = re.sub(rf"\b{re.escape(hero_player_name)}\b", hero_real_name, text)
 
         results.append(ConversionResult(
             hand_number=hand.hand_number,

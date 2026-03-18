@@ -1127,3 +1127,155 @@ Seat 1: Hero won ($5)"""
         assert "Hero" in results[0].converted_text
         # Other players should still be replaced
         assert "RealPlayer1" in results[0].converted_text
+
+
+class TestCustomHeroName:
+    """Tests for hero detection when player name is NOT 'Hero'.
+
+    These tests verify the fix for when GGPoker shows the user's actual
+    player name (e.g., 'HOT MOUSE!') instead of the literal 'Hero'.
+    """
+
+    # Hand where user's name is "HOT MOUSE!" instead of "Hero"
+    CUSTOM_HERO_HAND_1 = """Poker Hand #OM200001: PLO-5 ($5/$10) - 2025/12/21 15:09:46
+Table 'CustomTable' 6-max Seat #2 is the button
+Seat 1: enc_player1 ($1,000 in chips)
+Seat 2: enc_player2 ($1,000 in chips)
+Seat 5: HOT MOUSE! ($500 in chips)
+enc_player1: posts small blind $5
+enc_player2: posts big blind $10
+*** HOLE CARDS ***
+Dealt to HOT MOUSE! [7d 5c Kh 6c 8c]
+HOT MOUSE!: folds
+enc_player1: folds
+*** SUMMARY ***
+Seat 1: enc_player1 folded
+Seat 2: enc_player2 (button) won ($10)
+Seat 5: HOT MOUSE! folded"""
+
+    CUSTOM_HERO_HAND_2 = """Poker Hand #OM200002: PLO-5 ($5/$10) - 2025/12/21 15:10:00
+Table 'CustomTable' 6-max Seat #3 is the button
+Seat 1: enc_player1 ($1,000 in chips)
+Seat 2: enc_player2 ($1,000 in chips)
+Seat 5: HOT MOUSE! ($510 in chips)
+enc_player1: posts small blind $5
+enc_player2: posts big blind $10
+*** SUMMARY ***
+Seat 5: HOT MOUSE! won ($10)"""
+
+    def test_hero_detection_from_ocr_bottom_custom_name(self):
+        """Hero detected when name in hand history is NOT 'Hero'."""
+        from hand_history.converter import convert_hands_with_ocr
+
+        hand = parse_hand(self.CUSTOM_HERO_HAND_1)
+
+        # OCR shows "HOT MOUSE!" at bottom position (matching the hand)
+        ocr_data = {
+            "OM200001": OcrData(
+                position_names={
+                    "bottom": "HOT MOUSE!",  # Matches player name in hand
+                    "bottom_left": "RealPlayer1",
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="bottom_left",
+            ),
+        }
+
+        results = convert_hands_with_ocr([hand], ocr_data)
+
+        assert len(results) == 1
+        assert results[0].success
+        # Other players should be converted
+        assert "RealPlayer1" in results[0].converted_text
+        assert "enc_player1" not in results[0].converted_text
+        # HOT MOUSE! should be preserved (it's the hero)
+        assert "HOT MOUSE!" in results[0].converted_text
+
+    def test_conversion_with_custom_hero_name(self):
+        """Full conversion works when hero has custom name like 'HOT MOUSE!'."""
+        hand = parse_hand(self.CUSTOM_HERO_HAND_1)
+
+        # OCR data where bottom matches "HOT MOUSE!"
+        ocr_data = {
+            "OM200001": OcrData(
+                position_names={
+                    "bottom": "HOT MOUSE!",  # Hero's OCR name matches hand
+                    "bottom_left": "RealPlayer1",
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="bottom_left",
+            ),
+        }
+
+        results = convert_hands_with_propagation([hand], ocr_data)
+
+        assert len(results) == 1
+        assert results[0].success
+        # Other players should be converted
+        assert "RealPlayer1" in results[0].converted_text
+        assert "enc_player1" not in results[0].converted_text
+        # HOT MOUSE! should remain (it's already the real name)
+        assert "HOT MOUSE!" in results[0].converted_text
+
+    def test_hero_seat_propagates_across_hands_custom_name(self):
+        """Hero seat learned from one hand applies to others with custom name."""
+        hand1 = parse_hand(self.CUSTOM_HERO_HAND_1)
+        hand2 = parse_hand(self.CUSTOM_HERO_HAND_2)
+
+        # Only hand1 has OCR data
+        ocr_data = {
+            "OM200001": OcrData(
+                position_names={
+                    "bottom": "HOT MOUSE!",  # Hero at seat 5
+                    "bottom_left": "RealPlayer1",
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="bottom_left",
+            ),
+        }
+
+        results = convert_hands_with_propagation([hand1, hand2], ocr_data)
+
+        assert len(results) == 2
+        assert results[0].success
+        assert results[1].success
+
+        # Both hands should have encrypted players converted
+        assert "RealPlayer1" in results[0].converted_text
+        assert "enc_player1" not in results[0].converted_text
+        # Hand2 should also have propagated mappings
+        assert "RealPlayer1" in results[1].converted_text
+        assert "enc_player1" not in results[1].converted_text
+        # HOT MOUSE! should be present in both (not skipped)
+        assert "HOT MOUSE!" in results[0].converted_text
+        assert "HOT MOUSE!" in results[1].converted_text
+
+    def test_custom_hero_case_insensitive_match(self):
+        """Hero detection works with case-insensitive matching."""
+        hand = parse_hand(self.CUSTOM_HERO_HAND_1)
+
+        # OCR shows lowercase version due to OCR quirks
+        ocr_data = {
+            "OM200001": OcrData(
+                position_names={
+                    "bottom": "hot mouse!",  # lowercase version
+                    "bottom_left": "RealPlayer1",
+                    "top_left": "RealPlayer2",
+                },
+                table_type="6_player",
+                button_position="bottom_left",
+            ),
+        }
+
+        results = convert_hands_with_propagation([hand], ocr_data)
+
+        assert len(results) == 1
+        assert results[0].success
+        # Even with case mismatch, hero should be detected and skipped from conversion
+        # The actual name in hand history is "HOT MOUSE!" - it should be replaced
+        # with the OCR-detected version if different
+        assert "hot mouse!" in results[0].converted_text
+        assert "enc_player1" not in results[0].converted_text
