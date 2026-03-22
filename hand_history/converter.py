@@ -139,7 +139,7 @@ def convert_hands_with_ocr(
         table_type = ocr_data.get("table_type", "6_player")
         button_position = ocr_data.get("button_position")
 
-        # Detect hero by matching OCR bottom position to player in seats
+        # Detect hero: try OCR bottom match first, fall back to literal "Hero"
         hero_seat = None
         bottom_name = position_names.get("bottom", "")
         if bottom_name:
@@ -147,6 +147,8 @@ def convert_hands_with_ocr(
                 if player.lower() == bottom_name.lower():
                     hero_seat = seat
                     break
+        if hero_seat is None:
+            hero_seat = hand.get_seat_for_player("Hero")
 
         seat_data = position_to_seat(
             position_names,
@@ -195,7 +197,7 @@ def convert_hands_with_propagation(
         if ocr_data is None:
             continue
 
-        # Find Hero's seat by matching OCR bottom position to player in seats
+        # Find Hero's seat: try OCR bottom match first, fall back to literal "Hero"
         hero_seat = None
         hero_player_name = None
         bottom_name = ocr_data.get("position_names", {}).get("bottom", "")
@@ -205,6 +207,10 @@ def convert_hands_with_propagation(
                     hero_seat = seat
                     hero_player_name = player
                     break
+        if hero_seat is None:
+            hero_seat = hand.get_seat_for_player("Hero")
+            if hero_seat is not None:
+                hero_player_name = "Hero"
 
         seat_to_name = position_to_seat(
             ocr_data.get("position_names", {}),
