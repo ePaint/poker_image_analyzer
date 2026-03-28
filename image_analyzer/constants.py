@@ -111,7 +111,7 @@ FEWSHOT_ZERO_ALT_NAME = "H0T M0USE!"
 # Coordinates are for 800px base width, scaled to actual image width
 # 6-player: bright pixel (player present) - max(BGR) > BRIGHTNESS_THRESHOLD
 # 5-player: dark pixel (no player) - max(BGR) <= BRIGHTNESS_THRESHOLD
-TOP_CENTER_DETECTION_PIXEL = (400, 150)  # 800px base
+TOP_CENTER_DETECTION_PIXEL = (400, 140)  # 800px base
 BRIGHTNESS_THRESHOLD = 100  # If max(BGR) > this, player is present (6max)
 
 # D button detection - offset from player region top-left corner to button center

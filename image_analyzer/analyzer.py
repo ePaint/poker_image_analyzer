@@ -24,19 +24,26 @@ from image_analyzer.llm import get_provider, ProviderName
 def detect_table_type(image: np.ndarray) -> tuple[PlayerRegion, ...]:
     """Detect 5-player vs 6-player table by checking if a player exists at top center.
 
-    Uses TOP_CENTER_DETECTION_PIXEL as base coordinates, scaled to image width.
-    - 6-player: bright pixel (player present at top)
-    - 5-player: dark pixel (no player at top)
+    Samples multiple points in the top center area to handle layout variations.
+    - 6-player: any bright pixel found (player present at top)
+    - 5-player: all pixels dark (no player at top)
     """
-    image_width = image.shape[1]
+    image_height, image_width = image.shape[:2]
     scale = image_width / BASE_WIDTH
 
-    x = int(TOP_CENTER_DETECTION_PIXEL[0] * scale)
-    y = int(TOP_CENTER_DETECTION_PIXEL[1] * scale)
-    pixel = image[y, x]
+    base_x, base_y = TOP_CENTER_DETECTION_PIXEL
+    x_offsets = [-50, 0, 50]
+    y_offsets = [-10, 0, 10, 20]
 
-    if max(int(c) for c in pixel) > BRIGHTNESS_THRESHOLD:
-        return SIX_PLAYER_REGIONS
+    for dy in y_offsets:
+        for dx in x_offsets:
+            x = int((base_x + dx) * scale)
+            y = int((base_y + dy) * scale)
+            if 0 <= x < image_width and 0 <= y < image_height:
+                pixel = image[y, x]
+                if max(int(c) for c in pixel) > BRIGHTNESS_THRESHOLD:
+                    return SIX_PLAYER_REGIONS
+
     return FIVE_PLAYER_REGIONS
 
 
