@@ -284,6 +284,7 @@ class MainWindow(QMainWindow):
     def _start_conversion_from_screenshots(self) -> None:
         """Process screenshots via API (normal flow)."""
         assert self._screenshots_folder is not None
+        assert self._hands_folder is not None
         api_key = load_api_key()
         if not api_key:
             result = QMessageBox.question(
@@ -310,6 +311,7 @@ class MainWindow(QMainWindow):
 
         self._screenshot_worker = ScreenshotWorker(
             self._screenshots_folder,
+            self._hands_folder,
             api_key=api_key,
             parallel_calls=parallel_calls,
             rate_limit_per_minute=rate_limit,

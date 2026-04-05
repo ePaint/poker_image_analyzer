@@ -79,7 +79,7 @@ def save_api_key(key: str) -> None:
 
 
 DEFAULT_SEATS = {
-    "6_player": {
+    TableType.SIX_PLAYER.value: {
         "bottom": 1,
         "bottom_left": 2,
         "top_left": 3,
@@ -87,7 +87,7 @@ DEFAULT_SEATS = {
         "top_right": 5,
         "bottom_right": 6,
     },
-    "5_player": {
+    TableType.FIVE_PLAYER.value: {
         "bottom": 1,
         "left": 2,
         "top_left": 3,
@@ -97,15 +97,18 @@ DEFAULT_SEATS = {
 }
 
 
-def load_seat_mapping() -> dict[str, dict[str, int]]:
+def load_all_seat_mappings() -> dict[str, dict[str, int]]:
     """Load seat mappings for all table types. User file takes priority over bundled."""
+    six = TableType.SIX_PLAYER.value
+    five = TableType.FIVE_PLAYER.value
+
     user_path = _get_user_seat_mapping_path()
     if user_path.exists():
         with open(user_path, "rb") as f:
             data = tomllib.load(f)
         return {
-            "6_player": data.get("6_player", DEFAULT_SEATS["6_player"].copy()),
-            "5_player": data.get("5_player", DEFAULT_SEATS["5_player"].copy()),
+            six: data.get(six, DEFAULT_SEATS[six].copy()),
+            five: data.get(five, DEFAULT_SEATS[five].copy()),
         }
 
     bundled_path = _get_bundled_seat_mapping_path()
@@ -113,8 +116,8 @@ def load_seat_mapping() -> dict[str, dict[str, int]]:
         with open(bundled_path, "rb") as f:
             data = tomllib.load(f)
         return {
-            "6_player": data.get("6_player", DEFAULT_SEATS["6_player"].copy()),
-            "5_player": data.get("5_player", DEFAULT_SEATS["5_player"].copy()),
+            six: data.get(six, DEFAULT_SEATS[six].copy()),
+            five: data.get(five, DEFAULT_SEATS[five].copy()),
         }
 
     return {k: v.copy() for k, v in DEFAULT_SEATS.items()}
@@ -252,11 +255,11 @@ class SettingsDialog(QDialog):
         # Sub-tabs for each table type
         self._seat_tabs = QTabWidget()
         self._seat_tabs.addTab(
-            self._create_seat_form("6_player", self.SIX_PLAYER_POSITIONS),
+            self._create_seat_form(TableType.SIX_PLAYER, self.SIX_PLAYER_POSITIONS),
             "6-player"
         )
         self._seat_tabs.addTab(
-            self._create_seat_form("5_player", self.FIVE_PLAYER_POSITIONS),
+            self._create_seat_form(TableType.FIVE_PLAYER, self.FIVE_PLAYER_POSITIONS),
             "5-player"
         )
         layout.addWidget(self._seat_tabs)
@@ -273,12 +276,13 @@ class SettingsDialog(QDialog):
         widget = QWidget()
         form = QFormLayout(widget)
 
-        self._seat_spinboxes[table_type] = {}
+        key = table_type.value
+        self._seat_spinboxes[key] = {}
         for position in positions:
             spinbox = QSpinBox()
             spinbox.setRange(1, 6)
-            spinbox.setValue(DEFAULT_SEATS[table_type][position])
-            self._seat_spinboxes[table_type][position] = spinbox
+            spinbox.setValue(DEFAULT_SEATS[key][position])
+            self._seat_spinboxes[key][position] = spinbox
             form.addRow(f"{position}:", spinbox)
 
         return widget
@@ -328,7 +332,7 @@ class SettingsDialog(QDialog):
         if api_key:
             self._api_key_input.setText(api_key)
 
-        mappings = load_seat_mapping()
+        mappings = load_all_seat_mappings()
         for table_type, spinboxes in self._seat_spinboxes.items():
             for position, spinbox in spinboxes.items():
                 default = DEFAULT_SEATS[table_type].get(position, 1)

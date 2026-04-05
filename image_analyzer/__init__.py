@@ -8,7 +8,6 @@ from image_analyzer.analyzer import (
     analyze_screenshot,
     analyze_screenshots_batch,
     analyze_image,
-    detect_table_type,
     detect_button_position,
 )
 from image_analyzer.llm import LLMProvider, ProviderName, get_provider
@@ -17,7 +16,6 @@ __all__ = [
     "analyze_screenshot",
     "analyze_screenshots_batch",
     "analyze_image",
-    "detect_table_type",
     "detect_button_position",
     "PlayerRegion",
     "ScreenshotFilename",

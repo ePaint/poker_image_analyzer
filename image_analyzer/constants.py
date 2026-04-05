@@ -107,13 +107,6 @@ FEWSHOT_ZERO_ALT_B64 = (
 )
 FEWSHOT_ZERO_ALT_NAME = "H0T M0USE!"
 
-# 5-player vs 6-player detection: sample at top center where 6th player would be
-# Coordinates are for 800px base width, scaled to actual image width
-# 6-player: bright pixel (player present) - max(BGR) > BRIGHTNESS_THRESHOLD
-# 5-player: dark pixel (no player) - max(BGR) <= BRIGHTNESS_THRESHOLD
-TOP_CENTER_DETECTION_PIXEL = (400, 140)  # 800px base
-BRIGHTNESS_THRESHOLD = 100  # If max(BGR) > this, player is present (6max)
-
 # D button detection - offset from player region top-left corner to button center
 BUTTON_OFFSET_6PLAYER = (-15, -2)  # 800px base
 BUTTON_OFFSET_5PLAYER = (-16, 2)   # 960px base

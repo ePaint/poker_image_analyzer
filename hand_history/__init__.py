@@ -14,13 +14,14 @@ from hand_history.converter import (
     OcrData,
     convert_hand,
     convert_hands,
-    convert_hands_with_ocr,
     convert_hands_with_propagation,
     write_converted_file,
     write_skipped_file,
 )
 from hand_history.seat_mapping import (
     TableType,
+    InvalidTableTypeError,
+    parse_table_type_from_filename,
     POSITION_ORDER_6PLAYER,
     POSITION_ORDER_5PLAYER,
     DEFAULT_SEAT_MAPPINGS,
@@ -32,6 +33,8 @@ from hand_history.seat_mapping import (
 
 __all__ = [
     "TableType",
+    "InvalidTableTypeError",
+    "parse_table_type_from_filename",
     "HandHistory",
     "ConversionResult",
     "OcrData",
@@ -40,7 +43,6 @@ __all__ = [
     "find_hand_by_number",
     "convert_hand",
     "convert_hands",
-    "convert_hands_with_ocr",
     "convert_hands_with_propagation",
     "write_converted_file",
     "write_skipped_file",

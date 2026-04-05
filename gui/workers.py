@@ -10,12 +10,15 @@ import cv2
 
 from image_analyzer import (
     analyze_image,
-    detect_table_type,
     detect_button_position,
     ScreenshotFilename,
+    SIX_PLAYER_REGIONS,
+    FIVE_PLAYER_REGIONS,
 )
 from hand_history import (
     TableType,
+    InvalidTableTypeError,
+    parse_table_type_from_filename,
     OcrData,
     parse_file,
     convert_hands_with_propagation,
@@ -39,6 +42,7 @@ class ScreenshotWorker(QThread):
     def __init__(
         self,
         screenshots_dir: Path,
+        hands_dir: Path,
         api_key: str | None = None,
         parallel_calls: int = 5,
         rate_limit_per_minute: int = 50,
@@ -46,6 +50,7 @@ class ScreenshotWorker(QThread):
     ):
         super().__init__(parent)
         self._screenshots_dir = screenshots_dir
+        self._hands_dir = hands_dir
         self._api_key = api_key
         self._parallel_calls = parallel_calls
         self._rate_limit_per_minute = rate_limit_per_minute
@@ -84,7 +89,10 @@ class ScreenshotWorker(QThread):
         raise last_error or RuntimeError("No retries attempted")
 
     def _process_screenshot(
-        self, screenshot_path: Path
+        self,
+        screenshot_path: Path,
+        regions: tuple,
+        table_type: TableType,
     ) -> tuple[Path, str | None, TableType | None, dict | None, dict | None, str | None, str | None]:
         """Process single screenshot in thread pool.
 
@@ -101,9 +109,6 @@ class ScreenshotWorker(QThread):
             if image is None:
                 return (screenshot_path, hand_number, None, None, None, None, "Could not load image")
 
-            regions = detect_table_type(image)
-            table_type: TableType = "6_player" if len(regions) == 6 else "5_player"
-
             position_names = self._call_with_backoff(image, regions)
             button_position = detect_button_position(image, regions)
             seat_names = position_to_seat(position_names, table_type)
@@ -117,6 +122,21 @@ class ScreenshotWorker(QThread):
         ocr_results: list[dict] = []
         ocr_errors: list[dict] = []
 
+        # Determine table type from hand history filenames
+        txt_files = list(self._hands_dir.glob("*.txt"))
+        if not txt_files:
+            self.error.emit("", "No hand history files found")
+            self.finished_processing.emit((ocr_data, ocr_results, ocr_errors))
+            return
+
+        try:
+            table_type = parse_table_type_from_filename(txt_files[0].name)
+            regions = SIX_PLAYER_REGIONS if table_type == TableType.SIX_PLAYER else FIVE_PLAYER_REGIONS
+        except InvalidTableTypeError as e:
+            self.error.emit("", str(e))
+            self.finished_processing.emit((ocr_data, ocr_results, ocr_errors))
+            return
+
         png_files = list(self._screenshots_dir.glob("*.png"))
         valid_files = [f for f in png_files if ScreenshotFilename.is_valid(f.name)]
         total = len(valid_files)
@@ -124,7 +144,7 @@ class ScreenshotWorker(QThread):
 
         with ThreadPoolExecutor(max_workers=self._parallel_calls) as executor:
             futures = {
-                executor.submit(self._process_screenshot, f): f
+                executor.submit(self._process_screenshot, f, regions, table_type): f
                 for f in valid_files
             }
 

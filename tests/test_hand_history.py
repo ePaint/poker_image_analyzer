@@ -1165,7 +1165,7 @@ Seat 5: HOT MOUSE! won ($10)"""
 
     def test_hero_detection_from_ocr_bottom_custom_name(self):
         """Hero detected when name in hand history is NOT 'Hero'."""
-        from hand_history.converter import convert_hands_with_ocr
+        from hand_history.converter import convert_hands_with_propagation
 
         hand = parse_hand(self.CUSTOM_HERO_HAND_1)
 
@@ -1182,7 +1182,7 @@ Seat 5: HOT MOUSE! won ($10)"""
             ),
         }
 
-        results = convert_hands_with_ocr([hand], ocr_data)
+        results = convert_hands_with_propagation([hand], ocr_data)
 
         assert len(results) == 1
         assert results[0].success
@@ -1511,7 +1511,7 @@ Seat 1: Hero won ($10)"""
         4. hero_seat stayed None
         5. Seat mapping was wrong, conversion failed
         """
-        from hand_history.converter import convert_hands_with_ocr
+        from hand_history.converter import convert_hands_with_propagation
 
         hand = parse_hand(self.HAND_WITH_HERO_AT_SEAT_1)
         ocr_data = {
@@ -1525,12 +1525,13 @@ Seat 1: Hero won ($10)"""
             ),
         }
 
-        results = convert_hands_with_ocr([hand], ocr_data)
+        results = convert_hands_with_propagation([hand], ocr_data)
 
         # This FAILED in v0.1.10 - hero_seat was None
         assert results[0].success
-        # Hero should be preserved (fallback found it, OCR name used for mapping only)
-        assert "Hero" in results[0].converted_text
+        # Hero should be replaced with the real name from OCR
+        assert "CompletelyDifferentName" in results[0].converted_text
+        assert "Hero" not in results[0].converted_text
         # Other players should be converted correctly
         assert "Player2" in results[0].converted_text
         assert "enc_player2" not in results[0].converted_text

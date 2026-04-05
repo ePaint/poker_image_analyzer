@@ -10,7 +10,7 @@ from gui.settings_dialog import (
     SettingsDialog,
     load_api_key,
     save_api_key,
-    load_seat_mapping,
+    load_all_seat_mappings,
     save_seat_mapping,
     load_corrections,
     save_corrections,
@@ -254,7 +254,7 @@ class TestSettingsFunctions:
             }
             save_seat_mapping(test_mapping)
 
-            loaded = load_seat_mapping()
+            loaded = load_all_seat_mappings()
             assert loaded["6_player"]["bottom"] == 3
             assert loaded["6_player"]["top"] == 1
             assert loaded["5_player"]["bottom"] == 2

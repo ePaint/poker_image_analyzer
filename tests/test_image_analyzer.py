@@ -9,7 +9,6 @@ from image_analyzer import (
     PlayerRegion,
     ScreenshotFilename,
     analyze_screenshot,
-    detect_table_type,
     SIX_PLAYER_REGIONS,
     FIVE_PLAYER_REGIONS,
 )
@@ -134,46 +133,6 @@ class TestFivePlayerRegions:
     def test_no_top_position(self):
         names = {r.name for r in FIVE_PLAYER_REGIONS}
         assert "top" not in names
-
-
-class TestDetectTableType:
-    def test_detects_6player_table(self):
-        image_path = IMAGES_DIR / "testscreen1.png"
-        if not image_path.exists():
-            pytest.skip("Test image not available")
-        image = cv2.imread(str(image_path))
-        regions = detect_table_type(image)
-        assert len(regions) == 6
-        assert regions == SIX_PLAYER_REGIONS
-
-    def test_detects_5player_table(self):
-        image_path = IMAGES_DIR / "testscreen_5player.png"
-        if not image_path.exists():
-            pytest.skip("5-player test image not available")
-        image = cv2.imread(str(image_path))
-        regions = detect_table_type(image)
-        assert len(regions) == 5
-        assert regions == FIVE_PLAYER_REGIONS
-
-    def test_6player_has_top_position(self):
-        image_path = IMAGES_DIR / "testscreen1.png"
-        if not image_path.exists():
-            pytest.skip("Test image not available")
-        image = cv2.imread(str(image_path))
-        regions = detect_table_type(image)
-        names = {r.name for r in regions}
-        assert "top" in names
-
-    def test_5player_has_no_top_position(self):
-        image_path = IMAGES_DIR / "testscreen_5player.png"
-        if not image_path.exists():
-            pytest.skip("5-player test image not available")
-        image = cv2.imread(str(image_path))
-        regions = detect_table_type(image)
-        names = {r.name for r in regions}
-        assert "top" not in names
-        assert "left" in names
-        assert "right" in names
 
 
 @pytest.fixture(scope="module")

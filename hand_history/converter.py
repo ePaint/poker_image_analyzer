@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import TypedDict
 
 from hand_history.parser import HandHistory
+from hand_history.seat_mapping import TableType, position_to_seat
 
 
 class OcrData(TypedDict, total=False):
@@ -103,76 +104,14 @@ def convert_hands(
     return results
 
 
-def convert_hands_with_ocr(
-    hands: list[HandHistory],
-    hand_number_to_ocr: dict[str, OcrData],
-) -> list[ConversionResult]:
-    """Convert multiple hands using OCR data with button-aware seat mapping.
-
-    Uses the dealer button position from screenshots and hand histories
-    to correctly map positions to seats regardless of Hero's seat.
-
-    Args:
-        hands: List of parsed hand histories
-        hand_number_to_ocr: Mapping from hand number to OCR data
-
-    Returns:
-        List of ConversionResult objects
-    """
-    from hand_history import position_to_seat
-
-    results = []
-
-    for hand in hands:
-        ocr_data = hand_number_to_ocr.get(hand.hand_number)
-
-        if ocr_data is None:
-            results.append(ConversionResult(
-                hand_number=hand.hand_number,
-                success=False,
-                original_text=hand.raw_text,
-                error="No matching screenshot found",
-            ))
-            continue
-
-        position_names = ocr_data.get("position_names", {})
-        table_type = ocr_data.get("table_type", "6_player")
-        button_position = ocr_data.get("button_position")
-
-        # Detect hero: try OCR bottom match first, fall back to literal "Hero"
-        hero_seat = None
-        bottom_name = position_names.get("bottom", "")
-        if bottom_name:
-            for seat, player in hand.seats.items():
-                if player.lower() == bottom_name.lower():
-                    hero_seat = seat
-                    break
-        if hero_seat is None:
-            hero_seat = hand.get_seat_for_player("Hero")
-
-        seat_data = position_to_seat(
-            position_names,
-            table_type,
-            screenshot_button_position=button_position,
-            hand_button_seat=hand.button_seat if hand.button_seat else None,
-            hero_seat=hero_seat,
-        )
-
-        result = convert_hand(hand, seat_data, hero_seat=hero_seat)
-        results.append(result)
-
-    return results
-
-
 def convert_hands_with_propagation(
     hands: list[HandHistory],
     hand_number_to_ocr: dict[str, OcrData],
 ) -> list[ConversionResult]:
     """Convert hands, propagating mappings to same-table hands without screenshots.
 
-    Unlike convert_hands_with_ocr which only converts hands with direct screenshot
-    matches, this function learns encrypted_id -> real_name mappings from hands
-    with screenshots and applies them to ALL hands from the same table.
+    Learns encrypted_id -> real_name mappings from hands with screenshots and
+    applies them to ALL hands from the same table.
 
     Also replaces "Hero" with the real player name when detected from OCR data.
 
@@ -183,8 +122,6 @@ def convert_hands_with_propagation(
     Returns:
         List of ConversionResult objects
     """
-    from hand_history import position_to_seat
-
     # Step 1: Build encrypted_id -> name mappings per table from hands with screenshots
     # Also track Hero's real name and seat per table
     table_mappings: dict[str, dict[str, str]] = {}  # table_name -> {encrypted_id: real_name}
@@ -214,7 +151,7 @@ def convert_hands_with_propagation(
 
         seat_to_name = position_to_seat(
             ocr_data.get("position_names", {}),
-            ocr_data.get("table_type", "6_player"),
+            ocr_data.get("table_type", TableType.SIX_PLAYER),
             screenshot_button_position=ocr_data.get("button_position"),
             hand_button_seat=hand.button_seat if hand.button_seat else None,
             hero_seat=hero_seat,

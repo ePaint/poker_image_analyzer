@@ -7,7 +7,6 @@ from PIL import Image, ImageEnhance
 
 
 from image_analyzer.constants import (
-    TOP_CENTER_DETECTION_PIXEL, BRIGHTNESS_THRESHOLD,
     FEWSHOT_ZERO_B64, FEWSHOT_ZERO_NAME,
     FEWSHOT_I_VS_L_B64, FEWSHOT_I_VS_L_NAME,
     FEWSHOT_ZERO_ALT_B64, FEWSHOT_ZERO_ALT_NAME,
@@ -15,36 +14,8 @@ from image_analyzer.constants import (
     BUTTON_OFFSET_6PLAYER, BUTTON_OFFSET_5PLAYER,
     BUTTON_COLOR_BGR, BUTTON_COLOR_TOLERANCE,
 )
-from image_analyzer.models import (
-    PlayerRegion, BASE_WIDTH, FIVE_PLAYER_REGIONS, SIX_PLAYER_REGIONS,
-)
+from image_analyzer.models import PlayerRegion, SIX_PLAYER_REGIONS
 from image_analyzer.llm import get_provider, ProviderName
-
-
-def detect_table_type(image: np.ndarray) -> tuple[PlayerRegion, ...]:
-    """Detect 5-player vs 6-player table by checking if a player exists at top center.
-
-    Samples multiple points in the top center area to handle layout variations.
-    - 6-player: any bright pixel found (player present at top)
-    - 5-player: all pixels dark (no player at top)
-    """
-    image_height, image_width = image.shape[:2]
-    scale = image_width / BASE_WIDTH
-
-    base_x, base_y = TOP_CENTER_DETECTION_PIXEL
-    x_offsets = [-50, 0, 50]
-    y_offsets = [-10, 0, 10, 20]
-
-    for dy in y_offsets:
-        for dx in x_offsets:
-            x = int((base_x + dx) * scale)
-            y = int((base_y + dy) * scale)
-            if 0 <= x < image_width and 0 <= y < image_height:
-                pixel = image[y, x]
-                if max(int(c) for c in pixel) > BRIGHTNESS_THRESHOLD:
-                    return SIX_PLAYER_REGIONS
-
-    return FIVE_PLAYER_REGIONS
 
 
 def detect_button_position(
@@ -255,7 +226,7 @@ def analyze_screenshot(
 
     Args:
         image_path: Path to the image file
-        regions: Player region definitions (auto-detected if None)
+        regions: Player region definitions (defaults to SIX_PLAYER_REGIONS)
         api_key: API key (uses provider-specific env var if None)
         provider: LLM provider name ("anthropic" or "deepseek")
         model: Model name (uses provider default if None)
@@ -272,13 +243,14 @@ def analyze_screenshot(
         raise ValueError(f"Could not load image: {path}")
 
     if regions is None:
-        regions = detect_table_type(image)
+        regions = SIX_PLAYER_REGIONS
 
     return analyze_image(image, regions, api_key, provider, model)
 
 
 def analyze_screenshots_batch(
     image_paths: list[str | Path],
+    regions: tuple[PlayerRegion, ...] | None = None,
     api_key: str | None = None,
     provider: ProviderName = "anthropic",
     model: str | None = None,
@@ -287,6 +259,7 @@ def analyze_screenshots_batch(
 
     Args:
         image_paths: List of paths to screenshot files
+        regions: Player region definitions (defaults to SIX_PLAYER_REGIONS)
         api_key: API key (uses provider-specific env var if None)
         provider: LLM provider name ("anthropic" or "deepseek")
         model: Model name (uses provider default if None)
@@ -296,6 +269,9 @@ def analyze_screenshots_batch(
     """
     if not image_paths:
         return []
+
+    if regions is None:
+        regions = SIX_PLAYER_REGIONS
 
     images_data: list[tuple[np.ndarray, tuple[PlayerRegion, ...]]] = []
     for image_path in image_paths:
@@ -307,7 +283,6 @@ def analyze_screenshots_batch(
         if image is None:
             raise ValueError(f"Could not load image: {path}")
 
-        regions = detect_table_type(image)
         images_data.append((image, regions))
 
     all_crops: list[Image.Image] = []

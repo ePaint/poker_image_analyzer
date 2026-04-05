@@ -6,12 +6,15 @@ from pathlib import Path
 
 from image_analyzer import (
     analyze_screenshot,
-    detect_table_type,
     detect_button_position,
     ScreenshotFilename,
+    SIX_PLAYER_REGIONS,
+    FIVE_PLAYER_REGIONS,
 )
 from hand_history import (
     TableType,
+    InvalidTableTypeError,
+    parse_table_type_from_filename,
     OcrData,
     parse_file,
     convert_hands_with_propagation,
@@ -23,18 +26,34 @@ import cv2
 
 def process_screenshots(
     screenshots_dir: Path,
+    hands_dir: Path,
     api_key: str | None = None,
 ) -> dict[str, OcrData]:
     """Process all screenshots and extract hand numbers + player names.
 
     Args:
         screenshots_dir: Directory containing screenshot files
+        hands_dir: Directory containing hand history files (used to determine table type)
         api_key: API key for LLM provider
 
     Returns:
         Dict mapping hand number to OcrData (position_names, table_type, button_position)
     """
     result: dict[str, OcrData] = {}
+
+    # Determine table type from hand history filenames
+    txt_files = list(hands_dir.glob("*.txt"))
+    if not txt_files:
+        print("Error: No hand history files found")
+        return result
+
+    try:
+        table_type = parse_table_type_from_filename(txt_files[0].name)
+        regions = SIX_PLAYER_REGIONS if table_type == TableType.SIX_PLAYER else FIVE_PLAYER_REGIONS
+        print(f"Table type from filename: {table_type.value}")
+    except InvalidTableTypeError as e:
+        print(f"Error: {e}")
+        return result
 
     png_files = list(screenshots_dir.glob("*.png"))
     valid_files = [f for f in png_files if ScreenshotFilename.is_valid(f.name)]
@@ -57,10 +76,7 @@ def process_screenshots(
                 print("  Error: Could not load image")
                 continue
 
-            regions = detect_table_type(image)
-            table_type: TableType = "6_player" if len(regions) == 6 else "5_player"
-
-            position_names = analyze_screenshot(screenshot_path, api_key=api_key)
+            position_names = analyze_screenshot(screenshot_path, regions=regions, api_key=api_key)
             button_position = detect_button_position(image, regions)
 
             result[hand_number] = OcrData(
@@ -68,7 +84,7 @@ def process_screenshots(
                 table_type=table_type,
                 button_position=button_position,
             )
-            print(f"  Hand #{hand_number}: {len(position_names)} players ({table_type})")
+            print(f"  Hand #{hand_number}: {len(position_names)} players ({table_type.value})")
 
         except Exception as e:
             print(f"  Error: {e}")
@@ -195,7 +211,7 @@ def main(
     print(f"Output:      {output_dir}\n")
 
     print("Step 1: Processing screenshots...")
-    ocr_data = process_screenshots(screenshots_dir, api_key)
+    ocr_data = process_screenshots(screenshots_dir, hands_dir, api_key)
     print(f"\nExtracted data for {len(ocr_data)} hands\n")
 
     if not ocr_data:
